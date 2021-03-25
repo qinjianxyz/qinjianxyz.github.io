@@ -1,0 +1,10 @@
+/*
+.carousel-inner {
+    height:auto
+ }
+
+.carousel-item { 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
