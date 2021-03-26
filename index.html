@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/body.css">
     
 </head>
 <body>
     <!--Nav Bar-->
     <header class="header">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
             <div class="container">
               <a class="navbar-brand" href="#">Jian Qin</a>
               
@@ -27,7 +27,7 @@
               <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Project</a>
+                    <a class="nav-link active" id="project" aria-current="page" href="#feature">Project</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Blog</a>
@@ -45,18 +45,15 @@
                     <a class="nav-link active" aria-current="page" href="#">Contact</a>
                   </li>
                 </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <button class="btn"><a>Feature</a></button>
-                </ul>
-
               </div>
             </div>
           </nav>
     </header>
-    <hr>
+
     <!--Quote-->
     <div class="container" id="quote" style="text-align: center;">
         "The Best time to plant a tree was 20 years ago. The second best time is now."
+        <hr>
     </div>
     <br>
 
@@ -65,14 +62,14 @@
         <div class="row">
             <div class="col-sm">
                 <div class="container qin-title" style="text-align: center;">
-                    About Me
+                  About Me
                 </div>
                 <div class="container qin-text">
-                    Welcome. 
-                    I am a software developer with mechanical engineering background located in California. 
-                    My interest in computer science in how to handle geometry effectively in software. 
-                    I have built helpdesk system, e-commerce site, autonomous vehicle, robots for competition. 
-                    I have great knowledge in JavaScript, Python, C++, Java. React.js, React Native, Electron, Node.js.
+                  Welcome. 
+                  I am a software developer with mechanical engineering background located in California. 
+                  My interest in computer science in how to handle geometry effectively in software. 
+                  I have built helpdesk system, e-commerce site, autonomous vehicle, robots for competition. 
+                  I have great knowledge in JavaScript, Python, C++, Java. React.js, React Native, Electron, Node.js.
                 </div>
             </div>
             
@@ -107,8 +104,71 @@
         </div>
     </div>
 
-    <div style="height: 20000px;"></div>
+    <!--Features-->
+    <div class="container" id="feature">
+      <div class="qin-title">
+        Feature
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div style="height: 20000px;"></div>
     <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
