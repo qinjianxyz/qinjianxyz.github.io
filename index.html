@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/card.css">
     
 </head>
 <body>
@@ -27,7 +28,7 @@
               <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" id="project" aria-current="page" href="#feature">Project</a>
+                    <a class="nav-link active" id="project" aria-current="page" href="#feature" data-toggle="collapse">Project</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Blog</a>
@@ -48,21 +49,15 @@
               </div>
             </div>
           </nav>
-    </header>
-
-    <!--Quote-->
-    <div class="container" id="quote" style="text-align: center;">
-        "The Best time to plant a tree was 20 years ago. The second best time is now."
-        <hr>
-    </div>
-    <br>
+        </header>
 
     <!--Carousel-->
     <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="container qin-title" style="text-align: center;">
-                  About Me 
+        <div class="row" style="border-top: 30px;">
+            <div class="col-md" style="padding-left: 0; margin-left: 0;">
+                <div class="container qin-title">
+                  About Me
+                  <hr>
                 </div>
                 <div class="container qin-text">
                   Welcome. 
@@ -71,22 +66,28 @@
                   I have built helpdesk system, e-commerce site, autonomous vehicle, robots for competition. 
                   I have great knowledge in JavaScript, Python, C++, Java. React.js, React Native, Electron, Node.js.
                 </div>
+                <!--Quote-->
+                <div class="container" id="quote" style="text-align: center;">
+                  <br><br>
+                  "The Best time to plant a tree was 20 years ago.<br>
+                  The second best time is now." -- My favorite quote
+              </div>
             </div>
             
 
-            <div class="col-sm">
+            <div class="col-md">
                 <div class="container">
                     <!--data-bs-interval="2000"-->
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
                         <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="media/marathon.JPG" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
                             <img src="media/english.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="media/godfather.jpg" class="d-block w-100" alt="...">
+                            <img src="" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="" class="d-block w-100" alt="...">
                         </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -105,13 +106,14 @@
     </div>
 
     <!--Features-->
-    <div class="container" id="feature">
+    <div style="height: 120px;"id="feature"></div>
+    <div class="container">
       <div class="qin-title">
         Feature
         <hr>
       </div>
-      <div class="row">
-        <div class="col-sm">
+      <div class="row" style="border-top: 30px;">
+        <div class="col-md">
           <div class="card">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
@@ -129,7 +131,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm">
+        <div class="col-md">
           <div class="card">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
@@ -147,7 +149,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm">
+        <div class="col-md">
           <div class="card">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
@@ -167,6 +169,7 @@
         </div>
       </div>
     </div>
+
 
     <div style="height: 20000px;"></div>
     <script src="js/bootstrap.min.js"></script>
