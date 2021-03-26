@@ -2,6 +2,10 @@ body {
     padding-top: 150px;
 }
 
+.googleForm {
+    margin-left: 0;
+}
+
 #project {
     color: maroon;
 }
