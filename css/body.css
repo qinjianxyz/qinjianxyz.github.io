@@ -22,6 +22,20 @@ body {
     object-fit: cover;
 }
 
-.card {
-    background-color: #fff0f3;
+.feature>.col-lg-4>.card {
+    background-color: #f9f1fe;
+}
+
+.projects>.col-lg-4>.card {
+    background-color:#fff0f3;
+}
+
+.awards>.col-lg-4>.card {
+    background-color:#ffff9c;
+}
+
+video {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
 }
