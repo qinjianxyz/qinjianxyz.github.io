@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
 body { 
-    padding-top: 70px;
     background-color: azure;
 }
 
@@ -17,8 +16,12 @@ body {
     color: rebeccapurple;
 }
 
-.card-img-top {
+.card-img-top .card>video{
     width: 100%;
     height: 45vh;
     object-fit: cover;
+}
+
+.card {
+    background-color: #fff0f3;
 }

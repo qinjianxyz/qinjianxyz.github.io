@@ -1,0 +1,15 @@
+card image size: 
+sqaure
+stadnard card code:
+<div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <video src="media/assembly-sqaure.mp4" controls loop></video>
+    <div class="card-body">
+        <h5 class="card-title">3D Modeling</h5>
+        <p class="card-text">This feature contains numerous complex Solidworks parts and assemblies 
+            to illustrate my ability to design, prototype, and simulate a product.<hr>
+            <strong>Keywords:</strong> Solidworks, Simulation, 3D Modeling<br>
+            <a href="#" class="card-link">Learn More</a>
+        </p>
+    </div>
+</div>

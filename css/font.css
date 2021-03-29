@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-#quote {
-    font-family: Fredoka One;
-}
-
 .qin-title {
-    font-size: 40px;;
+    font-family: Fredoka One;
+    font-size: 2rem;
     color: brown;
     border-bottom: 0;
     padding-bottom: 0;
