@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jian Qin</title>
     
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font.css">
@@ -18,7 +18,7 @@
   <header class="header">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" href="#feature">Jian Qin</a>
+            <a class="navbar-brand" href="#">Jian Qin</a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span></span>
@@ -28,19 +28,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('project');">Project</a>
+                  <a class="nav-link active"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#feature');">Feature</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('project');">Blog</a>
+                  <a class="nav-link active"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#project');">Project</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('resume');">Resume</a>
+                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#resume');">Resume</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('project');">Awards</a>
+                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#awards');">Awards</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('contact');">Contact</a>
+                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#contact');">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('practice.html');">Blog</a>
                 </li>
               </ul>
             </div>
@@ -50,9 +53,9 @@
 
   <!--IMG-->
   <div class="container">
-    <img src="media/vegas.jpeg" alt="intro" style="display:block; margin-left: auto; margin-right: auto;">
+    <img src="media/potato-cut.jpg" alt="intro" class='img-fluid' style="display:block; margin-left: auto; margin-right: auto;">
   </div>
-  
+
   <!--Quote-->
   <div class='container quote' id="intro">
     "The Best time to plant a tree<br>
@@ -108,7 +111,9 @@
   
   <!--Quote-->
   <div class='container quote' id="feature">
-    xxxxxx
+      I sincerely invite you to read<br>
+      articles at my Blog about<br>
+      technology, culture, and politics.
   </div>
 
   <!--Features-->
@@ -117,7 +122,7 @@
       Feature
       <hr>
     </div>
-    <div class="row gx-3 gy-5">
+    <div class="row gx-5 gy-5">
       <div class="col-lg-4">
         <div class="card">
           <img class="card-img-top" src="..." alt="Card image cap">
@@ -189,7 +194,7 @@
       <hr>
     </div>
     <!--Row1-->
-    <div class="row gx-3 gy-5">
+    <div class="row gx-5 gy-5">
       <div class="col-lg-4">
         <div class="card">
           <img class="card-img-top" src="..." alt="Card image cap">
@@ -248,7 +253,7 @@
     <br>
     <br>
     <!--Row2-->
-    <div class="row gx-3 gy-5">
+    <div class="row gx-5 gy-5">
       <div class="col-lg-4">
         <div class="card">
           <img class="card-img-top" src="..." alt="Card image cap">
@@ -310,26 +315,12 @@
   </div>
 
   <!--Quote-->
-  <div class='container quote' id="skills">
-    Family
-  </div>
-
-  <!--Skills-->
-  <div class="container">
-    <div class="qin-title">
-      Skills
-      <hr>
-    </div>
-    xxxxx
-  </div>
-
-  <!--Quote-->
   <div class='container quote' id="resume">
     Family
   </div>
 
   <!--Resume-->
-  <div class="container" >
+  <div class="container">
     <div class="qin-title">
       Resume
       <hr>
@@ -344,6 +335,20 @@
     Family
   </div>
 
+  <!--Awards-->
+  <div class="container">
+    <div class="qin-title">
+      Awards
+      <hr>
+    </div>
+
+  </div>
+
+  <!--Quote-->
+  <div class='container quote' id="resume">
+    Family
+  </div>
+
   <!--Contact-->
   <div class="container">
     <div class="qin-title">
@@ -355,11 +360,15 @@
     </div>
   </div>
 
+  <!--footer-->
+  <footer>
+
+  </footer>
 
   <script src="js/bootstrap.min.js"></script>
   <script>
     function jumpto(anchor){
-      window.location.href = "#"+anchor;
+      window.location.href = anchor;
     }
   </script>
 

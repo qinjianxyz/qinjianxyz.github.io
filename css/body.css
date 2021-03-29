@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
 body { 
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: azure;
 }
 
@@ -11,4 +13,6 @@ body {
     margin-bottom: 15px;
     background-color: #d2f8d2;
     text-align: center;
+    font-family: New Tegomin;
+    color: rebeccapurple;
 }
