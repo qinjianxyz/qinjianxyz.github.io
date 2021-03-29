@@ -3,10 +3,12 @@ body {
     background-color: azure;
 }
 
-.googleForm {
-    margin-left: 0;
-}
-
-#project {
-    color: maroon;
+.quote {
+    height: 90px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #d2f8d2;
+    text-align: center;
 }
