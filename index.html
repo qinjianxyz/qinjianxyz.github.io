@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jian Qin</title>
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/qinstyle.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
@@ -43,7 +43,7 @@
                   <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#contact');">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('blog.html');">Blog</a>
+                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('./blog/blog.html');">Blog</a>
                 </li>
               </ul>
             </div>
@@ -60,7 +60,7 @@
               About
             </div>
             <div class="container qin-text">
-              <strong>Welcome!</strong> I am a Software and Mechancial Engineer located in California. 
+              <strong>Welcome!</strong> I am a Software and Mechatronics Engineer located in California. 
               I am passionate about <strong>problem solving</strong> and developing innovative technology. 
               Feel free to reach out.
               <br><br>
@@ -68,7 +68,7 @@
               abilities to work across platforms from web, mobile, desktop development to databases. 
               In my projects, I have used <em>Java, Python, C++, JavaScript, React.js, React Native, Node.js, Electron.</em>
               <br><br>
-              For <strong>Mechanical Engineering</strong>, I have built autonomous vehicle, pendulum, various robots for competiton 
+              For <strong>Mechatronics Engineering</strong>, I have built autonomous vehicle, pendulum, various robots for competiton 
               involving skills including computer vision, 3D modeling, simulation, manufacturing, etc. 
               I am expert in engineering software such as <em>Solidworks, AutoCAD, MATLAB, Inventor.</em>
             </div>
@@ -128,7 +128,7 @@
             <p class="card-text">This feature contains numerous complex Solidworks parts and assemblies 
               to illustrate my ability to design, prototype, and simulate a product.
               Skills include design intent, sketch & extrude tools, integrating physical parameters in a simulation.<hr>
-              <strong>Keywords:</strong> Solidworks, Simulation, 3D Modeling<br>
+              <strong>Keywords:</strong> Solidworks, Simulation, 3D Modeling, Finite Element Analysis, CAD<br>
               <a href="#" class="card-link">Learn More</a>
             </p>
           </div>
@@ -143,7 +143,7 @@
             <p class="card-text">Simulated 6 different trajectories of capsules landing on Mars. 
               Parameters include mass, gravity, air drag, air density, thruster, etc. 
               Data Visualization include landing time, landing speed, orbital period.<hr>
-              <strong>Keywords:</strong> Simulation, Data Visualization, MATLAB<br>
+              <strong>Keywords:</strong> Simulation, Data Visualization, MATLAB, Topology<br>
               <a href="#" class="card-link">Learn More</a>
             </p>
           </div>
@@ -159,7 +159,8 @@
             <p class="card-text">Designed and Manufactured a Robot for Competition. 
               Able to Move, Rotate, Lift, and Stack objects with Precision. 
               Created CAD Design, Machine Shop & theoretical knowledge for Prototype.<hr>
-              <strong>Keywords:</strong> Inventor, AutoCAD, Manufacturing<br>
+              <strong>Keywords:</strong> Inventor, AutoCAD, Design of Machine Elements, Manufacturing, 
+              3D Printing, Machine Tools<br>
               <a href="#" class="card-link">Learn More</a>
             </p>
           </div>
@@ -174,7 +175,7 @@
   <!--Blog-->
   <div class='container quote' id="projects">
     I sincerely invite you to read<br>
-    articles on <a href="blog.html">my Blog</a> about<br>
+    articles on <a href="./blog/blog.html">my Blog</a> about<br>
     technology, culture, and politics.
 </div>
 
@@ -321,9 +322,9 @@
     <div class="row gx-5 gy-5 awards">
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
-          <video src="media/assembly-sqaure.mp4" controls loop></video>
+          <img class="card-img-top" src="media/awards/amc-square.jpg" alt="AMC10">
           <div class="card-body">
-            <h5 class="card-title">Solidworks Assemblies</h5>
+            <h5 class="card-title">AMC10 Winner</h5>
             <p class="card-text">This feature contains numerous complex Solidworks parts and assemblies 
               to illustrate my ability to design, prototype, and simulate a product.
               Skills include design intent, sketch & extrude tools, integrating physical parameters in a simulation.<hr>
@@ -336,9 +337,9 @@
 
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
-          <img class="card-img-top" src="media/mars.jpg" alt="Mars Landing">
+          <img class="card-img-top" src="media/awards/veritas-square.jpg" alt="Veritas Award">
           <div class="card-body">
-            <h5 class="card-title">Mars Landing Simulation</h5>
+            <h5 class="card-title">Veritas Award</h5>
             <p class="card-text">Simulated 6 different trajectories of capsules landing on Mars. 
               Parameters include mass, gravity, air drag, air density, thruster, etc. 
               Data Visualization include landing time, landing speed, orbital period.<hr>
@@ -352,9 +353,9 @@
 
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
-          <img class="card-img-top" src="media/robot.png" alt="Robot Contest">
+          <img class="card-img-top" src="media/awards/ncs-square.jpg" alt="NCS">
           <div class="card-body">
-            <h5 class="card-title">LightSabers Picking Robot</h5>
+            <h5 class="card-title">North Coast Section Participant</h5>
             <p class="card-text">Designed and Manufactured a Robot for Competition. 
               Able to Move, Rotate, Lift, and Stack objects with Precision. 
               Created CAD Design, Machine Shop & theoretical knowledge for Prototype.<hr>
@@ -390,7 +391,7 @@
 
   </footer>
 
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/qinjs.js"></script>
   <script>
     function jumpto(anchor){
       window.location.href = anchor;
