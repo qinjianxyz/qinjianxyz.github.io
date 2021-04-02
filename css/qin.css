@@ -25,13 +25,15 @@ body {
     object-fit: cover;
 }
 
-.feature>.col-lg-4>.card {
+.projects>.col-lg-4>.card {
     background-color: #faf7fc;
 }
 
+/*
 .projects>.col-lg-4>.card {
     background-color:#fdfbfb;
 }
+*/
 
 .awards>.col-lg-4>.card {
     background-color:#ffffae;
@@ -130,3 +132,28 @@ header {
 .list-group-item {
     background-color: #fdfbfb;
   }
+
+.col>img {
+    height: 5em;
+    width: 5em;
+}
+
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon>img{
+    margin: 40px 15px 8px 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.skl{
+    flex-direction:inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
