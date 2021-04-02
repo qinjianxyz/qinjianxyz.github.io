@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+
+body { 
+    background-color: azure;
+}
+
+.quote {
+    height: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #e1f8e1;
+    text-align: center;
+    font-family: New Tegomin;
+    color: rebeccapurple;
+}
+
+.card-img-top .card>video{
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+
+.feature>.col-lg-4>.card {
+    background-color: #faf7fc;
+}
+
+.projects>.col-lg-4>.card {
+    background-color:#fdfbfb;
+}
+
+.awards>.col-lg-4>.card {
+    background-color:#ffffae;
+}
+
+header {
+    font-family: Fredoka One;
+    font-size: 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+.navbar .navbar-nav li a:hover {
+    color:lightsalmon !important;
+}
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0;
+    background-color: rgb(252, 252, 230) !important;
+}
+
+.navbar .navbar-brand {
+    font-family: Fredoka One;
+    font-size: 40px;
+    color:darkred !important;
+}
+
+.navbar .navbar-brand:hover {
+    color:darkred;
+}
+
+.navbar .navbar-toggler {
+    background: purple;
+    border: none;
+    height: 50px;
+    width: 50px;
+    padding: 10px 6px;
+    outline: none;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border: 1px;
+    background: turquoise;
+}
+
+.navbar-toggler span + span {
+    margin-top: 4px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+.navbar-toggler span + span + span {
+    width: 10px;
+    margin-left: 20px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+    border-top: 4px solid orange;
+}
+
+
+.qin-title {
+    font-family: Fredoka One;
+    font-size: 2rem;
+    color: brown;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.qin-text {
+    font-size: 20px;
+    color: black;
+}
+
+.blog-title {
+    font-family: Fredoka One;
+    font-size: 2rem;
+    color: black;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.list-group-item {
+    background-color: #fdfbfb;
+  }
