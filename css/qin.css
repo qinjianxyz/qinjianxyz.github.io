@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 body { 
     background-color: azure;
@@ -18,6 +20,39 @@ body {
     font-family: New Tegomin;
     color: rebeccapurple;
 }
+
+header {
+    font-family: Yatra One;
+    font-size: 15px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+}
+
+.navbar .navbar-brand {
+    font-family: Train One;
+    font-size: 40px;
+    color:darkred !important;
+}
+
+.qin-title {
+    font-family: Balsamiq Sans;
+    font-size: 2rem;
+    color: darkred;
+    border-bottom: 0;
+    padding-bottom: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.qin-text {
+    font-size: 20px;
+    color: black;
+}
+
 
 .card-img-top .card>video{
     width: 100%;
@@ -39,16 +74,7 @@ body {
     background-color:#ffffae;
 }
 
-header {
-    font-family: Fredoka One;
-    font-size: 15px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    margin: 0;
-    overflow-x: hidden;
-    top: 0;
-    left: 0;
-}
+
 
 .navbar .navbar-nav li a:hover {
     color:lightsalmon !important;
@@ -60,11 +86,7 @@ header {
     background-color: rgb(252, 252, 230) !important;
 }
 
-.navbar .navbar-brand {
-    font-family: Fredoka One;
-    font-size: 40px;
-    color:darkred !important;
-}
+
 
 .navbar .navbar-brand:hover {
     color:darkred;
@@ -108,26 +130,7 @@ header {
 }
 
 
-.qin-title {
-    font-family: Fredoka One;
-    font-size: 2rem;
-    color: brown;
-    border-bottom: 0;
-    padding-bottom: 0;
-}
 
-.qin-text {
-    font-size: 20px;
-    color: black;
-}
-
-.blog-title {
-    font-family: Fredoka One;
-    font-size: 2rem;
-    color: black;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
 
 .list-group-item {
     background-color: #fdfbfb;
