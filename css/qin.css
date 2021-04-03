@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body { 
     background-color: azure;
@@ -33,9 +31,9 @@ header {
 }
 
 .navbar .navbar-brand {
-    font-family: Train One;
+    font-family: Libre Baskerville;
     font-size: 40px;
-    color:darkred !important;
+    color:darkred;
 }
 
 .qin-title {
@@ -64,33 +62,34 @@ header {
     background-color: #faf7fc;
 }
 
-/*
-.projects>.col-lg-4>.card {
-    background-color:#fdfbfb;
-}
-*/
 
 .awards>.col-lg-4>.card {
     background-color:#ffffae;
 }
 
-
+.navbar>.nav-link{
+    color: darkred !important;
+}
 
 .navbar .navbar-nav li a:hover {
+    color:lightsalmon !important;
+}
+
+.qin-title:hover{
+    color:lightsalmon !important;
+}
+
+.navbar-brand:hover{
     color:lightsalmon !important;
 }
 
 .navbar {
     padding-top: 0 !important;
     padding-bottom: 0;
-    background-color: rgb(252, 252, 230) !important;
+    background-color: rgb(252, 252, 230);
 }
 
 
-
-.navbar .navbar-brand:hover {
-    color:darkred;
-}
 
 .navbar .navbar-toggler {
     background: purple;
@@ -122,6 +121,7 @@ header {
 
 .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.4rem;
+    color: darkblue !important;
     position: relative;
 }
 
