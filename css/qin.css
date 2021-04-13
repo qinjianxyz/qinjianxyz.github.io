@@ -62,6 +62,10 @@ header {
     background-color: #faf7fc;
 }
 
+.feature {
+    background-color:antiquewhite !important;
+}
+
 
 .awards>.col-lg-4>.card {
     background-color:#ffffae;
@@ -128,8 +132,6 @@ header {
 .navbar-expand-lg .navbar-nav .nav-link:hover {
     border-top: 4px solid orange;
 }
-
-
 
 
 .list-group-item {
