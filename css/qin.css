@@ -162,3 +162,15 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.ft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ft>a>img{
+    margin: 40px 15px 8px 15px;
+    width: 50px;
+    height: 50px;
+}
