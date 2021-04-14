@@ -37,6 +37,7 @@ header {
 
 .qin-title {
     font-size: 2rem;
+    font-weight: bold;
     color: darkred;
     border-bottom: 0;
     padding-bottom: 0;
