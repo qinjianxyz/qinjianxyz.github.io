@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body { 
-    background-color: azure;
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .quote {
@@ -13,7 +13,6 @@ body {
     padding-bottom: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: #e1f8e1;
     text-align: center;
     font-family: New Tegomin;
     color: rebeccapurple;
@@ -37,7 +36,6 @@ header {
 }
 
 .qin-title {
-    font-family: Balsamiq Sans;
     font-size: 2rem;
     color: darkred;
     border-bottom: 0;
@@ -59,16 +57,16 @@ header {
 }
 
 .projects>.col-lg-4>.card {
-    background-color: #faf7fc;
+    background-color: rgb(244, 253, 253);
 }
 
 .feature {
-    background-color:antiquewhite !important;
+    
 }
 
 
 .awards>.col-lg-4>.card {
-    background-color:#ffffae;
+    background-color: rgb(244, 253, 253);
 }
 
 .navbar>.nav-link{
@@ -90,9 +88,8 @@ header {
 .navbar {
     padding-top: 0 !important;
     padding-bottom: 0;
-    background-color: rgb(252, 252, 230);
+    background-color: whitesmoke;
 }
-
 
 
 .navbar .navbar-toggler {
