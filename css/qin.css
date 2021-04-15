@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body { 
@@ -19,7 +18,7 @@ body {
 }
 
 header {
-    font-family: Yatra One;
+    font-family: Libre Baskerville;
     font-size: 15px;
     line-height: 1.5;
     box-sizing: border-box;
@@ -38,6 +37,7 @@ header {
 .qin-title {
     font-size: 2rem;
     font-weight: bold;
+    font-family: Libre Baskerville;
     color: darkred;
     border-bottom: 0;
     padding-bottom: 0;
