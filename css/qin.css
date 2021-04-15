@@ -11,7 +11,7 @@ body {
     height: 80px;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 15px;
     text-align: center;
     font-family: New Tegomin;
@@ -58,16 +58,23 @@ header {
 }
 
 .projects>.col-lg-4>.card {
-    background-color: rgb(244, 253, 253);
+    background-color: azure;
 }
 
 .feature {
     
 }
 
-
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
 .awards>.col-lg-4>.card {
-    background-color: rgb(244, 253, 253);
+    background-color: azure;
 }
 
 .navbar>.nav-link{
