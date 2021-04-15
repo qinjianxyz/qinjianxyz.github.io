@@ -30,12 +30,12 @@ header {
 
 .navbar .navbar-brand {
     font-family: Libre Baskerville;
-    font-size: 40px;
+    font-size: 30px;
     color:darkred;
 }
 
 .qin-title {
-    font-size: 2rem;
+    font-size: 30px;
     font-weight: bold;
     font-family: Libre Baskerville;
     color: darkred;
@@ -91,15 +91,16 @@ header {
 .navbar .navbar-toggler {
     background: purple;
     border: none;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     padding: 10px 6px;
     outline: none;
 }
 
 .navbar-toggler span {
     display: block;
-    width: 30px;
+    width: 25px;
+    margin-right: 5px;
     height: 5px;
     border: 1px;
     background: turquoise;
@@ -107,13 +108,15 @@ header {
 
 .navbar-toggler span + span {
     margin-top: 4px;
-    width: 20px;
-    margin-left: 10px;
+    width: 17px;
+    margin-left: 8px;
+    margin-right: 5px;
 }
 
 .navbar-toggler span + span + span {
     width: 10px;
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
