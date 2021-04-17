@@ -103,7 +103,7 @@ a.nav-link.active{
     width: 25px;
     height: 5px;
     border: 1px;
-    background: white;
+    background: lightblue;
 }
 
 .navbar-toggler span + span {
