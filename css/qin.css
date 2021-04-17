@@ -29,13 +29,13 @@ header {
 }
 
 a.nav-link.active{
-    color: rgb(0, 0, 100) !important;
+    color: darkblue !important;
 }
 
 .navbar .navbar-brand {
     font-family: Libre Baskerville;
     font-size: 30px;
-    color:rgb(100, 0, 0);
+    color: darkred;
 }
 
 .qin-title {
