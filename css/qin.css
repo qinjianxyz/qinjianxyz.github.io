@@ -3,7 +3,7 @@
 
 body { 
     background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .quote {
@@ -28,14 +28,18 @@ header {
     left: 0;
 }
 
+a.nav-link.active{
+    color: darkblue !important;
+}
+
 .navbar .navbar-brand {
     font-family: Libre Baskerville;
-    font-size: 35px;
+    font-size: 30px;
     color:darkred;
 }
 
 .qin-title {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     font-family: Libre Baskerville;
     color: darkred;
@@ -46,7 +50,7 @@ header {
 }
 
 .qin-text {
-    font-size: 20px;
+    font-size: 18px;
     color: black;
 }
 
@@ -57,23 +61,20 @@ header {
     object-fit: cover;
 }
 
-.projects>.col-lg-4>.card {
-    background-color: azure;
+.card-title{
+    font-weight: bold;
+    color: darkred;
 }
 
-.awards>.col-lg-4>.card {
-    background-color: azure;
+.card-body{
+    background-color: whitesmoke;
 }
 
-.navbar>.nav-link{
-    color: darkred !important;
+.card-text {
+    color: darkblue;
 }
 
 .navbar .navbar-nav li a:hover {
-    color:lightsalmon !important;
-}
-
-.qin-title:hover{
     color:lightsalmon !important;
 }
 
@@ -84,45 +85,40 @@ header {
 .navbar {
     padding-top: 0 !important;
     padding-bottom: 0;
-    background-color: azure;
+    background-color: whitesmoke;
 }
 
 
 .navbar .navbar-toggler {
-    background: purple;
+    background: darkred;
     border: none;
     height: 40px;
     width: 40px;
-    padding: 10px 6px;
+    padding: 5px 7px;
     outline: none;
 }
 
 .navbar-toggler span {
     display: block;
     width: 25px;
-    margin-right: 5px;
     height: 5px;
     border: 1px;
-    background: turquoise;
+    background: white;
 }
 
 .navbar-toggler span + span {
     margin-top: 4px;
-    width: 17px;
-    margin-left: 8px;
-    margin-right: 5px;
+    width: 25px;
 }
 
 .navbar-toggler span + span + span {
-    width: 10px;
-    margin-left: 15px;
-    margin-right: 5px;
+    width: 25px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     font-size: 1.4rem;
-    color: darkblue !important;
     position: relative;
+    color: darkblue;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
