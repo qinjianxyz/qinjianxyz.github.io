@@ -74,6 +74,10 @@ div.container.qin-text>p>em{
     color: rgb(0, 0, 100);
 }
 
+.card-text>strong{
+    color: #FA4616;
+}
+
 .navbar .navbar-nav li a:hover {
     color:lightsalmon !important;
 }
