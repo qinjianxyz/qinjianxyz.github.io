@@ -29,20 +29,21 @@ header {
 }
 
 a.nav-link.active{
-    color: darkblue !important;
+    color: #E40046 !important;
 }
 
 .navbar .navbar-brand {
     font-family: Libre Baskerville;
     font-size: 30px;
-    color: darkred;
+    color: #E40046;
 }
+
 
 .qin-title {
     font-size: 25px;
     font-weight: bold;
-    font-family: Libre Baskerville;
-    color: darkred;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4E008E;
     border-bottom: 0;
     padding-bottom: 0;
     padding-bottom: 1rem;
@@ -51,9 +52,15 @@ a.nav-link.active{
 
 .qin-text {
     font-size: 18px;
-    color: black;
 }
 
+div.container.qin-text>p>strong{
+    color: #FA4616;
+}
+
+div.container.qin-text>p>em{
+    color: #343579;
+}
 
 .card-img-top .card>video{
     width: 100%;
@@ -63,7 +70,7 @@ a.nav-link.active{
 
 .card-title{
     font-weight: bold;
-    color: darkred;
+    color: #E40046;
 }
 
 .card-body{
