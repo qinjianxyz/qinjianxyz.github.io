@@ -33,6 +33,10 @@ a.nav-link.active{
     color: #E40046;
 }
 
+hr{
+    background-image: linear-gradient(to right, darkblue, darkred, darkblue) !important;
+}
+
 
 .qin-title {
     font-size: 25px;
