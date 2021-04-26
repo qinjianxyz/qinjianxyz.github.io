@@ -30,7 +30,7 @@ a.nav-link.active{
 
 .navbar .navbar-brand {
     font-size: 35px;
-    color: #E40046;
+    color: salmon;
 }
 
 hr{
@@ -97,7 +97,7 @@ div.container.qin-text>p>em{
 
 
 .navbar .navbar-toggler {
-    background: darkred;
+    background: lightsalmon;
     border: none;
     height: 40px;
     width: 40px;
@@ -110,7 +110,7 @@ div.container.qin-text>p>em{
     width: 25px;
     height: 5px;
     border: 1px;
-    background: lightblue;
+    background: whitesmoke;
 }
 
 .navbar-toggler span + span {
