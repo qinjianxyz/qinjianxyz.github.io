@@ -1,0 +1,4 @@
+div.container.blog {
+    max-width: min(80%, 800px);
+    min-width: 40%;
+}
