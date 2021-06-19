@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.quote {
+  height: 60px;
+  margin-top: 30px;
+  text-align: center;
+  font-family: New Tegomin;
+  color: rebeccapurple;
+}
+
+header {
+  font-size: 15px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  margin: 0;
+  overflow-x: hidden;
+  top: 0;
+  left: 0;
+}
+
+a.nav-link.active {
+  color: rgb(0, 0, 100) !important;
+  font-size: 20px !important;
+}
+
+.navbar .navbar-brand {
+  font-size: 35px;
+  color: #fa4616;
+}
+
+hr {
+  background-image: linear-gradient(
+    to right,
+    darkblue,
+    darkred,
+    darkblue
+  ) !important;
+}
+
+.qin-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(0, 0, 100);
+  border-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 1rem;
+}
+
+.qin-text {
+  font-size: 18px;
+}
+
+div.container.qin-text > p > strong {
+  color: #fa4616;
+}
+
+div.container.qin-text > p > em {
+  color: rgb(0, 0, 100);
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #e40046;
+}
+
+.card-body {
+  background-color: whitesmoke;
+}
+
+.card-text {
+  color: rgb(0, 0, 100);
+}
+
+.card-text > strong {
+  color: #fa4616;
+}
+
+.navbar .navbar-nav li a:hover {
+  color: lightsalmon !important;
+}
+
+.navbar-brand:hover {
+  color: lightsalmon !important;
+}
+
+.navbar {
+  padding-top: 0 !important;
+  padding-bottom: 0;
+  background-color: whitesmoke;
+}
+
+.navbar .navbar-toggler {
+  background: lightsalmon;
+  border: none;
+  height: 40px;
+  width: 40px;
+  padding: 5px 7px;
+  outline: none;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 5px;
+  border: 1px;
+  background: whitesmoke;
+}
+
+.navbar-toggler span + span {
+  margin-top: 4px;
+  width: 25px;
+}
+
+.navbar-toggler span + span + span {
+  width: 25px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  border-top: 4px solid orange;
+}
+
+.list-group-item {
+  background-color: #fdfbfb;
+}
+
+.col > img {
+  height: 5em;
+  width: 5em;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon > img {
+  margin: 40px 15px 8px 15px;
+  width: 100px;
+  height: 100px;
+}
+
+.skl {
+  flex-direction: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ft > a > img {
+  margin: 40px 15px 8px 15px;
+  width: 50px;
+  height: 50px;
+}
+
+
+.demo {
+    text-decoration: none;
+    color: black;
+}
