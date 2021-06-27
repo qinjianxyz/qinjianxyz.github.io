@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XXXX</title>
+
+    <link rel="stylesheet" href="../style/css/boot.css" />
+    <link rel="stylesheet" href="../style/css/qin.css" />
+    <link rel="stylesheet" href="../style/css/blogPage.css" />
+  </head>
+  <body>
+    <!--Nav Bar-->
+    <header class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../index.html#projects');"
+                  >Experience</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../index.html#skills');"
+                  >Skills</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../index.html#resume');"
+                  >Resume</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../index.html#awards');"
+                  >Awards</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../index.html#contact');"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  data-bs-toggle="collapse"
+                  data-bs-target=".navbar-collapse.show"
+                  onclick="jumpto('../blog.html');"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div style="height: 120px"></div>
+    <div class="container blog">
+      <p>27 June 2021</p>
+      <p class="text-center"><b>Approximate Method in Modern Engineering</b></p>
+      <hr />
+      <p>In the scientific and engineering world, one might hold the assumption that accuracy is always a preferable trait. However, just like there are microeconomics and macroeconomics in the field of economics, it is also important for engineers to sometimes take a step back and look at the larger picture. There are many very complex questions that could be answered with an abstract and an approximate answer.</p>
+      <p>Why are there no insects in the cold weather? The first instinct is that there might be something to do with heat and energy, and that is a good place to start. If we use the approximate method, we need to substitute details with gross approximation. Let us consider the shape of an insect is approximately a cube. We know that animals lose heat through their surface area and general heat through every living cell. So, we can say the heat generating capacity is proportionally related with the volume of the insect and the heat losing capacity is proportionally related with the surface area of the insect. Let us define the cold weather resistance as heat generating capacity divided by heat losing capacity. Remember we approximated the insect as a cube. As a result, the heat generating capacity is in the order of length to the third power, and the heat losing capacity is in the order of length to the second power if we ignore the scaler 6 for each surface. The cold resistant ratio is in the order of length, which means that an animal with a higher “length” is more resistant to cold weather. We only used very basic conditions to reach this sobering result.</p>
+      <p>There are so many more questions that can be answered by approximate method especially with complex systems. For example, why do human have legs instead of wheels? How many ping-pong balls can a Boeing 747 hold? These might seem like ridiculous questions but the ability to approximate almost everything is a valuable skill. When we solve modern problems, oftentimes we encounter extremely complex systems and instead of making sense of everything, it is often much more valuable to gain insight on what matters the most. In finance, economics, engineering, this can be called as the intuition when observing a system. Opponents of this way of thinking might propose that the approximation is too general, and no animal is exactly the shape of a cube. But this seemingly inaccurate way of thinking is in fact the power of the approximate method.</p>
+      <p>We could think of heuristics as one subfield of approximate method. In computer science, there are inherently intractable problems due to a very high volume of calculations. Some problems might be solvable at a small scale, but grows at exponential or factorial speed, which proves the most powerful computer is not nearly sufficient against the law of nature. Scientists gradually realized that they could alter the nature of the problem they are solving. Instead of finding a perfect solution, maybe a “good” solution is truly good enough. There are ways to ease the tension through changing boundary conditions and ignoring constraints, but the ultimate purpose of heuristics is to transform the intractable problem into a solvable problem, with the sacrifice of accuracy that is most often negligible. We see heuristics in many applications today and the most widely used is in navigation maps. Instead of spending 30 minutes to calculate every single route, the maps simply give us a good route depending on the current situation. It would be useless to find the best path anyway because the traffic is dynamic. By the time the calculation is finished, what used to be the best path might not be the best path after the calculation is done.</p>
+      <p>There are numerous applications of approximate method, but what impresses me is the creative way of tackling a problem. When we face an intractable problem, we should ask what the ultimate purpose is of solving this problem in the first place. But once we have a clear picture of what we want to achieve, we have the freedom to moderately tweak the problem and conditions given to produce a useful result, which ultimately leads to profits.</p>
+
+      <hr />
+      <div style="text-align: center;">
+        <div id='year'></div>
+        All rights reserved.
+      </div>
+      <div style="height: 50px;"></div>
+    </div>
+
+    <script src="../../style/js/qinjs.js"></script>
+    <script>
+      let d = new Date();
+      let currentYear = d.getFullYear();
+      let display = "Copyright &copy " + currentYear + ", Jian Qin";
+      document.getElementById('year').innerHTML = display;
+    </script>
+    <script>
+      function jumpto(anchor) {
+        window.location.href = anchor;
+      }
+    </script>
+  </body>
+</html>
