@@ -8,7 +8,11 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style/css/boot.css">
     <link rel="stylesheet" href="style/css/qin.css">
-    
+    <script>
+    function jumpto(anchor){
+      window.location.href = anchor;
+    }
+    </script>
 </head>
 <body>
   <!--Nav Bar-->
@@ -89,19 +93,20 @@
           </div>
           <div class="container qin-text">
             <p>
-            <strong>Welcome!</strong> I am a Software and Mechatronics Engineer located in California. 
+            <strong>Welcome!</strong> I am a Software and Mechanical Engineer located in California. 
             I am passionate about <strong>problem solving</strong> and <strong>creative thinking.</strong> 
             The experience section contains my <em>work experience, academic research, projects, and non-academic activities.</em> 
-            Feel free to reach out and <strong>connect</strong>.
+            Feel free to reach out and <b><a href="#contact" style="text-decoration: none; color: rgb(0,100,100);">connect</a></b>.
             </p>
             <p>
             For <strong>Software Engineering</strong>, I have extensive experience in design patterns, algorithms, and databases. 
-            I have solved business problems and built my projects 
-            with <em>JavaScript, Java, Python, C++, and the PERN stack.</em>
+            I have solved business problems and built my projects with <em>JavaScript, Java, Python, C++, and frameworks including firebase, the PERN stack, Java Spring Boot, etc.</em> 
+            Live Demos and Github Repositories are available in the <b><a href="#projects" style="text-decoration: none; color: rgb(0,100,100);">Experience section</a></b>
             </p>
             <p>
-            For <strong>Mechatronics Engineering</strong>, I have built competiton robots, thermostatic mug, pendulum, and other projects 
-            involving <em>controls system, machine learning, 3D Modeling, simulation, manufacturing, and design of experiment.</em> 
+            For <strong>Mechanical Engineering</strong>, I have built competiton robots, thermostatic mug, pendulum, and other projects 
+            involving <em>controls system, machine learning, 3D Modeling, simulation, manufacturing, and design of experiments.</em> 
+            My main interests in engineering are engineering software, controls system, and renewable energy. 
             I am fluent in engineering softwares such as <em>Solidworks, AutoCAD, MATLAB, and Inventor.</em>
             </p>
           </div>
@@ -222,24 +227,6 @@
       </div>
 
 
-      
-      <div class="col-lg-4 d-flex align-items-stretch">
-        <div class="card">
-          <img class="card-img-top" src="media/projects/robot.png" alt="Robot Contest">
-          <div class="card-body">
-            <h5 class="card-title">LightSabers Picking Robot</h5>
-            <p class="card-text"><strong>Designed</strong> and manufactured a competition robot. 
-              Able to move, rotate, lift, and stack objects with <strong>precision</strong>. 
-              Created CAD design & utilized machine shop tools and design theories for <strong>prototype</strong>.<hr>
-              <em>Skills:</em> Inventor, AutoCAD, Design of Machine Elements, Manufacturing, 
-              3D Printing.<br>
-            </p>
-            <a class='demo' href='https://github.com/qinjianxyz/light-saber-robot' target="_blank"><button>Details/Github Repo</button></a>
-          </div>
-        </div>
-      </div>
-
-
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/mars.jpg" alt="Mars Landing">
@@ -256,13 +243,29 @@
         </div>
       </div>
 
+      <div class="col-lg-4 d-flex align-items-stretch">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/robot.png" alt="Robot Contest">
+          <div class="card-body">
+            <h5 class="card-title">LightSabers Picking Robot - Autodesk Inventor</h5>
+            <p class="card-text"><strong>Designed</strong> and manufactured a competition robot in Autodesk Inventor. 
+              Able to move, rotate, lift, and stack objects with <strong>precision</strong>. 
+              Created CAD design & utilized machine shop tools and design theories for <strong>prototype</strong>.<hr>
+              <em>Skills:</em> Inventor, AutoCAD, Design of Machine Elements, Manufacturing, 
+              3D Printing.<br>
+            </p>
+            <a class='demo' href='https://github.com/qinjianxyz/light-saber-robot' target="_blank"><button>Details/Github Repo</button></a>
+          </div>
+        </div>
+      </div>
+
       
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/assembly.gif" alt="Assembly">
           <div class="card-body">
-            <h5 class="card-title">Six Cylinder Radial Engine</h5>
-            <p class="card-text">This engine Solidworks assembly illustrates my ability to <strong>design, prototype, and simulate</strong> a product.
+            <h5 class="card-title">Six Cylinder Radial Engine - Solidworks</h5>
+            <p class="card-text">This Solidworks engine assembly illustrates my ability to <strong>design, prototype, and simulate</strong> a product.
               The project demonstrates skills in design intent, sketch & extrude tools, and
               integrating <strong>physical parameters</strong> in a simulation.<hr>
               <em>Skills:</em> Solidworks, Simulation, 3D Modeling, Finite Element Analysis, CAD<br>
@@ -401,12 +404,26 @@
 
   <div class="skl">
     <div class="icon">
-      <img src="media/skills/sw.png" alt="Solidworks">
-      <label>Solidworks</label>
+      <img src="media/skills/react.svg" alt="React.js">
+      <label>React.js</label>
     </div>
     <div class="icon">
-      <img src="media/skills/ansys.png" alt="ANSYS">
-      <label>ANSYS</label>
+      <img src="media/skills/firebase.png" alt="Firebase">
+      <label>Firebase</label>
+    </div>
+    <div class="icon">
+      <img src="media/skills/nodejs.svg" alt="Node.js">
+      <label>Node.js</label>
+    </div>
+
+    <div class="icon">
+      <img src="media/skills/postgresql.png" alt="PostgreSQL">
+      <label>PostgreSQL</label>
+    </div>
+
+    <div class="icon">
+      <img src="media/skills/sw.png" alt="Solidworks">
+      <label>Solidworks</label>
     </div>
     <div class="icon">
       <img src="media/skills/autocad.png" alt="AutoCAD">
@@ -429,6 +446,10 @@
       <label>Anaconda</label>
     </div>
     <div class="icon">
+      <img src="media/skills/docker.png" alt="Docker">
+      <label>Docker</label>
+    </div>
+    <div class="icon">
       <img src="media/skills/matlab.png" alt="MATLAB">
       <label>MATLAB</label>
     </div>
@@ -443,26 +464,6 @@
     <div class="icon">
       <img src="media/skills/js.svg" alt="JavaScript">
       <label>JavaScript</label>
-    </div>
-    <div class="icon">
-      <img src="media/skills/react.svg" alt="React.js">
-      <label>React.js</label>
-    </div>
-    <div class="icon">
-      <img src="media/skills/nodejs.svg" alt="Node.js">
-      <label>Node.js</label>
-    </div>
-    <div class="icon">
-      <img src="media/skills/npm.svg" alt="npm">
-      <label>npm</label>
-    </div>
-    <div class="icon">
-      <img src="media/skills/github.svg" alt="GitHub">
-      <label>GitHub</label>
-    </div>
-    <div class="icon">
-      <img src="media/skills/git.svg" alt="Git">
-      <label>Git</label>
     </div>
 
   </div>
@@ -601,11 +602,7 @@
     let display = "Copyright &copy " + currentYear + ", Jian Qin";
     document.getElementById('year').innerHTML = display;
   </script>
-  <script>
-    function jumpto(anchor){
-      window.location.href = anchor;
-    }
-  </script>
+  
 
 </body>
 </html>
