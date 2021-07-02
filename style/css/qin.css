@@ -11,6 +11,7 @@ body {
   text-align: center;
   font-family: New Tegomin;
   color: rebeccapurple;
+  font-size: medium;
 }
 
 header {
@@ -180,7 +181,7 @@ div.container.qin-text > p > em {
 }
 
 #intro {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .card-text {
