@@ -174,8 +174,15 @@ div.container.qin-text > p > em {
   height: 50px;
 }
 
-
 .demo {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+#intro {
+  font-size: 1.3rem;
+}
+
+.card-text {
+  font-size: 1.1rem;
 }

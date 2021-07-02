@@ -8,11 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style/css/boot.css">
     <link rel="stylesheet" href="style/css/qin.css">
-    <script>
-    function jumpto(anchor){
-      window.location.href = anchor;
-    }
-    </script>
+    
 </head>
 <body>
   <!--Nav Bar-->
@@ -91,23 +87,22 @@
             My Story
             <hr>
           </div>
-          <div class="container qin-text">
+          <div class="container qin-text" id='intro'>
             <p>
             <strong>Welcome!</strong> I am a Software and Mechanical Engineer located in California. 
-            I am passionate about <strong>problem solving</strong> and <strong>creative thinking.</strong> 
-            The experience section contains my <em>work experience, academic research, projects, and non-academic activities.</em> 
-            Feel free to reach out and <b><a href="#contact" style="text-decoration: none; color: rgb(0,100,100);">connect</a></b>.
+            I am passionate about <strong>Engineering Software</strong> and <strong>Renewable Energy.</strong> 
+            The Experience section contains my <em>work experience, academic research, projects, non-academic activities, and live hosted demos.</em> 
+            Feel free to reach out and contact me for any inquries.
             </p>
             <p>
-            For <strong>Software Engineering</strong>, I have extensive experience in design patterns, algorithms, and databases. 
-            I have solved business problems and built my projects with <em>JavaScript, Java, Python, C++, and frameworks including firebase, the PERN stack, Java Spring Boot, etc.</em> 
-            Live Demos and Github Repositories are available in the <b><a href="#projects" style="text-decoration: none; color: rgb(0,100,100);">Experience section</a></b>
+            For <strong>Software Engineering</strong>, I have experience in algorithms, design patterns, databases, and popular frameworks. 
+            I am proficient with the PERN stack, and built my projects with <em>JavaScript, Java, Python, C++, firebase, Java Spring Boot, etc.</em> 
+            Live Demos and Github Repositories are available under each project in the Experience section.
             </p>
             <p>
             For <strong>Mechanical Engineering</strong>, I have built competiton robots, thermostatic mug, pendulum, and other projects 
-            involving <em>controls system, machine learning, 3D Modeling, simulation, manufacturing, and design of experiments.</em> 
-            My main interests in engineering are engineering software, controls system, and renewable energy. 
-            I am fluent in engineering softwares such as <em>Solidworks, AutoCAD, MATLAB, and Inventor.</em>
+            involving <em>controls system, circuits, sensors, machine learning, 3D Modeling, machine tools, simulation, design of experiment, etc.</em> 
+            I am proficient in engineering softwares such as <em>Solidworks, AutoCAD, MATLAB, and Inventor.</em>
             </p>
           </div>
         </div>
@@ -200,7 +195,7 @@
               The web app solves any <strong>valid sudoku</strong> within the blink of an eye using the <strong>backtracking algorithm</strong>.  
               The web app also checks and rejects any <strong>invalid inputs</strong> including invalid characters, soduko without any valid solution, or sudoku with more than one valid solution.
               <hr>
-              <em>Skills:</em> React & Backtracking algorithm.<br>
+              <em>Skills:</em> Javascript, React, Backtracking algorithm.<br>
             </p>
             <a class='demo' href='https://sudoku-xyz.netlify.app/' target="_blank"><button>Live Demo</button></a>
             <a class='demo' href='https://github.com/qinjianxyz/sudoku' target="_blank"><button>Github Repo</button></a>
@@ -218,7 +213,7 @@
               edits. I created the <strong>wrap around</strong> feature to improve the overall
               accauracy on <strong>edge cases</strong> and visuals of the simulation. Bootstrap buttons are used.
               <hr>
-              <em>Skills:</em> React, Bootstrap, Simulation.<br>
+              <em>Skills:</em> Javascript, React, Bootstrap, Simulation.<br>
             </p>
             <a class='demo' href='https://gameoflife-xyz.netlify.app/' target="_blank"><button>Live Demo</button></a>
             <a class='demo' href='https://github.com/qinjianxyz/gameoflife' target="_blank"><button>Github Repo</button></a>
@@ -236,7 +231,7 @@
               The parachute is activated at a certain altitute.  
               <strong>Physical parameters</strong> include mass, gravity, air drag, air density, thruster, etc. 
               <strong>Data visualization</strong> include landing time, landing speed, orbital period.<hr>
-              <em>Skills:</em> Simulation, Data Visualization, MATLAB Programming, Topology<br>
+              <em>Skills:</em> MATLAB, Simulation, Data Visualization, Topology<br>
             </p>
             <a class='demo' href='https://github.com/qinjianxyz/mars-landing' target="_blank"><button>Details/Github Repo</button></a>
           </div>
@@ -285,7 +280,7 @@
               the creation of digital prototype in <strong>AutoCAD and Inventor</strong>, and the manufacturing process involving machine skills, 
               laser cutting, and other Tools. Potential energy of the nuts is <strong>converted</strong> into kinetic energy for movement.
               <hr>
-              <em>Skills:</em> Design, Manufacturing, AutoCAD, Inventor<br>
+              <em>Skills:</em> Inventor, AutoCAD, Machine Tools<br>
             </p>
           </div>
         </div>
@@ -300,7 +295,7 @@
               using Arduino sensor, circuits, and python programming.
               The parts are designed in <strong>Fusion360</strong> and 3D printed. Similar commercial 
               products have been popular and successful.<hr>
-              <em>Skills:</em> Arduino, Python Programming, Circuits Design, Prototype<br>
+              <em>Skills:</em> Python, Arduino, Circuits Design, Prototype<br>
             </p>
           </div>
         </div>
@@ -358,7 +353,7 @@
               <strong>cultivating interests</strong> in sports for kids in kindergarten through basketball and soccer. 
               Led activities and games for fun, protected kids from injuries, and mentored <strong>good sportsmanship</strong>. 
               The smile on their face is all that matters to us at the end.<hr>
-              <em>Skills:</em> Community Service, sports, leadership<br>
+              <em>Skills:</em> Community Service, Sports, Leadership<br>
             </p>
           </div>
         </div>
@@ -596,6 +591,11 @@
   </footer>
 
   <script src="style/js/qinjs.js"></script>
+  <script>
+    function jumpto(anchor){
+      window.location.href = anchor;
+    }
+  </script>
   <script>
     let d = new Date();
     let currentYear = d.getFullYear();

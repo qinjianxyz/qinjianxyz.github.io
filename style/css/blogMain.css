@@ -1,4 +1,11 @@
 a {
-    text-decoration: none;
-    color: rgb(0, 0, 100)
+  text-decoration: none;
+  color: rgb(0, 0, 100);
+}
+
+.list-group .list-group-item {
+  margin: 5px;
+  border: 2px solid salmon;
+  text-align: center;
+  font-size: larger;
 }

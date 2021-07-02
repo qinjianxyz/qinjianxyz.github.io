@@ -1,4 +1,13 @@
 div.container.blog {
-    max-width: min(80%, 800px);
-    min-width: 40%;
+  max-width: min(80%, 800px);
+  min-width: 40%;
+}
+
+.container p {
+  font-size: x-large;
+}
+
+.text-center {
+  font-weight: bold;
+  color: rgb(0, 0, 100);
 }
