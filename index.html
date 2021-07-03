@@ -1,115 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jian Qin Home Page</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="style/css/boot.css">
-    <link rel="stylesheet" href="style/css/qin.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jian Qin Home Page</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style/css/boot.css">
+  <link rel="stylesheet" href="style/css/qin.css">
+
 </head>
+
 <body>
   <!--Nav Bar-->
   <header class="header">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-          <div class="container">
-            <a class="navbar-brand" href="#">Jian Qin (Ray)</a>
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#projects');">Experience</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#skills');">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#resume');">Resume</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#awards');">Awards</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('#contact');">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" onclick="jumpto('./blog.html');">Blog</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('./blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <div style="height: 120px;"></div>
   <!--Carousel-->
   <div class="container">
-      <div class="row gy-5">
+    <div class="row gy-5">
 
-        <div class="col-xl" style="padding: 0; margin-top: auto; margin-bottom: auto;">
-          <div class="container">
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                  <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="media/carol/1.png" class="d-block w-100" alt="Ocean">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="media/carol/2.jpeg" class="d-block w-100"  alt="Marathon">
-                  </div>
-                  <div class="carousel-item">
-                      <img src="media/carol/3.jpeg" class="d-block w-100" alt="Graduation">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="media/carol/4.jpeg" class="d-block w-100" alt="Chip">
-                  </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                  </button>
+      <div class="col-xl" style="padding: 0; margin-top: auto; margin-bottom: auto;">
+        <div class="container">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="media/carol/1.png" class="d-block w-100" alt="Ocean">
               </div>
+              <div class="carousel-item">
+                <img src="media/carol/2.jpeg" class="d-block w-100" alt="Marathon">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/3.jpeg" class="d-block w-100" alt="Graduation">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/4.jpeg" class="d-block w-100" alt="Chip">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
-
-        <div class="col-xl" style="padding: 0; margin: 0;">
-          <div class="container qin-title">
-            My Story
-            <hr>
-          </div>
-          <div class="container qin-text" id='intro'>
-            <p>
-            <strong>Welcome!</strong> I am a Software and Mechanical Engineer located in California. 
-            I am passionate about <strong>Simulation</strong> and <strong>Renewable Energy.</strong> 
-            The Experience section contains my <em>work experience, academic research, projects, non-academic activities, and live hosted demos.</em> 
-            Feel free to reach out and contact me for any inquries.
-            </p>
-            <p>
-            For <strong>Software Engineering</strong>, I have experience in algorithms, design patterns, databases, and popular frameworks. 
-            I am proficient with the PERN stack, and built my projects with <em>JavaScript, Java, Python, C++, firebase, Java Spring Boot, etc.</em> 
-            Live Demos and Github Repositories are available under each project in the Experience section.
-            </p>
-            <p>
-            For <strong>Mechanical Engineering</strong>, I have built competiton robots, thermostatic mug, pendulum, and other projects 
-            involving <em>controls system, circuits, sensors, machine learning, 3D Modeling, machine tools, simulation, design of experiment, etc.</em> 
-            I am proficient in engineering softwares such as <em>Solidworks, AutoCAD, MATLAB, and Inventor.</em>
-            </p>
-          </div>
-        </div>
-
-        
-
       </div>
+
+      <div class="col-xl" style="padding: 0; margin: 0;">
+        <div class="container qin-title">
+          My Story
+          <hr>
+        </div>
+        <div class="container qin-text" id='intro'>
+          <p>
+            <strong>Welcome!</strong> I am a Software and Mechanical Engineer located in California.
+            I am passionate about <strong>Simulation</strong> and <strong>Renewable Energy.</strong>
+            The Experience section contains my <em>work experience, academic research, projects, non-academic
+              activities, and live hosted demos.</em>
+            Feel free to reach out and contact me for any inquries.
+          </p>
+          <p>
+            For <strong>Software Engineering</strong>, I have experience in algorithms, design patterns, databases, and
+            popular frameworks.
+            I am proficient with the PERN stack, and built my projects with <em>JavaScript, Java, Python, C++, firebase,
+              Java Spring Boot, etc.</em>
+            Live Demos and Github Repositories are available under each project in the Experience section.
+          </p>
+          <p>
+            For <strong>Mechanical Engineering</strong>, I have built competiton robots, thermostatic mug, pendulum, and
+            other projects
+            involving <em>controls system, circuits, sensors, machine learning, 3D Modeling, machine tools, simulation,
+              design of experiment, etc.</em>
+            I am proficient in engineering softwares such as <em>Solidworks, AutoCAD, MATLAB, and Inventor.</em>
+          </p>
+        </div>
+      </div>
+
+
+
+    </div>
   </div>
 
   <!--Plant Tree-->
@@ -144,33 +161,40 @@
         </div>
       </div>
       -->
-      <div class="col-lg-4 d-flex align-items-stretch" >
+      <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/TA.jpg" alt="Instructional Assisstant">
           <div class="card-body">
             <h5 class="card-title">Instructional Assisstant</h5>
             <p class="card-text">
-              Employed by the department of Mechanical and Aerospace Engineering to assisst professors for various courses. 
-              <strong>Tutor</strong> students during offce hours, <strong>assisst</strong> professor to prepare course and exam material, 
-              conduct oral exams, grade assignment, participate in <strong>pedagogy research</strong>, and evaluate student's paper & design. 
-              Courses assissted: MAE40 Linear Circuits with Professor Jorge Cortes, MAE131A Solid Mechanics with Professor Huihui Qi, and David Kamensky.
+              Employed by the Department of Mechanical and Aerospace Engineering to assist professors with various
+              courses. <strong>Tutor</strong> students during office hours, assist professor to prepare the course and
+              exam material,
+              conduct oral exams, grade assignments, and evaluate student's paper &
+              design. Courses assisted: MAE40 <strong>Linear Circuits</strong> with Professor Jorge Cortes, MAE131A <strong>Solid Mechanics</strong> with
+              Professor Huihui Qi, and David Kamensky.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4 d-flex align-items-stretch" >
+      <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/yelp.png" alt="Data">
           <div class="card-body">
             <h5 class="card-title">Qualcomm Institute Data Analyst</h5>
             <p class="card-text">
-              During the 6 months internship, our team focused on analyzing San Diego <strong>businesses performance</strong>. 
-              We worked with the open city datasets, and I was responsible for scaling up our data analysis with the <strong>Yelp API</strong>. 
-              I was able to acquire business rating and reviews to perform <strong>sentiment analysis</strong> as well as descriptive statistics on business performance. 
-              Most importantly, I conducted <strong>data integration</strong> to connect the datasets to find more powerful results.
+              During the 6 months internship, our team focused on analyzing San Diego <strong>businesses
+                performance</strong>.
+              We worked with the open city datasets, and I was responsible for scaling up our data analysis with the
+              <strong>Yelp API</strong>.
+              I was able to acquire business ratings and reviews to perform <strong>sentiment analysis</strong> as well
+              as descriptive statistics on business performance.
+              Most importantly, I conducted <strong>data integration</strong> to connect the datasets to find more
+              powerful results.
             </p>
-            <a class='demo' href='https://github.com/qinjianxyz/business-analysis' target="_blank"><button>Details/Github Repo</button></a>
+            <a class='demo' href='https://github.com/qinjianxyz/business-analysis'
+              target="_blank"><button>Details/Github Repo</button></a>
           </div>
         </div>
       </div>
@@ -192,8 +216,10 @@
           <div class="card-body">
             <h5 class="card-title">Sudoku Solver</h5>
             <p class="card-text">
-              The web app solves any <strong>valid sudoku</strong> within the blink of an eye using the <strong>backtracking algorithm</strong>.  
-              The web app also checks and rejects any <strong>invalid inputs</strong> including invalid characters, soduko without any valid solution, or sudoku with more than one valid solution.
+              The web app solves any <strong>valid sudoku</strong> within the blink of an eye using the
+              <strong>backtracking algorithm</strong>.
+              The web app also checks and rejects any <strong>invalid inputs</strong> including invalid characters,
+              soduko without any valid solution, or sudoku with more than one valid solution.
               <hr>
               <em>Skills:</em> Javascript, React, Backtracking algorithm.<br>
             </p>
@@ -209,14 +235,16 @@
           <div class="card-body">
             <h5 class="card-title">The Game of Life</h5>
             <p class="card-text">
-              The web app simulates the <strong>game of life</strong> invented by John Conway. Beau Carnes made the initial
+              The web app simulates the <strong>game of life</strong> invented by John Conway. Beau Carnes made the
+              initial
               edits. I created the <strong>wrap around</strong> feature to improve the overall
               accauracy on <strong>edge cases</strong> and visuals of the simulation. Bootstrap buttons are used.
               <hr>
               <em>Skills:</em> Javascript, React, Bootstrap, Simulation.<br>
             </p>
             <a class='demo' href='https://gameoflife-xyz.netlify.app/' target="_blank"><button>Live Demo</button></a>
-            <a class='demo' href='https://github.com/qinjianxyz/gameoflife' target="_blank"><button>Github Repo</button></a>
+            <a class='demo' href='https://github.com/qinjianxyz/gameoflife' target="_blank"><button>Github
+                Repo</button></a>
           </div>
         </div>
       </div>
@@ -227,13 +255,15 @@
           <img class="card-img-top" src="media/projects/mars.jpg" alt="Mars Landing">
           <div class="card-body">
             <h5 class="card-title">Mars Landing Simulation</h5>
-            <p class="card-text"><strong>Simulated</strong> 6 different trajectories of capsules landing on Mars. 
-              The parachute is activated at a certain altitute.  
-              <strong>Physical parameters</strong> include mass, gravity, air drag, air density, thruster, etc. 
-              <strong>Data visualization</strong> include landing time, landing speed, orbital period.<hr>
+            <p class="card-text"><strong>Simulated</strong> 6 different trajectories of capsules landing on Mars.
+              The parachute is activated at a certain altitute.
+              <strong>Physical parameters</strong> include mass, gravity, air drag, air density, thruster, etc.
+              <strong>Data visualization</strong> include landing time, landing speed, orbital period.
+              <hr>
               <em>Skills:</em> MATLAB, Simulation, Data Visualization, Topology<br>
             </p>
-            <a class='demo' href='https://github.com/qinjianxyz/mars-landing' target="_blank"><button>Details/Github Repo</button></a>
+            <a class='demo' href='https://github.com/qinjianxyz/mars-landing' target="_blank"><button>Details/Github
+                Repo</button></a>
           </div>
         </div>
       </div>
@@ -243,42 +273,49 @@
           <img class="card-img-top" src="media/projects/robot.png" alt="Robot Contest">
           <div class="card-body">
             <h5 class="card-title">LightSabers Picking Robot - Autodesk Inventor</h5>
-            <p class="card-text"><strong>Designed</strong> and manufactured a competition robot in Autodesk Inventor. 
-              Able to move, rotate, lift, and stack objects with <strong>precision</strong>. 
-              Created CAD design & utilized machine shop tools and design theories for <strong>prototype</strong>.<hr>
-              <em>Skills:</em> Inventor, AutoCAD, Design of Machine Elements, Manufacturing, 
+            <p class="card-text"><strong>Designed</strong> and manufactured a competition robot in Autodesk Inventor.
+              Able to move, rotate, lift, and stack objects with <strong>precision</strong>.
+              Created CAD design & utilized machine shop tools and design theories for <strong>prototype</strong>.
+              <hr>
+              <em>Skills:</em> Inventor, AutoCAD, Design of Machine Elements, Manufacturing,
               3D Printing.<br>
             </p>
-            <a class='demo' href='https://github.com/qinjianxyz/light-saber-robot' target="_blank"><button>Details/Github Repo</button></a>
+            <a class='demo' href='https://github.com/qinjianxyz/light-saber-robot'
+              target="_blank"><button>Details/Github Repo</button></a>
           </div>
         </div>
       </div>
 
-      
+
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/assembly.gif" alt="Assembly">
           <div class="card-body">
             <h5 class="card-title">Six Cylinder Radial Engine - Solidworks</h5>
-            <p class="card-text">This Solidworks engine assembly illustrates my ability to <strong>design, prototype, and simulate</strong> a product.
+            <p class="card-text">This Solidworks engine assembly illustrates my ability to <strong>design, prototype,
+                and simulate</strong> a product.
               The project demonstrates skills in design intent, sketch & extrude tools, and
-              integrating <strong>physical parameters</strong> in a simulation.<hr>
+              integrating <strong>physical parameters</strong> in a simulation.
+              <hr>
               <em>Skills:</em> Solidworks, Simulation, 3D Modeling, Finite Element Analysis, CAD<br>
             </p>
-            <a class='demo' href='https://github.com/qinjianxyz/six-cylinder-radial-engine' target="_blank"><button>Details/Github Repo</button></a>
+            <a class='demo' href='https://github.com/qinjianxyz/six-cylinder-radial-engine'
+              target="_blank"><button>Details/Github Repo</button></a>
           </div>
         </div>
       </div>
 
-      
+
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/pendulum-square.png" alt="Pendulum">
           <div class="card-body">
             <h5 class="card-title">The Pendulum Project</h5>
-            <p class="card-text">The Pendulum project involves the design of the pendulum body, 
-              the creation of digital prototype in <strong>AutoCAD and Inventor</strong>, and the manufacturing process involving machine skills, 
-              laser cutting, and other Tools. Potential energy of the nuts is <strong>converted</strong> into kinetic energy for movement.
+            <p class="card-text">The Pendulum project involves the design of the pendulum body,
+              the creation of digital prototype in <strong>AutoCAD and Inventor</strong>, and the manufacturing process
+              involving machine skills,
+              laser cutting, and other Tools. Potential energy of the nuts is <strong>converted</strong> into kinetic
+              energy for movement.
               <hr>
               <em>Skills:</em> Inventor, AutoCAD, Machine Tools<br>
             </p>
@@ -291,10 +328,11 @@
           <img class="card-img-top" src="media/projects/mug-square.png" alt="Mug">
           <div class="card-body">
             <h5 class="card-title">Thermostatic Mug</h5>
-            <p class="card-text">The thermostatic mug can maintain a <strong>customized temperature</strong> 
+            <p class="card-text">The thermostatic mug can maintain a <strong>customized temperature</strong>
               using Arduino sensor, circuits, and python programming.
-              The parts are designed in <strong>Fusion360</strong> and 3D printed. Similar commercial 
-              products have been popular and successful.<hr>
+              The parts are designed in <strong>Fusion360</strong> and 3D printed. Similar commercial
+              products have been popular and successful.
+              <hr>
               <em>Skills:</em> Python, Arduino, Circuits Design, Prototype<br>
             </p>
           </div>
@@ -315,16 +353,18 @@
 
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
-            <img class="card-img-top" src="media/projects/prom.jpg" alt="Prom">
-            <div class="card-body">
-                <h5 class="card-title">PROM 2K18</h5>
-                <p class="card-text">
-                  As the Junior class President, my fellows and I <strong>designed</strong> the theme, contacted venues, 
-                  organized fund raising and ticket sales for Prom 2018. This would have never been possible without the support 
-                  and <strong>sincere dedication</strong> from students and parents volunteers.<hr>
-                  <em>Skills:</em> Event Planning, Collaboration, Leadership, TeamWork<br>
-                </p>
-            </div>
+          <img class="card-img-top" src="media/projects/prom.jpg" alt="Prom">
+          <div class="card-body">
+            <h5 class="card-title">PROM 2K18</h5>
+            <p class="card-text">
+              As the Junior class President, my fellows and I <strong>designed</strong> the theme, contacted venues,
+              organized fund raising and ticket sales for Prom 2018. This would have never been possible without the
+              support
+              and <strong>sincere dedication</strong> from students and parents volunteers.
+              <hr>
+              <em>Skills:</em> Event Planning, Collaboration, Leadership, TeamWork<br>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -334,10 +374,11 @@
           <img class="card-img-top" src="media/projects/community-square.jpg" alt="Community">
           <div class="card-body">
             <h5 class="card-title">Fitness Camp</h5>
-            <p class="card-text"> Managed fitness group events Over <strong>60 People</strong>. 
-              Organized group hiking & workout sessions. 
-              Prepared seminar on nutrition and <strong>progressive overload</strong>. 
-              Helped over 100 people <strong>achieve</strong> unique fitness goals.<hr>
+            <p class="card-text"> Managed fitness group events Over <strong>60 People</strong>.
+              Organized group hiking & workout sessions.
+              Prepared seminar on nutrition and <strong>progressive overload</strong>.
+              Helped over 100 people <strong>achieve</strong> unique fitness goals.
+              <hr>
               <em>Skills:</em> Community Service, Fitness, Leadership<br>
             </p>
           </div>
@@ -349,29 +390,32 @@
           <img class="card-img-top" src="media/projects/coach.jpg" alt="Coach">
           <div class="card-body">
             <h5 class="card-title">Youth Sports Camp</h5>
-            <p class="card-text"><strong>Coached</strong> youth sports camp for 2 years. The camp is focused on 
-              <strong>cultivating interests</strong> in sports for kids in kindergarten through basketball and soccer. 
-              Led activities and games for fun, protected kids from injuries, and mentored <strong>good sportsmanship</strong>. 
-              The smile on their face is all that matters to us at the end.<hr>
+            <p class="card-text"><strong>Coached</strong> youth sports camp for 2 years. The camp is focused on
+              <strong>cultivating interests</strong> in sports for kids in kindergarten through basketball and soccer.
+              Led activities and games for fun, protected kids from injuries, and mentored <strong>good
+                sportsmanship</strong>.
+              The smile on their face is all that matters to us at the end.
+              <hr>
               <em>Skills:</em> Community Service, Sports, Leadership<br>
             </p>
           </div>
         </div>
       </div>
 
-      
+
 
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/projects/kenya-square.jpg" alt="Kenya">
           <div class="card-body">
             <h5 class="card-title">Construction Investment Management</h5>
-            <p class="card-text">Managed apartments for rental in Kenya. 
-              Communicate with developers and <strong>international customers</strong>. 
-              Negotiate deals, draft, and revise leases with <strong>professional</strong> lawyers. 
+            <p class="card-text">Managed apartments for rental in Kenya.
+              Communicate with developers and <strong>international customers</strong>.
+              Negotiate deals, draft, and revise leases with <strong>professional</strong> lawyers.
               It has been a tremendously valuable opportunity to work with
-              people <strong>across the world</strong>, not only from Africa, but also from Europe, 
-              Asia, Oceania, etc.<hr>
+              people <strong>across the world</strong>, not only from Africa, but also from Europe,
+              Asia, Oceania, etc.
+              <hr>
               <em>Skills:</em> Management, Investment, Business<br>
             </p>
           </div>
@@ -453,8 +497,8 @@
       <label>HTML 5</label>
     </div>
     <div class="icon">
-        <img src="media/skills/css3.svg" alt="CSS">
-        <label>CSS3</label>
+      <img src="media/skills/css3.svg" alt="CSS">
+      <label>CSS3</label>
     </div>
     <div class="icon">
       <img src="media/skills/js.svg" alt="JavaScript">
@@ -503,25 +547,29 @@
           <img class="card-img-top" src="media/awards/veritas.jpg" alt="Veritas Award">
           <div class="card-body">
             <h5 class="card-title">Veritas Award</h5>
-            <p class="card-text">The <strong>highest honor</strong> San Domenico School bestows on graduating seniors (1 per class). 
-              It is awarded to the student who, through a spirit of <strong>loyalty and duty</strong>, 
-              has contributed generously to San Domenico through study, friendship, and giving of self. 
-              Nominated, voted on, and awarded this honor by faculty, this student encompasses the qualities 
+            <p class="card-text">The <strong>highest honor</strong> San Domenico School bestows on graduating seniors (1
+              per class).
+              It is awarded to the student who, through a spirit of <strong>loyalty and duty</strong>,
+              has contributed generously to San Domenico through study, friendship, and giving of self.
+              Nominated, voted on, and awarded this honor by faculty, this student encompasses the qualities
               of a natural leader and a <strong>devoted friend</strong>.
             </p>
           </div>
         </div>
       </div>
 
-      
+
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="card">
           <img class="card-img-top" src="media/awards/amc.jpg" alt="AMC10">
           <div class="card-body">
             <h5 class="card-title">AMC10 Winner</h5>
-            <p class="card-text">Participated and won the <strong>AMC 10</strong> Winner Certificate in San Domenico School 
-              for <strong>highest achieving</strong> score in 2017. Other Mathematic Awards Include Certificate of Merit from 
-              Mathematics League for Superior Achievement of 3.8/5 average in <strong>CalMath Competition</strong>. Certificate 
+            <p class="card-text">Participated and won the <strong>AMC 10</strong> Winner Certificate in San Domenico
+              School
+              for <strong>highest achieving</strong> score in 2017. Other Mathematic Awards Include Certificate of Merit
+              from
+              Mathematics League for Superior Achievement of 3.8/5 average in <strong>CalMath Competition</strong>.
+              Certificate
               of Merit from Puple Comet Math Meet.
             </p>
           </div>
@@ -534,15 +582,15 @@
           <img class="card-img-top" src="media/awards/ncs.jpg" alt="NCS">
           <div class="card-body">
             <h5 class="card-title">North Coast Section Participant</h5>
-            <p class="card-text"><strong>Qualified</strong> for North Coast Section Les Schwab Tires Championships 
-              in Track & Field from BCL conference. Competed in Discus for the <strong>Team</strong>. 
-              Recognized as Most Valuable Players for 2 years, and Most Improved for 1 year. 
-              Athletic Achievements also include <strong>BCL Championships</strong> in Varsity Basketball, Most Improved Player 
+            <p class="card-text"><strong>Qualified</strong> for North Coast Section Les Schwab Tires Championships
+              in Track & Field from BCL conference. Competed in Discus for the <strong>Team</strong>.
+              Recognized as Most Valuable Players for 2 years, and Most Improved for 1 year.
+              Athletic Achievements also include <strong>BCL Championships</strong> in Varsity Basketball, Most Improved
+              Player
               in Varsity Basketball, and Second Place in Intramural Basketball in College.
             </p>
           </div>
         </div>
-
       </div>
 
     </div>
@@ -551,10 +599,10 @@
   <!--Quote-->
   <div class='container quote' id="contact">
     "Learning is like rowing upstream:<br>
-     not to advance is to drop back."
+    not to advance is to drop back."
   </div>
 
-  
+
 
   <!--Contact-->
   <div class="container">
@@ -563,7 +611,8 @@
       <hr>
     </div>
     <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" style="width: 100%; height:1000px" src="https://docs.google.com/forms/d/e/1FAIpQLScq1bEhN2Vv9csKieBWvK3ngH_VWANYYyy8kopnwSGvubov0w/viewform?embedded=true" ></iframe>
+      <iframe class="embed-responsive-item" style="width: 100%; height:1000px"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScq1bEhN2Vv9csKieBWvK3ngH_VWANYYyy8kopnwSGvubov0w/viewform?embedded=true"></iframe>
     </div>
   </div>
 
@@ -573,13 +622,14 @@
       <div class="skl">
 
         <div class="ft">
-          <a href="https://www.linkedin.com/in/jian-qin-ucsd/" target="_blank"><img src="media/skills/linkedin.png" alt="LinkedIn"></a>
+          <a href="https://www.linkedin.com/in/jian-qin-ucsd/" target="_blank"><img src="media/skills/linkedin.png"
+              alt="LinkedIn"></a>
         </div>
 
         <div class="ft">
           <a href="https://github.com/qinjianxyz" target="_blank"><img src="media/skills/github.png" alt="Github"></a>
         </div>
-    
+
       </div>
 
       <div style="text-align: center;">
@@ -587,22 +637,23 @@
         All rights reserved.
       </div>
       <div style="height: 50px;"></div>
-      
-  </footer>
 
-  <script src="style/js/qinjs.js"></script>
-  <script>
-    function jumpto(anchor){
-      window.location.href = anchor;
-    }
-  </script>
-  <script>
-    let d = new Date();
-    let currentYear = d.getFullYear();
-    let display = "Copyright &copy " + currentYear + ", Jian Qin";
-    document.getElementById('year').innerHTML = display;
-  </script>
-  
+      </footer>
+
+      <script src="style/js/qinjs.js"></script>
+      <script>
+        function jumpto(anchor) {
+          window.location.href = anchor;
+        }
+      </script>
+      <script>
+        let d = new Date();
+        let currentYear = d.getFullYear();
+        let display = "Copyright &copy " + currentYear + ", Jian Qin";
+        document.getElementById('year').innerHTML = display;
+      </script>
+
 
 </body>
+
 </html>
