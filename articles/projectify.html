@@ -1,186 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projectify Learning</title>
 
-    <link rel="stylesheet" href="../style/css/boot.css" />
-    <link rel="stylesheet" href="../style/css/qin.css" />
-    <link rel="stylesheet" href="../style/css/blogPage.css" />
-  </head>
-  <body style="background-image: url(../background.png)">
-    <!--Nav Bar-->
-    <header class="header">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projectify Learning</title>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#projects');"
-                  >Experience</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#skills');"
-                  >Skills</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#resume');"
-                  >Resume</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#awards');"
-                  >Awards</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#contact');"
-                  >Contact</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  data-bs-toggle="collapse"
-                  data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../blog.html');"
-                  >Blog</a
-                >
-              </li>
-            </ul>
-          </div>
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <div style="height: 120px"></div>
-    <div class="container blog">
-      <p>26 April 2021</p>
-      <p class="text-center"><b>Projectify Learning</b></p>
-      <hr />
-      <p>
-        Why do we learn? Sometimes we learn just for fun, for the sake of it.
-        Many topics are interesting in their own right. I often find myself
-        reading articles on data science and probability even though I have no
-        plan of becoming a data scientist. I sincerely find the content
-        intrinsically interesting and would be potentially helpful for my future
-        work. But what occurs much more often is that students are trying very
-        hard to learn without understanding why. This is a rampant phenomenon,
-        and I firmly believe it is not given enough serious thoughts that it
-        deserves. The most immediate outcome is that talented and hardworking
-        students find themselves taking class after class and still have no clue
-        on what they could do with the knowledge they obtained through hard
-        work. This phenomenon has bothered me as well, so I have designed a
-        robust system called “projectify learning” to ferociously and
-        relentlessly fight back. The concept of a projectify learning is very
-        simple. “Do something with your knowledge.” In fact, this is not a
-        foreign or even a controversial idea. Most students would agree that
-        they should do more projects involving real world applications to gain
-        more value out of their education. The problem is that there are a lot
-        of misconceptions of projects and many people simply do not know where
-        to start. The goal of this article is to help people in these
-        situations.
-      </p>
-      <p>
-        “I am just a student and I do not have enough experience to start a
-        project.” Many people have the misconception that one would need 10
-        years of experience in the industry and at least a master’s degree to
-        start a project. Nothing can be further from the truth. We live in an
-        era of information explosion, and we can learn anything we want
-        basically for free. There are amazing sources of knowledge online, free
-        courses, YouTube, etc. The upside is that anyone with the access to
-        internet can learn. The downside of the is that we will never learn
-        everything. It is actually not a downside but just a reality that we
-        need to live with. The most important thing is just to start doing
-        something. Expecting one would be more prepared to start a project after
-        learning one more thing is like expecting one would become a better
-        driver after biking one more mile.
-      </p>
-      <p>
-        “Now I understand the benefits of projects and I want to start one, but
-        I do not know where to start.” The best tip I can give is to look for
-        cross-disciplinary opportunities. I have taken a course on material
-        science and for a long time I did not know what I could do it. One day
-        one of my engineer friends complained to me that it takes a long time to
-        find the material she needs to use in her design project. It would be
-        very helpful if a program could take in the parameters she wants and
-        recommend 5 materials that best match her criterion. That clicks with me
-        immediately. “Now, that is an industry problem.” I thought to myself. I
-        quickly identified that the material selector is a multi-disciplinary
-        challenge. It requires knowledge in material science and ultimately it
-        is an optimization problem involving both categorical and numerical
-        parameters, which is a great project idea. There are so more more
-        examples like this where I have connected two seemingly irrelevant
-        fields together to solve an real life problem.
-      </p>
-      <p>
-        Ultimately, projectify learning is a thinking strategy. It is about
-        taking one step further from the classroom to do something tangible and
-        useful. This thinking strategy definitely needs practice, especially
-        learning without practice is far too common in our educational
-        institutions. With enough practice and understanding of this philosophy,
-        I believe the concept of projectify learning could help individuals
-        become better learners and better doers at the same time.
-      </p>
-
-      <hr />
-      <div style="text-align: center">
-        <div id="year"></div>
-        All rights reserved.
       </div>
-      <div style="height: 50px"></div>
-    </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>26 April 2021</p>
+    <p class="text-center"><b>Projectify Learning</b></p>
+    <hr />
+    <p>
+      Why do we learn? Sometimes we learn just for fun, for the sake of it.
+      Many topics are interesting in their own right. I often find myself
+      reading articles on data science and probability even though I have no
+      plan of becoming a data scientist. I sincerely find the content
+      intrinsically interesting and would be potentially helpful for my future
+      work.
+    </p>
+    <p>With that said, what occurs much more often is that students are trying very
+      hard to learn without understanding why. This is a rampant phenomenon,
+      and I firmly believe it is not given enough serious thoughts that it
+      deserves. The most immediate outcome is that talented and hardworking
+      students find themselves taking class after class and still have no clue
+      on what they could do with the knowledge they obtained through hard
+      work. This phenomenon has bothered me as well, so I have designed a
+      robust system called “projectify learning” to ferociously and
+      relentlessly fight back. The concept of a projectify learning is very
+      simple. “Do something with your knowledge.” In fact, this is not a
+      foreign or even a controversial idea. Most students would agree that
+      they should do more projects involving real world applications to gain
+      more value out of their education. The problem is that there are a lot
+      of misconceptions of projects and many people simply do not know where
+      to start. The goal of this article is to help people in these
+      situations.
+    </p>
+    <p>
+      “I am just a student and I do not have enough experience to start a
+      project.” Many people have the misconception that one would need 10
+      years of experience in the industry and at least a master’s degree to
+      start a project. Nothing can be further from the truth. We live in an
+      era of information explosion, and we can learn anything we want
+      basically for free. There are amazing sources of knowledge online, free
+      courses, YouTube, etc. The upside is that anyone with the access to
+      internet can learn. The downside of the is that we will never learn
+      everything. It is actually not a downside but just a reality that we
+      need to live with. The most important thing is just to start doing
+      something. Expecting one would be more prepared to start a project after
+      learning one more thing is like expecting one would become a better
+      driver after biking one more mile.
+    </p>
+    <p>
+      “Now I understand the benefits of projects and I want to start one, but
+      I do not know where to start.” The best tip I can give is to look for
+      cross-disciplinary opportunities. I have taken a course on material
+      science and for a long time I did not know what I could do it. One day
+      one of my engineer friends complained to me that it takes a long time to
+      find the material she needs to use in her design project. It would be
+      very helpful if a program could take in the parameters she wants and
+      recommend 5 materials that best match her criterion. That clicks with me
+      immediately. “Now, that is an industry problem.” I thought to myself. I
+      quickly identified that the material selector is a multi-disciplinary
+      challenge. It requires knowledge in material science and ultimately it
+      is an optimization problem involving both categorical and numerical
+      parameters, which is a great project idea. There are so more more
+      examples like this where I have connected two seemingly irrelevant
+      fields together to solve an real life problem.
+    </p>
+    <p>
+      Ultimately, projectify learning is a thinking strategy. It is about
+      taking one step further from the classroom to do something tangible and
+      useful. This thinking strategy definitely needs practice, especially
+      learning without practice is far too common in our educational
+      institutions. With enough practice and understanding of this philosophy,
+      I believe the concept of projectify learning could help individuals
+      become better learners and better doers at the same time.
+    </p>
 
-    <script src="../../style/js/qinjs.js"></script>
-    <script>
-      let d = new Date();
-      let currentYear = d.getFullYear();
-      let display = "Copyright &copy " + currentYear + ", Jian Qin";
-      document.getElementById("year").innerHTML = display;
-    </script>
-    <script>
-      function jumpto(anchor) {
-        window.location.href = anchor;
-      }
-    </script>
-  </body>
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
 </html>
