@@ -1,2 +1,1 @@
-# qinjianxyz.github.io
-Personal Website
+# Jian Qin Personal Website
