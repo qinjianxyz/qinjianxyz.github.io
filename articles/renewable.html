@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importance of Renewable Energy</title>
+
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>27 Nov 2021</p>
+    <p class="text-center"><b>Importance of Renewable Energy</b></p>
+    <hr />
+    <p>Renewable energy has been a hot topic in the last decade (no pun intended). I personally believe Elon Musk has
+      the right idea on this topic. It is not purely an issue of global warming, but also an issue of finite
+      resources. I understand that global warming is a real crisis for the mankind, but the main reason I support
+      renewable energy is that if we know that we will run out of fossil fuel one day, why not transition into a more
+      sustainable source of energy before the cost of energy causes catastrophic collapse on our society. It just
+      seems to be the more peaceful way to interact with the nature that ultimately has given us everything. If there
+      is magic power that would make all fossil fuel disappear on earth, it is not responsible to use that power
+      because that would make the global economy collapse. But this is the same reason we should take renewable energy
+      seriously.</p>
+    <p>The future we are building certainly requires a source of renewable energy. Over the last decade,
+      cryptocurrency has been a popular topic that would theoretically replace the traditional sources of currency.
+      In one of my articles, I talked about why crypto does not work yet, but it is certainly possible that a future
+      version would work. But the main issue of cryptocurrency is its environmental impact, namely the consumption
+      of electricity. It is a massive global system that drains so much energy from earth, and a lot of that energy
+      is generated through unsustainable sources. Image if crypto becomes what it promises to be, decentralized,
+      secure, tax free, private, etc., but the cost of electricity becomes too high for it to become productive.</p>
+
+    <p>Facebook, now named Meta, floated the idea of a metaverse where people could do things in a virtual reality
+      world. At this point, the company has suffered in losses because of no tangible products, but it does not
+      mean that it cannot become a reality in the future. In the article explaining the benefits of a remote
+      workforce, I talked about my passion to expand people’s ability to do things from home. But this again would
+      require a tremendous amount of electricity.</p>
+
+    <p>The automobile industry is heavily transitioning into electric vehicles. Tesla started out by making
+      electric vehicles “SE3Y” (names of their models). Rivian gained a huge market valuation before selling a
+      single car. Ford, Dodge, etc., begin making electric models. The future of transportation would certainly
+      be heavily reliant on electricity.</p>
+
+    <p>It seems to me that the future that we hope to achieve requires a lot of energy, and the cost of
+      electricity is holding us back. If we have a sustainable way to produce electricity at little or no cost
+      while preserving our nature, why not? It does not matter how long fossil fuel can sustain us before we
+      finally run out of it. Of course, companies are going to make economically smart decisions, and I hope
+      the time will arrive soon when using renewable energy is indeed the more cost-efficient and more
+      environmental-friendly way of living. The myth of trading off quality vs ethics would no longer be true.
+      We will have a future of clean energy and convenience made possible by technology, and this is the
+      reason why I support sustainable energy.</p>
+
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
+</html>

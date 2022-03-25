@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures in Life</title>
+
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>24 Mar 2022</p>
+    <p class="text-center"><b>Data Structures in Life</b></p>
+    <hr />
+    <p>Data structure in a well-known topic in Computer Science. We study how to efficiently structure our data with
+      respect to time, space, and cognitive load. For example, a linked list is fast at adding additional nodes, while
+      slow at finding a node with linear traversal. But this article is not about data structure in computer science.
+      Instead, it is about data structure that we can find in our lives.</p>
+    <p>Most of us have some sort of a to-do list. One day I suddenly realized that a to-do list fundamentally is a
+      data structure of strings or things that we need to accomplish. If you simply use a calendar, and all of the
+      events are in chronological order, that is a queue. Earlier events are always processed first. This could be an
+      efficient data structure if you are good at finishing tasks on time. But sometimes, people might think that
+      there are still a lot of time left until there are only days left on a big project that would take weeks.
+      Putting everything on a calendar does not entirely reflect how urgent or how much resources need to be allocated
+      for that task.</p>
+    <p>Another choice is to have a priority queue. Instead of keeping things in a chronological order, we order the
+      task by their magnitude of their urgency. If something is important and needs to be done first, it shows up on
+      the list first. After all, chronological order does not encompass the importance of a task. This is the to-do
+      list that I personally use most of the time. This allows me to get the more important tasks done first and have
+      less stress so I can perform better.</p>
+    <p>If you are really extreme, you can consider using a stack as your to-do list. This is only recommended for
+      workaholics who would not keep anything on their to-do list. The way this works is that you would only do
+      earlier tasks if you have finished everything added after. This means that you would need to finish your paper
+      due next week first before doing your homework due tomorrow night. I have tried this a few times before where I
+      would work on a project due much later first. This causes extreme stress but sometimes it can also bring extreme
+      productivity.</p>
+    <p>For people who have built data structures in real life, it is understood that the best data structure can be a
+      combination of a number of different data structures. We could use different linear structures for different
+      tasks. Also, the data structure in life goes much beyond array, queue, and stack. I am sure this has been
+      discovered before, but a lot of data structures are inspired by real life events. A graph is inspired by social
+      connections drawn out on a board.</p>
+    <p>We might quickly realize that optimization can only go so far. The best way to optimize our to-do list to
+      finish tasks fast so that the list is never too long. This is just like optimizing tasks to be done for a CPU by
+      the operating system. Regardless of the efficiency of the optimization, the key is to get the task done.</p>
+
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
+</html>

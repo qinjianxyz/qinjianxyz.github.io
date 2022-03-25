@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Power of Physical Simulation</title>
+
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>27 Nov 2021</p>
+    <p class="text-center"><b>The Power of Physical Simulation</b></p>
+    <hr />
+    <p>As one of the largest social media company Facebook changed its parent company to “Meta,” people much more
+      often start hearing terms such as cryptocurrency, NFT, metaverse, etc. People are wondering whether it is
+      possible to have a virtual world as real as the one we live in right now. I can play games like GTA and
+      Minecraft and be in first person view, but I am not sure if that counts as a metaverse. Indeed, we need
+      precisions and flexibility much more than these. We need to be able to dig under the ground and build a house
+      from scratch if we want to. All these imaginations require physical simulation.</p>
+    <p>The power of physical simulation is not first discovered by internet companies. In engineering software
+      companies such as ANSYS and Autodesk, the value of physical simulation has been realized a long time ago.
+      Computer Aided Design (CAD) is crucial for designs of most products. Finite Element Method and other numerical
+      methods are used to design and test the engineering design of a product. For example, physical simulation of
+      automobiles and airplane wings drastically reduce the cost of iterative design compared to building a physical
+      product for and physically test for every iteration. The article on numerical methods on modern engineering has
+      a more detailed description on this topic.</p>
+    <p>Physical simulation can change the concept of time. This is a straightforward concept. Since we know how
+      gravity works, we do not have to wait for something to fall. Instead, we could calculate its projectiles.
+      Physical simulation works the same way. If we understand how different objects would interact with each other,
+      we can speed up time. For example, if we understand how chemicals interact, we could speed up the reaction
+      process which would slash costs for researchers. If we understand how bacteria reproduce and infect other parts
+      of our body, we could simulate treatment for certain diseases. There are already simulations for human hearts
+      that would be helpful to understand the delivery of medication, even though we are far from simulating the
+      entire human body.</p>
+    <p>If we can modify the concept of time, we can do a lot of things such as speeding up biomedical development.
+      Scientists no longer needs to wait for experiments given that the physical simulation model is accurate enough.
+      This technology would drastically save costs for scientists, researchers, and engineers. If we can make the
+      physical simulation so realistic, we would create a world identical to the one that we live in right now. This
+      idea hints that the world we live in right now could be a simulation itself. I am neither the first person to
+      propose this theory, nor do I fully believe this theory. But an interesting question to consider is that if we
+      were to live in a simulation, what would the purpose be? Why would somebody else run this simulation on us? Or
+      we can consider another question. If we have the capacity to run a simulation as realistic as the one we live in
+      right now, and a quark is the smallest unit, for what purpose would we run that simulation?</p>
+
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
+</html>
