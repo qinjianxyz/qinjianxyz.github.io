@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethics in Product Engineering</title>
+
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#feature');">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>25 Mar 2022</p>
+    <p class="text-center"><b>Ethics in Product Engineering</b></p>
+    <hr />
+    <p>When I was younger, ethics seemed like something so vague and so far away. I think it is very common, though.
+      When I was in high school, I was still pretty much clueless on how I could make an impact in the world, let
+      alone thinking about ethics. But, as time progresses, I have come to understand how products shape our world and
+      the responsibility for engineers to emphasize and take ethics into consideration when developing a product. When
+      I first read about how a bridge was designed to segregate communities because bus cannot go under the bridge, I
+      was shocked. I was not even disguised by the design intent at first; I was just in a state of shock. I have
+      always thought that a product is something that facilitates our lives in some regard, and I never thought it can
+      be used to achieve such insidious intent. Ever since, for every product I have ever touched, from software to
+      hardware, I kept thinking about that bridge, thinking about ways that the products might violate ethics.</p>
+
+    <p>Ethics can be summarized to be moral principles that guide our actions, which is a very broad definition. The
+      first step we can take towards a more ethical product is to make our product more inclusive and accessible. We
+      can start by asking, can everyone in the world use our product? How about visually or hearing-impaired people?
+      What about color blindness? Are these people left behind from our product? Is our product respectful for all
+      cultures in the world? If not, for what reasons? Are these reasons resolvable? Does our product have the
+      potential to harm our customers? If our database is attacked, how much losses do our customers need to bear?
+      Will our products cause mental or physical harm to our customers? If our product can be more addicting and
+      generate more revenue for the company but would cause mental illness or severe stress, what should we do? These
+      are a couple of endless questions engineers and product managers need to constantly ask themselves.</p>
+
+    <p>I believe the most important aspect in ethics is humility and good intention. Even if we make a mistake, which
+      we all do, we are humble enough to recognize it and improve our product for the better. I hope companies are not
+      deliberately making decisions that would sacrifice the wellbeing’s of their customers for more temporary
+      profits. Because I firmly believe if the company treats their customers like their family, they will be rewarded
+      accordingly. I am a very tolerant person and believe in personal growth. We all have our biases in different
+      ways. Even if we have worked so hard on eliminating conventional biases, such as race, gender, religion, we are
+      so far away from being bias free. In fact, I think it is impossible to be unbiased about everything unless we
+      are knowledgeable about every single detail of the human race, which is impossible. If perfection is impossible,
+      to me, the meaning of ethics in product engineering has become the process of continuous improvement.</p>
+
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
+</html>

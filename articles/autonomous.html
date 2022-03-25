@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building an Autonomous Vehicle</title>
+
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../index.html#feature');">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>25 Mar 2022</p>
+    <p class="text-center"><b>Building an Autonomous Vehicle</b></p>
+    <hr />
+    <p>Three months ago, we started with an empty chassis. The first step to building an autonomous vehicle was to
+      build all of the electrical and mechanical components. The team designed and made a camera mount to detect the
+      environment, a jetson nano case to protect the brain of our car, a remote emergency off switch to protect the
+      car when it goes off the track and connected numerous other electrical components such as the electric speed
+      controller to ensure the basic functionality of the car.</p>
+    <p>With a fully functional car, we implemented the donkey car framework which is a deep learning framework that
+      uses TensorFlow and other computer vision libraries. In this step, we did not write too much code because the
+      deep learning model is already there. We collected data in different circumstances and calibrated the
+      configurations such as neutral throttle voltage of the car to ensure the correct functionality. This is the
+      first attempt of an autonomous vehicle self-driving on a track without human intervention.</p>
+
+    <p>Moving on to something a bit more logical, we switched gear to the OpenCV library and ROS2 operating system.
+      This time, instead of using deep learning, the car uses lane detection to calibrate its position every time the
+      camera captures an image. There are dotted yellow lines in the middle of the track, and we calibrated the car so
+      that the masked image only shows the color that we want, which is yellow in this case. There are other details
+      that I won't get into here, such as denoising and quadrilateral detection. In the end, our car is able to drive
+      on the track by identifying the patterns that it detects using OpenCV. ROS2 is the robotic operating system that
+      allows different nodes to work together.</p>
+
+    <p>After just simply driving on the track, the team wanted to add a bit more fun to our autonomous vehicle. We
+      want the car to drive on the track and detect people in the surrounding who are not wearing masks. Once
+      detected, the car would drop off a mask for them. This was an interesting and very flexible idea because the
+      technology that we use to detect people without masks can be easily converted into other detections. There it
+      is, the first Maskcar in the world. First, the team built a simple mask dispenser using 3D printing and a servo
+      motor. The facial recognition is done by using a YOLOv5 model, which can accurately detect people wearing or not
+      wearing a mask and gives a score between 0 to 1 depending on its confidence. Then the heavy lifting came when we
+      integrated everything into a new ROS2 package, the mask_pkg.</p>
+
+    <p>Looking back, there was a lot of work and energy poured into this car, and I could not have asked for better
+      teammates than Quynh and Caitlin. It was common for us to work 8+ hours a day straight on this car debugging the
+      code and troubleshooting the hardware. There was a lot of personal growth as well as collaboration.</p>
+
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
+</html>
