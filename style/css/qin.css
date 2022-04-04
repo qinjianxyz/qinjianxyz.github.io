@@ -176,8 +176,15 @@ div.container.qin-text > p > em {
 }
 
 .demo {
-  text-decoration: none;
   color: black;
+  font: bold 16px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
 }
 
 #intro {
