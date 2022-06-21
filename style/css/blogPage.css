@@ -5,6 +5,8 @@ div.container.blog {
 
 .container p {
   font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+  line-height: 2.0;
 }
 
 .text-center {
