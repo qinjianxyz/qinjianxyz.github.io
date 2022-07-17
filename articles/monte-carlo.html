@@ -1,146 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monte Carlo Method</title>
 
-    <link rel="stylesheet" href="../style/css/boot.css" />
-    <link rel="stylesheet" href="../style/css/qin.css" />
-    <link rel="stylesheet" href="../style/css/blogPage.css" />
-  </head>
-  <body style="background-image: url(../media/background.png)">
-    <!--Nav Bar-->
-    <header class="header">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monte Carlo Method</title>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#feature');">Featured</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#projects');">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#skills');">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#resume');">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#awards');">Awards</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#contact');">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../blog.html');">Blog</a>
-              </li>
-            </ul>
-          </div>
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../#feature');">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <div style="height: 120px"></div>
-    <div class="container blog">
-      <p>21 June 2021</p>
-      <p class="text-center"><b>Monte Carlo Method in Modern Engineering</b></p>
-      <hr />
-      <p>
-        Monte Carlo method is a powerful numerical method strengthened by modern
-        computing power that solves all types of problems with an emphasis in
-        probability and statistics. However, the technique is used much broader
-        in engineering and social sciences as well. The grandiose sounding name
-        actually has a simple underlying principle: finding the analytical
-        nature of an event through random experiments.
-      </p>
-      <p>
-        The most famous albeit perhaps not the most useful application of Monte
-        Carlo method is to find the value of the irrational number π. One of the
-        ways to approximate is to draw a circle and a square that perfectly
-        encloses the circle. Then the next step is simple: randomly select
-        points within the square and see how many of them land in the circle.
-        How to randomly select points is another topic which will be discussed
-        in a separate article, but we can assume that the points are truly
-        randomly selected. The sobering answer is that we could use the number
-        of points in the circle divides the total number of points and then
-        multiplies by 4. Then we would have the approximate value of pi. From
-        this application, we see that Monte Carlo method is easy to implement,
-        and the only effort required is to set up the proper conditions.
-      </p>
-      <p>
-        The application is much beyond finding π. There are a tremendous number
-        of applications in the field of probability and statistics. The Monte
-        Carlo method allows us to find the probability of a very complex event
-        through simulation. The amazing thing is that we do not even need to
-        understand the theories behind an event. For example, let us consider
-        there are three decks of cards with jokers. You would draw 10 cards. In
-        the first 5 cards, if a card is the suit of heart or the suit of
-        diamond, we would replace the card, and redraw a card. But if the card
-        is the suit of heart again, we would keep it. In the second 5 cards, if
-        we draw a joker, we will replace the card and draw one more card. If it
-        is a joker again, we would keep it. What is the probability of having
-        exactly one joker and exactly one 5 of heart in the 10 cards? It is a
-        complicated problem to analyze but we could just code the exact
-        situation and run simulations for a million times. Then we could get a
-        very close approximation of the actual result. That is the power of
-        Monte Carlo.
-      </p>
-      <p>
-        Monte Carlo is used beyond probability and very popular in the field of
-        engineering. For example, determining the specifications of a final
-        product with many components that have inaccuracies in manufacturing
-        could be a nightmare for analytical method but simple for the Monte
-        Carlo method. Ideally, we want to understand why something happens, but
-        realistically that does not always happen especially when we analyze a
-        complex problem. It might be possible to do but likely a waste of money.
-        Monte Carlo allows engineers and scientists to directly get to the
-        result of an event using randomness and simulation. What Monte Carlo
-        method amazes me the most is not necessarily any specific application.
-        There are many elegant and useful applications, and they are wonderful.
-        However, what intrigues me the most is the way of thinking Monte Carlo
-        method has presented all of us. We do not have to understand the middle
-        steps in order to solve a problem, and I believe it speaks to the core
-        of numerical method.
-      </p>
-
-      <hr />
-      <div style="text-align: center">
-        <div id="year"></div>
-        All rights reserved.
       </div>
-      <div style="height: 50px"></div>
-    </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>21 June 2021</p>
+    <p class="text-center"><b>Monte Carlo Method in Modern Engineering</b></p>
+    <hr />
+    <p>
+      Monte Carlo method is a powerful numerical method strengthened by modern
+      computing power that solves all types of problems with an emphasis in
+      probability and statistics. However, the technique is used much broader
+      in engineering and social sciences as well. The grandiose sounding name
+      actually has a simple underlying principle: finding the analytical
+      nature of an event through random experiments.
+    </p>
+    <p>
+      The most famous albeit perhaps not the most useful application of Monte
+      Carlo method is to find the value of the irrational number π. One of the
+      ways to approximate is to draw a circle and a square that perfectly
+      encloses the circle. Then the next step is simple: randomly select
+      points within the square and see how many of them land in the circle.
+      How to randomly select points is another topic which will be discussed
+      in a separate article, but we can assume that the points are truly
+      randomly selected. The sobering answer is that we could use the number
+      of points in the circle divides the total number of points and then
+      multiplies by 4. Then we would have the approximate value of pi. From
+      this application, we see that Monte Carlo method is easy to implement,
+      and the only effort required is to set up the proper conditions.
+    </p>
+    <p>
+      The application is much beyond finding π. There are a tremendous number
+      of applications in the field of probability and statistics. The Monte
+      Carlo method allows us to find the probability of a very complex event
+      through simulation. The amazing thing is that we do not even need to
+      understand the theories behind an event. For example, let us consider
+      there are three decks of cards with jokers. You would draw 10 cards. In
+      the first 5 cards, if a card is the suit of heart or the suit of
+      diamond, we would replace the card, and redraw a card. But if the card
+      is the suit of heart again, we would keep it. In the second 5 cards, if
+      we draw a joker, we will replace the card and draw one more card. If it
+      is a joker again, we would keep it. What is the probability of having
+      exactly one joker and exactly one 5 of heart in the 10 cards? It is a
+      complicated problem to analyze but we could just code the exact
+      situation and run simulations for a million times. Then we could get a
+      very close approximation of the actual result. That is the power of
+      Monte Carlo.
+    </p>
+    <p>
+      Monte Carlo is used beyond probability and very popular in the field of
+      engineering. For example, determining the specifications of a final
+      product with many components that have inaccuracies in manufacturing
+      could be a nightmare for analytical method but simple for the Monte
+      Carlo method. Ideally, we want to understand why something happens, but
+      realistically that does not always happen especially when we analyze a
+      complex problem. It might be possible to do but likely a waste of money.
+      Monte Carlo allows engineers and scientists to directly get to the
+      result of an event using randomness and simulation. What Monte Carlo
+      method amazes me the most is not necessarily any specific application.
+      There are many elegant and useful applications, and they are wonderful.
+      However, what intrigues me the most is the way of thinking Monte Carlo
+      method has presented all of us. We do not have to understand the middle
+      steps in order to solve a problem, and I believe it speaks to the core
+      of numerical method.
+    </p>
 
-    <script src="../../style/js/qinjs.js"></script>
-    <script>
-      let d = new Date();
-      let currentYear = d.getFullYear();
-      let display = "Copyright &copy " + currentYear + ", Jian Qin";
-      document.getElementById("year").innerHTML = display;
-    </script>
-    <script>
-      function jumpto(anchor) {
-        window.location.href = anchor;
-      }
-    </script>
-  </body>
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
 </html>

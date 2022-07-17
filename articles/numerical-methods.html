@@ -1,158 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numerical Methods in Modern Engineering</title>
 
-    <link rel="stylesheet" href="../style/css/boot.css" />
-    <link rel="stylesheet" href="../style/css/qin.css" />
-    <link rel="stylesheet" href="../style/css/blogPage.css" />
-  </head>
-  <body style="background-image: url(../media/background.png)">
-    <!--Nav Bar-->
-    <header class="header">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand" href="../index.html">Jian Qin (Ray)</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Numerical Methods in Modern Engineering</title>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../index.html#feature');">Featured</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#projects');">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#skills');">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#resume');">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#awards');">Awards</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../portfolio.html#contact');">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
-                  onclick="jumpto('../blog.html');">Blog</a>
-              </li>
-            </ul>
-          </div>
+  <link rel="stylesheet" href="../style/css/boot.css" />
+  <link rel="stylesheet" href="../style/css/qin.css" />
+  <link rel="stylesheet" href="../style/css/blogPage.css" />
+</head>
+
+<body style="background-image: url(../media/background.png)">
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="../">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../#feature');">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#projects');">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#skills');">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#awards');">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../portfolio.html#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('../blog.html');">Blog</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <div style="height: 120px"></div>
-    <div class="container blog">
-      <p>15 June 2021</p>
-      <p class="text-center"><b>Numerical Methods in Modern Engineering</b></p>
-      <hr />
-      <p>
-        With increasing computational power, there comes increasing
-        possibilities to tackle familiar problems with novel perspectives and
-        creative techniques. Numerical method is one of many products of modern
-        computational power, and it has become an essential component of
-        scientific computing. This article introduces what numerical methods are
-        and give some practical applications of it. The central idea of
-        numerical method is to convert complex and often intractable analytical
-        problems into solvable mathematical models to find an approximate
-        solution to an arbitrary degree of accuracy.
-      </p>
-      <p>
-        There are many practical applications in numerical methods, such as
-        finite element analysis, numerical integration, etc. We will look into
-        root finding first. For example, try to solve this simple question: x^x
-        = ln(x), what is the value x, assume x is a real number? (^ means power,
-        2^3 = 2*2*2 = 8). One might quickly realize that this innocent looking
-        equation is almost impossible to solve analytically. However, with a
-        numerical technique called bisection, one can get a very close answer to
-        the approximate value of the irrational solution to this equation. There
-        are many numerical methods to solve this problem and bisection is just
-        one of them.
-      </p>
-      <p>
-        Numerical methods play a vital role in modern engineering. Before
-        computational power becomes an essential part of scientific or
-        engineering research, if one wants to model the air flow through the
-        wings of an airplane, there can be pages of complicated equations and
-        derivations trying to incorporate every detail caused by the nuanced
-        interactions between the wings and their surrounding air. There will be
-        lift force, air drag, vibrations of wings, etc. But finite element
-        analysis (FEA) has given engineers a new perspective to look at this
-        problem. The idea of finite element analysis is to take a large
-        component and break it down into infinitely small nodes connected by
-        meshes. The effect of one node would be reflected by its neighbors and
-        if the computational power allows us to have nodes close enough, we can
-        get very accurate results. Much of this is done by matrix calculations,
-        and the idea of FEA has been proposed long before today. But due to
-        limitations of computational power in the past, no one can go through
-        all of the matrix calculations by hand and obtain useful results from
-        them. If we look at modern CAD software, Autodesk Inventor, Dassault
-        Systèmes Solidworks, etc., all of their simulations are conducted by
-        numerical methods instead of analytical methods. Finite element analysis
-        is a simple yet sobering technique. Simplicity does not mean that the
-        implementation is easy. On the contrary, the difficult part of FEA is
-        during the setup of the problem. Engineers need to set the geometry,
-        meshes, constraints, physical parameters properly so the model could
-        work. Optimized meshes for arbitrary geometry is still an open problem
-        that many researchers and industry professionals work on. In fact, a new
-        field is emerging called computational science, whose core idea is to
-        utilize mathematical models to solve complex problems. I believe in the
-        upcoming decades this field would render tremendously valuable services.
-      </p>
-      <p>
-        What fascinates me the most about numerical method is not about solving
-        integration or find the stress and strain relationships of a complex
-        structure. These are definitely elegant applications, but what interests
-        me the most is that numerical methods a new way of thinking about
-        engineering problems. The big lesson I have learned from numerical
-        methods is that we could break down a complex problem into arbitrarily
-        small problems and solve them bottom up. This is like the divide and
-        conquer in sorting algorithm which has made computing so much more
-        efficient. There is so much more practical use of numerical methods, and
-        this article only gives a brief introduction of the topic. The
-        increasingly popular field of machine learning is built on numerical
-        methods. It is a way of thinking that scientists and engineers should
-        look into, and I believe the proper incorporation of numerical methods
-        of any field would render useful services.
-      </p>
-
-      <hr />
-      <div style="text-align: center">
-        <div id="year"></div>
-        All rights reserved.
       </div>
-      <div style="height: 50px"></div>
-    </div>
+    </nav>
+  </header>
+  <div style="height: 120px"></div>
+  <div class="container blog">
+    <p>15 June 2021</p>
+    <p class="text-center"><b>Numerical Methods in Modern Engineering</b></p>
+    <hr />
+    <p>
+      With increasing computational power, there comes increasing
+      possibilities to tackle familiar problems with novel perspectives and
+      creative techniques. Numerical method is one of many products of modern
+      computational power, and it has become an essential component of
+      scientific computing. This article introduces what numerical methods are
+      and give some practical applications of it. The central idea of
+      numerical method is to convert complex and often intractable analytical
+      problems into solvable mathematical models to find an approximate
+      solution to an arbitrary degree of accuracy.
+    </p>
+    <p>
+      There are many practical applications in numerical methods, such as
+      finite element analysis, numerical integration, etc. We will look into
+      root finding first. For example, try to solve this simple question: x^x
+      = ln(x), what is the value x, assume x is a real number? (^ means power,
+      2^3 = 2*2*2 = 8). One might quickly realize that this innocent looking
+      equation is almost impossible to solve analytically. However, with a
+      numerical technique called bisection, one can get a very close answer to
+      the approximate value of the irrational solution to this equation. There
+      are many numerical methods to solve this problem and bisection is just
+      one of them.
+    </p>
+    <p>
+      Numerical methods play a vital role in modern engineering. Before
+      computational power becomes an essential part of scientific or
+      engineering research, if one wants to model the air flow through the
+      wings of an airplane, there can be pages of complicated equations and
+      derivations trying to incorporate every detail caused by the nuanced
+      interactions between the wings and their surrounding air. There will be
+      lift force, air drag, vibrations of wings, etc. But finite element
+      analysis (FEA) has given engineers a new perspective to look at this
+      problem. The idea of finite element analysis is to take a large
+      component and break it down into infinitely small nodes connected by
+      meshes. The effect of one node would be reflected by its neighbors and
+      if the computational power allows us to have nodes close enough, we can
+      get very accurate results. Much of this is done by matrix calculations,
+      and the idea of FEA has been proposed long before today. But due to
+      limitations of computational power in the past, no one can go through
+      all of the matrix calculations by hand and obtain useful results from
+      them. If we look at modern CAD software, Autodesk Inventor, Dassault
+      Systèmes Solidworks, etc., all of their simulations are conducted by
+      numerical methods instead of analytical methods. Finite element analysis
+      is a simple yet sobering technique. Simplicity does not mean that the
+      implementation is easy. On the contrary, the difficult part of FEA is
+      during the setup of the problem. Engineers need to set the geometry,
+      meshes, constraints, physical parameters properly so the model could
+      work. Optimized meshes for arbitrary geometry is still an open problem
+      that many researchers and industry professionals work on. In fact, a new
+      field is emerging called computational science, whose core idea is to
+      utilize mathematical models to solve complex problems. I believe in the
+      upcoming decades this field would render tremendously valuable services.
+    </p>
+    <p>
+      What fascinates me the most about numerical method is not about solving
+      integration or find the stress and strain relationships of a complex
+      structure. These are definitely elegant applications, but what interests
+      me the most is that numerical methods a new way of thinking about
+      engineering problems. The big lesson I have learned from numerical
+      methods is that we could break down a complex problem into arbitrarily
+      small problems and solve them bottom up. This is like the divide and
+      conquer in sorting algorithm which has made computing so much more
+      efficient. There is so much more practical use of numerical methods, and
+      this article only gives a brief introduction of the topic. The
+      increasingly popular field of machine learning is built on numerical
+      methods. It is a way of thinking that scientists and engineers should
+      look into, and I believe the proper incorporation of numerical methods
+      of any field would render useful services.
+    </p>
 
-    <script src="../../style/js/qinjs.js"></script>
-    <script>
-      let d = new Date();
-      let currentYear = d.getFullYear();
-      let display = "Copyright &copy " + currentYear + ", Jian Qin";
-      document.getElementById("year").innerHTML = display;
-    </script>
-    <script>
-      function jumpto(anchor) {
-        window.location.href = anchor;
-      }
-    </script>
-  </body>
+    <hr />
+    <div style="text-align: center">
+      <div id="year"></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px"></div>
+  </div>
+
+  <script src="../../style/js/qinjs.js"></script>
+  <script>
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById("year").innerHTML = display;
+  </script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</body>
+
 </html>
