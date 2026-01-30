@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ray Qin Personal Website">
+  <title>Ray Qin Home Page</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="style/css/boot.css">
+  <link rel="stylesheet" href="style/css/qin.css">
+  <script src="style/js/qinjs.js"></script>
+  <script>
+    function jumpto(anchor) {
+      window.location.href = anchor;
+    }
+  </script>
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <header class="header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="/">Jian Qin (Ray)</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#feature');">Featured</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#resume');">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="jumpto('#contact');">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                onclick="toggleDetails()">Full Experience</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div style="height: 120px;"></div>
+  <!--Carousel-->
+  <div class="container">
+    <div class="row gy-5">
+
+      <div class="col-xl-5 col-lg-6" style="padding: 0; margin-top: auto; margin-bottom: auto;">
+        <div class="container">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="media/carol/1.jpg" class="d-block w-100" alt="Graduation">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/2.jpg" class="d-block w-100" alt="Seattle">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/3.jpg" class="d-block w-100" alt="Marathon">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/4.jpg" class="d-block w-100" alt="Ocean">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/5.jpg" class="d-block w-100" alt="Chip">
+              </div>
+              <div class="carousel-item">
+                <img src="media/carol/6.jpg" class="d-block w-100" alt="Smile">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-7 col-lg-6 container" style="padding: 0; margin: 0;">
+        <div class="container qin-title">
+          <strong>About</strong>
+          <hr>
+        </div>
+        <div class="container qin-text" id='intro'>
+          <p>
+            I am a software engineer experienced in full stack development, 
+            cloud computing, and data systems.
+            More than anything else, I love challenging myself. I take pride
+            in going a bit further everyday towards achieving my vision. Time
+            after time, I have achieved personal goals that might otherwise
+            seem impossible with creative planning and relentless execution.
+
+          </p>
+        </div>
+        <div class="container qin-title">
+          <strong>Background</strong>
+          <hr>
+        </div>
+        <div class="container qin-text">
+          <p>
+            I double majored in Computer Science and Mechanical Engineering
+            at the University of California San Diego. Since then, I have worked in effective
+            teams to relentlessly tackle technical problems,
+            increase business value, and improve customer experience.
+            I continue to rapidly grow with a humble, confident, and open-minded attitude.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Featured-->
+  <div class="container">
+    <div class='quote' id="feature">
+      "The Best time to plant a tree was 20 years ago.<br>
+      The second best time is now."
+    </div>
+
+    <div class="qin-title">
+      <strong>Featured Experience</strong>
+      <hr>
+    </div>
+    <div class="row gx-5 gy-5">
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/eightfold.jpeg" alt="eightfold.ai">
+          <div class="card-body">
+            <h5 class="card-title">Software Engineer @Eightfold</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Data Warehouse: </strong>Owned several high-impact projects that improved current ETL pipelines and the monitoring infrastructure across large-scale distributed backend components.
+              </li>
+              <li class="list-group-item"><strong>Atomic ETL Pipeline: </strong>Authored and implemented a design document for an atomic data loading process. Met team Q2 goal by slashing data inconsistency down to less than 2%.
+              </li>
+              <li class="list-group-item"><strong>Consistency Tracker: </strong>Extended consistency trackers to company-level granularity across monitoring dashboards, email reports, and alarms to 56 tables across RDS / Redshift / Firehose.
+              </li>
+              <li class="list-group-item"><strong>Spark Console: </strong>Built a dashboard in React enabling engineers to be 40% faster in debugging spark
+                jobs. Designed and developed a flask API to process data from EMR and S3 buckets.                
+              </li>
+              <li class="list-group-item"><strong>Engineering Reliability: </strong>Wrote pytest and selenium unit tests for the CI/CD pipeline. Provided constructive feedback in code reviews. Consistently finished 5+ Jira tasks per sprint on time.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/medsmart.webp" alt="MEDsmart">
+          <div class="card-body">
+            <h5 class="card-title">Software Engineer @MEDsmart</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>System Automation: </strong>Cut operation costs by 11% in clinics by
+                tracking and automating the medication refill
+                process. Slashed inventory waste by 4% by automating database queries and synchronization with AWS.</li>
+              <li class="list-group-item"><strong>Inventory Forecast: </strong>Reduced shortage response time by 7% by
+                generating inventory reports and visualizations.
+                Estimated future usage of medication by Implementing LSTM machine learning algorithm in Python.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/qualcomm.jpeg" alt="Data">
+          <div class="card-body">
+            <h5 class="card-title">Software Engineer @Qualcomm Institute</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Data Integration: </strong>Gained insights by building composite
+                business profiles through integrating data sets from
+                multiple sources. Spearheaded business data collection and processing from Yelp API and open city data
+                sets.</li>
+              <li class="list-group-item"><strong>Frontend Development: </strong>Built responsive data visualization
+                sites with HTML, CSS, Bootstrap, and JavaScript</li>
+              <li class="list-group-item"><strong>Machine Learning: </strong>Conducted sentiment analysis with Natural
+                Language Processing
+                libraries to understand customer reviews.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/sqlightning.png" alt="SQL">
+          <div class="card-body">
+            <h5 class="card-title">SQLightning</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Software Design: </strong>Developed a relational database command line
+                terminal with core SQL functionalities in C++.
+                Led software architecture design for the data flows, component interactions, interfaces, and
+                abstractions.</li>
+              <li class="list-group-item"><strong>Realibility: </strong>Improved database robustness through input
+                tokenizer, typed-stream encoder, and error reporting
+                system. Increased team reliability by utilizing CI/CD pipeline, unit tests, integration tests, and
+                sprint board.</li>
+              <li class="list-group-item"><strong>Performance: </strong>Optimized performance by 83% with the primary
+                key index system and the LRU cache system.</li>
+            </ul>
+            <hr>
+            <em>Skills:</em> Database Management System, C++, SQL, Software Architecture<br>
+            <a class='btn btn-link' href='https://github.com/qinjianxyz/SQLightning' target="_blank">Github
+              Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/drive-xyz.png" alt="Cloud Drive & Analytics">
+          <div class="card-body">
+            <h5 class="card-title">Cloud Drive & Analytics</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Web Development: </strong>Built a Cloud Drive and an Analytics
+                Dashboard with React, Firebase, HTML, CSS, and
+                JavaScript. Collects and analyzes visitor information with client-side JavaScript and Apache server log
+                files.</li>
+              <li class="list-group-item"><strong>RESTful API: </strong>Designed a RESTful API using Apache, Node.js,
+                Express.js, and Passport.js to handle client-side
+                API calls. Implemented secured CRUD routes, authentication, authorization, and custom roles for data
+                access.</li>
+            </ul>
+            <hr>
+            <em>Skills:</em> React, Firebase, HTML, CSS, JavaScript, Apache Authentication, Authorization<br>
+            <a class='btn btn-link' href='https://drive-xyz.netlify.app/' target="_blank">Live Demo</a>
+            <a class='btn btn-link' href='https://github.com/qinjianxyz/drive-xyz' target="_blank">Github
+              Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-4">
+        <div class="card">
+          <img class="card-img-top" src="media/projects/car.jpeg" alt="Self-Driving">
+          <div class="card-body">
+            <h5 class="card-title">Autonomous Navigation System</h5>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Deep Learning: </strong>Built and programmed a 1/8 scale autonomous
+                car that performs on tracks with over a 90%
+                success rate. Implemented Tensorflow and OpenCV libraries in Python in embedded NVIDIA Jetson Nano.</li>
+              <li class="list-group-item"><strong>ROS2: </strong>Developed ROS2 object detection package with YOLOv5
+                model with accuracy over 95%.</li>
+            </ul>
+            <hr>
+            <em>Skills:</em> Computer Vision, Tensorflow, ROS2, Docker, Deep Learning<br>
+            <a class='btn btn-link' href='https://guitar.ucsd.edu/maeece148/index.php/2022WinterTeam7'
+              target="_blank">Details</a>
+            <a class='btn btn-link' href='https://github.com/qinjianxyz/ros2_ws' target="_blank">Github
+              Repo</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <!--Resume-->
+  <div class="container">
+    <div class='quote' id="resume">
+      Let's Work Together!<br>
+      Contact me for any work opportunity.<br>
+    </div>
+
+    <div class="qin-title">
+      <strong>Resume</strong>
+      <a class="btn btn-light" href="media/Ray_Resume.pdf" download target="_blank"
+        style="text-decoration: none; color: rgb(0,0,100);">
+        Download
+      </a>
+      <hr>
+    </div>
+    <div class="embed-responsive-item">
+      <iframe class="embed-responsive-item" style="width: 100%; height: 1000px;" src="media/Ray_Resume.pdf"></iframe>
+    </div>
+  </div>
+
+  <!--Contact-->
+  <div class="container">
+    <div class='quote' id="contact">
+      "If you want to go fast, go alone.<br>
+      If you want to far, GO TOGETHER."
+    </div>
+    <div class="qin-title">
+      <strong>Contact</strong>
+      <hr>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" style="width: 100%; height:1000px"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScq1bEhN2Vv9csKieBWvK3ngH_VWANYYyy8kopnwSGvubov0w/viewform?embedded=true"></iframe>
+    </div>
+  </div>
+
+  <!--Detailed Experience-->
+  <HIDDEN class="container" id="details" style="display: none;">
+
+    <!--Full Experience-->
+    <div class="container">
+      <div class='quote'>
+        "In a gentle way, you can shake the world."
+      </div>
+
+      <div class="qin-title">
+        <strong>Full Experience</strong>
+        <hr>
+      </div>
+      <FULLEXPERIENCE class="row gx-5 gy-5">
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/zooseeker.png" alt="Zoo Seeker">
+            <div class="card-body">
+              <h5 class="card-title">San Diego Zoo Seeker</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Built a path-finding Android app for San Diego Zoo in a
+                  team of 6 passionate engineers.
+                </li>
+                <li class="list-group-item">Maximizes visitor efficiency by recommending the best route
+                  with Dijkstra
+                  algorithm and Google Map API.</li>
+                <li class="list-group-item">Increased team reliability by building CI/CD pipeline,
+                  unit tests,
+                  and sprint board on ZenHub.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Android, Mobile Development, JGraphT, JUnit, Google Map API.<br>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/ZooSeeker' target="_blank">Github
+                Repo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/TA.jpg" alt="Instructional Assisstant">
+            <div class="card-body">
+              <h5 class="card-title">Instructional Assistant @UCSD</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Employed by the Jacobs School of Engineering.</li>
+                <li class="list-group-item">Courses assisted: MAE40
+                  Linear Circuits with Professor Jorge Cortes, MAE131A
+                  Solid Mechanics with Professor Huihui Qi, and Professor David Kamensky.</li>
+                <li class="list-group-item">MAE3 Introduction to Engineering Graphics
+                  and Design with Professor Tania Morimoto and Professor Huihui Qi, MAE30A Statics and Introduction to
+                  Dynamics with Professor Marko Lubarda.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/rest-finder-xyz.png" alt="Restaurant Finder XYZ">
+            <div class="card-body">
+              <h5 class="card-title">XY&Z Restaurant Finder</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Fullstack application built with PERN stack (PostgreSQL, Express, React,
+                  Node.js).</li>
+                <li class="list-group-item">The app allows users to create and delete their familiar
+                  restaurants and leave reviews in the live hosted cloud database.</li>
+                <li class="list-group-item">Configured database
+                  connections, PostgreSQL aggregate functions, server
+                  routes, frontend API calls, and form validation.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> PostgreSQL, Express, React, Node.js, AWS<br>
+              <a class='btn btn-link' href='https://rest-finder-xyz.herokuapp.com/' target="_blank">Live
+                Demo</a>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/restaurant-finder' target="_blank">Github
+                Repo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/sudoku.png" alt="Sudoku Solver">
+            <div class="card-body">
+              <h5 class="card-title">XY&Z Sudoku Solver</h5>
+              <ul class="list-group">
+                <li class="list-group-item">The web app solves any valid sudoku within the blink of an eye using the
+                  backtracking algorithm.</li>
+                <li class="list-group-item">The web app also checks and rejects any invalid inputs including invalid
+                  characters,
+                  sudoku without any valid solution, or sudoku with more than one valid solution.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Javascript, React, Backtracking algorithm.<br>
+              <a class='btn btn-link' href='https://sudoku-xyz.netlify.app/' target="_blank">Live
+                Demo</a>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/sudoku' target="_blank">Github
+                Repo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/mars.jpg" alt="Mars Landing">
+            <div class="card-body">
+              <h5 class="card-title">Mars Landing Simulation</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Simulated 6 different trajectories of capsules landing on Mars.
+                  The parachute is activated at a certain altitude.</li>
+                <li class="list-group-item">Simulated physical parameters include mass, gravity, air drag, air density,
+                  thruster, etc.</li>
+                <li class="list-group-item">Data visualization includes landing time, landing speed, orbital period.
+                </li>
+              </ul>
+              <hr>
+              <em>Skills:</em> MATLAB, Simulation, Data Visualization, Topology<br>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/mars-landing' target="_blank">Details</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/robot.png" alt="Robot Contest">
+            <div class="card-body">
+              <h5 class="card-title">LightSabers Picking Robot</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Designed and manufactured a competition robot in Autodesk Inventor.</li>
+                <li class="list-group-item">Able to move, rotate, lift, and stack objects with precision.</li>
+                <li class="list-group-item">Created CAD design & utilized machine shop tools and design theories for
+                  prototype.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Inventor, AutoCAD, Design of Machine Elements, Manufacturing,
+              3D Printing.<br>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/light-saber-robot' target="_blank">Details</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/assembly.gif" alt="Assembly">
+            <div class="card-body">
+              <h5 class="card-title">Six Cylinder Radial Engine</h5>
+              <ul class="list-group">
+                <li class="list-group-item">This Solidworks engine assembly illustrates my ability to design,
+                  prototype, and simulate a product.</li>
+                <li class="list-group-item">The project btn btn-linknstrates skills in design intent, sketch & extrude
+                  tools, and
+                  integrating physical parameters in a simulation.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Solidworks, Simulation, 3D Modeling, Finite Element Analysis, CAD<br>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/six-cylinder-radial-engine'
+                target="_blank">Details</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/gameoflife.png" alt="Game of Life">
+            <div class="card-body">
+              <h5 class="card-title">The Game of Life</h5>
+
+              <ul class="list-group">
+                <li class="list-group-item">The web app simulates the game of life invented by John Conway.</li>
+                <li class="list-group-item">Beau Carnes made the initial edits.</li>
+                <li class="list-group-item">I created the wrap around feature to improve the overall
+                  accauracy on edge cases and visuals of the simulation.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Javascript, React, Bootstrap, Simulation.<br>
+              <a class='btn btn-link' href='https://gameoflife-xyz.netlify.app/' target="_blank">Live
+                Demo</a>
+              <a class='btn btn-link' href='https://github.com/qinjianxyz/gameoflife' target="_blank">Github
+                Repo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/mug-square.png" alt="Mug">
+            <div class="card-body">
+              <h5 class="card-title">Thermostatic Mug</h5>
+              <ul class="list-group">
+                <li class="list-group-item">The thermostatic mug can maintain a customized temperature
+                  using Arduino sensor, circuits, and python programming.</li>
+                <li class="list-group-item">The parts are designed in Fusion360 and 3D printed.</li>
+                <li class="list-group-item">Similar commercial products have been popular and successful.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Python, Arduino, Circuits Design, Prototype<br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/lipstick.jpg" alt="Lipstick-Holder">
+            <div class="card-body">
+              <h5 class="card-title">Lipstick Holder</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Customized lipstick holder that can hold up to 9 lipsticks and other
+                  small gadgets on the side as shwon in the image.</li>
+                <li class="list-group-item">The CAD design is done in Fusion 360, and 3D printing is
+                  done with Polyactic Acid (PLA).</li>
+                <li class="list-group-item">This durable holder costs less than similar commercial
+                  products.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> 3D Modeling, 3D Printing, Design<br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/prom.jpg" alt="Prom">
+            <div class="card-body">
+              <h5 class="card-title">PROM 2K18</h5>
+              <ul class="list-group">
+                <li class="list-group-item">As the Junior class President, my fellows and I designed the theme,
+                  contacted
+                  venues,
+                  organized fund raising and ticket sales for Prom 2018.</li>
+                <li class="list-group-item">Much appreciation for the
+                  support and sincere dedication from students and parents volunteers.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Event Planning, Collaboration, Leadership, TeamWork<br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/community-square.jpg" alt="Community">
+            <div class="card-body">
+              <h5 class="card-title">Fitness Camp</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Managed fitness group events Over 60 People.
+                  Organized group hiking & workout sessions.</li>
+                <li class="list-group-item">Prepared seminar on nutrition and progressive overload.</li>
+                <li class="list-group-item">Helped over 100 people achieve unique fitness goals.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Community Service, Fitness, Leadership<br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/coach.jpg" alt="Coach">
+            <div class="card-body">
+              <h5 class="card-title">Youth Sports Camp</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Coached youth sports camp for 2 years.</li>
+                <li class="list-group-item">The camp is focused on cultivating interests in sports for kids in
+                  kindergarten
+                  through basketball and soccer.</li>
+                <li class="list-group-item">Led activities and games for fun, protected kids from injuries, and mentored
+                  good sportsmanship.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Community Service, Sports, Leadership<br>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/projects/kenya-square.jpg" alt="Kenya">
+            <div class="card-body">
+              <h5 class="card-title">Construction Investment Management</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Managed apartments for rental in Kenya.</li>
+                <li class="list-group-item">Communicate with developers and international customers.</li>
+                <li class="list-group-item">Negotiate deals, draft, and revise leases with professional lawyers.</li>
+                <li class="list-group-item">It has been a tremendously valuable opportunity to work with
+                  people across the world, not only from Africa, but also from Europe,
+                  Asia, Oceania, etc.</li>
+              </ul>
+              <hr>
+              <em>Skills:</em> Management, Investment, Business<br>
+            </div>
+          </div>
+        </div>
+
+      </FULLEXPERIENCE>
+    </div>
+
+    <!--Awards & Certificates-->
+    <div class="container">
+      <div class='quote'>
+        "The market for shortcuts is infinite."
+      </div>
+
+      <div class="qin-title">
+        <strong>Awards & Certificates</strong>
+        <hr>
+      </div>
+
+      <AWARDS class="row gx-5 gy-5">
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/awards/veritas.jpg" alt="Veritas Award">
+            <div class="card-body">
+              <h5 class="card-title">Veritas Award</h5>
+              <ul class="list-group">
+                <li class="list-group-item">The highest honor San Domenico School bestows on graduating seniors (1
+                  per class).</li>
+                <li class="list-group-item">It is awarded to the student who, through a spirit of loyalty and duty,
+                  has contributed generously to San Domenico through study, friendship, and giving of self.</li>
+                <li class="list-group-item">Nominated, voted on, and awarded this honor by faculty, this student
+                  encompasses the
+                  qualities of a natural leader and a devoted friend.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/awards/amc.jpg" alt="AMC10">
+            <div class="card-body">
+              <h5 class="card-title">AMC10 Winner</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Participated and won the AMC 10 Winner Certificate in San Domenico
+                  School for highest achieving score in 2017.</li>
+                <li class="list-group-item">Other Mathematic Awards Include Certificate of Merit
+                  from Mathematics League for Superior Achievement of 3.8/5 average in CalMath Competition.</li>
+                <li class="list-group-item">Certificate of Merit from Puple Comet Math Meet.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/awards/ncs.jpg" alt="NCS">
+            <div class="card-body">
+              <h5 class="card-title">North Coast Section Participant</h5>
+              <ul class="list-group">
+                <li class="list-group-item">Qualified for North Coast Section Les Schwab Tires Championships
+                  in Track & Field from BCL conference. Competed in Discus for the Team.</li>
+                <li class="list-group-item">Recognized as Most Valuable Players for 2 years, and Most Improved for 1
+                  year.</li>
+                <li class="list-group-item">Athletic Achievements also include BCL Championships in Varsity Basketball,
+                  Most Improved
+                  Player in Varsity Basketball, and Second Place in Intramural Basketball in College.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/awards/nano.jpeg" alt="Nano">
+            <div class="card-body">
+              <h5 class="card-title">Nvidia Jetson Nano AI Specialist Certificate</h5>
+              <ul class="list-group">
+                <li class="list-group-item">NVIDIA’s Deep Learning Institute (DLI) delivers practical, hands-on training
+                  and
+                  certification in AI at the edge for developers, educators, students, and lifelong learners.</li>
+                <li class="list-group-item">This is a great way to
+                  get the critical AI skills you need to thrive and advance in your career.</li>
+                <li class="list-group-item">The certificate was
+                  obtained upon the approval of the submission of my original open-source project using Jetson Nano.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-xl-4">
+          <div class="card">
+            <img class="card-img-top" src="media/awards/athletic.jpg" alt="Athletics">
+            <div class="card-body">
+              <h5 class="card-title">Varsity Basketball & Varsity Track</h5>
+              <ul class="list-group">
+                <li class="list-group-item">A list of athletic achievements between track & field and basketball:</li>
+                <li class="list-group-item">freshman basketball most improved player.</li>
+                <li class="list-group-item">2017 BCL boys Junior Varsity basketball champions, Varsity basketball most
+                  improved player.</li>
+                <li class="list-group-item">boys Junior Varsity Track most valuable player.</li>
+                <li class="list-group-item">Varsity Track most valuable player, Varsity Track most improved player.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </AWARDS>
+
+    </div>
+
+    <!--Skills-->
+    <div class="container">
+      <div class='quote'>
+        "Tell me and I forget. <br>
+        Teach me and I remember. <br>
+        Involve me and I learn."
+      </div>
+      <div class="qin-title">
+        <strong>Skills</strong>
+        <hr>
+      </div>
+      <SKILLS class="skl">
+        <div class="icon">
+          <img src="media/skills/python.png" alt="Python">
+          <label>Python</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/java.png" alt="Java">
+          <label>Java</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/cpp.png" alt="C++">
+          <label>C++</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/html5.svg" alt="HTML5">
+          <label>HTML5</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/css3.svg" alt="CSS">
+          <label>CSS3</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/js.svg" alt="JavaScript">
+          <label>JavaScript</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/aws.png" alt="AWS">
+          <label>AWS</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/firebase.png" alt="Firebase">
+          <label>Firebase</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/react.svg" alt="React.js">
+          <label>React</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/nodejs.svg" alt="Node.js">
+          <label>Node</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/postgresql.png" alt="PostgreSQL">
+          <label>PostgreSQL</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/mongoDB.png" alt="mongoDB">
+          <label>MongoDB</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/tensorflow.png" alt="TensorFlow">
+          <label>TensorFlow</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/sw.png" alt="Solidworks">
+          <label>Solidworks</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/docker.png" alt="Docker">
+          <label>Docker</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/inventor.png" alt="Inventor">
+          <label>Inventor</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/linux.png" alt="Linux">
+          <label>Linux</label>
+        </div>
+        <div class="icon">
+          <img src="media/skills/matlab.png" alt="MATLAB">
+          <label>MATLAB</label>
+        </div>
+
+      </SKILLS>
+    </div>
+
+  </HIDDEN>
+
+  <!--footer-->
+  <footer>
+    <div class='quote'>
+      "Learning is like rowing upstream:<br>
+      not to advance is to drop back."
+    </div>
+
+    <div class="skl">
+      <div class="ft">
+        <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank"><img src="media/skills/linkedin.png"
+            alt="LinkedIn"></a>
+      </div>
+      <div class="ft">
+        <a href="https://github.com/qinjianxyz" target="_blank"><img src="media/skills/github.png" alt="Github"></a>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <div id='year'></div>
+      All rights reserved.
+    </div>
+    <div style="height: 50px;"></div>
+
+  </footer>
+
+  <script>
+    function toggleDetails() {
+      document.getElementById("details").style.display = "block";
+      jumpto("#details");
+    }
+    let d = new Date();
+    let currentYear = d.getFullYear();
+    let display = "Copyright &copy " + currentYear + ", Jian Qin";
+    document.getElementById('year').innerHTML = display;
+  </script>
+</body>
+
+</html>

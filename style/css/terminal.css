@@ -1,0 +1,570 @@
+/* ==========================================================================
+   Ray Qin Terminal - Cyberpunk Aesthetic
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  /* Terminal Colors */
+  --term-bg: #0a0a0f;
+  --term-bg-translucent: rgba(10, 10, 15, 0.92);
+  --term-primary: #00ff9c;
+  --term-secondary: #00d4ff;
+  --term-tertiary: #ff6b35;
+  --term-error: #ff3366;
+  --term-warning: #ffd700;
+  --term-text: #e0e0e0;
+  --term-text-dim: #666;
+  --term-cursor: #00ff9c;
+
+  /* Glow Effects */
+  --glow-primary: 0 0 10px rgba(0, 255, 156, 0.5);
+  --glow-secondary: 0 0 10px rgba(0, 212, 255, 0.5);
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+  --font-size-base: 15px;
+  --font-size-sm: 13px;
+  --line-height: 1.6;
+
+  /* Spacing */
+  --term-padding: 1.5rem;
+
+  /* Animations */
+  --cursor-blink-speed: 1s;
+  --typing-speed: 25ms;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--term-bg);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--term-text);
+  line-height: var(--line-height);
+}
+
+::selection {
+  background: var(--term-primary);
+  color: var(--term-bg);
+}
+
+/* --------------------------------------------------------------------------
+   Particle Canvas Background
+   -------------------------------------------------------------------------- */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Terminal Container
+   -------------------------------------------------------------------------- */
+.terminal {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  height: 100vh;
+  max-height: 100vh;
+  margin: 0 auto;
+  background: var(--term-bg-translucent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Scanline effect */
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* --------------------------------------------------------------------------
+   Terminal Header (fake window controls)
+   -------------------------------------------------------------------------- */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(30, 30, 40, 0.8);
+  border-bottom: 1px solid rgba(0, 255, 156, 0.2);
+  flex-shrink: 0;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  cursor: default;
+}
+
+.terminal-button.close { background: #ff5f57; }
+.terminal-button.minimize { background: #febc2e; }
+.terminal-button.maximize { background: #28c840; }
+
+.terminal-title {
+  margin-left: auto;
+  font-size: var(--font-size-sm);
+  color: var(--term-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Terminal Output
+   -------------------------------------------------------------------------- */
+.terminal-output {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--term-padding);
+  scroll-behavior: smooth;
+}
+
+.terminal-output::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 156, 0.3);
+  border-radius: 4px;
+}
+
+.terminal-output::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 156, 0.5);
+}
+
+/* Output lines */
+.output-line {
+  margin-bottom: 4px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.output-line.command {
+  color: var(--term-text);
+}
+
+.output-line.response {
+  color: var(--term-text);
+}
+
+.output-line.error {
+  color: var(--term-error);
+}
+
+.output-line.success {
+  color: var(--term-primary);
+}
+
+.output-line.system {
+  color: var(--term-text-dim);
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   Prompt Styling
+   -------------------------------------------------------------------------- */
+.prompt {
+  color: var(--term-text);
+}
+
+.prompt-user {
+  color: var(--term-primary);
+}
+
+.prompt-separator {
+  color: var(--term-text-dim);
+}
+
+.prompt-path {
+  color: var(--term-secondary);
+}
+
+.prompt-symbol {
+  color: var(--term-tertiary);
+}
+
+/* --------------------------------------------------------------------------
+   Terminal Input
+   -------------------------------------------------------------------------- */
+.terminal-input-wrapper {
+  flex-shrink: 0;
+  padding: var(--term-padding);
+  padding-top: 0;
+  background: transparent;
+}
+
+.terminal-input-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.terminal-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  color: var(--term-text);
+  caret-color: var(--term-cursor);
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.terminal-input::placeholder {
+  color: var(--term-text-dim);
+}
+
+/* Blinking cursor (for when input not focused) */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2em;
+  background: var(--term-cursor);
+  animation: blink var(--cursor-blink-speed) step-end infinite;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+}
+
+.terminal-input:focus + .cursor {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Command Hints
+   -------------------------------------------------------------------------- */
+.command-hints {
+  display: none;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.command-hint {
+  padding: 8px 16px;
+  background: rgba(0, 255, 156, 0.1);
+  border: 1px solid rgba(0, 255, 156, 0.3);
+  border-radius: 4px;
+  color: var(--term-primary);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.command-hint:hover,
+.command-hint:active {
+  background: rgba(0, 255, 156, 0.2);
+  border-color: var(--term-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Image Viewer Modal
+   -------------------------------------------------------------------------- */
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.image-viewer.hidden {
+  display: none;
+}
+
+.image-viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 2px solid var(--term-primary);
+  box-shadow: var(--glow-primary);
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: var(--term-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-viewer:hover {
+  color: var(--term-primary);
+}
+
+/* --------------------------------------------------------------------------
+   ASCII Art & Special Content
+   -------------------------------------------------------------------------- */
+.ascii-art {
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--term-primary);
+}
+
+.highlight {
+  color: var(--term-primary);
+}
+
+.highlight-secondary {
+  color: var(--term-secondary);
+}
+
+.highlight-tertiary {
+  color: var(--term-tertiary);
+}
+
+.dim {
+  color: var(--term-text-dim);
+}
+
+/* Photo gallery in terminal */
+.photo-gallery {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.photo-thumb {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid var(--term-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.photo-thumb:hover {
+  opacity: 1;
+  box-shadow: var(--glow-primary);
+  transform: scale(1.05);
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.skill-item {
+  padding: 8px 12px;
+  background: rgba(0, 255, 156, 0.1);
+  border: 1px solid rgba(0, 255, 156, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.skill-item:hover {
+  background: rgba(0, 255, 156, 0.2);
+  border-color: var(--term-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Animations
+   -------------------------------------------------------------------------- */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes matrixFall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   Matrix Rain Effect (Easter Egg)
+   -------------------------------------------------------------------------- */
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#matrix-canvas.active {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Design
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-sm: 12px;
+    --term-padding: 1rem;
+  }
+
+  .terminal {
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .terminal-header {
+    padding: 10px 12px;
+  }
+
+  .command-hints {
+    display: flex;
+  }
+
+  .photo-thumb {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .ascii-art {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-base: 13px;
+    --term-padding: 0.75rem;
+  }
+
+  .terminal-button {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
+
+  .photo-thumb {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+.terminal-input:focus-visible {
+  outline: 2px solid var(--term-primary);
+  outline-offset: 2px;
+}
+
+.command-hint:focus-visible {
+  outline: 2px solid var(--term-primary);
+  outline-offset: 2px;
+}
