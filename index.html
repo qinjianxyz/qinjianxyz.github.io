@@ -2,131 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Ray Qin - Senior Software Engineer & AI Agent Engineer. Building Salmon, the intelligence scaling engine for one-person startups.">
-  <meta name="keywords" content="Ray Qin, Software Engineer, AI Agent, Salmon, Full Stack Developer, Machine Learning">
-  <meta name="author" content="Ray Qin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jian Qin — Founder of Light Bulb Technology. Building Enterprise OS, the autonomous operating system for organizations. Atlas, Quant Qin, and more.">
+  <meta name="keywords" content="Jian Qin, Light Bulb Technology, Enterprise OS, Atlas, Quant Qin, AI agents, autonomous operations">
+  <meta name="author" content="Jian Qin">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Ray Qin | Terminal">
-  <meta property="og:description" content="Senior Software Engineer & AI Agent Engineer. Building Salmon - intelligence scaling for one-person startups.">
+  <meta property="og:title" content="Jian Qin | Founder, Light Bulb Technology">
+  <meta property="og:description" content="Building Enterprise OS — the autonomous operating system for organizations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://qinjianxyz.github.io">
+  <meta property="og:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ray Qin | Terminal">
-  <meta name="twitter:description" content="Senior Software Engineer & AI Agent Engineer. Building Salmon.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jian Qin | Founder, Light Bulb Technology">
+  <meta name="twitter:description" content="Building Enterprise OS — the autonomous operating system for organizations.">
+  <meta name="twitter:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
-  <title>Ray Qin | Terminal</title>
+  <title>Jian Qin | Founder, Light Bulb Technology</title>
 
-  <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style/css/terminal.css">
-
-  <!-- Critical inline styles for instant render -->
-  <style>
-    body {
-      margin: 0;
-      background: #0a0a0f;
-      min-height: 100vh;
-    }
-    /* Prevent flash of unstyled content */
-    .terminal {
-      opacity: 0;
-      animation: fadeIn 0.5s ease-out 0.2s forwards;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Particle canvas background -->
-  <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-  <!-- Matrix rain canvas (hidden by default) -->
-  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
-
-  <!-- Terminal container -->
-  <div id="terminal" class="terminal">
-    <!-- Terminal header with fake window controls -->
-    <div class="terminal-header">
-      <span class="terminal-button close"></span>
-      <span class="terminal-button minimize"></span>
-      <span class="terminal-button maximize"></span>
-      <span class="terminal-title">ray@salmon:~</span>
-    </div>
-
-    <!-- Terminal output area -->
-    <div id="terminal-output" class="terminal-output" role="log" aria-live="polite"></div>
-
-    <!-- Terminal input area -->
-    <div class="terminal-input-wrapper">
-      <!-- Mobile command hints -->
-      <div class="command-hints" id="command-hints" role="toolbar" aria-label="Quick commands"></div>
-
-      <div class="terminal-input-line">
-        <span class="prompt">
-          <span class="prompt-user">ray@salmon</span><span class="prompt-separator">:</span><span class="prompt-path">~</span><span class="prompt-symbol">$</span>
-        </span>
-        <input
-          type="text"
-          id="terminal-input"
-          class="terminal-input"
-          autocomplete="off"
-          autocapitalize="none"
-          autocorrect="off"
-          spellcheck="false"
-          aria-label="Terminal command input"
-          placeholder="Type 'help' to start..."
-        >
-        <span class="cursor" aria-hidden="true"></span>
+  <!-- ======================== Hero ======================== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img
+        src="media/profile-2025.jpg"
+        alt="Jian Qin"
+        class="hero-photo"
+        loading="eager"
+        width="140"
+        height="140"
+      >
+      <h1 class="font-display">Jian Qin</h1>
+      <p class="hero-role">Founder, <a href="https://www.lightbulb-technology.com" style="border-bottom: 1px solid rgba(255,255,255,0.2);">Light Bulb Technology</a></p>
+      <p class="hero-tagline">
+        I build autonomous systems that run organizations — so people can focus on what actually matters.
+      </p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary">See What We're Building</a>
+        <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener" class="btn btn-glass">
+          LinkedIn
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Image viewer modal -->
-  <div id="image-viewer" class="image-viewer hidden" role="dialog" aria-label="Image viewer">
-    <button class="close-viewer" aria-label="Close image viewer">&times;</button>
-    <img id="viewer-image" src="" alt="Full size photo">
-  </div>
-
-  <!-- NoScript fallback for SEO -->
-  <noscript>
-    <style>
-      .terminal { display: none; }
-      #particles-canvas { display: none; }
-    </style>
-    <div style="max-width: 800px; margin: 0 auto; padding: 40px 20px; font-family: system-ui, sans-serif; color: #e0e0e0; background: #0a0a0f; min-height: 100vh;">
-      <h1 style="color: #00ff9c;">Ray Qin</h1>
-      <p><strong>Senior Software Engineer</strong> · <strong>AI Agent Engineer</strong></p>
-      <p>Building Salmon — intelligence scaling for one-person startups.</p>
-
-      <h2 style="color: #00d4ff;">About</h2>
-      <p>Senior Software Engineer at ZipRecruiter with experience in full-stack development, AI/ML systems, and recommendation engines. Previously at Eightfold.ai. Double major in Computer Science and Mechanical Engineering from UC San Diego (Cum Laude, 3.9 GPA).</p>
-
-      <h2 style="color: #00d4ff;">Contact</h2>
-      <ul>
-        <li>Email: <a href="mailto:qinjianxyz@gmail.com" style="color: #00ff9c;">qinjianxyz@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/qinjianxyz" style="color: #00ff9c;">linkedin.com/in/qinjianxyz</a></li>
-        <li>GitHub: <a href="https://github.com/qinjianxyz" style="color: #00ff9c;">github.com/qinjianxyz</a></li>
-      </ul>
-
-      <p style="margin-top: 40px; color: #666;">Enable JavaScript for the full interactive terminal experience.</p>
+  <!-- ======================== Thesis ======================== -->
+  <section class="thesis">
+    <div class="container fade-in">
+      <p class="thesis-text">
+        I started Light Bulb Technology because I believe organizations shouldn't need to scale headcount to scale intelligence. Today I run the entire company with 50+ AI agents — no human engineers — shipping production software, managing infrastructure, and serving real customers. Every system we build proves that the future of work isn't about replacing people. It's about giving them leverage they never had before.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value orange">3</div>
+          <div class="stat-label">Products Live</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value blue">50+</div>
+          <div class="stat-label">AI Agents</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value emerald">24/7</div>
+          <div class="stat-label">Autonomous</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value purple">1</div>
+          <div class="stat-label">Human</div>
+        </div>
+      </div>
     </div>
-  </noscript>
+  </section>
 
-  <!-- Scripts -->
-  <script src="js/particles.js"></script>
-  <script src="js/terminal.js"></script>
-  <script src="js/easter-eggs.js"></script>
+  <!-- ======================== Products ======================== -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-heading fade-in">
+        <h2>What We're Building</h2>
+        <p>Systems that compound intelligence and scale without limits.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- Enterprise OS -->
+        <a href="https://www.lightbulb-technology.com" target="_blank" rel="noopener" class="card fade-in">
+          <div class="card-header">
+            <div class="card-icon orange">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+            </div>
+          </div>
+          <h3>Enterprise OS</h3>
+          <p>The autonomous operating system for organizations. AI agent teams governed by enforceable processes, compounding intelligence, and institutional memory.</p>
+          <span class="card-link">
+            lightbulb-technology.com
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Atlas -->
+        <a href="https://atlas.lightbulb-technology.com" target="_blank" rel="noopener" class="card fade-in">
+          <div class="card-header">
+            <div class="card-icon blue">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <span class="badge live">Live</span>
+          </div>
+          <h3>Atlas</h3>
+          <p>Global trade intelligence platform. Macro financial data, regime detection, and cross-asset analytics — Bloomberg-level insight at a fraction of the cost.</p>
+          <span class="card-link">
+            atlas.lightbulb-technology.com
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </span>
+        </a>
+
+        <!-- Quant Qin -->
+        <div class="card fade-in">
+          <div class="card-header">
+            <div class="card-icon emerald">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <span class="badge private">Private</span>
+          </div>
+          <h3>Quant Qin</h3>
+          <p>Private quantitative fund engine. Systematic trading with AI-powered regime detection, signal aggregation, and autonomous portfolio management.</p>
+        </div>
+
+        <!-- Robotics Lab -->
+        <div class="card fade-in">
+          <div class="card-header">
+            <div class="card-icon purple">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 18h.01"/><path d="M18 18h.01"/><path d="M2 14l3.5-5.5A2 2 0 0 1 7.2 7.5h9.6a2 2 0 0 1 1.7.95L22 14"/></svg>
+            </div>
+            <span class="badge soon">Coming Soon</span>
+          </div>
+          <h3>Robotics Lab</h3>
+          <p>Understanding the world economy and accelerating automation in physical labor. Bringing autonomous intelligence from software into the real world.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== Footer ======================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://www.lightbulb-technology.com" target="_blank" rel="noopener">Light Bulb Technology</a>
+        <a href="https://atlas.lightbulb-technology.com" target="_blank" rel="noopener">Atlas</a>
+        <a href="https://blog.lightbulb-technology.com" target="_blank" rel="noopener">Blog</a>
+        <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year">2026</span> Light Bulb Technology LLC</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
