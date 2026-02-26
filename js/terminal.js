@@ -924,3 +924,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('terminal');
   window.terminal = new Terminal(container);
 });
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Terminal;
+}
