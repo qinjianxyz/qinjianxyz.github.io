@@ -777,7 +777,7 @@ class Terminal {
       matrix: {
         hidden: true,
         execute: async (args, term) => {
-          if (term.secretsUnlocked || true) { // Always allow for fun
+          if (term.secretsUnlocked) {
             term.printLine('The Matrix has you...', 'success');
             if (window.startMatrix) {
               window.startMatrix(8000);
