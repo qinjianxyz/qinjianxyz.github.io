@@ -98,10 +98,10 @@ class ParticleSystem {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     // Update and draw particles
-    this.particles.forEach(particle => {
-      particle.update();
-      particle.draw();
-    });
+    for (let i = 0; i < this.particles.length; i++) {
+      this.particles[i].update();
+      this.particles[i].draw();
+    }
 
     // Draw connections
     this.drawConnections();
@@ -135,7 +135,8 @@ class ParticleSystem {
 
     // Draw connections to mouse
     if (this.mouse.x !== null && this.mouse.y !== null) {
-      this.particles.forEach(particle => {
+      for (let i = 0; i < this.particles.length; i++) {
+        const particle = this.particles[i];
         const dx = particle.x - this.mouse.x;
         const dy = particle.y - this.mouse.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -149,7 +150,7 @@ class ParticleSystem {
           this.ctx.lineTo(this.mouse.x, this.mouse.y);
           this.ctx.stroke();
         }
-      });
+      }
     }
   }
 
