@@ -111,6 +111,7 @@ class ParticleSystem {
 
   drawConnections() {
     const { maxDistance, lineColor } = this.config;
+    const maxDistanceSq = maxDistance * maxDistance;
 
     for (let i = 0; i < this.particles.length; i++) {
       for (let j = i + 1; j < this.particles.length; j++) {
@@ -119,9 +120,10 @@ class ParticleSystem {
 
         const dx = p1.x - p2.x;
         const dy = p1.y - p2.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+        const distSq = dx * dx + dy * dy;
 
-        if (distance < maxDistance) {
+        if (distSq < maxDistanceSq) {
+          const distance = Math.sqrt(distSq);
           const opacity = (1 - distance / maxDistance) * 0.15;
           this.ctx.strokeStyle = `rgba(${lineColor.r}, ${lineColor.g}, ${lineColor.b}, ${opacity})`;
           this.ctx.lineWidth = 1;
