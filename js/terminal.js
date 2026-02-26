@@ -921,6 +921,7 @@ class Terminal {
 
 // Initialize terminal when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('terminal');
-  window.terminal = new Terminal(container);
+  const container = document.getElementById('terminal') || document.getElementById('terminal-container');
+  const terminal = new Terminal(container);
+  container.terminal = terminal;
 });
