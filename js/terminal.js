@@ -2,6 +2,33 @@
    Ray Qin Terminal Engine
    ========================================================================== */
 
+/**
+ * Parses a terminal command string into a command and its arguments.
+ * Handles quoted arguments correctly.
+ *
+ * @param {string} input - The raw command line input.
+ * @returns {object} An object containing the command (string) and args (array of strings).
+ */
+function parseTerminalCommand(input) {
+  // Regex to match non-whitespace sequences or quoted strings
+  // This handles:
+  // - command argument
+  // - "quoted argument"
+  // - argument"with quote"
+  const parts = input.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
+
+  const cmd = parts[0]?.toLowerCase();
+
+  // Process arguments: remove surrounding quotes from args if present
+  // Note: The original logic was replacing all quotes. We should probably preserve
+  // quotes if they are part of the string but not delimiters, but strictly following
+  // the original logic for now which was:
+  // args = parts.slice(1).map(a => a.replace(/"/g, ''));
+  const args = parts.slice(1).map(a => a.replace(/"/g, ''));
+
+  return { cmd, args };
+}
+
 class Terminal {
   constructor(container) {
     this.container = container;
@@ -138,9 +165,7 @@ class Terminal {
     this.printPrompt(input);
 
     // Parse command and args
-    const parts = input.match(/(?:[^\s"]+|"[^"]*")+/g) || [];
-    const cmd = parts[0]?.toLowerCase();
-    const args = parts.slice(1).map(a => a.replace(/"/g, ''));
+    const { cmd, args } = parseTerminalCommand(input);
 
     // Find and execute command
     const handler = this.commands[cmd];
@@ -920,7 +945,14 @@ class Terminal {
 }
 
 // Initialize terminal when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('terminal');
-  window.terminal = new Terminal(container);
-});
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('terminal');
+    window.terminal = new Terminal(container);
+  });
+}
+
+// Export for testing
+if (typeof module !== 'undefined') {
+  module.exports = { parseTerminalCommand };
+}
