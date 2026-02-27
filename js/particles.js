@@ -249,3 +249,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.particleSystem = new ParticleSystem(canvas);
   }
 });
+
+// Export for testing
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { ParticleSystem };
+}
