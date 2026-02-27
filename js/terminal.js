@@ -175,7 +175,7 @@ class Terminal {
   printLine(text, className = 'response') {
     const line = document.createElement('div');
     line.className = `output-line ${className} fade-in`;
-    line.innerHTML = text;
+    line.textContent = text;
     this.outputEl.appendChild(line);
     this.scrollToBottom();
   }
