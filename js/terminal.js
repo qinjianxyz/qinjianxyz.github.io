@@ -920,7 +920,12 @@ class Terminal {
 }
 
 // Initialize terminal when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+if (typeof document !== 'undefined') { document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('terminal');
   window.terminal = new Terminal(container);
 });
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = Terminal;
+}
