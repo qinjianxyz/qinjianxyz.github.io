@@ -1,5 +1,5 @@
 // Fade-in on scroll
-document.addEventListener('DOMContentLoaded', () => {
+function initIntersectionObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -13,8 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+}
 
+function initCopyright() {
   // Dynamic copyright year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initIntersectionObserver();
+  initCopyright();
 });
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { initIntersectionObserver, initCopyright };
+}
