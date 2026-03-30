@@ -1,10 +1,9 @@
-// Fade-in on scroll
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
@@ -12,9 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-  // Dynamic copyright year
   const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 });
