@@ -124,7 +124,7 @@ img {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 56px 0 72px;
+  padding: 40px 0 64px;
 }
 
 .hero-grid,
@@ -167,7 +167,7 @@ img {
   position: relative;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 84px 0 48px;
+  padding: 68px 0 40px;
 }
 
 .eyebrow,
@@ -592,11 +592,11 @@ img {
 
 @media (max-width: 720px) {
   .hero {
-    padding-top: 28px;
+    padding: 22px 0 56px;
   }
 
   .hero-inner {
-    padding-top: 52px;
+    padding-top: 40px;
   }
 
   .container,
