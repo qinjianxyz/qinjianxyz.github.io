@@ -299,7 +299,7 @@ class Terminal {
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
   <span class="highlight">Senior Software Engineer</span> · <span class="highlight-secondary">AI Agent Engineer</span>
-  Building <span class="highlight-tertiary">Salmon</span> — intelligence scaling for one-person startups
+  Building <span class="highlight-tertiary">Enterprise OS</span> — autonomous operating systems for organizations
 
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -363,7 +363,7 @@ class Terminal {
   <span class="highlight">Ray Qin</span>
   <span class="dim">───────</span>
   Senior Software Engineer @ ZipRecruiter
-  AI Agent Engineer · Founder @ Salmon
+  AI Engineer building Enterprise OS and Anvil Sim
 
   <span class="dim">"The coolest engineer you'll meet."</span>
 
@@ -406,10 +406,10 @@ class Terminal {
   Recommendation Systems · API Design · Web Security
   Hosted company-wide Cursor workshop & AI Research Meetings.
 
-  <span class="highlight-tertiary">🚀 CHAPTER 5: Now</span> <span class="dim">(Building Salmon)</span>
+  <span class="highlight-tertiary">🚀 CHAPTER 5: Now</span> <span class="dim">(Building Enterprise OS and Anvil Sim)</span>
   <span class="dim">────────────────────────────────────────</span>
-  Creating the intelligence layer for one-person startups.
-  The future is individuals with AI superpowers.
+  Building Enterprise OS to scale organizational execution with AI agents.
+  Building Anvil Sim to make serious engineering simulation more AI-native and accessible.
 
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   <span class="dim">"The best time to plant a tree was 20 years ago.</span>
@@ -580,31 +580,34 @@ class Terminal {
 
   <span class="highlight-tertiary">THE PROBLEM</span>
   <span class="dim">───────────</span>
-  One-person startups are the future, but founders
-  drown in operational complexity that has nothing
-  to do with their core innovation.
+  Organizations hit execution limits long before they
+  run out of ideas. Infrastructure drifts, context gets
+  lost, and software delivery does not scale cleanly.
 
   <span class="highlight-tertiary">THE INSIGHT</span>
   <span class="dim">───────────</span>
   AI agents can do more than assist.
-  They can <span class="highlight">operate</span>. They can <span class="highlight">scale YOU</span>.
+  They can <span class="highlight">operate</span> inside machine-enforced process,
+  persistent memory, and bounded execution loops.
 
   <span class="highlight-tertiary">THE SOLUTION</span>
   <span class="dim">────────────</span>
-  Salmon is an <span class="highlight-secondary">intelligence scaling engine</span>.
+  Salmon is the early expression of <span class="highlight-secondary">Enterprise OS</span>.
+  An autonomous operating system for organizations.
   Not a chatbot. Not a copilot.
-  A system of AI agents that run your operations.
+  A system that helps run infrastructure, ship software,
+  and scale execution with AI agents.
 
-  <span class="highlight-tertiary">WHY "SALMON"?</span>
+  <span class="highlight-tertiary">WHY THIS WORK</span>
   <span class="dim">────────────</span>
-  Salmon swim upstream. Against the current.
-  That's what we do — we help founders do what
-  seems impossible.
+  The goal is software with real leverage:
+  systems that make execution more reliable,
+  more autonomous, and more compounding.
 
   <span class="highlight-tertiary">THE MISSION</span>
   <span class="dim">───────────</span>
-  Enable 10x more one-person startups to exist.
-  Make the solo founder as capable as a team of 10.
+  Scale intelligence without linearly scaling headcount.
+  Build tools that turn AI capability into reliable output.
 
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   <span class="dim">Interested? Type 'contact' to connect.</span>
@@ -630,13 +633,12 @@ class Terminal {
   You found the secret.
 
   Salmon was born from frustration.
-  I watched brilliant founders fail —
-  not because their ideas were bad,
-  but because operations crushed them.
+  I watched capable teams lose speed because
+  operations, context, and execution kept breaking.
 
-  I'm building the tool I wish existed.
-  The tool that lets one person do the work of ten.
-  The tool that makes the "impossible" just... possible.
+  I'm building the tool I wish existed:
+  a system that turns AI capability into reliable,
+  repeatable execution instead of scattered demos.
 
   If you found this, you're my kind of person.
   Let's talk.
@@ -760,8 +762,8 @@ class Terminal {
   That's exactly the kind of person I want
   on my team.
 
-  Salmon is going to change how solo founders
-  build companies. If that excites you...
+  Enterprise OS is the direction.
+  If that excites you...
 
   <span class="highlight-tertiary">📧 Reach out:</span> qinjianxyz@gmail.com
   <span class="highlight-tertiary">Subject line:</span> "I found .secrets"

@@ -176,7 +176,7 @@ function showConsoleArt() {
   console.log(art, 'color: #00ff9c; font-family: monospace; font-size: 12px;');
 
   console.log(
-    '%c🐟 Building Salmon - intelligence scaling for one-person startups',
+    '%c🐟 Building Enterprise OS - autonomous operating systems for organizations',
     'color: #ff6b35; font-size: 14px; font-weight: bold;'
   );
 }

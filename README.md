@@ -1,10 +1,19 @@
-# Ray Qin Founder Site
+# Ray Qin Website
 
-Lightweight GitHub Pages founder site for Ray Qin.
+Lightweight GitHub Pages site for Ray Qin.
 
-## Current direction
+## Positioning
 
-- founder-builder narrative first
-- Enterprise OS, Anvil Sim, and future engineering labs as the main story
+Ray Qin is an AI Engineer building software for the physical world.
+
+Primary systems:
+- Enterprise OS — an autonomous operating system for organizations that uses AI agents, machine-enforced process, and git-backed institutional memory to run infrastructure, ship software, and scale execution.
+- Anvil Sim — engineering simulation software being built to compete with tools like ANSYS and Autodesk with a more AI-native, faster, and more accessible workflow.
+
+## Site direction
+
+- concise, technical positioning first
+- Anvil Sim as the flagship product surface
+- Enterprise OS as the leverage and execution engine
 - static HTML, CSS, and JavaScript only
-- designed to stay cheap, fast, and easy to evolve
+- designed to stay fast, readable, and easy to evolve
