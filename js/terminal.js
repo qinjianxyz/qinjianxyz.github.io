@@ -317,8 +317,128 @@ class Terminal {
     return {
       help: {
         description: 'Show available commands',
-        execute: async (args, term) => {
-          term.printHTML(`
+        execute: async (args, term) => this.cmdHelp(args, term)
+      },
+
+      whoami: {
+        description: 'Quick intro',
+        execute: async (args, term) => this.cmdWhoami(args, term)
+      },
+
+      ray: {
+        description: 'Learn about Ray',
+        execute: async (args, term) => this.cmdRay(args, term)
+      },
+
+      salmon: {
+        description: 'Learn about Salmon',
+        execute: async (args, term) => this.cmdSalmon(args, term)
+      },
+
+      contact: {
+        description: 'Contact info',
+        execute: async (args, term) => this.cmdContact(args, term)
+      },
+
+      social: {
+        description: 'Social links',
+        execute: async (args, term) => this.cmdSocial(args, term)
+      },
+
+      resume: {
+        description: 'Download resume',
+        execute: async (args, term) => this.cmdResume(args, term)
+      },
+
+      clear: {
+        description: 'Clear terminal',
+        execute: (args, term) => {
+          term.clearOutput();
+        }
+      },
+
+      // -----------------------------------------------------------------------
+      // Easter Egg Commands (hidden)
+      // -----------------------------------------------------------------------
+
+      sudo: {
+        hidden: true,
+        execute: async (args, term) => this.cmdSudo(args, term)
+      },
+
+      'ls': {
+        hidden: true,
+        execute: async (args, term) => this.cmdLs(args, term)
+      },
+
+      cat: {
+        hidden: true,
+        execute: async (args, term) => this.cmdCat(args, term)
+      },
+
+      matrix: {
+        hidden: true,
+        execute: async (args, term) => this.cmdMatrix(args, term)
+      },
+
+      hack: {
+        hidden: true,
+        execute: async (args, term) => this.cmdHack(args, term)
+      },
+
+      coffee: {
+        hidden: true,
+        execute: async (args, term) => this.cmdCoffee(args, term)
+      },
+
+      'rm': {
+        hidden: true,
+        execute: async (args, term) => this.cmdRm(args, term)
+      },
+
+      pwd: {
+        hidden: true,
+        execute: async (args, term) => this.cmdPwd(args, term)
+      },
+
+      echo: {
+        hidden: true,
+        execute: async (args, term) => this.cmdEcho(args, term)
+      },
+
+      exit: {
+        hidden: true,
+        execute: async (args, term) => this.cmdExit(args, term)
+      },
+
+      vim: {
+        hidden: true,
+        execute: async (args, term) => this.cmdVim(args, term)
+      },
+
+      emacs: {
+        hidden: true,
+        execute: async (args, term) => this.cmdEmacs(args, term)
+      },
+
+      ping: {
+        hidden: true,
+        execute: async (args, term) => this.cmdPing(args, term)
+      },
+
+      neofetch: {
+        hidden: true,
+        execute: async (args, term) => this.cmdNeofetch(args, term)
+      }
+    };
+  }
+
+  // -------------------------------------------------------------------------
+  // Individual Command Methods
+  // -------------------------------------------------------------------------
+
+  async cmdHelp(args, term) {
+    term.printHTML(`
 <span class="highlight">Available Commands</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -353,13 +473,10 @@ class Terminal {
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   <span class="dim">Hint: There are secrets hidden for the curious...</span>
 `);
-        }
-      },
+  }
 
-      whoami: {
-        description: 'Quick intro',
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdWhoami(args, term) {
+    term.printHTML(`
   <span class="highlight">Ray Qin</span>
   <span class="dim">───────</span>
   Senior Software Engineer @ ZipRecruiter
@@ -369,17 +486,14 @@ class Terminal {
 
   Type <span class="highlight">'ray --journey'</span> to learn my story.
 `);
-        }
-      },
+  }
 
-      ray: {
-        description: 'Learn about Ray',
-        execute: async (args, term) => {
-          const flag = args[0];
+  async cmdRay(args, term) {
+    const flag = args[0];
 
-          switch(flag) {
-            case '--journey':
-              term.printHTML(`
+    switch(flag) {
+      case '--journey':
+        term.printHTML(`
 <span class="highlight">THE JOURNEY</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -415,10 +529,10 @@ class Terminal {
   <span class="dim">"The best time to plant a tree was 20 years ago.</span>
   <span class="dim"> The second best time is now."</span>
 `);
-              break;
+        break;
 
-            case '--human':
-              term.printHTML(`
+      case '--human':
+        term.printHTML(`
 <span class="highlight">THE HUMAN SIDE</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -445,16 +559,16 @@ class Terminal {
   <span class="dim"> not to advance is to drop back."</span>
 
 `);
-              term.showPhotos([
-                'media/profile-2025.jpg',
-                'media/carol/1.jpg',
-                'media/carol/3.jpg',
-                'media/carol/2.jpg'
-              ]);
-              break;
+        term.showPhotos([
+          'media/profile-2025.jpg',
+          'media/carol/1.jpg',
+          'media/carol/3.jpg',
+          'media/carol/2.jpg'
+        ]);
+        break;
 
-            case '--philosophy':
-              term.printHTML(`
+      case '--philosophy':
+        term.printHTML(`
 <span class="highlight">PRINCIPLES I LIVE BY</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -478,10 +592,10 @@ class Terminal {
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   These aren't just words. They're code I live by.
 `);
-              break;
+        break;
 
-            case '--projects':
-              term.printHTML(`
+      case '--projects':
+        term.printHTML(`
 <span class="highlight">PROJECT ARCHIVE</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -513,47 +627,47 @@ class Terminal {
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   <span class="dim">Full portfolio: github.com/qinjianxyz</span>
 `);
-              break;
+        break;
 
-            case '--skills':
-              term.printHTML(`
+      case '--skills':
+        term.printHTML(`
 <span class="highlight">TECHNICAL SKILLS</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
   <span class="highlight-secondary">Languages</span>
 `);
-              term.printHTML('<div class="skills-grid">' +
-                ['Golang', 'Python', 'TypeScript', 'JavaScript', 'C/C++', 'Rust', 'SQL', 'Bash'].map(s =>
-                  `<div class="skill-item">${s}</div>`
-                ).join('') + '</div>');
+        term.printHTML('<div class="skills-grid">' +
+          ['Golang', 'Python', 'TypeScript', 'JavaScript', 'C/C++', 'Rust', 'SQL', 'Bash'].map(s =>
+            `<div class="skill-item">${s}</div>`
+          ).join('') + '</div>');
 
-              term.printHTML(`
+        term.printHTML(`
   <span class="highlight-secondary">AI & ML</span>
 `);
-              term.printHTML('<div class="skills-grid">' +
-                ['LLM', 'Claude', 'MCP', 'Cursor', 'Agents', 'RAG', 'Embeddings'].map(s =>
-                  `<div class="skill-item">${s}</div>`
-                ).join('') + '</div>');
+        term.printHTML('<div class="skills-grid">' +
+          ['LLM', 'Claude', 'MCP', 'Cursor', 'Agents', 'RAG', 'Embeddings'].map(s =>
+            `<div class="skill-item">${s}</div>`
+          ).join('') + '</div>');
 
-              term.printHTML(`
+        term.printHTML(`
   <span class="highlight-secondary">Infrastructure</span>
 `);
-              term.printHTML('<div class="skills-grid">' +
-                ['AWS', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Kafka', 'Redis'].map(s =>
-                  `<div class="skill-item">${s}</div>`
-                ).join('') + '</div>');
+        term.printHTML('<div class="skills-grid">' +
+          ['AWS', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'Kafka', 'Redis'].map(s =>
+            `<div class="skill-item">${s}</div>`
+          ).join('') + '</div>');
 
-              term.printHTML(`
+        term.printHTML(`
   <span class="highlight-secondary">Web & Data</span>
 `);
-              term.printHTML('<div class="skills-grid">' +
-                ['React', 'Next.js', 'Node', 'gRPC', 'PostgreSQL', 'MongoDB', 'Spark'].map(s =>
-                  `<div class="skill-item">${s}</div>`
-                ).join('') + '</div>');
-              break;
+        term.printHTML('<div class="skills-grid">' +
+          ['React', 'Next.js', 'Node', 'gRPC', 'PostgreSQL', 'MongoDB', 'Spark'].map(s =>
+            `<div class="skill-item">${s}</div>`
+          ).join('') + '</div>');
+        break;
 
-            default:
-              term.printHTML(`
+      default:
+        term.printHTML(`
   <span class="highlight">Usage:</span> ray [flag]
 
   <span class="highlight-secondary">Flags:</span>
@@ -563,18 +677,15 @@ class Terminal {
     --skills       Technologies I work with
     --philosophy   Quotes and principles I live by
 `);
-          }
-        }
-      },
+    }
+  }
 
-      salmon: {
-        description: 'Learn about Salmon',
-        execute: async (args, term) => {
-          const flag = args[0];
+  async cmdSalmon(args, term) {
+    const flag = args[0];
 
-          switch(flag) {
-            case '--vision':
-              term.printHTML(`
+    switch(flag) {
+      case '--vision':
+        term.printHTML(`
 <span class="highlight">🐟 SALMON: THE VISION</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -612,21 +723,21 @@ class Terminal {
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
   <span class="dim">Interested? Type 'contact' to connect.</span>
 `);
-              break;
+        break;
 
-            case '--status':
-              term.printHTML(`
+      case '--status':
+        term.printHTML(`
   <span class="highlight-tertiary">🔧 Status:</span> Building in stealth mode
   <span class="highlight-tertiary">📍 Stage:</span> Deep development
   <span class="highlight-tertiary">🎯 Focus:</span> Core agent architecture
 
   Want updates? Type <span class="highlight">'contact'</span> to subscribe.
 `);
-              break;
+        break;
 
-            case '--secret':
-              if (term.secretsUnlocked) {
-                term.printHTML(`
+      case '--secret':
+        if (term.secretsUnlocked) {
+          term.printHTML(`
 <span class="highlight">THE REAL STORY BEHIND SALMON</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -645,28 +756,25 @@ class Terminal {
 
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 `);
-              } else {
-                term.printLine('Access denied. This command is locked.', 'error');
-                term.printLine('Hint: There are ways to unlock secrets...', 'system');
-              }
-              break;
+        } else {
+          term.printLine('Access denied. This command is locked.', 'error');
+          term.printLine('Hint: There are ways to unlock secrets...', 'system');
+        }
+        break;
 
-            default:
-              term.printHTML(`
+      default:
+        term.printHTML(`
   <span class="highlight">Usage:</span> salmon [flag]
 
   <span class="highlight-secondary">Flags:</span>
     --vision     What I'm building and why
     --status     Current progress
 `);
-          }
-        }
-      },
+    }
+  }
 
-      contact: {
-        description: 'Contact info',
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdContact(args, term) {
+    term.printHTML(`
 <span class="highlight">LET'S CONNECT</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -679,43 +787,23 @@ class Terminal {
   I respond to every message.
   Let's build something together.
 `);
-        }
-      },
+  }
 
-      social: {
-        description: 'Social links',
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdSocial(args, term) {
+    term.printHTML(`
   <span class="highlight-tertiary">LinkedIn:</span>  <a href="https://linkedin.com/in/qinjianxyz" target="_blank" style="color: var(--term-secondary)">linkedin.com/in/qinjianxyz</a>
   <span class="highlight-tertiary">GitHub:</span>    <a href="https://github.com/qinjianxyz" target="_blank" style="color: var(--term-secondary)">github.com/qinjianxyz</a>
 `);
-        }
-      },
+  }
 
-      resume: {
-        description: 'Download resume',
-        execute: async (args, term) => {
-          term.printLine('Opening resume...', 'system');
-          window.open('media/Ray_Resume.pdf', '_blank');
-          term.printLine('Resume opened in new tab.', 'success');
-        }
-      },
+  async cmdResume(args, term) {
+    term.printLine('Opening resume...', 'system');
+    window.open('media/Ray_Resume.pdf', '_blank');
+    term.printLine('Resume opened in new tab.', 'success');
+  }
 
-      clear: {
-        description: 'Clear terminal',
-        execute: (args, term) => {
-          term.clearOutput();
-        }
-      },
-
-      // -----------------------------------------------------------------------
-      // Easter Egg Commands (hidden)
-      // -----------------------------------------------------------------------
-
-      sudo: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdSudo(args, term) {
+    term.printHTML(`
   <span class="error">Nice try! But you're not root here.</span>
 
   ...although if you know about sudo,
@@ -723,14 +811,11 @@ class Terminal {
 
   Type <span class="highlight">'contact'</span> to reach me.
 `);
-        }
-      },
+  }
 
-      'ls': {
-        hidden: true,
-        execute: async (args, term) => {
-          if (args[0] === '-la' || args[0] === '-al') {
-            term.printHTML(`
+  async cmdLs(args, term) {
+    if (args[0] === '-la' || args[0] === '-al') {
+      term.printHTML(`
 <span class="dim">drwxr-xr-x  ray  wheel  4096  Jan 29 16:00  .</span>
 <span class="dim">drwxr-xr-x  ray  wheel  4096  Jan 29 16:00  ..</span>
 <span class="dim">-rw-r--r--  ray  wheel   420  Jan 29 16:00  </span><span class="highlight">.secrets</span>
@@ -742,17 +827,14 @@ class Terminal {
   Looks like you know your way around a terminal.
   Try <span class="highlight">'cat .secrets'</span> for something special.
 `);
-          } else {
-            term.printLine('ambition.txt  build-the-future  salmon/  dreams/', 'response');
-          }
-        }
-      },
+    } else {
+      term.printLine('ambition.txt  build-the-future  salmon/  dreams/', 'response');
+    }
+  }
 
-      cat: {
-        hidden: true,
-        execute: async (args, term) => {
-          if (args[0] === '.secrets') {
-            term.printHTML(`
+  async cmdCat(args, term) {
+    if (args[0] === '.secrets') {
+      term.printHTML(`
 <span class="highlight">SECRETS UNLOCKED</span>
 <span class="dim">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span>
 
@@ -770,52 +852,43 @@ class Terminal {
 
   I'll know you're one of us.
 `);
-          } else {
-            term.printLine(`cat: ${args[0] || ''}: No such file`, 'error');
-          }
-        }
-      },
+    } else {
+      term.printLine(`cat: ${args[0] || ''}: No such file`, 'error');
+    }
+  }
 
-      matrix: {
-        hidden: true,
-        execute: async (args, term) => {
-          if (term.secretsUnlocked || true) { // Always allow for fun
-            term.printLine('The Matrix has you...', 'success');
-            if (window.startMatrix) {
-              window.startMatrix(8000);
-            }
-          } else {
-            term.printLine('Command locked. Find the secrets first.', 'error');
-          }
-        }
-      },
+  async cmdMatrix(args, term) {
+    if (term.secretsUnlocked || true) { // Always allow for fun
+      term.printLine('The Matrix has you...', 'success');
+      if (window.startMatrix) {
+        window.startMatrix(8000);
+      }
+    } else {
+      term.printLine('Command locked. Find the secrets first.', 'error');
+    }
+  }
 
-      hack: {
-        hidden: true,
-        execute: async (args, term) => {
-          const sequence = [
-            'Initializing exploit framework...',
-            'Scanning network topology...',
-            'Bypassing firewall... [OK]',
-            'Injecting payload...',
-            'Establishing reverse shell...',
-            'Access granted.',
-            '',
-            '...just kidding. But you found a secret! 🎉',
-            "Type 'help' to see what else you can explore."
-          ];
+  async cmdHack(args, term) {
+    const sequence = [
+      'Initializing exploit framework...',
+      'Scanning network topology...',
+      'Bypassing firewall... [OK]',
+      'Injecting payload...',
+      'Establishing reverse shell...',
+      'Access granted.',
+      '',
+      '...just kidding. But you found a secret! 🎉',
+      "Type 'help' to see what else you can explore."
+    ];
 
-          for (const line of sequence) {
-            term.printLine(line, line.includes('[OK]') || line.includes('granted') ? 'success' : 'response');
-            await term.sleep(400);
-          }
-        }
-      },
+    for (const line of sequence) {
+      term.printLine(line, line.includes('[OK]') || line.includes('granted') ? 'success' : 'response');
+      await term.sleep(400);
+    }
+  }
 
-      coffee: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdCoffee(args, term) {
+    term.printHTML(`
 <pre class="highlight">
        ) (
       ( ) )
@@ -830,80 +903,56 @@ class Terminal {
   Here's some virtual coffee! ☕
   Fuel for late night coding sessions.
 `);
-        }
-      },
+  }
 
-      'rm': {
-        hidden: true,
-        execute: async (args, term) => {
-          if (args.join(' ').includes('-rf')) {
-            term.printLine('Deleting everything...', 'error');
-            await term.sleep(1500);
-            term.printLine('Just kidding. This is a static website. 😄', 'success');
-            term.printLine("But I appreciate a developer who tests edge cases.", 'system');
-          } else {
-            term.printLine('rm: missing operand', 'error');
-          }
-        }
-      },
+  async cmdRm(args, term) {
+    if (args.join(' ').includes('-rf')) {
+      term.printLine('Deleting everything...', 'error');
+      await term.sleep(1500);
+      term.printLine('Just kidding. This is a static website. 😄', 'success');
+      term.printLine("But I appreciate a developer who tests edge cases.", 'system');
+    } else {
+      term.printLine('rm: missing operand', 'error');
+    }
+  }
 
-      pwd: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printLine('/home/ray/the-future', 'response');
-        }
-      },
+  async cmdPwd(args, term) {
+    term.printLine('/home/ray/the-future', 'response');
+  }
 
-      echo: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printLine(args.join(' ') || '', 'response');
-        }
-      },
+  async cmdEcho(args, term) {
+    term.printLine(args.join(' ') || '', 'response');
+  }
 
-      exit: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printLine('There is no escape. You are trapped in the terminal.', 'system');
-          term.printLine('(Just kidding, close the tab if you must.)', 'dim');
-        }
-      },
+  async cmdExit(args, term) {
+    term.printLine('There is no escape. You are trapped in the terminal.', 'system');
+    term.printLine('(Just kidding, close the tab if you must.)', 'dim');
+  }
 
-      vim: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printLine('I see you are a person of culture.', 'success');
-          term.printLine('But this terminal does not support vim.', 'system');
-          term.printLine('...yet. 😏', 'dim');
-        }
-      },
+  async cmdVim(args, term) {
+    term.printLine('I see you are a person of culture.', 'success');
+    term.printLine('But this terminal does not support vim.', 'system');
+    term.printLine('...yet. 😏', 'dim');
+  }
 
-      emacs: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printLine('Emacs? In this economy?', 'response');
-          term.printLine('Just kidding. All text editors are valid.', 'system');
-          term.printLine('(But vim is better.)', 'dim');
-        }
-      },
+  async cmdEmacs(args, term) {
+    term.printLine('Emacs? In this economy?', 'response');
+    term.printLine('Just kidding. All text editors are valid.', 'system');
+    term.printLine('(But vim is better.)', 'dim');
+  }
 
-      ping: {
-        hidden: true,
-        execute: async (args, term) => {
-          const target = args[0] || 'the-void';
-          for (let i = 0; i < 4; i++) {
-            term.printLine(`PING ${target}: seq=${i} time=${Math.floor(Math.random() * 50 + 10)}ms`, 'response');
-            await term.sleep(500);
-          }
-          term.printLine('', 'response');
-          term.printLine('Connection to your dreams: stable ✓', 'success');
-        }
-      },
+  async cmdPing(args, term) {
+    const target = args[0] || 'the-void';
+    for (let i = 0; i < 4; i++) {
+      term.printLine(`PING ${target}: seq=${i} time=${Math.floor(Math.random() * 50 + 10)}ms`, 'response');
+      await term.sleep(500);
+    }
+    term.printLine('', 'response');
+    term.printLine('Connection to your dreams: stable ✓', 'success');
+  }
 
-      neofetch: {
-        hidden: true,
-        execute: async (args, term) => {
-          term.printHTML(`
+  async cmdNeofetch(args, term) {
+    term.printHTML(`
 <span class="highlight">
        .---.        </span><span class="highlight-secondary">ray@salmon</span>
 <span class="highlight">      /     \\       </span><span class="dim">-----------</span>
@@ -915,9 +964,6 @@ class Terminal {
 <span class="highlight">   \\__/'---'\\__/    </span><span class="highlight-tertiary">CPU:</span> Caffeinated Mind @ 3.9GHz
 <span class="highlight">                    </span><span class="highlight-tertiary">Memory:</span> Mostly song lyrics
 `);
-        }
-      }
-    };
   }
 }
 
