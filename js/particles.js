@@ -111,6 +111,11 @@ class ParticleSystem {
 
   drawConnections() {
     const { maxDistance, lineColor } = this.config;
+    const maxDistanceSq = maxDistance * maxDistance;
+    const lineColorPrefix = `rgba(${lineColor.r}, ${lineColor.g}, ${lineColor.b},`;
+
+    // Optimize: Set lineWidth once outside loop
+    this.ctx.lineWidth = 1;
 
     for (let i = 0; i < this.particles.length; i++) {
       for (let j = i + 1; j < this.particles.length; j++) {
@@ -119,12 +124,15 @@ class ParticleSystem {
 
         const dx = p1.x - p2.x;
         const dy = p1.y - p2.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < maxDistance) {
+        // Optimize: Check squared distance first to avoid sqrt
+        const distSq = dx * dx + dy * dy;
+
+        if (distSq < maxDistanceSq) {
+          const distance = Math.sqrt(distSq);
           const opacity = (1 - distance / maxDistance) * 0.15;
-          this.ctx.strokeStyle = `rgba(${lineColor.r}, ${lineColor.g}, ${lineColor.b}, ${opacity})`;
-          this.ctx.lineWidth = 1;
+
+          this.ctx.strokeStyle = `${lineColorPrefix} ${opacity})`;
           this.ctx.beginPath();
           this.ctx.moveTo(p1.x, p1.y);
           this.ctx.lineTo(p2.x, p2.y);
@@ -135,15 +143,18 @@ class ParticleSystem {
 
     // Draw connections to mouse
     if (this.mouse.x !== null && this.mouse.y !== null) {
+      const mouseRadiusSq = this.mouse.radius * this.mouse.radius;
+
       this.particles.forEach(particle => {
         const dx = particle.x - this.mouse.x;
         const dy = particle.y - this.mouse.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+        const distSq = dx * dx + dy * dy;
 
-        if (distance < this.mouse.radius) {
+        if (distSq < mouseRadiusSq) {
+          const distance = Math.sqrt(distSq);
           const opacity = (1 - distance / this.mouse.radius) * 0.3;
           this.ctx.strokeStyle = `rgba(0, 212, 255, ${opacity})`;
-          this.ctx.lineWidth = 1;
+          // lineWidth is already 1
           this.ctx.beginPath();
           this.ctx.moveTo(particle.x, particle.y);
           this.ctx.lineTo(this.mouse.x, this.mouse.y);
