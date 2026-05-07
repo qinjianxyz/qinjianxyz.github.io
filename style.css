@@ -130,11 +130,11 @@ video {
   position: relative;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  padding: 48px 0 24px;
+  padding: 48px 0 18px;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 1.08fr);
-  gap: 34px;
-  align-items: end;
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
 }
 
 .eyebrow,
@@ -163,7 +163,7 @@ video {
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  font-size: clamp(3.2rem, 6.2vw, 5.7rem);
   max-width: 10ch;
 }
 
@@ -239,11 +239,31 @@ video {
 
 .hero-demo {
   display: grid;
+  align-self: start;
+  margin-top: clamp(86px, 9vw, 148px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-demo::before {
+  content: "live proof surface";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  border: 1px solid rgba(150, 230, 223, 0.38);
+  background: rgba(8, 11, 15, 0.82);
+  color: var(--cyan);
+  padding: 6px 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.62rem;
+  font-weight: 700;
 }
 
 .hero-demo video {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
   background: #000;
   border-bottom: 1px solid var(--line);
@@ -293,7 +313,7 @@ video {
 
 .demo-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   gap: 16px;
 }
 
@@ -303,7 +323,7 @@ video {
 }
 
 .demo-card-wide {
-  grid-column: span 2;
+  grid-column: auto;
 }
 
 .demo-card video {
@@ -447,6 +467,49 @@ video {
   font-size: 0.72rem;
 }
 
+.backstage-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(360px, 1fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 22px 24px;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(90deg, rgba(150, 230, 223, 0.055), transparent 56%),
+    rgba(255, 255, 255, 0.018);
+}
+
+.backstage-copy h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1;
+}
+
+.backstage-copy p:last-child {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--text-soft);
+}
+
+.trace-panel-inline {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  padding: 0;
+  border-bottom: 0;
+  background: transparent;
+}
+
+.trace-panel-inline span {
+  min-height: 58px;
+  display: grid;
+  place-items: center start;
+}
+
 .work-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.7fr) minmax(300px, 1fr);
@@ -571,25 +634,31 @@ video {
   }
 
   .hero-inner,
-  .demo-grid,
   .work-layout,
   .connect-card,
-  .footer-inner {
+  .footer-inner,
+  .backstage-strip {
     grid-template-columns: 1fr;
   }
 
-  .demo-card-wide {
-    grid-column: auto;
+  .hero-demo {
+    margin-top: 12px;
+  }
+
+  .demo-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 720px) {
   .hero {
-    padding: 18px 0 50px;
+    padding: 18px 0 44px;
   }
 
   .hero-inner {
-    padding-top: 28px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
   }
 
   .container,
@@ -599,6 +668,59 @@ video {
 
   .section {
     padding: 78px 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.9rem, 14vw, 4rem);
+  }
+
+  .hero-demo {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .hero-demo::before {
+    display: none;
+  }
+
+  .hero-demo video {
+    aspect-ratio: 16 / 11;
+    object-fit: contain;
+  }
+
+  .hero-demo-caption {
+    padding: 12px 14px;
+  }
+
+  .demo-grid {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-right: calc((100vw - 100%) / -2);
+    padding-right: 14px;
+    padding-bottom: 10px;
+  }
+
+  .demo-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .demo-grid::-webkit-scrollbar-thumb {
+    background: var(--line-strong);
+  }
+
+  .demo-card {
+    min-width: min(84vw, 360px);
+    scroll-snap-align: start;
+  }
+
+  .rove-visual {
+    min-height: 260px;
+  }
+
+  .trace-panel-inline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-actions,
