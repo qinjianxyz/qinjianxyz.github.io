@@ -593,6 +593,18 @@ video {
   margin: 0;
 }
 
+.work-row h3 a:hover,
+.work-link:hover {
+  color: var(--cyan);
+}
+
+.work-link {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
 .next-band {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
