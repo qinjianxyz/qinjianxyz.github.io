@@ -145,8 +145,7 @@ video {
 .eyebrow,
 .section-kicker,
 .card-index,
-.hero-demo-caption span,
-.thesis-band p {
+.hero-demo-caption span {
   margin: 0 0 18px;
   color: var(--orange);
   text-transform: uppercase;
@@ -159,7 +158,7 @@ video {
 .section-heading h2,
 .work-layout h2,
 .connect-copy h2,
-.thesis-band h2 {
+.next-band h2 {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 600;
@@ -237,7 +236,7 @@ video {
 .hero-demo,
 .demo-card,
 .connect-card,
-.thesis-band {
+.next-band {
   border: 1px solid var(--line);
   background: var(--panel);
 }
@@ -321,7 +320,7 @@ video {
 .section-heading h2,
 .work-layout h2,
 .connect-copy h2,
-.thesis-band h2 {
+.next-band h2 {
   font-size: clamp(2.2rem, 5vw, 4.8rem);
   max-width: 14ch;
 }
@@ -594,32 +593,42 @@ video {
   margin: 0;
 }
 
-.thesis-band {
+.next-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+  gap: 34px;
+  align-items: start;
   padding: 28px;
 }
 
-.thesis-band h2 {
-  max-width: 18ch;
+.next-band h2 {
+  max-width: 12ch;
 }
 
-.thesis-copy {
-  max-width: 72ch;
-  margin: 18px 0 0;
+.next-list {
+  display: grid;
+  border-top: 1px solid var(--line-strong);
+}
+
+.next-list article {
+  display: grid;
+  grid-template-columns: 136px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.next-list span {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.next-list p {
+  margin: 0;
   color: var(--text-soft);
-}
-
-.thesis-band div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 26px;
-}
-
-.thesis-band span {
-  border: 1px solid var(--line);
-  padding: 8px 12px;
-  color: var(--text-soft);
-  font-size: 0.92rem;
 }
 
 .connect-section {
@@ -703,7 +712,8 @@ video {
   .work-layout,
   .connect-card,
   .footer-inner,
-  .backstage-strip {
+  .backstage-strip,
+  .next-band {
     grid-template-columns: 1fr;
   }
 
@@ -810,6 +820,11 @@ video {
 
   .work-row {
     grid-template-columns: 1fr;
+  }
+
+  .next-list article {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 }
 
