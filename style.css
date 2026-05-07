@@ -134,10 +134,10 @@ video {
   position: relative;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
-  min-height: min(780px, calc(100vh - 96px));
+  min-height: min(690px, calc(100vh - 96px));
   padding: 34px 0 18px;
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 1.14fr);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
 }
@@ -167,8 +167,8 @@ video {
 }
 
 .hero h1 {
-  font-size: clamp(3.2rem, 6.2vw, 5.7rem);
-  max-width: 10ch;
+  font-size: clamp(3rem, 5.45vw, 5.25rem);
+  max-width: 14ch;
 }
 
 .hero-lead,
@@ -244,13 +244,15 @@ video {
 .hero-demo {
   display: grid;
   align-self: start;
-  margin-top: clamp(34px, 5vw, 72px);
+  justify-self: end;
+  width: min(100%, 520px);
+  margin-top: clamp(20px, 4vw, 42px);
   position: relative;
   overflow: hidden;
 }
 
 .hero-demo::before {
-  content: "live proof surface";
+  content: "current proof";
   position: absolute;
   top: 14px;
   left: 14px;
@@ -267,7 +269,7 @@ video {
 
 .hero-demo video {
   width: 100%;
-  aspect-ratio: 5 / 3;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   background: #000;
   border-bottom: 1px solid var(--line);
