@@ -1,4 +1,18 @@
+document.documentElement.classList.add('motion-ready');
+
 document.addEventListener('DOMContentLoaded', () => {
+  const revealEls = document.querySelectorAll('.reveal');
+  const yearEl = document.getElementById('year');
+
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+    return;
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -11,10 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     { threshold: 0.15 }
   );
 
-  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-  const yearEl = document.getElementById('year');
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  revealEls.forEach((el) => observer.observe(el));
 });
