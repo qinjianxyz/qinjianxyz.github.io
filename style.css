@@ -252,7 +252,7 @@ video {
 }
 
 .hero-demo::before {
-  content: "current proof";
+  content: "current demo";
   position: absolute;
   top: 14px;
   left: 14px;

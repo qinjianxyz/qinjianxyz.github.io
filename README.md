@@ -8,8 +8,8 @@ Ray Qin is CEO of Lightbulb Technology, Enterprise OS, Anvil Sim, Rove Robotics 
 
 Primary systems:
 - Enterprise OS — an autonomous operating system for organizations that uses AI agents, machine-enforced process, and git-backed institutional memory to run infrastructure, ship software, and scale execution.
-- Anvil Sim — engineering simulation software being built to compete with tools like ANSYS and Autodesk with a more AI-native, faster, and more accessible workflow.
-- Rove Robotics Lab — compact humanoid robotics R&D around Rove Mini, staged through virtual body receipts, static physical structure, manipulation, braced motion, and failure logs.
+- Anvil Sim — an AI-first engineering simulation platform for deep tech, starting with simulation replay, solver traces, load checks, diagnostics, and reviewable engineering decisions.
+- Rove Robotics Lab — compact humanoid robotics R&D around Rove Mini, staged through virtual body models, static physical structure, manipulation, braced motion, and failure logs.
 
 ## Site direction
 
