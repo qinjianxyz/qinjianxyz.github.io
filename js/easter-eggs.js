@@ -57,8 +57,28 @@ class MatrixRain {
     this.animationId = null;
     this.chars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+    this.initColors();
+
     this.resize();
     window.addEventListener('resize', () => this.resize());
+  }
+
+  initColors() {
+    this.colors = [];
+    // Bucket 0: White
+    this.colors[0] = '#fff';
+    // Bucket 1: Bright Green
+    this.colors[1] = '#00ff9c';
+    // Buckets 2-11: Dim Green (Quantized)
+    // Original formula: 0.3 + brightness * 0.5
+    // Brightness for these is 0.0 to 0.9.
+    // We quantize into 10 steps.
+    for (let i = 0; i < 10; i++) {
+        // brightness approx level * 0.1
+        const brightness = i * 0.1;
+        const alpha = 0.3 + brightness * 0.5;
+        this.colors[2 + i] = `rgba(0, 255, 156, ${alpha.toFixed(2)})`;
+    }
   }
 
   createCanvas() {
@@ -80,7 +100,9 @@ class MatrixRain {
         x: i * fontSize,
         y: Math.random() * this.canvas.height,
         speed: Math.random() * 20 + 10,
-        fontSize: fontSize
+        fontSize: fontSize,
+        char: '',
+        bucket: 0
       });
     }
   }
@@ -92,30 +114,50 @@ class MatrixRain {
 
     this.ctx.font = '14px monospace';
 
-    this.columns.forEach(column => {
-      // Random character
-      const char = this.chars[Math.floor(Math.random() * this.chars.length)];
+    // Update Phase
+    for (let i = 0; i < this.columns.length; i++) {
+        const col = this.columns[i];
 
-      // Gradient color from bright to dim
-      const brightness = Math.random();
-      if (brightness > 0.98) {
-        this.ctx.fillStyle = '#fff';
-      } else if (brightness > 0.9) {
-        this.ctx.fillStyle = '#00ff9c';
-      } else {
-        this.ctx.fillStyle = `rgba(0, 255, 156, ${0.3 + brightness * 0.5})`;
-      }
+        // Random character
+        col.char = this.chars[Math.floor(Math.random() * this.chars.length)];
 
-      this.ctx.fillText(char, column.x, column.y);
+        // Calculate bucket based on brightness
+        const brightness = Math.random();
+        if (brightness > 0.98) {
+            col.bucket = 0; // White
+        } else if (brightness > 0.9) {
+            col.bucket = 1; // Bright Green
+        } else {
+            // brightness is between 0.0 and 0.9
+            // Quantize to 0-9
+            const level = Math.floor(brightness * 10);
+            col.bucket = 2 + level;
+        }
 
-      // Move column down
-      column.y += column.speed;
+        // Move column down
+        col.y += col.speed;
 
-      // Reset when off screen
-      if (column.y > this.canvas.height && Math.random() > 0.95) {
-        column.y = 0;
-      }
-    });
+        // Reset when off screen
+        if (col.y > this.canvas.height && Math.random() > 0.95) {
+            col.y = 0;
+        }
+    }
+
+    // Sort Phase - Group by color bucket to minimize fillStyle changes
+    this.columns.sort((a, b) => a.bucket - b.bucket);
+
+    // Draw Phase
+    let currentBucket = -1;
+    for (let i = 0; i < this.columns.length; i++) {
+        const col = this.columns[i];
+
+        if (col.bucket !== currentBucket) {
+            currentBucket = col.bucket;
+            this.ctx.fillStyle = this.colors[currentBucket];
+        }
+
+        this.ctx.fillText(col.char, col.x, col.y);
+    }
 
     this.animationId = requestAnimationFrame(() => this.draw());
   }
