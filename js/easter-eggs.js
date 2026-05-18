@@ -192,8 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Konami Code
   new KonamiCode(() => {
     // Show celebration
-    if (window.terminal) {
-      window.terminal.printHTML(`
+    const terminalEl = document.getElementById('terminal') || document.getElementById('terminal-container');
+    const terminal = terminalEl ? terminalEl.terminal : null;
+
+    if (terminal) {
+      terminal.printHTML(`
 <span class="highlight">
 ██╗   ██╗ ██████╗ ██╗   ██╗    ███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗
 ╚██╗ ██╔╝██╔═══██╗██║   ██║    ██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗
@@ -214,8 +217,8 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="highlight">salmon --secret</span>  The real story behind the name
 
 `);
-      window.terminal.unlockSecrets();
-      window.terminal.scrollToBottom();
+      terminal.unlockSecrets();
+      terminal.scrollToBottom();
     }
 
     // Trigger matrix rain
