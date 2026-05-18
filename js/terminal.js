@@ -168,7 +168,13 @@ class Terminal {
   printPrompt(input) {
     const line = document.createElement('div');
     line.className = 'output-line command';
-    line.innerHTML = `<span class="prompt"><span class="prompt-user">ray@salmon</span><span class="prompt-separator">:</span><span class="prompt-path">~</span><span class="prompt-symbol">$</span></span> ${this.escapeHtml(input)}`;
+
+    const prompt = document.createElement('span');
+    prompt.className = 'prompt';
+    prompt.innerHTML = '<span class="prompt-user">ray@salmon</span><span class="prompt-separator">:</span><span class="prompt-path">~</span><span class="prompt-symbol">$</span>';
+
+    line.appendChild(prompt);
+    line.appendChild(document.createTextNode(` ${input}`));
     this.outputEl.appendChild(line);
   }
 
