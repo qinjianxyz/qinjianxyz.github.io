@@ -13,3 +13,15 @@ div.container.blog {
   font-weight: bold;
   color: rgb(0, 0, 100);
 }
+
+.spacer-120 {
+  height: 120px;
+}
+
+.spacer-50 {
+  height: 50px;
+}
+
+.footer-container {
+  text-align: center;
+}
