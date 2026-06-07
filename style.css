@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 [id] {
@@ -38,6 +39,7 @@ body {
     linear-gradient(180deg, #080b0f 0%, #0c1116 52%, #080b0f 100%);
   background-size: 58px 58px, 58px 58px, auto;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -47,6 +49,11 @@ a {
 
 video {
   display: block;
+  max-width: 100%;
+}
+
+img,
+svg {
   max-width: 100%;
 }
 
@@ -134,12 +141,22 @@ video {
   position: relative;
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
+  min-width: 0;
   min-height: min(690px, calc(100vh - 96px));
   padding: 34px 0 18px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
+}
+
+.hero-main,
+.hero-demo,
+.demo-card,
+.work-row,
+.next-band,
+.connect-card {
+  min-width: 0;
 }
 
 .eyebrow,
@@ -187,12 +204,14 @@ video {
   margin: 24px 0 0;
   font-size: clamp(1.08rem, 1.45vw, 1.3rem);
   line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 .hero-subcopy {
   max-width: 58ch;
   margin: 16px 0 0;
   font-size: 1rem;
+  overflow-wrap: anywhere;
 }
 
 .hero-actions,
@@ -760,6 +779,15 @@ video {
   .container,
   .hero-inner {
     width: min(100%, calc(100% - 28px));
+  }
+
+  .hero-main,
+  .hero-demo,
+  .hero-lead,
+  .hero-subcopy,
+  .hero-actions {
+    width: 100%;
+    max-width: 100%;
   }
 
   .section {
