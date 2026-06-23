@@ -3,45 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ray Qin — senior AI &amp; full-stack engineer (ex-ZipRecruiter, 10M+ users). I help startups and teams design, build, and ship production AI: agents, RAG systems, and the full-stack products around them. Available for freelance, contract, and consulting work.">
-  <meta name="keywords" content="freelance AI engineer, hire AI agent developer, RAG chatbot developer, LLM integration, Next.js developer for hire, full-stack engineer, AI consulting, Ray Qin">
+  <meta name="description" content="Ray Qin — a senior AI engineer for hire who designs, builds, and ships AI to production, solo. Support assistants, document search, automation, in-product AI features, and reliability/cost work for founders and teams. Free 30-minute first call.">
+  <meta name="keywords" content="AI engineer for hire, AI consultant, freelance AI developer, RAG, AI agents, LLM integration, AI automation, document search, custom AI, Ray Qin">
   <meta name="author" content="Ray Qin">
-  <meta name="theme-color" content="#fbfbf9">
+  <meta name="theme-color" content="#fbfaf7">
 
-  <meta property="og:title" content="Ray Qin — AI &amp; Full-Stack Engineer for Hire">
-  <meta property="og:description" content="Senior engineer (ex-ZipRecruiter, 10M+ users) who designs, builds, and ships production AI — agents, RAG, and the full-stack products around them.">
+  <meta property="og:title" content="Ray Qin — AI Engineer for Hire">
+  <meta property="og:description" content="You have an AI problem. I design it, build it, and ship it to production — solo. Production AI for founders and teams.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://qinjianxyz.github.io">
   <meta property="og:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ray Qin — AI &amp; Full-Stack Engineer for Hire">
-  <meta name="twitter:description" content="Senior engineer who designs, builds, and ships production AI — agents, RAG, and the full-stack products around them.">
+  <meta name="twitter:title" content="Ray Qin — AI Engineer for Hire">
+  <meta name="twitter:description" content="You have an AI problem. I design it, build it, and ship it to production — solo.">
   <meta name="twitter:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
-  <title>Ray Qin — AI &amp; Full-Stack Engineer for Hire</title>
+  <title>Ray Qin — AI Engineer for Hire</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#fcfcfa;
-      --bg-soft:#f4f2ec;
-      --bg-card:#ffffff;
-      --ink:#1b2030;
-      --ink-2:#39414f;
-      --muted:#6c7382;
-      --muted-2:#9aa0ab;
-      --line:#e7e3d8;
-      --line-2:#dcd7c9;
-      --accent:#21426f;
-      --accent-deep:#172f51;
-      --accent-soft:#eef1f6;
-      --maxw:1080px;
-      --r:14px;
+      --bg:#fbfaf7; --bg-soft:#f1eee5; --paper:#ffffff;
+      --ink:#191c26; --ink-2:#3b414f; --muted:#6b7180; --muted-2:#959aa6;
+      --line:#e7e2d6; --line-2:#d9d3c5;
+      --navy:#1d3b5a; --navy-deep:#142a42; --navy-soft:#edf0f4;
+      --maxw:1140px; --r:14px;
       --serif:'Newsreader',Georgia,'Times New Roman',serif;
       --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
     }
@@ -50,175 +41,238 @@
     body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    ::selection{background:#dde4ef}
-    .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
-    .eyebrow{font-size:.76rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-    h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.01em;color:var(--ink)}
+    ::selection{background:#dde3ec}
+    .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 30px}
     .serif{font-family:var(--serif)}
-    .section{padding:104px 0}
-    .head{max-width:40em;margin-bottom:54px}
-    .head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin:.7rem 0 .8rem;font-weight:500}
-    .head p{color:var(--muted);font-size:1.08rem;max-width:34em}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.13;letter-spacing:-.012em;color:var(--ink)}
+    /* section label: number + caps */
+    .label{display:flex;align-items:baseline;gap:14px;font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .label .no{font-family:var(--serif);font-size:.95rem;font-weight:500;letter-spacing:0;color:var(--navy)}
+    .section{padding:96px 0}
+    .section-tight{padding:72px 0}
+    .sec-head{max-width:40em;margin-bottom:48px}
+    .sec-head h2{font-size:clamp(1.95rem,3.6vw,2.7rem);margin:18px 0 14px}
+    .sec-head p{color:var(--ink-2);font-size:1.08rem}
+    .rule{height:1px;background:var(--line);border:0}
 
     /* buttons */
-    .btn{display:inline-flex;align-items:center;gap:.55em;font-family:var(--sans);font-weight:500;font-size:.96rem;
-      padding:.85em 1.6em;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:.18s ease}
+    .btn{display:inline-flex;align-items:center;gap:.5em;font-family:var(--sans);font-weight:500;font-size:.97rem;
+      padding:.92em 1.7em;border-radius:999px;border:1px solid transparent;cursor:pointer;transition:.18s ease}
     .btn svg{width:1.05em;height:1.05em}
-    .btn-primary{background:var(--accent);color:#fff}
-    .btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px);box-shadow:0 10px 26px -12px rgba(23,47,81,.6)}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-primary:hover{background:var(--navy-deep);transform:translateY(-1px);box-shadow:0 12px 28px -14px rgba(20,42,66,.7)}
     .btn-outline{background:transparent;color:var(--ink);border-color:var(--line-2)}
-    .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
-    .btn-lg{padding:1.02em 2em;font-size:1.02rem}
+    .btn-outline:hover{border-color:var(--navy);color:var(--navy)}
+    .btn-lg{padding:1.05em 2.1em;font-size:1.04rem}
 
     /* nav */
-    .nav{position:sticky;top:0;z-index:60;background:rgba(252,252,250,.82);backdrop-filter:saturate(150%) blur(12px);border-bottom:1px solid var(--line)}
+    .nav{position:sticky;top:0;z-index:60;background:rgba(251,250,247,.85);backdrop-filter:saturate(150%) blur(12px);border-bottom:1px solid var(--line)}
     .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px}
-    .brand{font-family:var(--serif);font-size:1.35rem;font-weight:600;letter-spacing:-.01em}
-    .brand span{color:var(--accent)}
-    .nav-links{display:flex;align-items:center;gap:34px}
-    .nav-links a:not(.btn){font-size:.94rem;color:var(--ink-2);font-weight:500;transition:color .15s}
-    .nav-links a:not(.btn):hover{color:var(--accent)}
-    .nav-links .btn{padding:.6em 1.25em}
+    .brand{font-family:var(--serif);font-size:1.4rem;font-weight:600;letter-spacing:-.01em}
+    .brand span{color:var(--navy)}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-links a:not(.btn){font-size:.93rem;color:var(--ink-2);font-weight:500;transition:color .15s}
+    .nav-links a:not(.btn):hover{color:var(--navy)}
+    .nav-links .btn{padding:.6em 1.2em}
     .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
     .nav-toggle span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;transition:.2s}
 
     /* hero */
-    .hero{padding:86px 0 76px;position:relative}
-    .hero-in{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
-    .hero h1{font-size:clamp(2.6rem,5.2vw,4rem);font-weight:500;letter-spacing:-.02em;margin:1.1rem 0 0}
-    .hero h1 em{font-style:italic;color:var(--accent)}
-    .hero-lead{font-size:1.18rem;color:var(--ink-2);margin:1.5rem 0 2rem;max-width:32em;line-height:1.7}
+    .hero{padding:80px 0 64px}
+    .hero-in{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .hero .eyebrow{font-family:var(--sans);font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--navy)}
+    .hero h1{font-size:clamp(2.5rem,5vw,3.9rem);font-weight:500;letter-spacing:-.022em;margin:18px 0 0;line-height:1.08}
+    .hero h1 em{font-style:italic}
+    .hero-sub{font-size:1.16rem;color:var(--ink-2);margin:24px 0 28px;max-width:33em;line-height:1.7}
     .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-    .hero-creds{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:30px;font-size:.88rem;color:var(--muted)}
-    .hero-creds span{display:inline-flex;align-items:center;gap:.6em}
-    .hero-creds span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--line-2);margin-right:18px}
+    .hero-micro{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted);max-width:34em;line-height:1.6}
+    .hero-micro b{color:var(--ink-2);font-weight:600}
     .hero-photo{position:relative}
-    .hero-photo img{border-radius:var(--r);width:100%;object-fit:cover;aspect-ratio:4/5;border:1px solid var(--line)}
-    .hero-photo figcaption{position:absolute;left:18px;bottom:18px;right:18px;background:rgba(252,252,250,.92);backdrop-filter:blur(6px);
+    .hero-photo img{border-radius:var(--r);width:100%;object-fit:cover;aspect-ratio:4/5;border:1px solid var(--line-2)}
+    .hero-photo figcaption{position:absolute;left:16px;bottom:16px;right:16px;background:rgba(251,250,247,.94);backdrop-filter:blur(6px);
       border:1px solid var(--line);border-radius:10px;padding:11px 15px}
-    .hero-photo figcaption b{font-family:var(--serif);font-weight:600;font-size:.98rem;display:block}
-    .hero-photo figcaption small{color:var(--muted);font-size:.8rem}
+    .hero-photo b{font-family:var(--serif);font-weight:600;font-size:1rem;display:block}
+    .hero-photo small{color:var(--muted);font-size:.82rem}
 
-    /* metrics band */
-    .metrics{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .metrics-in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 0}
-    .metric{text-align:center;position:relative}
-    .metric+.metric::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--line-2)}
-    .metric b{font-family:var(--serif);display:block;font-size:2.15rem;font-weight:500;color:var(--accent);letter-spacing:-.01em}
-    .metric span{font-size:.85rem;color:var(--muted);letter-spacing:.01em}
+    /* trust strip */
+    .trust{background:var(--navy);color:#dfe6ef}
+    .trust-in{display:flex;flex-wrap:wrap;gap:14px 0;justify-content:space-between;padding:26px 0}
+    .trust-item{display:flex;align-items:center;gap:12px;padding:0 22px;flex:1;min-width:200px;position:relative}
+    .trust-item+.trust-item::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:rgba(255,255,255,.16)}
+    .trust-item b{font-family:var(--serif);color:#fff;font-weight:500;font-size:1.15rem;line-height:1.1}
+    .trust-item span{font-size:.84rem;color:#a9b6c8}
 
-    /* services */
-    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
-    .svc{padding:34px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-card);transition:background .2s}
-    .svc:hover{background:var(--bg-soft)}
-    .svc .num{font-size:.8rem;color:var(--accent);letter-spacing:.06em;font-weight:500}
-    .svc h3{font-size:1.32rem;margin:12px 0 9px;font-weight:500}
-    .svc p{color:var(--muted);font-size:.96rem;line-height:1.62}
-    .svc .feat-tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
-      border:1px solid var(--line-2);padding:.26em .7em;border-radius:999px;margin-top:14px}
-    .enterprise{margin-top:36px;display:grid;grid-template-columns:1.5fr auto;gap:28px;align-items:center;
-      background:var(--accent);color:#eef2f8;border-radius:var(--r);padding:36px 40px}
-    .enterprise h3{color:#fff;font-size:1.5rem;font-weight:500;margin-bottom:8px}
-    .enterprise p{color:#c2cee0;font-size:1rem;max-width:40em}
-    .enterprise .btn-outline{color:#fff;border-color:rgba(255,255,255,.4)}
-    .enterprise .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;color:#fff}
+    /* spine */
+    .spine{padding:64px 0}
+    .spine p{font-family:var(--serif);font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.4;color:var(--ink);max-width:24em;font-weight:400}
+    .spine p em{font-style:italic;color:var(--navy)}
 
-    /* approach */
-    .approach{background:var(--bg-soft)}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step}
-    .step{position:relative}
-    .step .n{font-family:var(--serif);font-size:1.5rem;color:var(--accent);font-weight:500;margin-bottom:10px;
-      width:46px;height:46px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;background:var(--bg-card)}
-    .step h3{font-size:1.18rem;font-weight:500;margin-bottom:7px}
-    .step p{color:var(--muted);font-size:.94rem}
+    /* who I help */
+    .who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .who{padding:30px 30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .who h3{font-size:1.28rem;margin-bottom:8px}
+    .who p{color:var(--muted);font-size:.98rem}
 
-    /* work */
-    .work{border-top:1px solid var(--line)}
-    .work-row{display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:start;padding:34px 4px;border-bottom:1px solid var(--line);transition:padding .2s}
-    .work-row:hover{background:var(--bg-soft)}
-    .work-no{font-family:var(--serif);font-size:1.2rem;color:var(--muted-2);min-width:1.6em;padding-top:4px}
-    .work-row h3{font-size:1.45rem;font-weight:500;display:flex;align-items:baseline;gap:.6em;flex-wrap:wrap}
-    .work-row .role{font-family:var(--sans);font-size:.85rem;color:var(--muted);font-weight:400}
-    .work-row p{color:var(--ink-2);font-size:1rem;margin-top:9px;max-width:60em;line-height:1.66}
-    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    /* problems catalog */
+    .grp{margin-bottom:8px}
+    .grp-head{display:flex;align-items:baseline;gap:14px;margin:48px 0 6px}
+    .grp-head .gn{font-family:var(--serif);color:var(--navy);font-size:1.05rem}
+    .grp-head h3{font-size:1.35rem;font-weight:500}
+    .prob{display:grid;grid-template-columns:1fr 1fr;gap:10px 48px;padding:30px 0;border-top:1px solid var(--line)}
+    .prob:last-child{border-bottom:1px solid var(--line)}
+    .prob .pq{font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ink);line-height:1.25;letter-spacing:-.01em}
+    .prob .pain{color:var(--muted);font-size:.98rem;margin-top:12px;font-style:italic;font-family:var(--serif)}
+    .prob .do{color:var(--ink-2);font-size:1rem;line-height:1.66}
+    .prob .get{margin-top:14px;font-size:.92rem;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+    .prob .get b{font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
+
+    /* CTA band */
+    .ctaband{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .ctaband-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:44px 0}
+    .ctaband h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:500;max-width:18em}
+
+    /* ways to work */
+    .ways{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .way{display:flex;gap:16px;padding:24px 26px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r)}
+    .way .wn{font-family:var(--serif);color:var(--navy);font-size:1.1rem;flex:none}
+    .way h4{font-size:1.12rem;font-weight:600;font-family:var(--serif);margin-bottom:4px}
+    .way p{color:var(--muted);font-size:.94rem}
+
+    /* process */
+    .process{background:var(--bg-soft)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+    .step .sn{font-family:var(--serif);font-size:1.4rem;color:var(--navy);width:52px;height:52px;border:1px solid var(--line-2);border-radius:50%;display:grid;place-items:center;background:var(--paper);margin-bottom:18px}
+    .step h3{font-size:1.3rem;margin-bottom:10px}
+    .step p{color:var(--ink-2);font-size:.98rem;line-height:1.66}
+    .anchors{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:36px}
+    .anchor{font-size:.86rem;color:var(--ink-2);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.5em 1em}
+    .anchor b{color:var(--navy);font-weight:600}
+
+    /* what you get */
+    .get-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 40px}
+    .get-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .get-item .ck{flex:none;color:var(--navy);font-family:var(--serif);font-size:1.2rem;line-height:1.2}
+    .get-item p{color:var(--ink-2);font-size:1rem}
+    .get-item p b{color:var(--ink);font-weight:600}
+
+    /* why me */
+    .why{background:var(--navy);color:#e7edf4}
+    .why .label{color:#9fb0c6}.why .label .no{color:#9fc1ea}
+    .why h2{color:#fff;font-size:clamp(2rem,4vw,3rem);font-weight:500;max-width:16em;margin:18px 0 22px;line-height:1.16}
+    .why h2 em{font-style:italic;color:#cfe0f3}
+    .why p{color:#bccadd;font-size:1.1rem;max-width:40em;line-height:1.72}
+
+    /* proof */
+    .proof{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .pf{padding:28px 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r)}
+    .pf .pm{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+    .pf h3{font-size:1.5rem;margin:8px 0 10px;display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+    .pf p{color:var(--ink-2);font-size:.99rem;line-height:1.66}
+    .pf a.more{display:inline-block;margin-top:14px;font-size:.92rem;font-weight:600;color:var(--navy)}
+    .pf a.more:hover{text-decoration:underline}
+    .pf .live{font-size:.66rem;font-weight:600;letter-spacing:.08em;color:#2f6b4e;background:#e8f3ec;border:1px solid #cfe6d8;padding:.24em .6em;border-radius:6px;text-transform:uppercase;font-family:var(--sans)}
+
+    /* writing + about */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+    .about-photo img{border-radius:var(--r);border:1px solid var(--line-2);aspect-ratio:1/1;object-fit:cover;width:160px}
+    .about .pull{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:var(--ink);line-height:1.5;border-left:2px solid var(--navy);padding-left:20px;margin:4px 0 20px}
+    .about p{color:var(--ink-2);font-size:1.04rem;margin-bottom:14px;line-height:1.72}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
     .chip{font-size:.78rem;color:var(--ink-2);background:var(--bg-soft);border:1px solid var(--line);padding:.3em .75em;border-radius:999px}
-    .work-row:hover .chip{background:var(--bg-card)}
-    .work-link{font-size:.92rem;font-weight:500;color:var(--accent);white-space:nowrap;padding-top:6px}
-    .work-link:hover{text-decoration:underline}
-    .badge-live{font-size:.68rem;font-weight:600;letter-spacing:.08em;color:#2f6b4e;background:#e8f3ec;border:1px solid #cfe6d8;padding:.26em .6em;border-radius:999px;text-transform:uppercase;font-family:var(--sans)}
+    .lbl-sm{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:600}
 
-    /* about */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-    .about h2{font-size:clamp(1.8rem,3.2vw,2.5rem);font-weight:500;margin-bottom:18px}
-    .about p{color:var(--ink-2);margin-bottom:16px;font-size:1.06rem;line-height:1.72}
-    .about .pull{font-family:var(--serif);font-size:1.28rem;font-style:italic;color:var(--ink);line-height:1.5;
-      border-left:2px solid var(--accent);padding-left:20px;margin:6px 0 22px}
-    .about .lbl{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-    .about-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+    /* founding offer */
+    .founding{background:var(--bg-soft);border:1px solid var(--line-2);border-radius:var(--r);padding:40px 44px;text-align:center;max-width:50em;margin:0 auto}
+    .founding h3{font-size:1.7rem;font-weight:500;margin:10px 0 12px}
+    .founding p{color:var(--ink-2);font-size:1.06rem;max-width:36em;margin:0 auto;line-height:1.7}
+
+    /* faq */
+    .faq details{border-bottom:1px solid var(--line);padding:4px 0}
+    .faq summary{list-style:none;cursor:pointer;padding:20px 36px 20px 0;position:relative;font-family:var(--serif);font-size:1.22rem;font-weight:500;color:var(--ink)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";position:absolute;right:4px;top:18px;font-family:var(--sans);font-size:1.5rem;color:var(--navy);transition:transform .2s;font-weight:400}
+    .faq details[open] summary::after{content:"–"}
+    .faq .ans{color:var(--ink-2);font-size:1.02rem;line-height:1.72;padding:0 40px 22px 0;max-width:52em}
 
     /* contact */
-    .contact{background:var(--accent);color:#eef2f8;text-align:center}
-    .contact .eyebrow{color:#9fb4d4}
-    .contact h2{color:#fff;font-size:clamp(2.2rem,4.6vw,3.3rem);font-weight:500;margin:.6rem auto .7rem;max-width:14em}
-    .contact p{color:#c2cee0;font-size:1.12rem;max-width:34em;margin:0 auto 2rem;line-height:1.7}
-    .contact .btn-primary{background:#fff;color:var(--accent)}
-    .contact .btn-primary:hover{background:#eef2f8;box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
-    .contact-email{display:block;margin-top:20px;font-size:.95rem;color:#9fb4d4}
-    .contact-alt{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;margin-top:26px;font-size:.94rem}
-    .contact-alt a{color:#c2cee0;display:inline-flex;align-items:center;gap:.5em;transition:color .15s}
-    .contact-alt a:hover{color:#fff}
+    .contact{background:var(--navy);color:#e7edf4}
+    .contact .label{color:#9fb0c6}.contact .label .no{color:#9fc1ea}
+    .contact h2{color:#fff;font-size:clamp(2rem,4.2vw,3rem);font-weight:500;margin:16px 0 14px;max-width:16em}
+    .contact .intro{color:#bccadd;font-size:1.08rem;max-width:42em;line-height:1.72;margin-bottom:34px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .field{margin-bottom:16px}
+    .field label{display:block;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#9fb0c6;margin-bottom:7px;font-weight:600}
+    .field input,.field textarea{width:100%;font-family:var(--sans);font-size:1rem;color:#fff;background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:12px 14px;transition:border-color .15s}
+    .field input::placeholder,.field textarea::placeholder{color:#7e8da0}
+    .field input:focus,.field textarea:focus{outline:none;border-color:#9fc1ea;background:rgba(255,255,255,.1)}
+    .field textarea{resize:vertical;min-height:120px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .contact .btn-primary{background:#fff;color:var(--navy);width:100%;justify-content:center}
+    .contact .btn-primary:hover{background:#eef2f7}
+    .form-note{font-size:.85rem;color:#9fb0c6;margin-top:12px;text-align:center}
+    .contact-side .ci{display:block;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+    .contact-side .ci:first-child{border-top:1px solid rgba(255,255,255,.14)}
+    .contact-side .ci small{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#9fb0c6;margin-bottom:4px;font-weight:600}
+    .contact-side .ci a,.contact-side .ci b{color:#fff;font-size:1.04rem;font-weight:500}
+    .contact-side .ci a:hover{color:#cfe0f3}
+    .expect{margin-top:22px;font-size:.92rem;color:#bccadd;line-height:1.6}
+    .expect b{color:#fff;font-weight:600}
 
     /* footer */
-    .footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0}
-    .footer-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
-    .footer-brand{font-family:var(--serif);font-weight:600;font-size:1.15rem}
-    .footer-copy{font-size:.86rem;color:var(--muted);max-width:30em;margin-top:4px}
-    .footer-links{display:flex;flex-wrap:wrap;gap:22px;font-size:.9rem;color:var(--muted)}
-    .footer-links a:hover{color:var(--accent)}
-    .footer-year{font-size:.82rem;color:var(--muted-2);width:100%;border-top:1px solid var(--line);padding-top:20px;margin-top:6px}
+    .footer{background:var(--bg);border-top:1px solid var(--line);padding:46px 0}
+    .footer-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px}
+    .footer-brand{font-family:var(--serif);font-weight:600;font-size:1.2rem}
+    .footer-copy{font-size:.88rem;color:var(--muted);max-width:26em;margin-top:6px}
+    .footer-links{display:flex;flex-wrap:wrap;gap:20px;font-size:.92rem;color:var(--ink-2);align-content:start}
+    .footer-links a:hover{color:var(--navy)}
+    .footer-base{width:100%;border-top:1px solid var(--line);margin-top:8px;padding-top:18px;font-size:.82rem;color:var(--muted-2)}
 
-    /* reveal (subtle) */
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+    /* reveal */
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
     .reveal.on{opacity:1;transform:none}
     @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
 
     /* responsive */
-    @media(max-width:920px){
-      .hero-in{grid-template-columns:1fr;gap:44px}
-      .hero{padding:56px 0 60px}
-      .hero-photo{max-width:380px}
-      .about{grid-template-columns:1fr;gap:34px}
-      .steps{grid-template-columns:1fr 1fr;gap:30px}
-      .enterprise{grid-template-columns:1fr;gap:20px}
+    @media(max-width:940px){
+      .hero-in{grid-template-columns:1fr;gap:40px}
+      .hero-photo{max-width:360px}
+      .trust-in{gap:20px 0}.trust-item{min-width:45%;flex:none}
+      .trust-item:nth-child(odd)::before{content:none}
+      .proof{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr;gap:40px}
+      .steps{grid-template-columns:1fr;gap:28px}
+      .contact-grid{grid-template-columns:1fr;gap:34px}
     }
-    @media(max-width:720px){
+    @media(max-width:700px){
       .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);
-        border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-135%);transition:transform .25s;box-shadow:0 20px 40px -24px rgba(0,0,0,.25)}
+        border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-140%);transition:transform .25s;box-shadow:0 20px 40px -24px rgba(0,0,0,.25)}
       .nav-links.open{transform:translateY(0)}
-      .nav-links a:not(.btn){padding:13px 28px}
-      .nav-links .btn{margin:8px 28px}
+      .nav-links a:not(.btn){padding:13px 30px}
+      .nav-links .btn{margin:8px 30px}
       .nav-toggle{display:block}
-      .section{padding:70px 0}
-      .svc-grid{grid-template-columns:1fr}
-      .metrics-in{grid-template-columns:1fr 1fr;gap:34px 0}
-      .metric:nth-child(3)::before,.metric:nth-child(2)::before{content:none}
-      .steps{grid-template-columns:1fr}
-      .work-row{grid-template-columns:auto 1fr;gap:16px}
-      .work-link{grid-column:2}
+      .section{padding:64px 0}
+      .who-grid{grid-template-columns:1fr}
+      .prob{grid-template-columns:1fr;gap:6px}
+      .prob .do-wrap{margin-top:6px}
+      .ways{grid-template-columns:1fr}
+      .get-grid{grid-template-columns:1fr;gap:0}
+      .trust-item{min-width:100%}.trust-item::before{content:none!important}
+      .form-row{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body id="top">
   <header class="nav">
-    <div class="container nav-in">
+    <div class="wrap nav-in">
       <a class="brand" href="#top">Ray<span>.</span>Qin</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav-links" id="navLinks">
-        <a href="#services">Services</a>
+        <a href="#problems">Problems</a>
+        <a href="#process">How it works</a>
         <a href="#work">Work</a>
-        <a href="#about">About</a>
         <a href="blog.html">Writing</a>
-        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-primary" href="#contact">Tell me your AI problem</a>
       </nav>
     </div>
   </header>
@@ -226,24 +280,16 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="container hero-in">
+      <div class="wrap hero-in">
         <div class="hero-main reveal">
-          <p class="eyebrow">Senior Software &amp; AI Engineer</p>
-          <h1>I build AI products that <em>earn trust</em>.</h1>
-          <p class="hero-lead">
-            I'm Ray Qin — a senior software and AI engineer (ex-ZipRecruiter, 10M+ users).
-            I help startups and teams design, build, and ship production AI: agents, RAG systems,
-            and the full-stack products around them — carefully, and built to last.
-          </p>
+          <p class="eyebrow">AI engineer &amp; builder for hire</p>
+          <h1>You have an AI problem.<br>I design it, build it, and ship it to production — <em>solo</em>.</h1>
+          <p class="hero-sub">I'm Ray. I help founders and teams turn a fuzzy AI idea — or a slow manual process that's costing you — into working software your customers actually use. One senior engineer, accountable end to end, explaining every decision in plain language.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary btn-lg" href="#contact">Get in touch</a>
-            <a class="btn btn-outline btn-lg" href="#work">See selected work</a>
+            <a class="btn btn-primary btn-lg" href="#contact">Tell me your AI problem</a>
+            <a class="btn btn-outline btn-lg" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">See a product I shipped →</a>
           </div>
-          <div class="hero-creds">
-            <span>Ex-ZipRecruiter</span>
-            <span>UC San Diego, Cum Laude</span>
-            <span>3 years in production</span>
-          </div>
+          <p class="hero-micro">I've taken AI to production for <b>10M+ monthly users</b> and built a complete AI product alone — <b>Anvil Sim</b>, live today. The breadth and reliability aren't promises; they're things I've already shipped.</p>
         </div>
         <figure class="hero-photo reveal">
           <img src="media/profile-2025.jpg" alt="Ray Qin" loading="eager">
@@ -252,140 +298,329 @@
       </div>
     </section>
 
-    <!-- METRICS -->
-    <section class="metrics">
-      <div class="container metrics-in">
-        <div class="metric reveal"><b>10M+</b><span>monthly users served</span></div>
-        <div class="metric reveal"><b>+20 pts</b><span>login conversion lift</span></div>
-        <div class="metric reveal"><b>~40%</b><span>faster homepage loads</span></div>
-        <div class="metric reveal"><b>22 mo</b><span>new grad → Senior</span></div>
+    <!-- TRUST STRIP -->
+    <section class="trust">
+      <div class="wrap trust-in">
+        <div class="trust-item"><b>10M+</b><span>users served in production</span></div>
+        <div class="trust-item"><b>Solo</b><span>AI products shipped end to end</span></div>
+        <div class="trust-item"><b>Measured</b><span>for accuracy &amp; cost, not vibes</span></div>
+        <div class="trust-item"><b>Full-stack</b><span>AI, app, backend &amp; infra</span></div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="head reveal">
-          <p class="eyebrow">Services</p>
-          <h2>How I can help</h2>
-          <p>Clear, productized engagements — from a single feature shipped to an embedded senior engineer on your roadmap.</p>
+    <!-- SPINE -->
+    <section class="spine wrap">
+      <p class="reveal">My core is <em>grounded LLM systems</em> — assistants, search over your own data, and agents that take real action without making things up. And because I ship complete products solo, I build everything around them too: the app, the backend, the infrastructure.</p>
+    </section>
+
+    <!-- WHO I HELP -->
+    <section class="section-tight" id="who">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">01</span> Who I work with</p>
+          <h2>If one of these sounds like you, we'll get along.</h2>
         </div>
-        <div class="svc-grid">
-          <div class="svc reveal"><p class="num">01</p><h3>AI Agents &amp; Automation</h3><p>Custom agents and workflow automation that do real work — tool use, multi-step pipelines, and MCP integrations — with human review and guardrails so they're safe in production.</p><span class="feat-tag">Most requested</span></div>
-          <div class="svc reveal"><p class="num">02</p><h3>RAG &amp; AI Assistants</h3><p>Assistants grounded in your own documents and data, with evaluations so answers stay accurate, cited, and safe.</p></div>
-          <div class="svc reveal"><p class="num">03</p><h3>LLM Integration</h3><p>Add Claude or GPT to your existing product — copilots, content pipelines, smart features — production-ready with monitoring and cost control.</p></div>
-          <div class="svc reveal"><p class="num">04</p><h3>Full-Stack Apps &amp; MVPs</h3><p>The whole product: React / Next.js front ends and Go / Node back ends, from idea to a deployed, tested MVP your users can rely on.</p></div>
-          <div class="svc reveal"><p class="num">05</p><h3>Consulting &amp; Architecture</h3><p>Advisory on AI strategy and system design — architecture reviews, roadmaps, and honest de-risking before you commit budget.</p></div>
-          <div class="svc reveal"><p class="num">06</p><h3>Training &amp; Workshops</h3><p>Hands-on team workshops on agentic coding and AI engineering practice. I ran ZipRecruiter's first internal Cursor workshop.</p></div>
+        <div class="who-grid reveal">
+          <div class="who"><h3>Founders with an AI idea and no one to build it</h3><p>You have the vision and the market but no technical partner who can turn it into a real, working product. I become that partner — and ship it.</p></div>
+          <div class="who"><h3>Startups that need to move fast, short-handed</h3><p>There's a deadline and a stretched team. I plug in as a senior engineer who builds the AI piece end to end without a long ramp-up.</p></div>
+          <div class="who"><h3>Businesses losing hours to manual work</h3><p>Repetitive busywork and trapped knowledge are quietly costing you. I find the highest-leverage fix and automate it, with people still in control.</p></div>
+          <div class="who"><h3>Product teams adding AI the right way</h3><p>You want an AI feature that feels native and holds up in front of real users — not a flaky demo. I design, build, and harden it into production.</p></div>
         </div>
-        <div class="enterprise reveal">
-          <div>
-            <h3>Embedded &amp; enterprise engagements</h3>
-            <p>Need a full product delivered end to end, or an ongoing senior partner for your AI roadmap? I take on fixed-scope builds and monthly retainers with clear milestones and disciplined review.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEMS CATALOG -->
+    <section class="section" id="problems">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">02</span> The problems I solve</p>
+          <h2>Real problems, in the words customers actually use.</h2>
+          <p>Whatever your AI challenge, it probably looks like one of these. Each comes with what I'd build and exactly what you walk away with.</p>
+        </div>
+
+        <div class="grp reveal">
+          <div class="grp-head"><span class="gn">A</span><h3>Save your team's time</h3></div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“Our support inbox is overwhelmed.”</p>
+              <p class="pain">Customers wait hours, your team answers the same questions all day, and hiring doesn't scale — but you don't trust AI not to get something wrong in front of a customer.</p>
+            </div>
+            <div>
+              <p class="do">I build a support assistant that answers from your real docs and past tickets, hands off cleanly to a human when it's unsure, and doesn't make things up. Faster replies, a lighter team, guardrails you can trust.</p>
+              <div class="get"><b>You get</b>A grounded support assistant wired to your help center and ticket history, with confidence thresholds and clean human escalation.</div>
+            </div>
           </div>
-          <a class="btn btn-outline" href="#contact">Start a conversation</a>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“We're sitting on documents nobody can search.”</p>
+              <p class="pain">Contracts, PDFs, wikis, transcripts — the answers are in there, but finding them means pinging the one person who remembers. When people leave, the knowledge leaves too.</p>
+            </div>
+            <div>
+              <p class="do">I build a private search-and-answer system over your own documents, so anyone can ask a plain-English question and get the right answer with a link to the source. Your knowledge becomes searchable instead of tribal.</p>
+              <div class="get"><b>You get</b>A secure document Q&amp;A system over your files, with cited sources and permissioned access.</div>
+            </div>
+          </div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“Our team loses hours to repetitive busywork.”</p>
+              <p class="pain">Copy-pasting between tools, sorting tickets, summarizing reports, drafting the same emails — a hundred small tasks no single hire can justify, quietly burning out good people.</p>
+            </div>
+            <div>
+              <p class="do">I find the workflows eating your week and build AI agents that do the boring parts reliably — wired into the tools you already use, with a human in control where it matters. Your people get their hours back.</p>
+              <div class="get"><b>You get</b>AI agents connected to your stack (Slack, email, CRM, docs, ticketing) that run real multi-step work, with human approval on the steps that count.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grp reveal">
+          <div class="grp-head"><span class="gn">B</span><h3>Ship AI that grows the business</h3></div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“We want to add an AI feature — and keep it working.”</p>
+              <p class="pain">Users expect AI and leadership wants it shipped, but a flaky feature would hurt your brand more than help it — and the demos that impress everyone break the moment real customers touch them.</p>
+            </div>
+            <div>
+              <p class="do">I find the highest-value AI feature for your product, prototype it fast so you can see it working, then build it in properly — model work, UX, testing — with measurement that proves it stays good as you change it. Ships fast, feels native, holds up.</p>
+              <div class="get"><b>You get</b>A production AI feature built into your product end to end, with the UX, accuracy, edge cases, and ongoing measurement handled.</div>
+            </div>
+          </div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“We have an idea but no one to tell us if it's real.”</p>
+              <p class="pain">You've got a concept and a budget, but you need a straight answer before you spend: is this feasible, what will it take, is it even worth doing?</p>
+            </div>
+            <div>
+              <p class="do">I give you an honest technical read and a concrete plan — what's possible now, what it'll cost, where the risks are, and the smallest version worth building first. If an off-the-shelf tool is the right answer, I'll tell you that too. A decision, not a sales pitch.</p>
+              <div class="get"><b>You get</b>A focused AI opportunity review: a short, ranked plan of what to build, what to buy, what to skip, what it costs, and what it returns.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grp reveal">
+          <div class="grp-head"><span class="gn">C</span><h3>Make AI reliable &amp; affordable</h3></div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“Our AI works in the demo but breaks in the real world.”</p>
+              <p class="pain">The prototype impressed everyone. Then in production it gives wrong answers, costs too much, or behaves unpredictably — and no one can tell whether a change made it better or worse.</p>
+            </div>
+            <div>
+              <p class="do">I make AI features production-ready: I put measurement in place so you can prove quality, drive down wrong answers and cost, handle the messy edge cases, and let you ship changes with confidence instead of crossing your fingers.</p>
+              <div class="get"><b>You get</b>Evaluations, guardrails, monitoring, and cost/latency tuning that take a prototype to production-grade.</div>
+            </div>
+          </div>
+          <div class="prob">
+            <div class="do-wrap">
+              <p class="pq">“We're spending more on AI and not sure it's working.”</p>
+              <p class="pain">Model bills are climbing, results are inconsistent, and you can't tell whether the spend is buying real value or quietly leaking money. Scaling feels risky instead of exciting.</p>
+            </div>
+            <div>
+              <p class="do">I audit how your AI is built and run, cut the waste — right-sized models, caching, smarter prompts and architecture — and put real numbers behind quality, so you know exactly what you're paying for and what it returns.</p>
+              <div class="get"><b>You get</b>A cost-and-quality audit with concrete fixes that lower spend and latency without hurting results.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- APPROACH -->
-    <section class="section approach" id="approach">
-      <div class="container">
-        <div class="head reveal">
-          <p class="eyebrow">How I work</p>
-          <h2>Calm, transparent, dependable</h2>
-          <p>The same discipline I brought to systems serving millions of users — so you always know where a project stands.</p>
+    <!-- CTA BAND -->
+    <section class="ctaband">
+      <div class="wrap ctaband-in reveal">
+        <h3>See your problem here — or something close to it?</h3>
+        <a class="btn btn-primary btn-lg" href="#contact">Tell me your AI problem</a>
+      </div>
+    </section>
+
+    <!-- WAYS TO WORK -->
+    <section class="section" id="ways">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">03</span> Ways to work with me</p>
+          <h2>However you need to bring me in.</h2>
         </div>
-        <div class="steps">
-          <div class="step reveal"><div class="n">1</div><h3>Scope</h3><p>A free call to understand the goal, then a clear plan with fixed scope or a sensible rate.</p></div>
-          <div class="step reveal"><div class="n">2</div><h3>Build</h3><p>I build in the open — tested, reviewed, and shared as it progresses. No black boxes.</p></div>
-          <div class="step reveal"><div class="n">3</div><h3>Ship</h3><p>Deployed and verified, with monitoring and guardrails where it counts.</p></div>
-          <div class="step reveal"><div class="n">4</div><h3>Support</h3><p>Clear handoff with docs — and I'm around afterward if you need me.</p></div>
+        <div class="ways reveal">
+          <div class="way"><span class="wn">→</span><div><h4>Fixed-scope project</h4><p>A defined build, one flat price agreed up front. The most common way to start.</p></div></div>
+          <div class="way"><span class="wn">→</span><div><h4>Fractional senior builder</h4><p>Part-time, ongoing — I own the AI build alongside your roadmap.</p></div></div>
+          <div class="way"><span class="wn">→</span><div><h4>Embedded for a sprint</h4><p>I join your team for a focused stretch and ship the AI piece end to end.</p></div></div>
+          <div class="way"><span class="wn">→</span><div><h4>Full-product build</h4><p>AI plus the app, backend, and infrastructure around it — one coherent thing.</p></div></div>
         </div>
       </div>
     </section>
 
-    <!-- WORK -->
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">04</span> How it works</p>
+          <h2>Calm, transparent, and priced before we start.</h2>
+        </div>
+        <div class="steps reveal">
+          <div class="step">
+            <div class="sn">1</div><h3>Scope it</h3>
+            <p>A free 30-minute call about your actual problem — not a pitch. I pressure-test the idea, find where AI genuinely creates value (and where an off-the-shelf tool would serve you better), and give you a straight read: what's worth building, roughly what it costs and takes, and the smallest version that proves it. You keep the plan either way.</p>
+          </div>
+          <div class="step">
+            <div class="sn">2</div><h3>Build it</h3>
+            <p>Most work runs as a fixed-scope sprint — typically 2 to 8 weeks, flat price agreed up front, no open-ended meter. I build the real thing: the model work, the product around it, the integrations, and the measurement that proves it works. You see progress in working software, often a first usable version in 2 to 4 weeks.</p>
+          </div>
+          <div class="step">
+            <div class="sn">3</div><h3>Ship it &amp; hand over</h3>
+            <p>I take it to production — fast, reliable, cost-controlled — with monitoring so you catch problems before customers do. Then I hand off clean: documented, tested, maintainable code your team can own and extend after I'm gone.</p>
+          </div>
+        </div>
+        <div class="anchors reveal">
+          <span class="anchor"><b>Free</b> 30-min first call</span>
+          <span class="anchor"><b>Flat price</b> agreed up front</span>
+          <span class="anchor"><b>2–8 week</b> sprints</span>
+          <span class="anchor">First usable version in <b>2–4 weeks</b></span>
+          <span class="anchor">Reply within <b>a business day</b></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section" id="get">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">05</span> What you get</p>
+          <h2>The discipline of a full team, from one accountable person.</h2>
+        </div>
+        <div class="get-grid reveal">
+          <div class="get-item"><span class="ck">—</span><p><b>A working product in production</b> — not a slide deck, not a prototype that stalls at "almost ready."</p></div>
+          <div class="get-item"><span class="ck">—</span><p><b>One accountable expert</b> from first call to shipped software — you talk to the person doing the work.</p></div>
+          <div class="get-item"><span class="ck">—</span><p><b>Plain-English explanations</b> of every decision, so you always know what's happening and why.</p></div>
+          <div class="get-item"><span class="ck">—</span><p><b>Clean code you own</b> — documented, tested, maintainable — never a black box only I can change.</p></div>
+          <div class="get-item"><span class="ck">—</span><p><b>Measurement built in</b> — real numbers on accuracy, cost, and quality, so you can see it working.</p></div>
+          <div class="get-item"><span class="ck">—</span><p><b>An honest read</b> on what's worth building — including when the right answer is an off-the-shelf tool.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ME -->
+    <section class="section why" id="why">
+      <div class="wrap">
+        <p class="label reveal"><span class="no">06</span> Why me</p>
+        <h2 class="reveal">Most people selling AI help can do one or the other: operate at scale, or build the whole thing alone. <em>I've done both.</em></h2>
+        <p class="reveal">Consultants hand you a strategy deck and disappear before any code exists. Agencies bill for a team you never meet and have to manage. I'm one senior engineer who diagnoses the real problem and then builds and ships it myself — with production systems behind me at 10M-user scale and a complete AI product shipped solo. The engineer who ships, not the advisor who hands off a deck.</p>
+      </div>
+    </section>
+
+    <!-- PROOF -->
     <section class="section" id="work">
-      <div class="container">
-        <div class="head reveal">
-          <p class="eyebrow">Selected work</p>
-          <h2>A track record of shipping</h2>
-          <p>Three years building core systems for millions of users, plus production AI products built solo — not demos, shipped software.</p>
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">07</span> Proof of work</p>
+          <h2>Real, checkable work — not testimonials I wrote myself.</h2>
         </div>
-        <div class="work">
-          <article class="work-row reveal">
-            <span class="work-no">01</span>
-            <div>
-              <h3>ZipRecruiter <span class="role">Senior Software Engineer · 2023–2026</span></h3>
-              <p>Rebuilt registration, login, and authentication across 30+ fragmented entry points into one reusable platform for 10M+ monthly users — a double-digit login-conversion lift, 10K+ weekly SMS opt-ins, and ~40% faster homepage loads. Pioneered AI-assisted delivery and ran the company's first Cursor workshop.</p>
-              <div class="chips"><span class="chip">Go</span><span class="chip">React / Next.js</span><span class="chip">Auth &amp; OTP</span><span class="chip">gRPC / Protobuf</span><span class="chip">Claude Code · MCP</span></div>
-            </div>
-          </article>
-          <article class="work-row reveal">
-            <span class="work-no">02</span>
-            <div>
-              <h3><a href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Anvil Sim</a> <span class="badge-live">Live</span></h3>
-              <p>An AI-first engineering simulation product I built solo: import STEP/STP geometry, let agents help prepare the setup, then validate, run, visualize, and export a reviewer packet — structural FEA, CFD, and thermal. A native Mac app, from geometry kernel to interface.</p>
-              <div class="chips"><span class="chip">Swift / SwiftUI</span><span class="chip">Metal</span><span class="chip">Rust</span><span class="chip">AI agents</span></div>
-            </div>
-            <a class="work-link" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Visit →</a>
-          </article>
-          <article class="work-row reveal">
-            <span class="work-no">03</span>
-            <div>
-              <h3>Enterprise OS <span class="role">Multi-agent engineering system</span></h3>
-              <p>A system where coding agents deliver against real codebases in isolated workspaces — every change carries specs, tests, evaluations, permissions, and CI, so AI-generated work is reviewable, reproducible, and rollback-aware. The same care I bring to client work.</p>
-              <div class="chips"><span class="chip">Rust</span><span class="chip">Agent orchestration</span><span class="chip">RAG / vector search</span><span class="chip">CI &amp; evals</span></div>
-            </div>
-          </article>
+        <div class="proof reveal">
+          <div class="pf">
+            <p class="pm">Solo product</p>
+            <h3>Anvil Sim <span class="live">Live</span></h3>
+            <p>A hard, real AI product for Mac, built solo — from a raw geometry engine all the way to a finished, shipped interface, in real hands today. It's the proof that disarms the biggest fear of hiring one person: that they can't actually do all of it. I did — engine, AI, and native UI, alone. That's the end-to-end reliability I bring to your build.</p>
+            <a class="more" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Visit the live product →</a>
+          </div>
+          <div class="pf">
+            <p class="pm">Scale</p>
+            <h3>Production AI for 10M+ users</h3>
+            <p>At ZipRecruiter I rebuilt core systems for over ten million monthly users — lifting login conversion by double digits and cutting homepage load time by roughly 40%. That's the level where a black box gets you fired, so reliability and measurement aren't slogans here — they're how I've already had to work.</p>
+          </div>
+          <div class="pf">
+            <p class="pm">Agentic systems</p>
+            <h3>Enterprise OS</h3>
+            <p>A multi-agent development system I designed and built solo — agents that connect to real tools and do real, multi-step work. It's the internal system I use to ship client work fast, and the kind of agentic system I build for clients who need AI that acts, not just chats.</p>
+          </div>
+          <div class="pf">
+            <p class="pm">How I ship</p>
+            <h3>AI-native delivery</h3>
+            <p>I pioneered AI-assisted delivery with Claude Code and ran a company's first internal AI-coding workshop. Every change I ship carries a spec, automated tests, and an eval that proves the AI's quality didn't regress — disciplined and fast, without cutting corners.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section approach" id="about">
-      <div class="container about">
-        <div class="reveal">
-          <p class="eyebrow">About</p>
-          <h2>A senior engineer who sweats the details.</h2>
+    <!-- WRITING + ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div class="reveal about">
+          <p class="label"><span class="no">08</span> About</p>
+          <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);margin:16px 0 18px">A senior engineer who sweats the details.</h2>
           <p class="pull">I care less about shipping something clever, and more about shipping something that still works at 3 a.m. six months later.</p>
-          <p>I spent three years at <strong>ZipRecruiter</strong> building core systems for 10M+ monthly users and pioneering AI-assisted engineering — promoted from new graduate to Senior in 22 months. On my own I build production AI products end to end (Anvil Sim, Enterprise OS), so I know what it takes to get agents and LLM features from a clever prototype to something dependable in front of real users.</p>
-          <p>UC San Diego dual B.S. in Mathematics–Computer Science and Mechanical Engineering, Cum Laude (GPA 3.9/4.0).</p>
-          <div class="about-actions">
-            <a class="btn btn-primary" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
-            <a class="btn btn-outline" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
+          <p>I spent three years at ZipRecruiter building core systems for 10M+ monthly users and pioneering AI-assisted engineering. On my own I build production AI products end to end — Anvil Sim and Enterprise OS — so I know what it takes to get agents and LLM features from a clever prototype to something dependable in front of real users.</p>
+          <p>I trained in mathematics, computer science, and mechanical engineering at UC San Diego — which is a long way of saying I'm comfortable from the math under a model all the way up to the product a customer touches.</p>
+          <div style="margin-top:22px">
+            <a class="btn btn-outline" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener" style="margin-left:8px">LinkedIn</a>
           </div>
         </div>
         <div class="reveal">
-          <p class="lbl">Toolkit</p>
+          <p class="lbl-sm">Toolkit</p>
           <div class="chips">
-            <span class="chip">TypeScript</span><span class="chip">React / Next.js</span><span class="chip">Go</span><span class="chip">Python</span><span class="chip">Rust</span>
-            <span class="chip">AI agents</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">LLM evals</span><span class="chip">Vector search</span>
-            <span class="chip">Postgres</span><span class="chip">Docker / K8s</span><span class="chip">Terraform</span><span class="chip">gRPC / Protobuf</span>
+            <span class="chip">Grounded LLM systems</span><span class="chip">RAG &amp; search</span><span class="chip">AI agents</span><span class="chip">Evals &amp; guardrails</span>
+            <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">Go</span><span class="chip">Rust</span>
+            <span class="chip">React / Next.js</span><span class="chip">Postgres</span><span class="chip">Docker / K8s</span><span class="chip">Cloud infra</span>
           </div>
-          <p class="lbl" style="margin-top:30px">Focus areas</p>
-          <div class="chips">
-            <span class="chip">Production AI &amp; agents</span><span class="chip">Authentication &amp; security</span><span class="chip">Search &amp; recommendation</span>
-            <span class="chip">Growth &amp; conversion</span><span class="chip">Developer experience</span>
-          </div>
+          <p class="lbl-sm" style="margin-top:30px">Writing</p>
+          <p style="color:var(--ink-2);font-size:1.02rem;line-height:1.7;margin-bottom:14px">I write about building and shipping AI — what holds up in production and what quietly doesn't.</p>
+          <a class="more" style="font-weight:600;color:var(--navy)" href="blog.html">Read the writing →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDING CLIENT OFFER -->
+    <section class="section-tight">
+      <div class="wrap">
+        <div class="founding reveal">
+          <p class="label" style="justify-content:center"><span class="no">09</span> Founding clients</p>
+          <h3>Being first should be low-risk — so I make it that way.</h3>
+          <p>I'm taking on a small number of first client projects at founding-client terms. Early clients get my full focus and can start with a small paid pilot: if the first milestone doesn't convince you, we stop there — no long contract signed on faith.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label"><span class="no">10</span> Questions</p>
+          <h2>The things people ask before reaching out.</h2>
+        </div>
+        <div class="faq reveal">
+          <details><summary>I'm not technical. Will I understand what you're doing?</summary><p class="ans">Yes — that's the point. I explain every decision in plain language and show you working software instead of jargon. You'll always know what's being built, why, and what it costs. And you don't need a perfectly-diagnosed "AI problem" to start — if you can describe what's slowing you down, we can work together. I'll tell you straight whether it's even an AI problem.</p></details>
+          <details><summary>What does this cost, and how do you work?</summary><p class="ans">I price per project, not per hour — most work runs as a fixed-scope sprint (typically 2 to 8 weeks) with a flat price agreed up front, so you know the number before any work begins. There's no open-ended meter. The first call is free and includes a rough ballpark so you can decide with real information.</p></details>
+          <details><summary>You have no client testimonials yet. Why should I trust you?</summary><p class="ans">Honestly: because I'd rather show you real, checkable work than invent reviews. Anvil Sim is live right now — a complete AI product I built and shipped alone. I've also taken AI to production for 10M+ monthly users. And because I'm taking on a small number of first projects, we can start with a small paid pilot: if the first milestone doesn't convince you, we stop there — no long contract on faith.</p></details>
+          <details><summary>How is this different from hiring an agency or a consultant?</summary><p class="ans">Most people selling AI help can either operate at scale or build the whole thing solo — rarely both. I've done both: production systems at 10M-user scale, and a complete AI product shipped alone. Consultants hand you a strategy deck and disappear before any code exists; agencies bill for a team you never meet and have to manage. I'm one senior engineer who diagnoses the real problem and then builds and ships it myself.</p></details>
+          <details><summary>Will I be locked into something only you can maintain?</summary><p class="ans">No. I hand back work that's documented, tested, and maintainable, so your team can own and extend it after I'm gone. De-risking the handover is part of the job — you're never left with a black box you can't change.</p></details>
+          <details><summary>Would an off-the-shelf tool be cheaper than hiring you?</summary><p class="ans">Sometimes, yes — and I'll tell you when it is. If an existing product does the job, that's the honest recommendation and it saves you money. I build custom when your data, workflow, or quality bar means the off-the-shelf version won't cut it. Knowing when to buy instead of build is part of giving you a straight answer.</p></details>
+          <details><summary>Do you only do AI work?</summary><p class="ans">AI is the focus, but I build the whole product around it when you need it — interface, backend, data, and infrastructure — as one person, so you get a coherent working thing instead of a pile of parts to integrate.</p></details>
+          <details><summary>How do we start?</summary><p class="ans">Tell me your problem using the form below, or email me — I read every message myself and reply within a business day. The first conversation is a free 30-minute call: a straight technical read on whether it's worth doing and what it would take. No deck, no pitch, no commitment.</p></details>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section class="section contact" id="contact">
-      <div class="container">
-        <div class="reveal">
-          <p class="eyebrow">Let's talk</p>
-          <h2>Tell me what you're building.</h2>
-          <p>Share a few sentences about your goal and timeline. I reply within a business day with whether I'm a fit, a rough approach, and next steps — no obligation.</p>
-          <a class="btn btn-primary btn-lg" href="mailto:qinjianxyz@gmail.com?subject=Project%20inquiry&body=Hi%20Ray%2C%0D%0A%0D%0AI'm%20working%20on%20...%20and%20I'd%20like%20help%20with%20...%0D%0A%0D%0ATimeline%3A%20...%0D%0ABudget%3A%20...%0D%0A%0D%0AThanks!">Email me about your project</a>
-          <span class="contact-email">qinjianxyz@gmail.com</span>
-          <div class="contact-alt">
-            <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-            <a href="blog.html">Writing</a>
+      <div class="wrap">
+        <p class="label reveal"><span class="no">11</span> Let's talk</p>
+        <h2 class="reveal">Have an AI problem? Let's build the fix.</h2>
+        <p class="intro reveal">Tell me what you're trying to do — or just what's slowing you down. Not sure it's even an AI problem? That's fine; describe it in plain words and I'll tell you straight. The first call is free, 30 minutes, and you leave with an honest read on whether it's worth doing and a rough sense of cost and time — whether or not we work together.</p>
+        <div class="contact-grid reveal">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" placeholder="Your name" required></div>
+              <div class="field"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" placeholder="you@company.com" required></div>
+            </div>
+            <div class="field"><label for="cf-msg">What are you trying to do?</label><textarea id="cf-msg" name="message" placeholder="A few sentences about your goal — or just what's slowing you down." required></textarea></div>
+            <div class="form-row">
+              <div class="field"><label for="cf-time">Timeline (optional)</label><input id="cf-time" name="timeline" type="text" placeholder="e.g. next 4–6 weeks"></div>
+              <div class="field"><label for="cf-budget">Budget (optional)</label><input id="cf-budget" name="budget" type="text" placeholder="e.g. $5–15k"></div>
+            </div>
+            <button class="btn btn-primary btn-lg" type="submit">Tell me your AI problem</button>
+            <p class="form-note" id="formNote">Opens your email, pre-filled — or write me directly at qinjianxyz@gmail.com</p>
+          </form>
+          <div class="contact-side">
+            <div class="ci"><small>Email</small><a href="mailto:qinjianxyz@gmail.com?subject=AI%20project%20inquiry">qinjianxyz@gmail.com</a></div>
+            <div class="ci"><small>LinkedIn</small><a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">linkedin.com/in/qinjianxyz</a></div>
+            <div class="ci"><small>Résumé</small><a href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download PDF</a></div>
+            <p class="expect">The first call is <b>free</b> and <b>30 minutes</b>. You'll get a straight read on whether it's worth doing and a rough sense of cost and time. I reply within <b>a business day</b>.</p>
           </div>
         </div>
       </div>
@@ -393,15 +628,17 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-in">
+    <div class="wrap footer-in">
       <div>
-        <p class="footer-brand">Ray Qin</p>
-        <p class="footer-copy">Senior AI &amp; full-stack engineer. Production agents, RAG, LLM integration, and full-stack apps — freelance, contract &amp; consulting.</p>
+        <p class="footer-brand">Ray<span style="color:var(--navy)">.</span>Qin</p>
+        <p class="footer-copy">AI engineer for hire — I design, build, and ship AI to production, solo, for founders and teams.</p>
       </div>
       <div class="footer-links">
-        <a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="blog.html">Writing</a><a href="#contact">Contact</a>
+        <a href="#problems">Problems</a><a href="#process">How it works</a><a href="#work">Work</a>
+        <a href="blog.html">Writing</a><a href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Anvil Sim</a>
+        <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a><a href="#contact">Contact</a>
       </div>
-      <p class="footer-year">© <span id="year">2026</span> Ray Qin</p>
+      <p class="footer-base">© <span id="year">2026</span> Ray Qin · qinjianxyz@gmail.com</p>
     </div>
   </footer>
 
@@ -414,9 +651,18 @@
       n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
     var rev=document.querySelectorAll('.reveal');
     if('IntersectionObserver' in window && !reduce){
-      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.1});
       rev.forEach(function(e){io.observe(e);});
     } else { rev.forEach(function(e){e.classList.add('on');}); }
+    // Contact form -> prefilled email (works on a static host). Swap for Formspree by setting form action.
+    var f=document.getElementById('contactForm');
+    if(f){f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var g=function(id){return (document.getElementById(id)||{}).value||'';};
+      var body="Name: "+g('cf-name')+"\r\nEmail: "+g('cf-email')+"\r\nTimeline: "+g('cf-time')+"\r\nBudget: "+g('cf-budget')+"\r\n\r\nWhat I'm trying to do:\r\n"+g('cf-msg');
+      window.location.href="mailto:qinjianxyz@gmail.com?subject="+encodeURIComponent("AI project inquiry — "+(g('cf-name')||'website'))+"&body="+encodeURIComponent(body);
+      var note=document.getElementById('formNote'); if(note)note.textContent="Opening your email app… if nothing happens, write me at qinjianxyz@gmail.com";
+    });}
   })();
   </script>
 </body>
