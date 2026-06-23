@@ -100,9 +100,10 @@
     }
     .brand-text{font-size:1.02rem}
     .topnav{display:flex;align-items:center;gap:28px}
-    .topnav a{font-size:.93rem;color:var(--muted);font-weight:500;transition:.15s}
-    .topnav a:hover{color:var(--ink)}
+    .topnav a:not(.btn){font-size:.93rem;color:var(--muted);font-weight:500;transition:.15s}
+    .topnav a:not(.btn):hover{color:var(--ink)}
     .topnav .btn{padding:.55em 1.1em}
+    .topnav a.btn-primary,.topnav a.btn-primary:hover{color:#fff}
     .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
     .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.2s}
 
