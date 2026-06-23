@@ -6,9 +6,10 @@
   <meta name="description" content="Ray Qin — senior AI &amp; full-stack engineer for hire (ex-ZipRecruiter, 10M+ MAU). I build production AI agents, RAG assistants, LLM integrations, and full-stack apps. Available for freelance, contract, and consulting work.">
   <meta name="keywords" content="freelance AI engineer, hire AI agent developer, RAG chatbot developer, LLM integration, Next.js developer for hire, full-stack engineer, AI automation, Claude, MCP, Ray Qin">
   <meta name="author" content="Ray Qin">
+  <meta name="theme-color" content="#070b14">
 
   <meta property="og:title" content="Ray Qin — AI &amp; Full-Stack Engineer for Hire">
-  <meta property="og:description" content="Production AI agents, RAG assistants, LLM integrations, and full-stack apps. Ex-ZipRecruiter senior engineer, available for freelance &amp; contract work.">
+  <meta property="og:description" content="I build production AI agents, RAG assistants, LLM integrations, and the full-stack apps around them. Ex-ZipRecruiter senior engineer, available for hire.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://qinjianxyz.github.io">
   <meta property="og:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
@@ -23,283 +24,242 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#ffffff;
-      --bg-soft:#f5f8fc;
-      --bg-soft-2:#eef3fa;
-      --ink:#0d1b2e;
-      --ink-2:#1d2a3d;
-      --muted:#54657b;
-      --muted-soft:#7588a0;
-      --accent:#1d4ed8;
-      --accent-deep:#163c86;
-      --accent-soft:#e7eeff;
-      --navy:#0b1626;
-      --navy-2:#10223b;
-      --line:#e3eaf3;
-      --line-strong:#d2dcea;
-      --radius:16px;
-      --radius-sm:11px;
-      --shadow-sm:0 1px 2px rgba(13,27,46,.06), 0 4px 14px rgba(13,27,46,.05);
-      --shadow-md:0 10px 30px rgba(13,27,46,.10);
-      --maxw:1120px;
-      --font:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
-      --serif:'IBM Plex Serif',Georgia,serif;
+      --bg:#070b14;
+      --bg-2:#0a1020;
+      --panel:#0e1626;
+      --panel-2:#121d31;
+      --ink:#eef3fb;
+      --muted:#9fb0c9;
+      --muted-2:#697c98;
+      --line:rgba(255,255,255,.09);
+      --line-2:rgba(255,255,255,.16);
+      --accent:#3b82f6;
+      --accent-cy:#22d3ee;
+      --accent-vi:#8b5cf6;
+      --ok:#34d399;
+      --maxw:1180px;
+      --r:18px;--r-sm:12px;
+      --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+      --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{
-      font-family:var(--font);
-      color:var(--ink);
-      background:var(--bg);
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
+    body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
+    ::selection{background:rgba(59,130,246,.35);color:#fff}
     .container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-    .eyebrow{
-      font-size:.78rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
-      color:var(--accent);
-    }
-    h1,h2,h3{line-height:1.15;letter-spacing:-.02em;color:var(--ink)}
-    .section{padding:84px 0}
-    .section-soft{background:var(--bg-soft)}
-    .lead{color:var(--muted);font-size:1.06rem}
+    .mono{font-family:var(--mono)}
+    .kicker{font-family:var(--mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-cy)}
+    h1,h2,h3{line-height:1.1;letter-spacing:-.025em}
+    .section{padding:96px 0;position:relative}
+    .head{max-width:44em;margin-bottom:46px}
+    .head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin:.55rem 0 .7rem;font-weight:700}
+    .head p{color:var(--muted);font-size:1.06rem}
 
     /* buttons */
-    .btn{
-      display:inline-flex;align-items:center;gap:.5em;
-      font-weight:600;font-size:.95rem;
-      padding:.78em 1.35em;border-radius:999px;
-      border:1px solid transparent;cursor:pointer;transition:.18s ease;
-      white-space:nowrap;
-    }
-    .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(29,78,216,.28)}
-    .btn-primary:hover{background:var(--accent-deep);transform:translateY(-1px)}
-    .btn-secondary{background:#fff;color:var(--ink);border-color:var(--line-strong)}
-    .btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
-    .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.22)}
-    .btn-ghost:hover{background:rgba(255,255,255,.16);transform:translateY(-1px)}
+    .btn{display:inline-flex;align-items:center;gap:.55em;font-weight:600;font-size:.97rem;
+      padding:.95em 1.5em;border-radius:999px;border:1px solid transparent;cursor:pointer;
+      transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease;white-space:nowrap}
+    .btn svg{width:1.05em;height:1.05em}
+    .btn-primary{background:linear-gradient(135deg,#3b82f6,#22d3ee);color:#04101f;
+      box-shadow:0 10px 30px -8px rgba(34,211,238,.55),0 0 0 1px rgba(34,211,238,.25) inset}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(34,211,238,.7)}
+    .btn-ghost{background:rgba(255,255,255,.04);color:var(--ink);border-color:var(--line-2)}
+    .btn-ghost:hover{border-color:var(--accent-cy);color:#fff;transform:translateY(-2px)}
+    .btn-lg{padding:1.1em 1.9em;font-size:1.06rem}
 
-    /* header */
-    .topbar{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(12px);
-      border-bottom:1px solid var(--line);
-    }
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+    /* nav */
+    .nav{position:sticky;top:0;z-index:60;background:rgba(7,11,20,.72);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+    .nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
     .brand{display:flex;align-items:center;gap:.6em;font-weight:700}
-    .brand-mark{
-      display:grid;place-items:center;width:34px;height:34px;border-radius:9px;
-      background:var(--ink);color:#fff;font-size:.85rem;font-weight:700;letter-spacing:.02em;
-    }
-    .brand-text{font-size:1.02rem}
-    .topnav{display:flex;align-items:center;gap:28px}
-    .topnav a:not(.btn){font-size:.93rem;color:var(--muted);font-weight:500;transition:.15s}
-    .topnav a:not(.btn):hover{color:var(--ink)}
-    .topnav .btn{padding:.55em 1.1em}
-    .topnav a.btn-primary,.topnav a.btn-primary:hover{color:#fff}
+    .brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;font-family:var(--mono);font-size:.82rem;font-weight:600;
+      background:linear-gradient(135deg,#3b82f6,#22d3ee);color:#04101f}
+    .nav-links{display:flex;align-items:center;gap:30px}
+    .nav-links a:not(.btn){font-size:.93rem;color:var(--muted);font-weight:500;transition:color .15s;position:relative}
+    .nav-links a:not(.btn):hover{color:var(--ink)}
+    .nav-links a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent-cy);transition:width .2s}
+    .nav-links a:not(.btn):hover::after{width:100%}
+    .nav-links .btn{padding:.6em 1.2em;font-size:.9rem}
     .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
-    .nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.2s}
+    .nav-toggle span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.2s;border-radius:2px}
 
     /* hero */
-    .hero{
-      position:relative;overflow:hidden;color:#eaf1fb;
-      background:radial-gradient(1100px 520px at 78% -10%,#1b3a6b 0%,transparent 55%),
-                 linear-gradient(160deg,#0b1626 0%,#0e1f37 55%,#122a49 100%);
-    }
-    .hero::before{
-      content:"";position:absolute;inset:0;
-      background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
-                       linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
-      background-size:46px 46px;mask-image:radial-gradient(900px 500px at 75% 0%,#000 0%,transparent 70%);
-      pointer-events:none;
-    }
-    .hero-inner{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:54px;align-items:center;padding:92px 0 96px}
-    .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);color:#fff;margin:.5rem 0 .2rem;letter-spacing:-.03em}
-    .hero h1 .grad{background:linear-gradient(92deg,#8fb6ff,#cfe0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero .eyebrow{color:#8fb6ff}
-    .hero-lead{font-size:1.16rem;color:#c5d4e8;margin:1.1rem 0 1.5rem;max-width:36em}
-    .hero-lead strong{color:#fff;font-weight:600}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.86rem;color:#9fb2cb}
-    .hero-trust b{color:#dce7f6;font-weight:600}
+    .hero{position:relative;overflow:hidden;padding:84px 0 92px}
+    .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+    .hero-bg::before{content:"";position:absolute;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+      background-size:52px 52px;mask-image:radial-gradient(1000px 600px at 70% 0%,#000 0%,transparent 72%)}
+    .orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+    .orb-1{width:520px;height:520px;background:radial-gradient(circle,#1e63d6,transparent 65%);top:-180px;right:-120px}
+    .orb-2{width:440px;height:440px;background:radial-gradient(circle,#0e7490,transparent 65%);bottom:-200px;left:-160px;opacity:.4}
+    .hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr .94fr;gap:54px;align-items:center}
+    .hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);font-weight:700;margin:1rem 0 .3rem;letter-spacing:-.035em}
+    .rotator{background:linear-gradient(100deg,#60a5fa,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .caret{display:inline-block;width:.06em;height:.95em;background:var(--accent-cy);margin-left:.04em;vertical-align:-.08em;animation:blink 1.05s steps(1) infinite;border-radius:2px}
+    @keyframes blink{50%{opacity:0}}
+    .hero-lead{font-size:1.18rem;color:var(--muted);margin:1.2rem 0 1.7rem;max-width:34em}
+    .hero-lead b{color:var(--ink);font-weight:600}
+    .hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:20px}
+    .avail{display:inline-flex;align-items:center;gap:.6em;font-family:var(--mono);font-size:.8rem;color:#9fe9c8;
+      background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.32);padding:.5em 1em;border-radius:999px}
+    .avail .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:pulse 2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 7px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.86rem;color:var(--muted-2);font-family:var(--mono)}
+    .hero-trust b{color:var(--muted);font-weight:500}
     .hero-trust span{display:inline-flex;align-items:center;gap:.5em}
-    .hero-trust span::before{content:"";width:5px;height:5px;border-radius:50%;background:#5e87c4}
+    .hero-trust span::before{content:"›";color:var(--accent-cy)}
 
-    .hero-card{
-      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
-      border-radius:var(--radius);padding:24px;backdrop-filter:blur(6px);
-    }
-    .hero-card h3{color:#fff;font-size:1rem;margin-bottom:14px;font-weight:600}
-    .flow{display:flex;flex-direction:column;gap:10px}
-    .flow-step{display:flex;align-items:center;gap:12px;font-size:.92rem;color:#cdd9ec}
-    .flow-step b{color:#fff;font-weight:600}
-    .flow-dot{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
-      background:rgba(143,182,255,.16);color:#9fc0ff;font-size:.78rem;font-weight:700}
-    .flow-line{height:14px;width:1px;background:rgba(255,255,255,.18);margin-left:13px}
+    /* terminal */
+    .term{background:linear-gradient(180deg,#0c1424,#0a111e);border:1px solid var(--line-2);border-radius:14px;overflow:hidden;
+      box-shadow:0 30px 80px -30px rgba(0,0,0,.8),0 0 0 1px rgba(34,211,238,.08);position:relative}
+    .term::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;box-shadow:0 0 60px -20px rgba(34,211,238,.4) inset}
+    .term-bar{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+    .term-bar i{width:11px;height:11px;border-radius:50%;display:block}
+    .term-bar i:nth-child(1){background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+    .term-title{margin-left:8px;font-family:var(--mono);font-size:.74rem;color:var(--muted-2)}
+    .term-body{padding:18px 18px 22px;font-family:var(--mono);font-size:.84rem;line-height:1.75;min-height:288px}
+    .t-line{opacity:0;transform:translateY(4px);transition:opacity .25s,transform .25s}
+    .t-line.on{opacity:1;transform:none}
+    .t-prompt{color:var(--accent-cy)}
+    .t-cmd{color:#eef3fb}
+    .t-step{color:var(--muted)}
+    .t-key{color:#cbd5e1}
+    .t-ok{color:var(--ok);font-weight:600}
+    .t-dim{color:var(--muted-2)}
+    .t-res{color:#7dd3fc}
+    .t-cursor{display:inline-block;width:8px;height:1.05em;background:var(--accent-cy);vertical-align:-.15em;animation:blink 1.05s steps(1) infinite}
 
-    /* stat strip */
-    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
-      padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .stat b{display:block;font-size:1.65rem;font-weight:700;color:var(--ink);letter-spacing:-.02em}
-    .stat span{font-size:.86rem;color:var(--muted)}
-
-    /* section heading */
-    .head{max-width:42em;margin-bottom:42px}
-    .head h2{font-size:clamp(1.6rem,3vw,2.2rem);margin:.5rem 0 .6rem}
-    .head p{color:var(--muted);font-size:1.04rem}
+    /* marquee strip / stats */
+    .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+    .stats-in{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0}
+    .stat b{display:block;font-size:2rem;font-weight:700;letter-spacing:-.03em;
+      background:linear-gradient(120deg,#fff,#9fc6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .stat span{font-family:var(--mono);font-size:.8rem;color:var(--muted-2)}
 
     /* services */
-    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .svc{
-      background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
-      box-shadow:var(--shadow-sm);transition:.2s ease;
-    }
-    .svc:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--line-strong)}
-    .svc-ic{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
-      background:var(--accent-soft);color:var(--accent);margin-bottom:16px}
-    .svc-ic svg{width:22px;height:22px}
-    .svc h3{font-size:1.12rem;margin-bottom:8px}
+    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .svc{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px;overflow:hidden;
+      transition:transform .2s,border-color .2s,box-shadow .2s}
+    .svc::before{content:"";position:absolute;inset:0;border-radius:var(--r);opacity:0;transition:opacity .25s;
+      background:radial-gradient(420px 200px at var(--mx,50%) -10%,rgba(34,211,238,.12),transparent 60%)}
+    .svc:hover{transform:translateY(-4px);border-color:var(--line-2);box-shadow:0 24px 50px -28px rgba(0,0,0,.9)}
+    .svc:hover::before{opacity:1}
+    .svc .num{font-family:var(--mono);font-size:.76rem;color:var(--accent-cy);letter-spacing:.1em}
+    .svc h3{font-size:1.18rem;margin:14px 0 8px;font-weight:600}
     .svc p{color:var(--muted);font-size:.95rem}
-    .svc .tag{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:600;color:var(--accent-deep);
-      background:var(--accent-soft);padding:.3em .7em;border-radius:999px}
+    .svc-feat{grid-column:span 3;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;
+      background:linear-gradient(120deg,var(--panel-2),var(--panel));border-color:var(--line-2)}
+    .svc-feat .tag{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+      color:#04101f;background:linear-gradient(135deg,#3b82f6,#22d3ee);padding:.34em .8em;border-radius:999px;margin-bottom:14px}
+    .svc-feat h3{font-size:1.55rem}
+    .svc-feat p{font-size:1.02rem;max-width:34em}
+    .feat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .feat-chips span{font-family:var(--mono);font-size:.76rem;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:.3em .7em;border-radius:8px}
+    .feat-side{font-family:var(--mono);font-size:.82rem;color:var(--muted);background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:12px;padding:18px;line-height:1.9}
+    .feat-side .ln{display:flex;gap:.6em}.feat-side .ar{color:var(--accent-cy)}
 
-    .enterprise{
-      margin-top:18px;display:grid;grid-template-columns:1.4fr 1fr;gap:26px;align-items:center;
-      background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#eaf1fb;
-      border-radius:var(--radius);padding:30px 32px;
-    }
-    .enterprise h3{color:#fff;font-size:1.25rem;margin-bottom:8px}
-    .enterprise p{color:#bccadf;font-size:.97rem}
-    .enterprise .ent-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
-    @media(max-width:760px){.enterprise .ent-cta{justify-content:flex-start}}
+    .enterprise{margin-top:16px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center;
+      background:linear-gradient(120deg,rgba(59,130,246,.1),rgba(34,211,238,.06));border:1px solid var(--line-2);border-radius:var(--r);padding:30px 32px}
+    .enterprise h3{font-size:1.3rem;margin-bottom:8px}
+    .enterprise p{color:var(--muted);font-size:.98rem}
+    .ent-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
 
-    /* engagement models */
-    .models{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
-    .model{border:1px solid var(--line);border-radius:var(--radius-sm);padding:22px;background:#fff}
-    .model h4{font-size:1.02rem;margin-bottom:6px}
-    .model p{color:var(--muted);font-size:.92rem}
-    .model .k{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
-
-    /* work / portfolio */
-    .work{display:flex;flex-direction:column;gap:16px}
-    .work-row{
-      display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start;
-      background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;
-      box-shadow:var(--shadow-sm);transition:.2s}
-    .work-row:hover{border-color:var(--line-strong);box-shadow:var(--shadow-md)}
-    .work-no{font-family:var(--serif);font-size:1.3rem;color:var(--accent);font-weight:600;min-width:1.5em}
-    .work-row h3{font-size:1.2rem;margin-bottom:4px;display:flex;align-items:center;gap:.5em;flex-wrap:wrap}
-    .work-row .role{font-size:.84rem;color:var(--muted-soft);font-weight:500}
-    .work-row p{color:var(--muted);font-size:.97rem;margin-top:8px;max-width:60em}
+    /* work */
+    .work{display:flex;flex-direction:column;gap:14px}
+    .work-row{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:start;
+      background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .work-row:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:0 24px 50px -28px rgba(0,0,0,.9)}
+    .work-no{font-family:var(--mono);font-size:.85rem;color:var(--accent-cy)}
+    .work-row h3{font-size:1.22rem;font-weight:600;display:flex;align-items:center;gap:.55em;flex-wrap:wrap}
+    .work-row .role{font-family:var(--mono);font-size:.78rem;color:var(--muted-2);font-weight:400}
+    .work-row p{color:var(--muted);font-size:.97rem;margin-top:8px;max-width:62em}
     .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-    .chip{font-size:.76rem;color:var(--ink-2);background:var(--bg-soft-2);border:1px solid var(--line);
-      padding:.28em .7em;border-radius:999px;font-weight:500}
-    .work-link{font-size:.9rem;font-weight:600;color:var(--accent);white-space:nowrap}
+    .chip{font-family:var(--mono);font-size:.74rem;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:.28em .65em;border-radius:8px}
+    .work-link{font-size:.9rem;font-weight:600;color:var(--accent-cy);white-space:nowrap}
     .work-link:hover{text-decoration:underline}
-    .badge-live{font-size:.7rem;font-weight:700;letter-spacing:.05em;color:#0a7d4d;background:#e3f7ec;
-      padding:.22em .6em;border-radius:999px;text-transform:uppercase}
+    .badge-live{font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.08em;color:#34d399;background:rgba(52,211,153,.12);
+      border:1px solid rgba(52,211,153,.3);padding:.25em .55em;border-radius:6px;text-transform:uppercase}
 
     /* about */
-    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:46px;align-items:center}
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
     .about-photo{position:relative}
-    .about-photo img{border-radius:var(--radius);box-shadow:var(--shadow-md);width:100%;object-fit:cover;aspect-ratio:4/5}
-    .about h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:16px}
-    .about p{color:var(--muted);margin-bottom:14px;font-size:1.02rem}
-    .about p strong{color:var(--ink);font-weight:600}
-    .about-skills{margin-top:18px}
-    .about-skills .k{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-soft);margin-bottom:10px}
+    .about-photo img{border-radius:var(--r);width:100%;object-fit:cover;aspect-ratio:4/5;border:1px solid var(--line-2)}
+    .about-photo::after{content:"";position:absolute;inset:-1px;border-radius:var(--r);pointer-events:none;
+      box-shadow:0 40px 90px -40px rgba(34,211,238,.5)}
+    .about h2{font-size:clamp(1.8rem,3.4vw,2.5rem);margin-bottom:16px;font-weight:700}
+    .about p{color:var(--muted);margin-bottom:14px;font-size:1.03rem}
+    .about p b{color:var(--ink);font-weight:600}
     .about-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 
     /* contact */
-    .contact{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#eaf1fb}
-    .contact .head h2{color:#fff}
-    .contact .head p{color:#bccadf}
-    .contact-card{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
-    .contact h2{font-size:clamp(1.7rem,3.2vw,2.4rem);color:#fff}
-    .contact-methods{display:flex;flex-direction:column;gap:12px}
-    .cm{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--radius-sm);
-      background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);transition:.18s}
-    .cm:hover{background:rgba(255,255,255,.12);transform:translateX(3px)}
-    .cm-ic{flex:none;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
-      background:rgba(143,182,255,.16);color:#9fc0ff}
-    .cm-ic svg{width:19px;height:19px}
-    .cm b{display:block;color:#fff;font-size:.97rem}
-    .cm span{font-size:.85rem;color:#9fb2cb}
-    .avail{display:inline-flex;align-items:center;gap:.55em;font-size:.85rem;color:#9fe3bf;
-      background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);padding:.4em .9em;border-radius:999px;margin-bottom:18px}
-    .avail::before{content:"";width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.22)}
+    .contact{position:relative;overflow:hidden;background:linear-gradient(160deg,#0a1326,#0c1a30)}
+    .contact .orb-1{top:-160px;left:-120px;right:auto;opacity:.4}
+    .contact-in{position:relative;z-index:1;text-align:center;max-width:760px;margin:0 auto}
+    .contact h2{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;margin:.6rem 0 .8rem;letter-spacing:-.035em}
+    .contact p{color:var(--muted);font-size:1.12rem;max-width:34em;margin:0 auto 1.8rem}
+    .contact .btn-primary{box-shadow:0 14px 50px -10px rgba(34,211,238,.65)}
+    .contact-email{display:block;font-family:var(--mono);font-size:.92rem;color:var(--muted-2);margin-top:18px}
+    .contact-alt{display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:center;margin-top:26px;font-size:.92rem}
+    .contact-alt a{color:var(--muted);display:inline-flex;align-items:center;gap:.5em;transition:color .15s}
+    .contact-alt a:hover{color:var(--accent-cy)}
 
     /* footer */
-    .footer{background:#fff;border-top:1px solid var(--line);padding:40px 0}
-    .footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
+    .footer{background:var(--bg);border-top:1px solid var(--line);padding:40px 0}
+    .footer-in{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
     .footer-title{font-weight:700}
-    .footer-copy{font-size:.88rem;color:var(--muted);max-width:30em;margin-top:4px}
+    .footer-copy{font-size:.86rem;color:var(--muted-2);max-width:32em;margin-top:4px}
     .footer-links{display:flex;flex-wrap:wrap;gap:20px;font-size:.9rem;color:var(--muted)}
-    .footer-links a:hover{color:var(--accent)}
-    .footer-year{font-size:.85rem;color:var(--muted-soft);width:100%;border-top:1px solid var(--line);padding-top:18px;margin-top:8px}
+    .footer-links a:hover{color:var(--accent-cy)}
+    .footer-year{font-family:var(--mono);font-size:.8rem;color:var(--muted-2);width:100%;border-top:1px solid var(--line);padding-top:18px;margin-top:6px}
 
     /* reveal */
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
-    .motion-ready .reveal.is-visible{opacity:1;transform:none}
-    .motion-ready .reveal{will-change:opacity,transform}
-    html:not(.motion-ready) .reveal{opacity:1;transform:none}
-    @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.on{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}.caret,.t-cursor,.avail .dot{animation:none}}
 
     /* responsive */
-    @media(max-width:920px){
-      .hero-inner{grid-template-columns:1fr;gap:40px;padding:64px 0 70px}
-      .hero-card{max-width:440px}
+    @media(max-width:940px){
+      .hero-in{grid-template-columns:1fr;gap:42px}
+      .hero{padding:60px 0 70px}
+      .term{max-width:520px}
+      .svc-feat{grid-template-columns:1fr;gap:20px}
       .about{grid-template-columns:1fr;gap:30px}
-      .about-photo{max-width:320px}
-      .contact-card{grid-template-columns:1fr;gap:28px}
+      .about-photo{max-width:330px}
       .enterprise{grid-template-columns:1fr;gap:18px}
-      .enterprise .ent-cta{justify-content:flex-start}
+      .ent-cta{justify-content:flex-start}
     }
-    @media(max-width:760px){
-      .svc-grid{grid-template-columns:1fr 1fr}
-      .models{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr 1fr;gap:22px 16px}
-      .topnav{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
-        background:#fff;border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-130%);
-        transition:transform .25s ease;box-shadow:var(--shadow-md)}
-      .topnav.open{transform:translateY(0)}
-      .topnav a{padding:13px 24px}
-      .topnav .btn{margin:8px 24px}
+    @media(max-width:720px){
+      .nav-links{position:fixed;inset:66px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg-2);
+        border-bottom:1px solid var(--line);padding:8px 0;transform:translateY(-135%);transition:transform .25s;box-shadow:0 24px 50px -20px rgba(0,0,0,.9)}
+      .nav-links.open{transform:translateY(0)}
+      .nav-links a:not(.btn){padding:13px 24px}
+      .nav-links .btn{margin:8px 24px}
       .nav-toggle{display:block}
-      .section{padding:60px 0}
-      .work-row{grid-template-columns:auto 1fr;gap:14px}
-      .work-link{grid-column:2;margin-top:6px}
-    }
-    @media(max-width:480px){
+      .section{padding:64px 0}
       .svc-grid{grid-template-columns:1fr}
-      .stats{grid-template-columns:1fr 1fr}
-      .hero-trust{gap:8px 16px}
+      .svc-feat{grid-column:span 1}
+      .stats-in{grid-template-columns:1fr 1fr;gap:26px 16px}
+      .work-row{grid-template-columns:auto 1fr;gap:14px}
+      .work-link{grid-column:2}
     }
   </style>
 </head>
 <body id="top">
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#top">
-        <span class="brand-mark">RQ</span>
-        <span class="brand-text">Ray Qin</span>
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="topnav" id="topnav">
+  <header class="nav">
+    <div class="container nav-in">
+      <a class="brand" href="#top"><span class="brand-mark">RQ</span><span>Ray Qin</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="navLinks">
         <a href="#services">Services</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="blog.html">Writing</a>
-        <a class="btn btn-primary" href="#contact">Hire me</a>
+        <a class="btn btn-primary" href="#contact">Email me</a>
       </nav>
     </div>
   </header>
@@ -307,50 +267,46 @@
   <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-main reveal">
-          <p class="eyebrow">Senior Software &amp; AI Engineer &middot; ex-ZipRecruiter</p>
-          <h1>I build <span class="grad">production AI agents</span> &amp; full-stack products.</h1>
+      <div class="hero-bg"><span class="orb orb-1"></span><span class="orb orb-2"></span></div>
+      <div class="container hero-in">
+        <div class="hero-main">
+          <p class="kicker">Senior Software &amp; AI Engineer &middot; ex-ZipRecruiter</p>
+          <h1>I build production <span class="rotator" id="rotator">AI agents</span><span class="caret"></span></h1>
           <p class="hero-lead">
             I help startups and teams ship AI that actually works in production &mdash;
-            <strong>autonomous agents, RAG assistants, LLM integrations</strong>, and the
-            full-stack apps around them. Senior engineer from ZipRecruiter (10M+ monthly users),
-            now available for <strong>freelance, contract, and consulting</strong> work.
+            <b>autonomous agents, RAG assistants, LLM features</b>, and the full-stack apps around them.
+            Senior engineer from ZipRecruiter (10M+ users), now taking <b>freelance &amp; contract</b> work.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Start a project</a>
-            <a class="btn btn-ghost" href="#work">See my work</a>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="#contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              Email me about your project
+            </a>
+            <a class="btn btn-ghost btn-lg" href="#work">See the work</a>
           </div>
+          <div style="margin:6px 0 18px"><span class="avail"><span class="dot"></span>Available now &middot; replies within a day</span></div>
           <div class="hero-trust">
-            <span><b>3 yrs</b>&nbsp;at ZipRecruiter</span>
-            <span><b>10M+</b>&nbsp;MAU shipped</span>
-            <span><b>AI agents</b>&nbsp;in production</span>
-            <span><b>UC San Diego</b>&nbsp;&middot; Cum Laude</span>
+            <span><b>3 yrs at ZipRecruiter</b></span>
+            <span><b>10M+ users shipped</b></span>
+            <span><b>AI agents in production</b></span>
+            <span><b>UC San Diego &middot; Cum Laude</b></span>
           </div>
         </div>
 
-        <div class="hero-card reveal">
-          <h3>How an engagement runs</h3>
-          <div class="flow">
-            <div class="flow-step"><span class="flow-dot">1</span><span>Free scoping call &mdash; <b>your goal, my plan</b></span></div>
-            <div class="flow-line"></div>
-            <div class="flow-step"><span class="flow-dot">2</span><span>Fixed scope &amp; price, or <b>hourly / retainer</b></span></div>
-            <div class="flow-line"></div>
-            <div class="flow-step"><span class="flow-dot">3</span><span>I build it &mdash; <b>tested, reviewed, shipped</b></span></div>
-            <div class="flow-line"></div>
-            <div class="flow-step"><span class="flow-dot">4</span><span>Handoff with docs &amp; <b>a working demo</b></span></div>
-          </div>
+        <div class="term reveal" id="term">
+          <div class="term-bar"><i></i><i></i><i></i><span class="term-title">ray@anvil — agent session</span></div>
+          <div class="term-body" id="termBody"></div>
         </div>
       </div>
     </section>
 
     <!-- STATS -->
-    <section class="container">
-      <div class="stats reveal">
-        <div class="stat"><b>+20pts</b><span>login conversion lift at scale</span></div>
-        <div class="stat"><b>~40%</b><span>faster homepage load time</span></div>
-        <div class="stat"><b>30+</b><span>systems unified into one platform</span></div>
-        <div class="stat"><b>2&nbsp;products</b><span>built solo, AI-first</span></div>
+    <section class="stats">
+      <div class="container stats-in">
+        <div class="stat"><b data-count="20" data-pre="+" data-suf="pts">+20pts</b><span>login conversion lift</span></div>
+        <div class="stat"><b data-count="40" data-pre="~" data-suf="%">~40%</b><span>faster homepage loads</span></div>
+        <div class="stat"><b data-count="30" data-suf="+">30+</b><span>systems unified</span></div>
+        <div class="stat"><b data-count="10" data-suf="M+">10M+</b><span>monthly users served</span></div>
       </div>
     </section>
 
@@ -358,113 +314,80 @@
     <section class="section" id="services">
       <div class="container">
         <div class="head reveal">
-          <p class="eyebrow">Services</p>
+          <p class="kicker">// services</p>
           <h2>What I can build for you</h2>
-          <p>Productized, fixed-scope offerings &mdash; plus custom and enterprise engagements. Whether you need one feature shipped or an embedded senior engineer, there's a way to work together.</p>
+          <p>Productized, fixed-scope offerings &mdash; plus custom and enterprise engagements. From a single shipped feature to an embedded senior engineer on your roadmap.</p>
         </div>
 
         <div class="svc-grid">
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M12 8V4M9 4h6M8 14h.01M16 14h.01M9 18h6"/></svg></div>
-            <h3>AI Agents &amp; Automation</h3>
-            <p>Custom agents and workflow automation that do real work &mdash; tool use, multi-step pipelines, and MCP integrations, with human-in-the-loop review and guardrails.</p>
-            <span class="tag">Flagship</span>
+          <div class="svc svc-feat reveal">
+            <div>
+              <span class="tag">Flagship</span>
+              <h3>AI Agents &amp; Automation</h3>
+              <p>Custom agents and workflow automation that do real work &mdash; tool use, multi-step pipelines, and MCP integrations &mdash; with human-in-the-loop review, evals, and guardrails so they're safe to run in production, not just in a demo.</p>
+              <div class="feat-chips"><span>Agents</span><span>MCP</span><span>Tool use</span><span>Evals</span><span>Human-in-the-loop</span></div>
+            </div>
+            <div class="feat-side">
+              <div class="ln"><span class="ar">▸</span><span>scope &amp; plan</span></div>
+              <div class="ln"><span class="ar">▸</span><span>build agent loop</span></div>
+              <div class="ln"><span class="ar">▸</span><span>tests + evals</span></div>
+              <div class="ln"><span class="ar">▸</span><span>review &amp; ship</span></div>
+              <div class="ln" style="color:var(--ok)"><span>✓</span><span>monitored in prod</span></div>
+            </div>
           </div>
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.9-.9L3 21l1.9-5.6A8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg></div>
-            <h3>RAG &amp; AI Assistants</h3>
-            <p>"Chat with your docs" assistants and support bots grounded in your own data &mdash; with evaluations so answers stay accurate, cited, and safe.</p>
-          </div>
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="3"/></svg></div>
-            <h3>LLM Integration</h3>
-            <p>Add Claude or GPT to your existing product &mdash; copilots, content pipelines, smart features &mdash; production-ready with monitoring, evals, and cost control.</p>
-          </div>
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-            <h3>Full-Stack Apps &amp; MVPs</h3>
-            <p>Ship the whole product: React / Next.js front ends and Go / Node back ends, from idea to a deployed, tested MVP your users can actually use.</p>
-          </div>
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-            <h3>Consulting &amp; Architecture</h3>
-            <p>Advisory on AI strategy, agent architecture, and system design. Code and architecture reviews, technical roadmaps, and de-risking before you commit budget.</p>
-          </div>
-          <div class="svc reveal">
-            <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-            <h3>Training &amp; Workshops</h3>
-            <p>Hands-on team workshops on agentic coding, Claude Code, and AI engineering practice. I ran ZipRecruiter's first internal Cursor workshop.</p>
-          </div>
+
+          <div class="svc reveal"><p class="num">01</p><h3>RAG &amp; AI Assistants</h3><p>"Chat with your docs" assistants and support bots grounded in your own data &mdash; with evaluations so answers stay accurate, cited, and safe.</p></div>
+          <div class="svc reveal"><p class="num">02</p><h3>LLM Integration</h3><p>Add Claude or GPT to your existing product &mdash; copilots, content pipelines, smart features &mdash; production-ready with monitoring and cost control.</p></div>
+          <div class="svc reveal"><p class="num">03</p><h3>Full-Stack Apps &amp; MVPs</h3><p>Ship the whole product: React / Next.js front ends and Go / Node back ends, from idea to a deployed, tested MVP your users can actually use.</p></div>
+          <div class="svc reveal"><p class="num">04</p><h3>Consulting &amp; Architecture</h3><p>Advisory on AI strategy, agent architecture, and system design. Code and architecture reviews, roadmaps, and de-risking before you commit budget.</p></div>
+          <div class="svc reveal"><p class="num">05</p><h3>Training &amp; Workshops</h3><p>Hands-on team workshops on agentic coding, Claude Code, and AI engineering practice. I ran ZipRecruiter's first internal Cursor workshop.</p></div>
+          <div class="svc reveal"><p class="num">06</p><h3>Fractional AI Engineer</h3><p>Ongoing capacity each month as your embedded senior AI &amp; full-stack engineer &mdash; the steady hand on your AI roadmap.</p></div>
         </div>
 
         <div class="enterprise reveal">
           <div>
             <h3>Enterprise &amp; full-project engagements</h3>
-            <p>Need an embedded senior engineer, a full product delivered end-to-end, or an ongoing partner for your AI roadmap? I take on retainer and fixed-scope enterprise work with clear milestones, review, and rollback discipline.</p>
+            <p>Need a full product delivered end-to-end with clear milestones, review, and rollback discipline? I take on fixed-scope enterprise builds and longer retainers.</p>
           </div>
           <div class="ent-cta">
             <a class="btn btn-primary" href="#contact">Discuss a project</a>
-            <a class="btn btn-ghost" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
-          </div>
-        </div>
-
-        <div class="models">
-          <div class="model reveal">
-            <p class="k">Hourly</p>
-            <h4>Flexible help</h4>
-            <p>For evolving scope, pair-building, audits, or ongoing support. Pay for the hours you need.</p>
-          </div>
-          <div class="model reveal">
-            <p class="k">Fixed-scope</p>
-            <h4>Defined project</h4>
-            <p>A clear deliverable, agreed up front for one price. Best for MVPs, integrations, and bots.</p>
-          </div>
-          <div class="model reveal">
-            <p class="k">Retainer</p>
-            <h4>Embedded partner</h4>
-            <p>A set block of capacity each month &mdash; your on-call senior AI &amp; full-stack engineer.</p>
+            <a class="btn btn-ghost" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- WORK -->
-    <section class="section section-soft" id="work">
+    <section class="section" id="work">
       <div class="container">
         <div class="head reveal">
-          <p class="eyebrow">Selected work</p>
+          <p class="kicker">// selected work</p>
           <h2>Proof I ship real systems</h2>
           <p>Three years building core systems for millions of users, plus production AI products built solo &mdash; not demos, shipped software.</p>
         </div>
-
         <div class="work">
           <article class="work-row reveal">
             <span class="work-no">01</span>
             <div>
-              <h3>ZipRecruiter <span class="role">&middot; Senior Software Engineer, 2023&ndash;2026</span></h3>
-              <p>Rebuilt registration, login, and authentication across 30+ fragmented entry points into one reusable platform for 10M+ monthly users &mdash; delivering a double-digit login-conversion lift, 10K+ weekly SMS opt-ins, and ~40% faster homepage loads. Pioneered AI-assisted delivery (Claude Code loops, MCP), and hosted the company's first Cursor workshop.</p>
+              <h3>ZipRecruiter <span class="role">// Senior Software Engineer · 2023–2026</span></h3>
+              <p>Rebuilt registration, login, and authentication across 30+ fragmented entry points into one reusable platform for 10M+ monthly users &mdash; a double-digit login-conversion lift, 10K+ weekly SMS opt-ins, and ~40% faster homepage loads. Pioneered AI-assisted delivery (Claude Code loops, MCP) and ran the company's first Cursor workshop.</p>
               <div class="chips"><span class="chip">Go</span><span class="chip">React / Next.js</span><span class="chip">Auth &amp; OTP</span><span class="chip">gRPC / Protobuf</span><span class="chip">Claude Code</span><span class="chip">MCP</span></div>
             </div>
           </article>
-
           <article class="work-row reveal">
             <span class="work-no">02</span>
             <div>
-              <h3>
-                <a href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Anvil Sim</a>
-                <span class="badge-live">Live</span>
-              </h3>
-              <p>An AI-first engineering simulation product I built solo: import STEP/STP geometry, let agents help prepare the setup, then validate, run, visualize, and export a reviewer packet &mdash; structural FEA, CFD, and thermal. Native Mac app with Swift/SwiftUI + Metal, Rust solvers, and an OCCT geometry kernel.</p>
+              <h3><a href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Anvil Sim</a> <span class="badge-live">Live</span></h3>
+              <p>An AI-first engineering simulation product I built solo: import STEP/STP geometry, let agents help prepare the setup, then validate, run, visualize, and export a reviewer packet &mdash; structural FEA, CFD, and thermal. Native Mac app: Swift/SwiftUI + Metal, Rust solvers, OCCT geometry kernel.</p>
               <div class="chips"><span class="chip">Swift / SwiftUI</span><span class="chip">Metal</span><span class="chip">Rust</span><span class="chip">AI agents</span><span class="chip">Simulation</span></div>
             </div>
             <a class="work-link" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Open →</a>
           </article>
-
           <article class="work-row reveal">
             <span class="work-no">03</span>
             <div>
-              <h3>Enterprise OS <span class="role">&middot; multi-agent engineering system</span></h3>
-              <p>A system where coding agents (Codex, Claude Code) deliver against real codebases in isolated worktrees &mdash; every change carries task specs, tests, evaluations, permissions, and CI, so AI-generated work is reviewable, reproducible, and rollback-aware. The same discipline I bring to client work.</p>
+              <h3>Enterprise OS <span class="role">// multi-agent engineering system</span></h3>
+              <p>A system where coding agents (Codex, Claude Code) deliver against real codebases in isolated worktrees &mdash; every change carries task specs, tests, evals, permissions, and CI, so AI-generated work is reviewable, reproducible, and rollback-aware. The same discipline I bring to client work.</p>
               <div class="chips"><span class="chip">Rust</span><span class="chip">Agent orchestration</span><span class="chip">RAG / vector search</span><span class="chip">CI &amp; evals</span></div>
             </div>
           </article>
@@ -475,25 +398,20 @@
     <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container about">
-        <div class="about-photo reveal">
-          <img src="media/profile-2025.jpg" alt="Ray Qin" loading="lazy">
-        </div>
+        <div class="about-photo reveal"><img src="media/profile-2025.jpg" alt="Ray Qin" loading="lazy"></div>
         <div class="about-main reveal">
-          <p class="eyebrow">About</p>
+          <p class="kicker">// about</p>
           <h2>Hi, I'm Ray.</h2>
-          <p>I'm a senior software and AI engineer based in the San Francisco Bay Area, working with clients remotely worldwide. I spent three years at <strong>ZipRecruiter</strong> building core systems for 10M+ monthly users and pioneering AI-assisted engineering &mdash; promoted from new grad to Senior in 22 months.</p>
-          <p>On my own, I build <strong>production AI products</strong> end to end (Anvil Sim, Enterprise OS), so I know what it takes to get agents and LLM features from a clever prototype to something reliable in front of real users. I hold a UC San Diego dual B.S. in Mathematics&ndash;Computer Science and Mechanical Engineering, Cum Laude (GPA 3.9/4.0).</p>
-          <div class="about-skills">
-            <p class="k">Toolkit</p>
-            <div class="chips">
-              <span class="chip">TypeScript</span><span class="chip">React / Next.js</span><span class="chip">Go</span><span class="chip">Python</span><span class="chip">Rust</span>
-              <span class="chip">AI agents</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">LLM evals</span><span class="chip">Vector search</span>
-              <span class="chip">Postgres</span><span class="chip">Docker / K8s</span><span class="chip">Terraform</span>
-            </div>
+          <p>I'm a senior software and AI engineer in the San Francisco Bay Area, working with clients remotely worldwide. I spent three years at <b>ZipRecruiter</b> building core systems for 10M+ monthly users and pioneering AI-assisted engineering &mdash; promoted from new grad to Senior in 22 months.</p>
+          <p>On my own I build <b>production AI products</b> end to end (Anvil Sim, Enterprise OS), so I know what it takes to get agents and LLM features from a clever prototype to something reliable in front of real users. UC San Diego dual B.S. in Mathematics&ndash;Computer Science and Mechanical Engineering, Cum Laude (GPA 3.9/4.0).</p>
+          <div class="chips">
+            <span class="chip">TypeScript</span><span class="chip">React / Next.js</span><span class="chip">Go</span><span class="chip">Python</span><span class="chip">Rust</span>
+            <span class="chip">AI agents</span><span class="chip">RAG</span><span class="chip">MCP</span><span class="chip">LLM evals</span><span class="chip">Vector search</span>
+            <span class="chip">Postgres</span><span class="chip">Docker / K8s</span><span class="chip">Terraform</span>
           </div>
           <div class="about-actions">
-            <a class="btn btn-secondary" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -501,66 +419,127 @@
 
     <!-- CONTACT -->
     <section class="section contact" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="reveal">
-            <span class="avail">Available for new projects</span>
-            <p class="eyebrow" style="color:#8fb6ff">Let's talk</p>
-            <h2>Tell me what you're building.</h2>
-            <p class="hero-lead" style="color:#bccadf;margin-top:14px">
-              Send a few sentences about your goal and timeline. I reply within a business day with whether I'm a fit, a rough approach, and next steps &mdash; no obligation.
-            </p>
-          </div>
-          <div class="contact-methods reveal">
-            <a class="cm" href="mailto:qinjianxyz@gmail.com?subject=Project%20inquiry">
-              <span class="cm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span><b>qinjianxyz@gmail.com</b><span>Best for project inquiries</span></span>
-            </a>
-            <a class="cm" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">
-              <span class="cm-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></span>
-              <span><b>LinkedIn</b><span>linkedin.com/in/qinjianxyz</span></span>
-            </a>
-            <a class="cm" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">
-              <span class="cm-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg></span>
-              <span><b>Résumé (PDF)</b><span>Full background &amp; experience</span></span>
-            </a>
-          </div>
+      <div class="hero-bg"><span class="orb orb-1"></span></div>
+      <div class="container contact-in reveal">
+        <span class="avail"><span class="dot"></span>Available for new projects</span>
+        <h2>Let's build something that ships.</h2>
+        <p>Tell me what you're working on and your timeline. I reply within a business day with whether I'm a fit, a rough approach, and next steps &mdash; no obligation.</p>
+        <a class="btn btn-primary btn-lg" href="mailto:qinjianxyz@gmail.com?subject=Project%20inquiry&body=Hi%20Ray%2C%0D%0A%0D%0AI'm%20working%20on%20...%20and%20I'd%20like%20help%20with%20...%0D%0A%0D%0ATimeline%3A%20...%0D%0ABudget%3A%20...%0D%0A%0D%0AThanks!">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email me about your project
+        </a>
+        <span class="contact-email">qinjianxyz@gmail.com</span>
+        <div class="contact-alt">
+          <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+            LinkedIn
+          </a>
+          <a href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+          <a href="blog.html">Writing</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-in">
       <div>
         <p class="footer-title">Ray Qin</p>
-        <p class="footer-copy">Senior AI &amp; full-stack engineer for hire. Production agents, RAG, LLM integration, and full-stack apps &mdash; freelance, contract, and consulting.</p>
+        <p class="footer-copy">Senior AI &amp; full-stack engineer for hire. Production agents, RAG, LLM integration, and full-stack apps.</p>
       </div>
       <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="blog.html">Writing</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="blog.html">Writing</a><a href="#contact">Contact</a>
       </div>
-      <p class="footer-year">&copy; <span id="year">2026</span> Ray Qin &middot; Built &amp; shipped solo.</p>
+      <p class="footer-year">© <span id="year">2026</span> Ray Qin · built &amp; shipped solo</p>
     </div>
   </footer>
 
-  <script src="main.js"></script>
   <script>
-    (function(){
-      var t=document.getElementById('navToggle'), n=document.getElementById('topnav');
-      if(t&&n){
-        t.addEventListener('click',function(){
-          var open=n.classList.toggle('open');
-          t.setAttribute('aria-expanded',open?'true':'false');
-        });
-        n.querySelectorAll('a').forEach(function(a){
-          a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});
-        });
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var yr=document.getElementById('year'); if(yr) yr.textContent=new Date().getFullYear();
+
+    /* mobile nav */
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+      n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');t.setAttribute('aria-expanded','false');});});}
+
+    /* reveal on scroll */
+    var rev=document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window && !reduce){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}});},{threshold:.12});
+      rev.forEach(function(e){io.observe(e);});
+    } else { rev.forEach(function(e){e.classList.add('on');}); }
+
+    /* count-up stats */
+    function countUp(el){
+      var target=+el.getAttribute('data-count'), pre=el.getAttribute('data-pre')||'', suf=el.getAttribute('data-suf')||'';
+      if(reduce){el.textContent=pre+target+suf;return;}
+      var start=null, dur=1100;
+      function step(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); var v=Math.round((1-Math.pow(1-p,3))*target);
+        el.textContent=pre+v+suf; if(p<1)requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    }
+    var stats=document.querySelectorAll('.stat b'); var counted=false;
+    if('IntersectionObserver' in window){
+      var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!counted){counted=true;stats.forEach(countUp);}});},{threshold:.5});
+      var sw=document.querySelector('.stats'); if(sw)so.observe(sw);
+    } else { stats.forEach(countUp); }
+
+    /* rotating headline */
+    var words=['AI agents','RAG assistants','LLM features','full-stack apps','agentic systems'];
+    var rot=document.getElementById('rotator');
+    if(rot && !reduce){
+      var wi=0, ci=0, del=false;
+      function tick(){
+        var w=words[wi];
+        rot.textContent = del ? w.slice(0,ci--) : w.slice(0,ci++);
+        var d=del?45:90;
+        if(!del && ci>w.length){ d=1500; del=true; ci=w.length; }
+        else if(del && ci<0){ del=false; ci=0; wi=(wi+1)%words.length; d=320; }
+        setTimeout(tick,d);
       }
-    })();
+      setTimeout(tick,1400);
+    }
+
+    /* terminal animation */
+    var lines=[
+      {h:'<span class="t-prompt">ray@anvil ~ $</span> <span class="t-cmd">build invoice-agent --from "messy PDFs"</span>',type:true},
+      {h:'<span class="t-step">▸ scope     </span> <span class="t-key">read 240 invoices · drafted 4-step plan</span>  <span class="t-ok">ok</span>'},
+      {h:'<span class="t-step">▸ implement </span> <span class="t-key">agent loop · 9 files · 41 tests</span>  <span class="t-ok">green</span>'},
+      {h:'<span class="t-step">▸ review    </span> <span class="t-key">human-in-the-loop · 0 regressions</span>  <span class="t-ok">✓</span>'},
+      {h:'<span class="t-step">▸ ship      </span> <span class="t-key">PR #128 merged → deployed</span>  <span class="t-ok">live</span>'},
+      {h:'<span class="t-dim">─────────────────────────────</span>'},
+      {h:'<span class="t-res">→ 240/240 parsed · 98.7% field accuracy · 6 min</span>'},
+      {h:'<span class="t-prompt">ray@anvil ~ $</span> <span class="t-cursor"></span>'}
+    ];
+    var body=document.getElementById('termBody');
+    function renderAll(){ body.innerHTML=lines.map(function(l){return '<div class="t-line on">'+l.h+'</div>';}).join(''); }
+    function play(){
+      if(reduce){renderAll();return;}
+      body.innerHTML='';
+      var els=lines.map(function(l){var d=document.createElement('div');d.className='t-line';body.appendChild(d);return d;});
+      function typeLine(i){
+        if(i>=lines.length) return;
+        var el=els[i], l=lines[i];
+        el.classList.add('on');
+        if(l.type){
+          // type the command portion char-by-char (keep prompt instant)
+          var full=l.h; el.innerHTML=full; // simplest: show full; emulate typing via cursor below
+        } else { el.innerHTML=l.h; }
+        el.innerHTML=l.h;
+        var delay = l.type?620: (i===lines.length-1?260:340);
+        setTimeout(function(){typeLine(i+1);}, delay);
+      }
+      typeLine(0);
+    }
+    var term=document.getElementById('term');
+    if('IntersectionObserver' in window){
+      var played=false;
+      var to=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!played){played=true;play();}});},{threshold:.4});
+      if(term)to.observe(term);
+    } else { renderAll(); }
+  })();
   </script>
 </body>
 </html>
