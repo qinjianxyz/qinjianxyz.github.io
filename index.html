@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ray Qin — a senior AI engineer for hire who designs, builds, and ships AI to production, solo. Support assistants, document search, automation, in-product AI features, and reliability/cost work for founders and teams. Free 30-minute first call.">
+  <meta name="description" content="Ray Qin — AI consultant and engineer for hire delivering AI-powered solutions end to end: consulting, engineering, agentic systems, and project management. Support assistants, document search, automation, and in-product AI features for founders and teams. Free 30-minute first call.">
   <meta name="keywords" content="AI engineer for hire, AI consultant, freelance AI developer, RAG, AI agents, LLM integration, AI automation, document search, custom AI, Ray Qin">
   <meta name="author" content="Ray Qin">
   <meta name="theme-color" content="#fbfaf7">
 
-  <meta property="og:title" content="Ray Qin — AI Engineer for Hire">
-  <meta property="og:description" content="You have an AI problem. I design it, build it, and ship it to production — solo. Production AI for founders and teams.">
+  <meta property="og:title" content="Ray Qin — AI Consultant &amp; Engineer">
+  <meta property="og:description" content="You have an AI problem. I design it, build it, and ship it to production — end to end. One partner, from first idea to a system your business depends on.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://qinjianxyz.github.io">
   <meta property="og:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ray Qin — AI Engineer for Hire">
-  <meta name="twitter:description" content="You have an AI problem. I design it, build it, and ship it to production — solo.">
+  <meta name="twitter:title" content="Ray Qin — AI Consultant &amp; Engineer">
+  <meta name="twitter:description" content="You have an AI problem. I design it, build it, and ship it to production — end to end. One partner, first idea to dependable system.">
   <meta name="twitter:image" content="https://qinjianxyz.github.io/media/profile-2025.jpg">
 
-  <title>Ray Qin — AI Engineer for Hire</title>
+  <title>Ray Qin — AI Consultant &amp; Engineer | End-to-End AI Solutions</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="canonical" href="https://qinjianxyz.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,6 +41,8 @@
     html{scroll-behavior:smooth}
     body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
     a{color:inherit;text-decoration:none}
+    :focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:4px}
+    .why :focus-visible,.contact :focus-visible,.trust :focus-visible{outline-color:#9fc1ea}
     img{max-width:100%;display:block}
     ::selection{background:#dde3ec}
     .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 30px}
@@ -100,7 +103,7 @@
     .trust-item{display:flex;align-items:center;gap:12px;padding:0 22px;flex:1;min-width:200px;position:relative}
     .trust-item+.trust-item::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:1px;background:rgba(255,255,255,.16)}
     .trust-item b{font-family:var(--serif);color:#fff;font-weight:500;font-size:1.15rem;line-height:1.1}
-    .trust-item span{font-size:.84rem;color:#a9b6c8}
+    .trust-item span{font-size:.84rem;color:#c2cdda}
 
     /* spine */
     .spine{padding:64px 0}
@@ -226,7 +229,7 @@
     .footer-copy{font-size:.88rem;color:var(--muted);max-width:26em;margin-top:6px}
     .footer-links{display:flex;flex-wrap:wrap;gap:20px;font-size:.92rem;color:var(--ink-2);align-content:start}
     .footer-links a:hover{color:var(--navy)}
-    .footer-base{width:100%;border-top:1px solid var(--line);margin-top:8px;padding-top:18px;font-size:.82rem;color:var(--muted-2)}
+    .footer-base{width:100%;border-top:1px solid var(--line);margin-top:8px;padding-top:18px;font-size:.82rem;color:var(--muted)}
 
     /* reveal */
     .reveal{opacity:0;transform:translateY(14px);transition:opacity .65s ease,transform .65s ease}
@@ -253,8 +256,8 @@
       .nav-toggle{display:block}
       .section{padding:64px 0}
       .who-grid{grid-template-columns:1fr}
-      .prob{grid-template-columns:1fr;gap:6px}
-      .prob .do-wrap{margin-top:6px}
+      .prob{grid-template-columns:1fr;gap:0;padding:26px 0}
+      .prob>div:last-child{margin-top:18px;padding-top:18px;border-top:1px dashed var(--line-2)}
       .ways{grid-template-columns:1fr}
       .get-grid{grid-template-columns:1fr;gap:0}
       .trust-item{min-width:100%}.trust-item::before{content:none!important}
@@ -266,8 +269,8 @@
   <header class="nav">
     <div class="wrap nav-in">
       <a class="brand" href="#top">Ray<span>.</span>Qin</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav-links" id="navLinks">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#problems">Problems</a>
         <a href="#process">Delivery</a>
         <a href="#work">Work</a>
@@ -282,7 +285,7 @@
     <section class="hero">
       <div class="wrap hero-in">
         <div class="hero-main reveal">
-          <p class="eyebrow">AI Consulting · Engineering · Agentic Systems · Project Management</p>
+          <p class="eyebrow">Consulting · Engineering · Agentic Systems · Project Management</p>
           <h1>AI-powered solutions, <em>delivered end to end.</em></h1>
           <p class="hero-sub">I'm Ray Qin — an AI consultant and engineer who takes the whole problem off your plate: strategy and architecture, engineering and agentic systems, project management, and delivery to production. One partner, from first idea to a system your business depends on.</p>
           <div class="hero-cta">
@@ -292,7 +295,7 @@
           <p class="hero-micro">Production AI for <b>10M+ monthly users</b>. <b>Anvil Sim</b> — a complete AI engineering product, live today. <b>Enterprise OS</b> — a multi-agent system I designed and run. Open them right now; the proof is already shipped.</p>
         </div>
         <figure class="hero-photo reveal">
-          <img src="media/profile-2025.jpg" alt="Ray Qin" loading="eager">
+          <img src="media/profile-2025.jpg" alt="Portrait of Ray Qin, AI consultant and engineer" loading="eager">
           <figcaption><b>Ray Qin</b><small>San Francisco Bay Area · available worldwide, remote</small></figcaption>
         </figure>
       </div>
@@ -310,7 +313,7 @@
 
     <!-- SPINE -->
     <section class="spine wrap">
-      <p class="reveal">I build <em>grounded LLM systems</em> — assistants, search over your own data, and agents that take real action and stay grounded in your data, not the model's imagination. And because I ship complete products solo, I architect everything around them: the app, the backend, the infrastructure.</p>
+      <p class="reveal">I build <em>grounded LLM systems</em> — assistants, search over your own data, and agents that take real action, anchored to your data rather than the model's imagination. And because I deliver complete products end to end, I architect everything around them: the app, the backend, the infrastructure.</p>
     </section>
 
     <!-- WHO I HELP -->
@@ -517,8 +520,8 @@
           <div class="pf">
             <p class="pm">Solo product</p>
             <h3>Anvil Sim <span class="live">Live</span></h3>
-            <p>A hard, real AI product for Mac — from a raw geometry engine to a finished, shipped interface, in real hands today. Engine, AI, and native UI, all production-grade. Proof I can take a serious system the whole way — the same end-to-end reliability I bring to your build.</p>
-            <a class="more" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener">Visit the live product →</a>
+            <p>A hard, real AI product for Mac — from a raw geometry engine to a polished native interface, in real hands today. Engine, AI, and UI, all production-grade. Proof I can take a serious system the whole way — the same end-to-end reliability I bring to your build.</p>
+            <a class="more" href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener" aria-label="Visit the live product (opens in a new tab)">Visit the live product →</a>
           </div>
           <div class="pf">
             <p class="pm">Scale</p>
@@ -544,7 +547,7 @@
       <div class="wrap split">
         <div class="reveal about">
           <p class="label"><span class="no">08</span> About</p>
-          <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);margin:16px 0 18px">A senior engineer who ships the hard parts others outsource.</h2>
+          <h2 style="font-size:clamp(1.7rem,3vw,2.3rem);margin:16px 0 18px">An AI consultant and engineer who ships the hard parts others outsource.</h2>
           <p class="pull">I care less about shipping something clever, and more about shipping something that still works at 3 a.m. six months later.</p>
           <p>I spent three years at ZipRecruiter building core systems for 10M+ monthly users and pioneering AI-assisted engineering. On my own I build production AI products end to end — Anvil Sim and Enterprise OS — so I know what it takes to get agents and LLM features from a clever prototype to something dependable in front of real users.</p>
           <p>I trained in mathematics, computer science, and mechanical engineering at UC San Diego — which is a long way of saying I'm comfortable from the math under a model all the way up to the product a customer touches.</p>
@@ -588,8 +591,8 @@
         <div class="faq reveal">
           <details><summary>I'm not technical. Will I understand what you're doing?</summary><p class="ans">Yes — that's the point. I explain every decision in plain language and show you working software instead of jargon. You'll always know what's being built, why, and what it costs. And you don't need a perfectly-diagnosed "AI problem" to start — if you can describe what's slowing you down, we can work together. I'll tell you straight whether it's even an AI problem.</p></details>
           <details><summary>What does this cost, and how do you work?</summary><p class="ans">I price per project, not per hour — most work runs as a fixed-scope sprint (typically 2 to 8 weeks) with a flat price agreed up front, so you know the number before any work begins. There's no open-ended meter. The first call is free and includes a rough ballpark so you can decide with real information.</p></details>
-          <details><summary>You have no client testimonials yet. Why should I trust you?</summary><p class="ans">Honestly: because I'd rather show you real, checkable work than invent reviews. Anvil Sim is live right now — a complete AI product I built and shipped alone. I've also taken AI to production for 10M+ monthly users. And because I'm taking on a small number of first projects, we can start with a small paid pilot: if the first milestone doesn't convince you, we stop there — no long contract on faith.</p></details>
-          <details><summary>How is this different from hiring an agency or a consultant?</summary><p class="ans">Most people selling AI help can either operate at scale or build the whole thing solo — rarely both. I've done both: production systems at 10M-user scale, and a complete AI product shipped alone. Consultants hand you a strategy deck and disappear before any code exists; agencies bill for a team you never meet and have to manage. I'm one senior engineer who diagnoses the real problem and then builds and ships it myself.</p></details>
+          <details><summary>No client testimonials yet — what's the proof?</summary><p class="ans">I'd rather show you real, checkable work than invent reviews. Anvil Sim is live right now — a complete AI product I built and shipped end to end. I've also taken AI to production for 10M+ monthly users. And because I'm taking on a small number of first projects, we can start with a small paid pilot: if the first milestone doesn't convince you, we stop there — no long contract on faith.</p></details>
+          <details><summary>How is this different from hiring an agency or a consultant?</summary><p class="ans">Most people selling AI help can either operate at scale or own a product end to end — rarely both. I've done both: production systems at 10M-user scale, and a complete AI product shipped end to end. Consultants hand you a strategy deck and disappear before any code exists; agencies bill for a team you never meet and have to manage. I'm one senior engineer who diagnoses the real problem and then builds and ships it myself.</p></details>
           <details><summary>Will I be locked into something only you can maintain?</summary><p class="ans">No. I hand back work that's documented, tested, and maintainable, so your team can own and extend it after I'm gone. De-risking the handover is part of the job — you're never left with a black box you can't change.</p></details>
           <details><summary>Would an off-the-shelf tool be cheaper than hiring you?</summary><p class="ans">Sometimes, yes — and I'll tell you when it is. If an existing product does the job, that's the honest recommendation and it saves you money. I build custom when your data, workflow, or quality bar means the off-the-shelf version won't cut it. Knowing when to buy instead of build is part of giving you a straight answer.</p></details>
           <details><summary>Do you only do AI work?</summary><p class="ans">AI is the focus, but I build the whole product around it when you need it — interface, backend, data, and infrastructure — as one person, so you get a coherent working thing instead of a pile of parts to integrate.</p></details>
@@ -615,8 +618,8 @@
               <div class="field"><label for="cf-time">Timeline (optional)</label><input id="cf-time" name="timeline" type="text" placeholder="e.g. next 4–6 weeks"></div>
               <div class="field"><label for="cf-budget">Budget (optional)</label><input id="cf-budget" name="budget" type="text" placeholder="e.g. $5–15k"></div>
             </div>
-            <button class="btn btn-primary btn-lg" type="submit">Book your call</button>
-            <p class="form-note" id="formNote">Opens your email, pre-filled — or write me directly at qinjianxyz@gmail.com</p>
+            <button class="btn btn-primary btn-lg" type="submit">Send my inquiry</button>
+            <p class="form-note" id="formNote">Free 30-min call · I reply within a business day. This opens your email pre-filled — or write me directly at qinjianxyz@gmail.com</p>
           </form>
           <div class="contact-side">
             <div class="ci"><small>Email</small><a href="mailto:qinjianxyz@gmail.com?subject=AI%20project%20inquiry">qinjianxyz@gmail.com</a></div>
@@ -633,7 +636,7 @@
     <div class="wrap footer-in">
       <div>
         <p class="footer-brand">Ray<span style="color:var(--navy)">.</span>Qin</p>
-        <p class="footer-copy">AI engineer for hire — I design, build, and ship AI to production, solo, for founders and teams.</p>
+        <p class="footer-copy">AI consultant and engineer for hire — I deliver AI-powered solutions end to end, from strategy to production, for founders and teams.</p>
       </div>
       <div class="footer-links">
         <a href="#problems">Problems</a><a href="#process">Delivery</a><a href="#work">Work</a>
