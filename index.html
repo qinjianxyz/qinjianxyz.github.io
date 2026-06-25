@@ -110,6 +110,19 @@
     .trust-item b{font-family:var(--serif);color:#fff;font-weight:500;font-size:1.12rem;line-height:1.15}
     .trust-item span{font-size:.84rem;color:#c2cdda}
 
+    /* experience */
+    .exp{border-top:1px solid var(--line)}
+    .role{display:grid;grid-template-columns:.85fr 2.15fr;gap:8px 48px;padding:30px 0;border-bottom:1px solid var(--line)}
+    .role .rmeta h3{font-size:1.3rem;font-weight:500}
+    .role .role-title{color:var(--navy);font-size:.95rem;font-weight:600;margin-top:5px}
+    .role .role-meta{color:var(--muted);font-size:.88rem;margin-top:4px;font-variant-numeric:lining-nums tabular-nums}
+    .role ul{list-style:none;margin:0;padding:0}
+    .role li{position:relative;padding-left:18px;color:var(--ink-2);font-size:1rem;line-height:1.62;margin-bottom:10px}
+    .role li:last-child{margin-bottom:0}
+    .role li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+    .role .rsum{color:var(--ink-2);font-size:1rem;line-height:1.62}
+    .edu b{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.05rem}
+
     /* services */
     .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .svc{display:flex;flex-direction:column;padding:32px 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);transition:transform .2s,border-color .2s,box-shadow .2s}
@@ -183,6 +196,7 @@
       .trust-in{gap:20px 0}.trust-item{min-width:45%;flex:none}
       .trust-item:nth-child(odd)::before{content:none}
       .split{grid-template-columns:1fr;gap:38px}
+      .role{grid-template-columns:1fr;gap:12px}
       .contact-grid{grid-template-columns:1fr;gap:34px}
     }
     @media(max-width:700px){
@@ -205,6 +219,7 @@
       <a class="brand" href="#top">Ray<span>.</span>Qin</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
       <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#experience">Experience</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -219,7 +234,7 @@
       <div class="wrap hero-in">
         <div class="hero-main reveal">
           <p class="eyebrow">AI Engineer · Software Engineer · Builder</p>
-          <h1>Senior software &amp; AI engineer. <em>I design, build, and ship products end to end.</em></h1>
+          <h1>Senior software &amp; AI engineer.<br>I design, build, and ship products end to end.</h1>
           <p class="hero-sub">Full-stack and AI, from first idea to production. I build products, features, and the systems behind them, and make them hold up under real use.</p>
           <div class="hero-cta">
             <a class="btn btn-primary btn-lg" href="#contact">Book a call</a>
@@ -244,6 +259,55 @@
         <div class="trust-item"><b>AI-native</b><span>Claude Code, agents, RAG</span></div>
         <div class="trust-item"><b>Ships to production</b><span>evals, cost controls, guardrails</span></div>
         <div class="trust-item"><b>Independent</b><span>work directly with the engineer</span></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label">Experience</p>
+          <h2>A track record of shipped work.</h2>
+        </div>
+        <div class="exp reveal">
+          <div class="role">
+            <div class="rmeta">
+              <h3>ZipRecruiter</h3>
+              <p class="role-title">Senior Software Engineer</p>
+              <p class="role-meta">Apr 2023 – Apr 2026 · Remote</p>
+            </div>
+            <ul>
+              <li>Rebuilt registration, login, and authentication across 30+ fragmented entry points into one platform for 10M+ monthly users — a double-digit login-conversion lift and roughly 40% faster homepage loads.</li>
+              <li>Architected the Go backend (OTP login, auto-login tokens, Protobuf credential APIs) and the shared React / Next.js frontend, and retired three legacy authentication services.</li>
+              <li>Pioneered AI-assisted delivery: Claude Code loops that turned designs into reviewed PRs, agents wired to Jira, Slack, Notion, and GitHub via MCP, the company's first Cursor workshop, and its AI-usage guidelines.</li>
+              <li>Shipped vector-embedding similarity search powering Suggested Jobs and More Candidates Like This across the 10M+-user marketplace.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <div class="rmeta">
+              <h3>Eightfold</h3>
+              <p class="role-title">Software Engineer Intern</p>
+              <p class="role-meta">2022</p>
+            </div>
+            <p class="rsum">Made ETL loading atomic and extended consistency monitoring to 56 tables; built a React / Flask Spark console that cut debugging time about 40%.</p>
+          </div>
+          <div class="role">
+            <div class="rmeta">
+              <h3>MEDsmart</h3>
+              <p class="role-title">Software Engineer Intern</p>
+              <p class="role-meta">2021 – 22</p>
+            </div>
+            <p class="rsum">Built AWS data pipelines and Python / LSTM demand forecasting that cut clinic operating cost about 11% and inventory waste about 4%.</p>
+          </div>
+          <div class="role">
+            <div class="rmeta">
+              <h3>Qualcomm Institute · UCSD Calit2</h3>
+              <p class="role-title">Software Engineer Intern</p>
+              <p class="role-meta">2020 – 21</p>
+            </div>
+            <p class="rsum">Built business-data visualizations from the Yelp API and city open data.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -319,6 +383,8 @@
           </div>
         </div>
         <div class="reveal">
+          <p class="lbl-sm">Education</p>
+          <p class="edu" style="color:var(--ink-2);font-size:.98rem;line-height:1.6;margin-bottom:26px"><b>UC San Diego</b><br>Dual B.S. — Mathematics–Computer Science &amp; Mechanical Engineering<br><span style="color:var(--muted)">2019 – 2023</span></p>
           <p class="lbl-sm">Toolkit</p>
           <div class="chips">
             <span class="chip">AI agents</span><span class="chip">RAG &amp; search</span><span class="chip">LLM integration</span><span class="chip">Evals &amp; guardrails</span>
@@ -364,7 +430,7 @@
         <p class="footer-copy">AI engineer &amp; consultant · ex-ZipRecruiter · builds and ships AI in production.</p>
       </div>
       <div class="footer-links">
-        <a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#experience">Experience</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
         <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <p class="footer-base">© <span id="year">2026</span> Ray Qin · qinjianxyz@gmail.com</p>
