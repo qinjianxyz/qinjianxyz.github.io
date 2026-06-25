@@ -123,6 +123,20 @@
     .role .rsum{color:var(--ink-2);font-size:1rem;line-height:1.62}
     .edu b{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.05rem}
 
+    /* projects */
+    .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .proj{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .proj:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:0 18px 44px -28px rgba(20,42,66,.5)}
+    .proj-img{width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--bg-soft);border-bottom:1px solid var(--line)}
+    .proj-body{display:flex;flex-direction:column;flex:1;padding:20px 22px}
+    .proj .ptag{font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--navy)}
+    .proj h3{font-size:1.2rem;font-weight:500;margin:9px 0 8px}
+    .proj p{color:var(--ink-2);font-size:.93rem;line-height:1.55;margin-bottom:14px}
+    .proj .ptech{font-size:.78rem;color:var(--muted);margin-bottom:16px;line-height:1.5}
+    .proj .plinks{margin-top:auto;display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem;font-weight:600}
+    .proj .plinks a{color:var(--navy)}
+    .proj .plinks a:hover{text-decoration:underline}
+
     /* services */
     .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .svc{display:flex;flex-direction:column;padding:32px 30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);transition:transform .2s,border-color .2s,box-shadow .2s}
@@ -197,6 +211,7 @@
       .trust-item:nth-child(odd)::before{content:none}
       .split{grid-template-columns:1fr;gap:38px}
       .role{grid-template-columns:1fr;gap:12px}
+      .proj-grid{grid-template-columns:repeat(2,1fr)}
       .contact-grid{grid-template-columns:1fr;gap:34px}
     }
     @media(max-width:700px){
@@ -207,6 +222,7 @@
       .nav-links .btn{margin:8px 30px}
       .nav-toggle{display:block}
       .section{padding:60px 0}
+      .proj-grid{grid-template-columns:1fr}
       .trust-item{min-width:100%}.trust-item::before{content:none!important}
       .form-row{grid-template-columns:1fr}
     }
@@ -220,8 +236,8 @@
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
       <nav class="nav-links" id="navLinks" aria-label="Primary">
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#services">Services</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="#contact">Book a call</a>
       </nav>
@@ -307,6 +323,118 @@
             </div>
             <p class="rsum">Built business-data visualizations from the Yelp API and city open data.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="label">Projects</p>
+          <h2>Selected work, across disciplines.</h2>
+          <p>From self-driving cars and a database engine to full-stack apps, simulations, and mechanical systems — a sample of what I build when I go deep.</p>
+        </div>
+        <div class="proj-grid">
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/car.jpeg" alt="1/8-scale autonomous car built for the navigation project" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">AI · Computer Vision · Robotics</p>
+              <h3>Autonomous Navigation System</h3>
+              <p>A 1/8-scale self-driving car that runs autonomous laps at 90%+ success — lane-following with TensorFlow and OpenCV on an NVIDIA Jetson Nano, plus a ROS2 object-detection package using YOLOv5 at 95%+ accuracy.</p>
+              <p class="ptech">Python · TensorFlow · OpenCV · ROS2 · Jetson Nano</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/ros2_ws" target="_blank" rel="noopener" aria-label="Autonomous Navigation System on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/sqlightning.png" alt="SQLightning database engine command line" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Systems · Databases</p>
+              <h3>SQLightning</h3>
+              <p>A relational database engine with core SQL functionality, built from scratch in C++. A primary-key index and LRU cache made queries 83% faster, with a tokenizer, typed-stream encoder, and error reporting for robustness.</p>
+              <p class="ptech">C++ · SQL · Software architecture</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/SQLightning" target="_blank" rel="noopener" aria-label="SQLightning on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/drive-xyz.png" alt="Cloud Drive and Analytics dashboard" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Full-stack</p>
+              <h3>Cloud Drive &amp; Analytics</h3>
+              <p>A cloud drive plus an analytics dashboard: a React / Firebase front end and a RESTful API (Node, Express, Passport) with authenticated CRUD, custom roles, and server-log analytics.</p>
+              <p class="ptech">React · Firebase · Node · Express</p>
+              <p class="plinks"><a href="https://drive-xyz.netlify.app/" target="_blank" rel="noopener" aria-label="Cloud Drive live demo">Live ↗</a><a href="https://github.com/qinjianxyz/drive-xyz" target="_blank" rel="noopener" aria-label="Cloud Drive on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/zooseeker.png" alt="San Diego Zoo Seeker Android app" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Mobile</p>
+              <h3>San Diego ZooSeeker</h3>
+              <p>An Android wayfinding app for the San Diego Zoo that plans the most efficient route between exhibits using Dijkstra's algorithm and the Google Maps API.</p>
+              <p class="ptech">Android · Java · JGraphT · Maps API</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/ZooSeeker" target="_blank" rel="noopener" aria-label="ZooSeeker on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/mars.jpg" alt="Mars landing trajectory simulation" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Simulation</p>
+              <h3>Mars Landing Simulation</h3>
+              <p>A MATLAB simulation of six capsule descent trajectories to the Martian surface — modeling mass, gravity, drag, air density, and thruster and parachute timing — with landing-speed and orbit visualizations.</p>
+              <p class="ptech">MATLAB · Numerical simulation</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/mars-landing" target="_blank" rel="noopener" aria-label="Mars Landing Simulation on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/assembly.jpg" alt="Six-cylinder radial engine CAD assembly" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Mechanical CAD</p>
+              <h3>Six-Cylinder Radial Engine</h3>
+              <p>A fully parametric six-cylinder radial-engine assembly in SolidWorks — design-intent modeling, sketch and extrude features, and motion plus finite-element simulation of the working engine.</p>
+              <p class="ptech">SolidWorks · FEA · 3D modeling</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/six-cylinder-radial-engine" target="_blank" rel="noopener" aria-label="Six-Cylinder Radial Engine on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/robot.jpg" alt="Competition picking robot built in Autodesk Inventor" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Robotics · Mechanical</p>
+              <h3>LightSabers Picking Robot</h3>
+              <p>A competition robot designed and machined from scratch in Autodesk Inventor — it moves, rotates, lifts, and stacks objects with precision, prototyped with machine-shop tooling and 3D printing.</p>
+              <p class="ptech">Autodesk Inventor · AutoCAD · Manufacturing</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/light-saber-robot" target="_blank" rel="noopener" aria-label="LightSabers Picking Robot on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/mug-square.jpg" alt="Thermostatic mug hardware build" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Embedded · Hardware</p>
+              <h3>Thermostatic Mug</h3>
+              <p>A mug that holds a set temperature using an Arduino sensor-and-circuit control loop, with custom parts designed in Fusion 360 and 3D-printed.</p>
+              <p class="ptech">Arduino · Python · Fusion 360 · 3D printing</p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
+            <img class="proj-img" src="media/projects/sudoku.jpg" alt="Sudoku solver web app" loading="lazy" decoding="async">
+            <div class="proj-body">
+              <p class="ptag">Algorithms · Web</p>
+              <h3>Sudoku Solver</h3>
+              <p>A web app that solves any valid Sudoku instantly with backtracking, and validates input — rejecting bad characters, unsolvable boards, and puzzles with more than one solution.</p>
+              <p class="ptech">JavaScript · React · Backtracking</p>
+              <p class="plinks"><a href="https://sudoku-xyz.netlify.app/" target="_blank" rel="noopener" aria-label="Sudoku Solver live demo">Live ↗</a><a href="https://github.com/qinjianxyz/sudoku" target="_blank" rel="noopener" aria-label="Sudoku Solver on GitHub">GitHub ↗</a></p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -430,7 +558,7 @@
         <p class="footer-copy">AI engineer &amp; consultant · ex-ZipRecruiter · builds and ships AI in production.</p>
       </div>
       <div class="footer-links">
-        <a href="#experience">Experience</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+        <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a>
         <a href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
       <p class="footer-base">© <span id="year">2026</span> Ray Qin · qinjianxyz@gmail.com</p>
