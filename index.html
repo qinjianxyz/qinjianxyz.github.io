@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://qinjianxyz.github.io/#ray","name":"Ray Qin","url":"https://qinjianxyz.github.io/","image":"https://qinjianxyz.github.io/media/profile-2025.jpg","jobTitle":"Senior Software & AI Engineer","description":"Senior software and AI engineer. Ships AI features — agents, RAG, and vector search — and full-stack products to production. Ex-ZipRecruiter (10M+ users), AI-native delivery.","email":"qinjianxyz@gmail.com","sameAs":["https://www.linkedin.com/in/qinjianxyz/"],"knowsAbout":["Large Language Models","Retrieval-Augmented Generation","AI Agents","Multi-Agent Systems","Model Context Protocol","Function Calling","Model Routing","LLM Evaluation","Vector Search","Embeddings","Recommendation Systems","Automation","TypeScript","Go","Python","Rust","React","Next.js","Node.js","gRPC","PostgreSQL","Redis","Kafka","Docker","Kubernetes","Terraform"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of California, San Diego"}},{"@type":"ProfessionalService","@id":"https://qinjianxyz.github.io/#service","name":"Ray Qin — AI Engineering Consulting, Advisory & Mentorship","url":"https://qinjianxyz.github.io/","image":"https://qinjianxyz.github.io/media/profile-2025.jpg","description":"AI engineering consulting, technical advisory, and AI mentorship for founders and engineering teams.","provider":{"@id":"https://qinjianxyz.github.io/#ray"},"email":"qinjianxyz@gmail.com","areaServed":"Worldwide","availableLanguage":"English","sameAs":["https://www.linkedin.com/in/qinjianxyz/"]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://qinjianxyz.github.io/#ray","name":"Ray Qin","url":"https://qinjianxyz.github.io/","image":"https://qinjianxyz.github.io/media/profile-2025.jpg","jobTitle":"Senior Software & AI Engineer","description":"Senior software and AI engineer. Ships AI features — agents, RAG, and vector search — and full-stack products to production. Ex-ZipRecruiter (10M+ users), AI-native delivery.","email":"qinjianxyz@gmail.com","sameAs":["https://www.linkedin.com/in/qinjianxyz/"],"knowsAbout":["Large Language Models","Retrieval-Augmented Generation","AI Agents","Multi-Agent Systems","Model Context Protocol","Function Calling","Model Routing","LLM Evaluation","Vector Search","Embeddings","Recommendation Systems","Embodied AI","Computer Vision","Robotics","ROS2","Autonomy","Engineering Simulation","Finite Element Analysis","Computational Fluid Dynamics","Automation","TypeScript","Go","Python","Rust","React","Next.js","Node.js","gRPC","PostgreSQL","Redis","Kafka","Docker","Kubernetes","Terraform"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of California, San Diego"}},{"@type":"ProfessionalService","@id":"https://qinjianxyz.github.io/#service","name":"Ray Qin — AI Engineering Consulting, Advisory & Mentorship","url":"https://qinjianxyz.github.io/","image":"https://qinjianxyz.github.io/media/profile-2025.jpg","description":"AI engineering consulting, technical advisory, and AI mentorship for founders and engineering teams.","provider":{"@id":"https://qinjianxyz.github.io/#ray"},"email":"qinjianxyz@gmail.com","areaServed":"Worldwide","availableLanguage":"English","sameAs":["https://www.linkedin.com/in/qinjianxyz/"]}]}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ray Qin — senior software & AI engineer. I ship AI features — agents, RAG, vector search — and full-stack products to production. Ex-ZipRecruiter (10M+ users), AI-native delivery. Open to engineering roles and freelance: consulting, technical advisory, and mentorship.">
-  <meta name="keywords" content="Senior Software Engineer, AI Engineer, AI agents, agentic AI, multi-agent systems, RAG, retrieval augmented generation, vector search, embeddings, MCP, Model Context Protocol, function calling, evals, model routing, LLM integration, recommendation systems, Go, TypeScript, Python, Rust, React, Next.js, Claude Code, production AI at scale, AI consultant, technical advisor, Ray Qin">
+  <meta name="keywords" content="Senior Software Engineer, AI Engineer, AI agents, agentic AI, multi-agent systems, RAG, retrieval augmented generation, vector search, embeddings, MCP, Model Context Protocol, function calling, evals, model routing, LLM integration, recommendation systems, embodied AI, computer vision, perception, ROS2, Jetson, autonomy, AI-native delivery, engineering simulation, FEA, CFD, Go, TypeScript, Python, Rust, React, Next.js, Claude Code, production AI at scale, AI consultant, technical advisor, Ray Qin">
   <meta name="author" content="Ray Qin">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#fbfaf7">
@@ -136,6 +136,13 @@
     .proj .plinks{margin-top:auto;display:flex;flex-wrap:wrap;gap:16px;font-size:.85rem;font-weight:600}
     .proj .plinks a{color:var(--navy)}
     .proj .plinks a:hover{text-decoration:underline}
+    .proj-diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--navy);padding:18px;text-align:center}
+    .proj-diagram .pipe{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:7px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:#cdd8e6}
+    .proj-diagram .pipe span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:5px 9px}
+    .proj-diagram .pipe b{color:#7f9bbd;font-weight:400}
+    .proj-diagram .pipe .ok{background:rgba(95,168,134,.22);border-color:#5fa886;color:#bfe6d2}
+    .proj-diagram .pipe-sub{font-family:var(--sans);font-size:.74rem;color:#9fb0c6;margin:0}
+    .proj-badge{display:inline-block;font-family:var(--sans);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);background:var(--bg-soft);border:1px solid var(--line-2);border-radius:999px;padding:.25em .6em;vertical-align:middle;margin-left:.45em}
 
     /* services */
     .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -301,17 +308,6 @@
           </div>
           <div class="role">
             <div class="rmeta">
-              <h3>Independent</h3>
-              <p class="role-title">Multi-agent engineering system</p>
-              <p class="role-meta">2025 – present</p>
-            </div>
-            <ul>
-              <li>Built a multi-agent system where coding agents ship real multi-file pull requests against live repositories — every change gated by specs, tests, evals, scoped permissions, and CI.</li>
-              <li>Layered RAG over each codebase for grounded retrieval, with an eval harness that blocks regressions before merge.</li>
-            </ul>
-          </div>
-          <div class="role">
-            <div class="rmeta">
               <h3>Eightfold</h3>
               <p class="role-title">Software Engineer Intern</p>
               <p class="role-meta">2022</p>
@@ -344,40 +340,42 @@
         <div class="sec-head reveal">
           <p class="label">Projects</p>
           <h2>Selected projects.</h2>
-          <p>Deep, hands-on builds across AI, systems, and the full stack.</p>
+          <p>The hard-to-build kind — agentic systems, embodied AI on real hardware, and AI for engineering.</p>
         </div>
         <div class="proj-grid">
 
           <article class="proj reveal">
+            <div class="proj-img proj-diagram" role="img" aria-label="Agent pipeline: spec, generate, test, eval, CI, then a merged pull request, with RAG over each repo and scoped permissions">
+              <div class="pipe"><span>spec</span><b>→</b><span>generate</span><b>→</b><span>test</span><b>→</b><span>eval</span><b>→</b><span>CI</span><b>→</b><span class="ok">PR ✓</span></div>
+              <p class="pipe-sub">RAG over each repo · scoped permissions</p>
+            </div>
+            <div class="proj-body">
+              <p class="ptag">Agentic AI · Dev Infrastructure</p>
+              <h3>Enterprise OS</h3>
+              <p>A multi-agent engineering system: coding agents ship real multi-file pull requests against live repos — gated by specs, tests, evals, scoped permissions, and CI, with RAG over each codebase.</p>
+              <p class="ptech">LLM agents · MCP · code RAG · evals · Rust · CI</p>
+            </div>
+          </article>
+
+          <article class="proj reveal">
             <img class="proj-img" src="media/projects/car.jpeg" alt="1/8-scale autonomous car built for the navigation project" loading="lazy" decoding="async">
             <div class="proj-body">
-              <p class="ptag">AI · Computer Vision · Robotics</p>
-              <h3>Autonomous Navigation System</h3>
-              <p>A 1/8-scale self-driving car that runs autonomous laps at 90%+ success — lane-following with TensorFlow and OpenCV on an NVIDIA Jetson Nano, plus a ROS2 object-detection package using YOLOv5 at 95%+ accuracy.</p>
-              <p class="ptech">Python · TensorFlow · OpenCV · ROS2 · Jetson Nano</p>
-              <p class="plinks"><a href="https://github.com/qinjianxyz/ros2_ws" target="_blank" rel="noopener" aria-label="Autonomous Navigation System on GitHub">GitHub ↗</a></p>
+              <p class="ptag">Embodied AI · Computer Vision · Robotics</p>
+              <h3>Autonomous Vehicle</h3>
+              <p>A full perception-to-control loop on real hardware: a 1/8-scale self-driving car running deep-learning lane-following on an NVIDIA Jetson Nano, with ROS2 + YOLOv5 perception at 95%+ accuracy and 90%+ track success.</p>
+              <p class="ptech">Python · TensorFlow · OpenCV · ROS2 · YOLOv5 · Jetson Nano</p>
+              <p class="plinks"><a href="https://github.com/qinjianxyz/ros2_ws" target="_blank" rel="noopener" aria-label="Autonomous Vehicle on GitHub">GitHub ↗</a></p>
             </div>
           </article>
 
           <article class="proj reveal">
-            <img class="proj-img" src="media/projects/sqlightning.png" alt="SQLightning database engine command line" loading="lazy" decoding="async">
+            <img class="proj-img" src="media/projects/anvil.jpg" alt="Anvil Sim founder-preview dashboard of FEA, CFD, and thermal simulation workflows" loading="lazy" decoding="async">
             <div class="proj-body">
-              <p class="ptag">Systems · Databases</p>
-              <h3>SQLightning</h3>
-              <p>A relational database engine built from scratch in C++, with core SQL support. A primary-key index and LRU cache made queries 83% faster.</p>
-              <p class="ptech">C++ · SQL · Software architecture</p>
-              <p class="plinks"><a href="https://github.com/qinjianxyz/SQLightning" target="_blank" rel="noopener" aria-label="SQLightning on GitHub">GitHub ↗</a></p>
-            </div>
-          </article>
-
-          <article class="proj reveal">
-            <img class="proj-img" src="media/projects/drive-xyz.png" alt="Cloud Drive and Analytics dashboard" loading="lazy" decoding="async">
-            <div class="proj-body">
-              <p class="ptag">Full-stack</p>
-              <h3>Cloud Drive &amp; Analytics</h3>
-              <p>A deployed cloud-storage app with an analytics dashboard — a React / Firebase front end and a Node / Express REST API with authentication, role-based access, and CRUD.</p>
-              <p class="ptech">React · Firebase · Node · Express</p>
-              <p class="plinks"><a href="https://drive-xyz.netlify.app/" target="_blank" rel="noopener" aria-label="Cloud Drive live demo">Live ↗</a><a href="https://github.com/qinjianxyz/drive-xyz" target="_blank" rel="noopener" aria-label="Cloud Drive on GitHub">GitHub ↗</a></p>
+              <p class="ptag">AI × Mechanical Engineering · Simulation</p>
+              <h3>Anvil Sim <span class="proj-badge">private preview</span></h3>
+              <p>Agentic engineering simulation for Mac: a coding agent drives FEA, CFD, and thermal screening from CAD geometry and produces a signed result a reviewer can re-check — benchmarked against CalculiX. Where my mechanical-engineering and AI work meet.</p>
+              <p class="ptech">Agentic AI · FEA / CFD / thermal · native Mac app</p>
+              <p class="plinks"><a href="https://anvil-sim.vercel.app/" target="_blank" rel="noopener" aria-label="Anvil Sim website">Visit ↗</a></p>
             </div>
           </article>
 
