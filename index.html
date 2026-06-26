@@ -172,6 +172,13 @@
     .lbl-sm{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;font-weight:600}
     .about-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 
+    /* resume */
+    .resume{background:var(--bg-soft)}
+    .resume-doc{display:block;max-width:860px;margin:0 auto;background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 70px -36px rgba(20,42,66,.45);transition:transform .2s,box-shadow .2s}
+    .resume-doc:hover{transform:translateY(-3px);box-shadow:0 36px 80px -36px rgba(20,42,66,.55)}
+    .resume-doc img{width:100%;height:auto;display:block}
+    .resume-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+
     /* contact */
     .contact{background:var(--navy);color:#e7edf4}
     .contact .label{color:#9fb0c6}
@@ -245,6 +252,7 @@
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#services">Services</a>
+        <a href="#resume">Résumé</a>
         <a href="#contact">Contact</a>
         <a class="btn btn-primary" href="#contact">Book a call</a>
       </nav>
@@ -256,7 +264,7 @@
     <section class="hero">
       <div class="wrap hero-in">
         <div class="hero-main reveal">
-          <p class="eyebrow">AI Engineer · Software Engineer · Agents &amp; RAG</p>
+          <p class="eyebrow">AI Engineer · Software Engineer · Builder</p>
           <h1>Senior software &amp; AI engineer.<br>I design, build, and ship products end to end.</h1>
           <p class="hero-sub">Full-stack and AI, from first idea to production. I build products and AI features — agents, RAG, vector search — and the systems behind them, and make them hold up under real use.</p>
           <div class="hero-cta">
@@ -470,6 +478,23 @@
           <div class="chips">
             <span class="chip">React / Next.js</span><span class="chip">Node</span><span class="chip">gRPC / Protobuf</span><span class="chip">Postgres</span><span class="chip">Redis</span><span class="chip">Kafka</span><span class="chip">Docker / Kubernetes</span><span class="chip">Terraform</span><span class="chip">Observability</span><span class="chip">TDD</span>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RÉSUMÉ -->
+    <section class="section resume" id="resume">
+      <div class="wrap">
+        <div class="sec-head reveal" style="max-width:none;text-align:center;margin-bottom:34px">
+          <p class="label">Résumé</p>
+          <h2>The whole thing, on one page.</h2>
+        </div>
+        <a class="resume-doc reveal" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener" aria-label="Open Ray Qin résumé PDF in a new tab">
+          <img src="media/resume-preview.jpg" alt="Ray Qin résumé — one page: senior software &amp; AI engineer, ZipRecruiter experience, independent work, education, and skills" width="1004" height="1300" loading="lazy" decoding="async">
+        </a>
+        <div class="resume-actions reveal">
+          <a class="btn btn-primary" href="media/Ray_Qin_Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/qinjianxyz/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
