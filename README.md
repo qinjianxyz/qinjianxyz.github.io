@@ -15,11 +15,12 @@ Finance work is limited to education, public/general research, data tooling, and
 
 ## Site map
 
-- `index.html` — career positioning, interactive problem triage, engagement paths, proof, experience, and contact.
+- `index.html` — career positioning, cross-disciplinary capability map, selected work, engagement paths, experience, and contact.
 - `services.html` — diagnose/build/embed engagement paths, problem families, boundaries, and working process.
 - `lab.html` — Lightbulb R&D founder narrative.
 - `assets/site.css` — shared design system and responsive layout.
 - `assets/site.js` — navigation, reveal behavior, and local mailto contact form.
+- `media/ray-qin-og.png` — branded social-sharing image used instead of a personal or prototype photograph.
 
 Detailed owner-operator planning documents are deliberately kept outside this public repository because they include personal capital and work-authorization planning.
 
@@ -37,4 +38,4 @@ Then open `http://localhost:8000/`.
 
 ## Design direction
 
-The visual language comes from engineering field notes and plotter drawings: cool paper, blueprint blue, a restrained copper signal, condensed display typography, monospaced evidence labels, and an interactive problem-triage instrument. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, and reduced-motion support.
+The site uses a calm, professional portfolio language: generous whitespace, wide Sora display type, Public Sans body text, restrained blueprint blue and copper accents, real product evidence, and a light capability map. Personal and prototype photographs are intentionally excluded until imagery meets the same professional bar. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, and reduced-motion support.
