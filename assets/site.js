@@ -1,5 +1,4 @@
 (function () {
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
@@ -26,21 +25,6 @@
         toggle.focus();
       }
     });
-  }
-
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduce) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('on');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    reveals.forEach(function (element) { observer.observe(element); });
-  } else {
-    reveals.forEach(function (element) { element.classList.add('on'); });
   }
 
   var form = document.getElementById('contactForm');

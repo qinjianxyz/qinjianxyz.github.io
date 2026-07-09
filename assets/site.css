@@ -320,9 +320,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .footer-links a { color: var(--ink-soft); font-size: .82rem; font-weight: 600; }
 .footer-links a:hover { color: var(--blue); }
 .footer-base { border-top: 1px solid var(--line); color: var(--muted); font-size: .61rem; grid-column: 1 / -1; margin-top: 7px; padding-top: 17px; }
-.reveal { opacity: 0; transform: translateY(10px); transition: opacity .4s ease, transform .4s ease; }
-.reveal.on { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1 !important; transform: none !important; } }
+.reveal { opacity: 1; transform: none; }
 
 @media (max-width: 1040px) {
   .hero-lead { gap: 50px; grid-template-columns: 1fr 1fr; }
