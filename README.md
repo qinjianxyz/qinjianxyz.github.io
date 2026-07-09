@@ -4,19 +4,20 @@ Dependency-free GitHub Pages site for Ray Qin's career, independent technical wo
 
 ## Positioning
 
-Ray Qin is a senior engineer and independent problem solver who works across software, AI, data, engineering, and physical systems. The site is designed to support freelance, contract, advisory, and selected senior-role conversations without turning Ray's separate owner-operator experiments into public service claims.
+Ray Qin is a senior software and AI engineer available for AI workflow automation, AI product and internal-tool builds, and focused senior engineering contracts. The site is designed to convert qualified founder and small-team traffic into project conversations without turning Ray's full owner-operator exploration into public service claims.
 
 The site keeps two layers distinct:
 
-- **Professional work:** a one-week problem diagnostic, fixed-scope build-and-ship engagements, and embedded technical-operator work.
-- **Lightbulb R&D:** Anvil Sim as the current product surface, Rove Robotics Lab as the future hardware track, and Enterprise OS as the internal execution engine.
+- **Client services:** AI Workflow Automation, AI Product & Internal Tool Sprints, Fractional Senior Engineering, and a Technical Scoping Sprint.
+- **Founder proof:** ZipRecruiter demonstrates production scale; Anvil Sim demonstrates zero-to-one product ownership; the autonomous vehicle demonstrates software/hardware integration.
+- **Lightbulb R&D:** Anvil Sim, Rove Robotics Lab, and Enterprise OS remain a separate long-horizon founder narrative.
 
 Finance work is limited to education, public/general research, data tooling, and client-defined reporting. Ray does not offer personalized investment advice, custody, or trade execution.
 
 ## Site map
 
-- `index.html` — career positioning, cross-disciplinary capability map, selected work, engagement paths, experience, and contact.
-- `services.html` — diagnose/build/embed engagement paths, problem families, boundaries, and working process.
+- `index.html` — client-facing positioning, purchasable services, proof, experience, pricing anchors, and project contact.
+- `services.html` — detailed offers, deliverables, timelines, starting prices, qualification, and delivery process.
 - `lab.html` — Lightbulb R&D founder narrative.
 - `assets/site.css` — shared design system and responsive layout.
 - `assets/site.js` — navigation, reveal behavior, and local mailto contact form.
@@ -38,4 +39,4 @@ Then open `http://localhost:8000/`.
 
 ## Design direction
 
-The site uses a calm, professional portfolio language: generous whitespace, wide Sora display type, Public Sans body text, restrained blueprint blue and copper accents, real product evidence, and a light capability map. Personal and prototype photographs are intentionally excluded until imagery meets the same professional bar. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, and reduced-motion support.
+The site uses the visual language of an engineering work order: white and cool-gray surfaces, dark ink, signal blue, a single safety-yellow action cue, Archivo display type, Source Sans body text, square boundaries, and direct commercial information. Abstract capability diagrams, oversized generic claims, personal photographs, and prototype photographs are excluded. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, and reduced-motion support.

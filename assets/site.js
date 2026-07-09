@@ -61,12 +61,12 @@
         'Email: ' + read('cf-email'),
         'Organization: ' + read('cf-org'),
         'Project type: ' + read('cf-which'),
-        'Timing: ' + read('cf-budget'),
+        'Budget / engagement: ' + read('cf-budget'),
         '',
         read('cf-msg')
       ].join('\r\n');
       window.location.href = 'mailto:qinjianxyz@gmail.com?subject=' +
-        encodeURIComponent('Problem for Ray — ' + read('cf-name')) + '&body=' + encodeURIComponent(body);
+        encodeURIComponent('Project for Ray — ' + read('cf-name')) + '&body=' + encodeURIComponent(body);
       if (note) note.textContent = 'Opening your email app. If nothing happens, write qinjianxyz@gmail.com.';
     });
   }
