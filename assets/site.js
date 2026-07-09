@@ -50,7 +50,7 @@
         read('cf-msg')
       ].join('\r\n');
       window.location.href = 'mailto:qinjianxyz@gmail.com?subject=' +
-        encodeURIComponent('Project for Ray — ' + read('cf-name')) + '&body=' + encodeURIComponent(body);
+        encodeURIComponent('Project for Ray: ' + read('cf-name')) + '&body=' + encodeURIComponent(body);
       if (note) note.textContent = 'Opening your email app. If nothing happens, write qinjianxyz@gmail.com.';
     });
   }
