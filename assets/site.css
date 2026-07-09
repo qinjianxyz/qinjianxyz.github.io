@@ -53,7 +53,7 @@ h1 { font-size: clamp(3rem, 4.8vw, 4.75rem); }
 h2 { font-size: clamp(2.1rem, 3.5vw, 3.35rem); }
 h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .eyebrow, .kicker, .meta, .nav-note, .availability,
-.service-index, .service-for, .footer-base, .contact-points span {
+.service-for, .footer-base, .contact-points span {
   font-family: var(--mono);
 }
 .eyebrow, .kicker {
@@ -227,28 +227,26 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .service-hero-copy { padding-top: 40px; }
 .service-hero-copy .lede { max-width: 690px; }
 .page-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-.service-facts { border-top: 2px solid var(--ink); display: grid; gap: 36px; grid-template-columns: repeat(3, 1fr); margin-top: 58px; padding-top: 20px; }
-.service-facts .meta { color: var(--blue); font-size: .62rem; text-transform: uppercase; }
-.service-facts p { color: var(--ink-soft); font-size: .88rem; margin-top: 7px; }
+.service-brief { border-top: 2px solid var(--ink); display: grid; gap: 48px; grid-template-columns: 1.4fr 1fr; margin-top: 58px; padding-top: 20px; }
+.service-brief p { color: var(--ink-soft); font-size: .92rem; }
+.service-brief strong { color: var(--ink); }
 
 .services-detail { background: #fff; }
 .service-detail { border-top: 3px solid var(--ink); margin-top: 70px; padding-top: 30px; }
 .service-detail:first-of-type { margin-top: 0; }
-.service-detail-title { display: grid; gap: 24px; grid-template-columns: 44px 1fr; max-width: 850px; }
-.service-index { color: var(--blue); font-size: .72rem; padding-top: 7px; }
+.service-detail-title { max-width: 850px; }
 .service-detail-title .meta { color: var(--blue); font-size: .64rem; letter-spacing: .04em; text-transform: uppercase; }
 .service-detail h2 { margin: 10px 0 13px; }
 .service-for { color: var(--ink-soft); font-size: .78rem; line-height: 1.6; max-width: 720px; }
-.service-detail-body { border-top: 1px solid var(--line); display: grid; gap: 46px; grid-template-columns: repeat(3, 1fr); margin: 29px 0 0 68px; padding: 26px 0; }
+.service-detail-body { border-top: 1px solid var(--line); display: grid; gap: 70px; grid-template-columns: repeat(2, 1fr); margin-top: 29px; padding: 26px 0; }
 .service-detail-body h3 { font-size: 1rem; letter-spacing: -.015em; }
 .service-detail-body p, .service-detail-body li { color: var(--ink-soft); font-size: .87rem; }
 .service-detail-body p { margin-top: 9px; }
 .service-detail-body ul { display: grid; gap: 7px; list-style: none; margin-top: 9px; }
 .service-detail-body li { padding-left: 15px; position: relative; }
 .service-detail-body li::before { background: var(--blue); content: ""; height: 5px; left: 0; position: absolute; top: .64em; width: 5px; }
-.service-action { align-items: center; border-block: 1px solid var(--line); color: var(--blue); display: flex; font-weight: 700; justify-content: space-between; margin-left: 68px; padding: 16px 0; }
+.service-action { align-items: center; border-block: 1px solid var(--line); color: var(--blue); display: flex; font-weight: 700; min-height: 52px; padding: 12px 0; }
 .service-action:hover { color: var(--blue-deep); }
-.service-action span { font-size: 1.25rem; }
 .service-detail-compact { border-top-color: var(--yellow); }
 
 .selection-section { background: var(--paper); border-block: 1px solid var(--line); }
@@ -372,10 +370,8 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .case-with-media .case-body { grid-template-columns: 1fr; }
   .experience-intro { position: static; }
   .service-hero-copy { padding-top: 0; }
-  .service-facts, .service-detail-body, .page-intro-grid { grid-template-columns: 1fr; }
-  .service-facts { gap: 20px; }
-  .service-detail-body { margin-left: 0; }
-  .service-action { margin-left: 0; }
+  .service-brief, .service-detail-body, .page-intro-grid { grid-template-columns: 1fr; }
+  .service-brief { gap: 12px; }
   .delivery-list { grid-template-columns: repeat(2, 1fr); }
   .delivery-list li:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .delivery-list li:nth-child(4) { border-top: 1px solid var(--line); }
@@ -411,7 +407,6 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .contact-form { padding: 20px; }
   .page-hero { padding: 64px 0 54px; }
   .service-detail { margin-top: 54px; }
-  .service-detail-title { gap: 12px; grid-template-columns: 30px 1fr; }
   .service-detail-body { grid-template-columns: 1fr; }
   .selection-list > div { gap: 9px; grid-template-columns: 1fr; }
   .delivery-list { grid-template-columns: 1fr; }
