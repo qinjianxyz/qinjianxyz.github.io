@@ -274,9 +274,9 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .page-hero:not(.service-hero) { background: var(--paper); border-bottom: 1px solid var(--line); }
 .page-hero:not(.service-hero) h1 { margin: 22px 0; max-width: 880px; }
 .page-hero:not(.service-hero) .lede { max-width: 800px; }
-.page-intro-grid { border-top: 2px solid var(--ink); display: grid; gap: 36px; grid-template-columns: repeat(3, 1fr); margin-top: 48px; padding-top: 20px; }
-.page-intro-grid .meta { color: var(--blue); font-size: .62rem; text-transform: uppercase; }
-.page-intro-grid p { color: var(--ink-soft); font-size: .87rem; margin-top: 7px; }
+.lab-summary { border-top: 2px solid var(--ink); margin-top: 48px; padding-top: 20px; }
+.lab-summary p { color: var(--ink-soft); font-size: .92rem; }
+.lab-summary strong { color: var(--ink); }
 .surface { background: #fff; }
 .ink-section { background: var(--dark); color: #fff; }
 .ink-section h1, .ink-section h2, .ink-section h3 { color: #fff; }
@@ -297,11 +297,11 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .lab-card-copy h2 { margin: 16px 0; }
 .lab-card-copy p { color: var(--ink-soft); }
 .lab-card-copy .text-link { margin-top: 21px; }
-.research-grid { display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); background: #384452; border: 1px solid #384452; }
-.research-card { background: var(--dark); padding: 28px; }
-.research-card .meta { color: #9db4ff; font-size: .62rem; }
-.research-card h3 { font-size: 1.28rem; margin: 16px 0 10px; }
-.research-card p { color: #b8c1cc; font-size: .86rem; }
+.research-list { border-top: 1px solid #384452; }
+.research-row { border-bottom: 1px solid #384452; display: grid; gap: 42px; grid-template-columns: 130px 1fr; padding: 28px 0; }
+.research-row .meta { color: #9db4ff; font-size: .62rem; padding-top: 4px; }
+.research-row h3 { font-size: 1.28rem; }
+.research-row p { color: #b8c1cc; font-size: .9rem; margin-top: 9px; max-width: 720px; }
 .why-grid { align-items: start; display: grid; gap: 70px; grid-template-columns: .8fr 1.2fr; }
 .why-copy { display: grid; gap: 18px; }
 .why-copy p { color: var(--ink-soft); }
@@ -370,14 +370,13 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .case-with-media .case-body { grid-template-columns: 1fr; }
   .experience-intro { position: static; }
   .service-hero-copy { padding-top: 0; }
-  .service-brief, .service-detail-body, .page-intro-grid { grid-template-columns: 1fr; }
+  .service-brief, .service-detail-body { grid-template-columns: 1fr; }
   .service-brief { gap: 12px; }
   .delivery-list { grid-template-columns: repeat(2, 1fr); }
   .delivery-list li:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .delivery-list li:nth-child(4) { border-top: 1px solid var(--line); }
   .contact-band-inner { align-items: flex-start; flex-direction: column; }
   .lab-card { grid-template-columns: 1fr; }
-  .research-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -414,6 +413,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .delivery-list li + li, .delivery-list li:nth-child(3), .delivery-list li:nth-child(4) { border-left: 0; border-top: 1px solid var(--line); }
   .lab-card-copy { padding: 28px 22px; }
   .lab-card-media { min-height: 230px; }
+  .research-row { gap: 9px; grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
   .footer-base { grid-column: auto; }
