@@ -4,11 +4,11 @@ Dependency-free GitHub Pages site for Ray Qin's career, independent technical wo
 
 ## Positioning
 
-Ray Qin is an independent senior software engineer available for AI workflow automation, AI product and internal-tool builds, and focused senior engineering contracts. The site is designed to convert qualified founder and small-team traffic into project conversations without turning Ray's full owner-operator exploration into public service claims.
+Ray Qin is a senior software engineer available for AI workflow automation, AI product and internal-tool builds, and focused contract work. The site is designed to convert qualified founder and small-team traffic into project conversations without turning Ray's full owner-operator exploration into public service claims.
 
 The site keeps two layers distinct:
 
-- **Client services:** AI Workflow Automation, AI Product & Internal Tool Sprints, Senior Engineering Contracts, and a Technical Scoping Sprint.
+- **Client services:** AI Workflow Automation, AI Product & Internal Tool Builds, Contract Senior Software Engineering, and Technical Scoping.
 - **Founder proof:** ZipRecruiter demonstrates production scale; Anvil Sim demonstrates zero-to-one product ownership; the autonomous vehicle demonstrates software/hardware integration.
 - **Lightbulb R&D:** Anvil Sim, Rove Robotics Lab, and Enterprise OS remain a separate long-horizon founder narrative.
 
