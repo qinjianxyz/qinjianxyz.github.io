@@ -298,6 +298,8 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .lab-card-copy h2 { margin: 16px 0; }
 .lab-card-copy p { color: var(--ink-soft); }
 .lab-card-copy .text-link { margin-top: 21px; }
+.lab-card-text { grid-template-columns: 1fr; }
+.lab-card-text .lab-card-copy { max-width: 850px; }
 .research-list { border-top: 1px solid #384452; }
 .research-row { border-bottom: 1px solid #384452; display: grid; gap: 42px; grid-template-columns: 130px 1fr; padding: 28px 0; }
 .research-row .meta { color: #9db4ff; font-size: .62rem; padding-top: 4px; }
