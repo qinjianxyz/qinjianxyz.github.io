@@ -3,7 +3,7 @@
   --surface: #ffffff;
   --ink: #111418;
   --ink-soft: #3f4750;
-  --muted: #707984;
+  --muted: #68727d;
   --line: #d8dde3;
   --line-strong: #aeb6c0;
   --blue: #1743d1;
@@ -218,7 +218,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .field select { color-scheme: dark; }
 .field input:focus, .field textarea:focus, .field select:focus { border-color: #9db4ff; }
 .field textarea { min-height: 122px; resize: vertical; }
-.field ::placeholder { color: #718092; }
+.field ::placeholder { color: #8796a7; }
 .contact-form .btn { width: 100%; }
 .form-note { color: #8291a1; font-size: .74rem; margin-top: 10px; text-align: center; }
 
