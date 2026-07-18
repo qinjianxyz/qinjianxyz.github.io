@@ -127,7 +127,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 30px; }
 .availability { color: var(--muted); font-size: .69rem; margin-top: 22px; }
 
-.hero-outcomes { border: 1px solid var(--line); border-bottom: 0; display: grid; grid-template-columns: 180px repeat(4, 1fr); }
+.hero-outcomes { border-block: 2px solid var(--ink); display: grid; grid-template-columns: 180px repeat(4, 1fr); }
 .hero-outcomes > div { min-height: 126px; padding: 23px 20px; }
 .hero-outcomes > div + div { border-left: 1px solid var(--line); }
 .outcomes-label { align-items: center; background: var(--yellow); display: flex; }
@@ -155,7 +155,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .offer-terms span { color: var(--muted); font-family: var(--mono); font-size: .63rem; }
 .offer-terms a { align-items: center; color: var(--blue); display: inline-flex; font-size: .78rem; font-weight: 700; margin-top: 5px; min-height: 44px; }
 .offer-terms a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.scope-note { align-items: center; background: var(--yellow-soft); border-left: 5px solid var(--yellow); display: grid; gap: 26px; grid-template-columns: 1fr 1.5fr auto; margin-top: 32px; padding: 23px 25px; }
+.scope-note { align-items: center; background: var(--yellow-soft); border-block: 1px solid var(--yellow); display: grid; gap: 26px; grid-template-columns: 1fr 1.5fr auto; margin-top: 32px; padding: 23px 25px; }
 .scope-note .meta { color: #725a00; display: block; font-size: .61rem; text-transform: uppercase; }
 .scope-note strong { display: block; font-family: var(--display); margin-top: 4px; }
 .scope-note p { color: #514a2a; font-size: .88rem; }
@@ -260,11 +260,11 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .selection-list p { color: var(--ink-soft); font-size: .9rem; }
 
 .delivery-section { background: #fff; }
-.delivery-list { border: 1px solid var(--line-strong); display: grid; grid-template-columns: repeat(4, 1fr); list-style: none; }
-.delivery-list li { min-height: 230px; padding: 24px; }
-.delivery-list li + li { border-left: 1px solid var(--line); }
+.delivery-list { border-top: 2px solid var(--ink); display: grid; grid-template-columns: repeat(2, 1fr); list-style: none; }
+.delivery-list li { border-bottom: 1px solid var(--line); display: grid; gap: 18px; grid-template-columns: 42px 1fr; min-height: 0; padding: 28px 32px 28px 0; }
+.delivery-list li:nth-child(even) { border-left: 1px solid var(--line); padding-left: 32px; }
 .delivery-list li > span { color: var(--blue); font-family: var(--mono); font-size: .65rem; }
-.delivery-list strong { display: block; font-family: var(--display); font-size: 1.05rem; margin-top: 36px; }
+.delivery-list strong { display: block; font-family: var(--display); font-size: 1.05rem; }
 .delivery-list p { color: var(--ink-soft); font-size: .85rem; margin-top: 9px; }
 
 .contact-band { background: var(--blue); color: #fff; }
@@ -373,8 +373,6 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .service-brief, .service-detail-body { grid-template-columns: 1fr; }
   .service-brief { gap: 12px; }
   .delivery-list { grid-template-columns: repeat(2, 1fr); }
-  .delivery-list li:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
-  .delivery-list li:nth-child(4) { border-top: 1px solid var(--line); }
   .contact-band-inner { align-items: flex-start; flex-direction: column; }
   .lab-card { grid-template-columns: 1fr; }
 }
@@ -411,8 +409,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .service-detail-body { grid-template-columns: 1fr; }
   .selection-list > div { gap: 9px; grid-template-columns: 1fr; }
   .delivery-list { grid-template-columns: 1fr; }
-  .delivery-list li { min-height: 0; }
-  .delivery-list li + li, .delivery-list li:nth-child(3), .delivery-list li:nth-child(4) { border-left: 0; border-top: 1px solid var(--line); }
+  .delivery-list li, .delivery-list li:nth-child(even) { border-left: 0; padding: 24px 0; }
   .lab-card-copy { padding: 28px 22px; }
   .lab-card-media { min-height: 230px; }
   .research-row { gap: 9px; grid-template-columns: 1fr; }
