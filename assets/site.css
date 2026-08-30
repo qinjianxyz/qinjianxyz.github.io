@@ -286,14 +286,11 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .lab-card { background: var(--surface); border: 1px solid var(--line-strong); display: grid; grid-template-columns: .9fr 1.1fr; }
 .lab-card-media { background: var(--dark); min-height: 300px; position: relative; }
 .lab-card-media img { height: 100%; object-fit: cover; width: 100%; }
-.lab-card-media.rove-diagram { align-items: center; display: flex; justify-content: center; padding: 28px; }
-.rove-flow { display: grid; gap: 8px; grid-template-columns: repeat(2, 1fr); max-width: 340px; width: 100%; }
-.rove-flow span { background: #202c3a; border: 1px solid #556474; color: #d7dee6; font-family: var(--mono); font-size: .7rem; padding: 12px; text-align: center; }
-.rove-flow span:last-child { grid-column: 1 / -1; }
 .lab-card-copy { display: flex; flex-direction: column; justify-content: center; padding: 40px; }
 .lab-card-copy .meta { color: var(--blue); font-size: .72rem; text-transform: uppercase; }
 .lab-card-copy h2 { margin: 16px 0; }
 .lab-card-copy p { color: var(--ink-soft); }
+.lab-card-copy p + p { margin-top: 12px; }
 .lab-card-copy .text-link { margin-top: 21px; }
 .lab-card-text { grid-template-columns: 1fr; }
 .lab-card-text .lab-card-copy { max-width: 850px; }
