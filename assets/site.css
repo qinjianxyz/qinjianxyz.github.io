@@ -178,6 +178,9 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .case-with-media .case-body { align-items: start; }
 .case-with-media img { aspect-ratio: 16 / 9; background: var(--dark); border: 1px solid var(--line-strong); height: auto; object-fit: cover; width: 100%; }
 .case-with-media .text-link, .case-study > .case-body > .text-link { margin-top: 17px; }
+.case-physical-proof .case-body { gap: 46px; grid-template-columns: .8fr 1.2fr; }
+.case-physical-proof img { aspect-ratio: 4 / 3; object-position: center center; }
+.case-physical-proof .case-results { margin-top: 22px; }
 
 /* Experience */
 .experience-grid { align-items: start; display: grid; gap: 80px; grid-template-columns: .85fr 1.15fr; }
@@ -286,6 +289,9 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
 .lab-card { background: var(--surface); border: 1px solid var(--line-strong); display: grid; grid-template-columns: .9fr 1.1fr; }
 .lab-card-media { background: var(--dark); min-height: 300px; position: relative; }
 .lab-card-media img { height: 100%; object-fit: cover; width: 100%; }
+.autonomous-card { grid-template-columns: 1.15fr .85fr; }
+.autonomous-card .lab-card-media { min-height: 460px; }
+.autonomous-card .lab-card-media img { object-position: center center; }
 .lab-card-copy { display: flex; flex-direction: column; justify-content: center; padding: 40px; }
 .lab-card-copy .meta { color: var(--blue); font-size: .72rem; text-transform: uppercase; }
 .lab-card-copy h2 { margin: 16px 0; }
@@ -372,6 +378,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .delivery-list { grid-template-columns: repeat(2, 1fr); }
   .contact-band-inner { align-items: flex-start; flex-direction: column; }
   .lab-card { grid-template-columns: 1fr; }
+  .autonomous-card .lab-card-media { min-height: 360px; }
 }
 
 @media (max-width: 560px) {
@@ -409,6 +416,7 @@ h3 { font-size: clamp(1.3rem, 2vw, 1.8rem); }
   .delivery-list li, .delivery-list li:nth-child(even) { border-left: 0; padding: 24px 0; }
   .lab-card-copy { padding: 28px 22px; }
   .lab-card-media { min-height: 230px; }
+  .autonomous-card .lab-card-media { min-height: 300px; }
   .research-row { gap: 9px; grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-links { justify-content: flex-start; }
