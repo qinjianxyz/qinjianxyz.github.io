@@ -4,7 +4,7 @@ Dependency-free GitHub Pages site for Ray Qin's career, client work, and indepen
 
 ## Positioning
 
-Ray Qin is the master brand. The homepage establishes his identity, range, and proof for financial and technology teams, collaborators, and employers. The Work with me page sells fixed-scope technical results and follow-on implementation. The R&amp;D page shows what Ray builds independently without presenting local or planned work as deployed products.
+Ray Qin is the master brand. The portfolio leads with an interactive engineering diagram and selected work before commercial offerings. The homepage establishes his identity, range, and proof for financial and technology teams, collaborators, and employers. The Work with me page sells fixed-scope technical results and follow-on implementation. The R&amp;D page shows what Ray builds independently without presenting local or planned work as deployed products.
 
 The site keeps two layers distinct:
 
@@ -21,8 +21,8 @@ Light Bulb Technology L.L.C. provides software engineering and technical consult
 - `services.html` — fixed-scope products, deliverables, initial pricing, qualification, boundaries, and implementation path.
 - `lab.html` — independent financial, engineering, robotics-foundation, and homestead work with explicit maturity boundaries.
 - `assets/site.css` — shared design system and responsive layout.
-- `assets/site.js` — mobile navigation and local mailto contact form.
-- `media/ray-qin-og.png` — branded social-sharing image used instead of a personal or prototype photograph.
+- `assets/site.js` — mobile navigation, engineering discipline explorer, and local mailto contact form.
+- `media/ray-qin-og-v2.png` — branded social-sharing image used instead of a personal or prototype photograph.
 
 Detailed owner-operator planning documents remain outside this public repository because they include personal capital and operating plans.
 
@@ -40,4 +40,8 @@ Then open `http://localhost:8000/`.
 
 ## Design direction
 
-The site uses the visual language of an engineering work order: white and cool-gray surfaces, dark ink, signal blue, a single safety-yellow action cue, Archivo display type, Source Sans body text, square boundaries, and direct information. Project cards are reserved for real bodies of work; local-only and planned work must say so next to the claim. Navigation and page framing stay consistent under the Ray Qin brand. Visible copy uses ordinary sentences instead of chains of branded or hyphenated nouns. Crypto gradients, coin imagery, stock charts, generic robot art, homestead stock photography, oversized claims, and personal photographs are excluded. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, readable metadata, and reduced-motion support.
+The site uses the visual language of an engineering work order: off-white surfaces, dark ink, signal blue, technical diagrams, Archivo display type, Source Sans body text, square boundaries, and direct information. Project cards are reserved for real bodies of work; local-only and planned work must say so next to the claim. Navigation and page framing stay consistent under the Ray Qin brand. Visible copy uses ordinary sentences instead of chains of branded or hyphenated nouns. Crypto gradients, coin imagery, stock charts, generic robot art, homestead stock photography, oversized claims, and personal photographs are excluded. Accessibility requirements include visible focus, keyboard-operable controls, mobile navigation, semantic structure, readable metadata, and reduced-motion support.
+
+## Portfolio verification (2026-09-04)
+
+The redesign retains static HTML/CSS/JavaScript and existing professional claims, project maturity labels, prices, and contact details. Preview with `python3 -m http.server 8048 --bind 127.0.0.1`. Check all three pages at desktop and 390px / 320px widths, the discipline buttons, mobile navigation including Escape, required contact fields, internal anchors, and local assets. Contact continues to prepare an email in the visitor’s own email app; it has no submission backend.
