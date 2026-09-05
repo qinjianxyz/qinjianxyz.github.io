@@ -32,7 +32,7 @@ def markdown(d):
         lines += ['', f"### {p['name']}", p['context'], '', p['text']]
     e = d['education']
     lines += ['', '## Education', '', f"### {e['school']}", f"{e['degree']} | {e['dates']}", e['honors'], '', '## Technical Skills', '']
-    lines += [f'**{k}:** {v}  ' for k,v in d['skills']]
+    lines += [f'- **{k}:** {v}' for k,v in d['skills']]
     return '\n'.join(lines) + '\n'
 
 def pdf(d, font_dir):

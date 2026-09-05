@@ -44,7 +44,7 @@ Cum Laude · GPA 3.9/4.0
 
 ## Technical Skills
 
-**Languages:** Go, TypeScript/JavaScript, Python, SQL, C/C++, Rust, Swift  
-**AI & data:** LLM agents, MCP, RAG, evaluation, vector search, retrieval/reranking, Spark  
-**Product & systems:** React, Next.js, SwiftUI, REST, gRPC, Protobuf, authentication, distributed systems  
-**Infrastructure:** AWS, PostgreSQL, Redis, Kafka, Docker, Kubernetes, Terraform, OpenTelemetry  
+- **Languages:** Go, TypeScript/JavaScript, Python, SQL, C/C++, Rust, Swift
+- **AI & data:** LLM agents, MCP, RAG, evaluation, vector search, retrieval/reranking, Spark
+- **Product & systems:** React, Next.js, SwiftUI, REST, gRPC, Protobuf, authentication, distributed systems
+- **Infrastructure:** AWS, PostgreSQL, Redis, Kafka, Docker, Kubernetes, Terraform, OpenTelemetry
