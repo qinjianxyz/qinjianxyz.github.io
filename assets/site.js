@@ -34,6 +34,28 @@
     });
   }
 
+  var figure = document.querySelector('.system-figure');
+  var caption = document.getElementById('discipline-caption');
+  var descriptions = {
+    software: 'Architecture to production. Systems built to serve real people.',
+    intelligence: 'Context, reasoning, and evaluation. AI inside the real workflow.',
+    physical: 'Sensors, perception, and control. Code that acts in the real world.'
+  };
+  if (figure && caption) {
+    var disciplines = figure.querySelectorAll('[data-discipline]');
+    disciplines.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var discipline = button.getAttribute('data-discipline');
+        if (!descriptions[discipline]) return;
+        figure.setAttribute('data-active', discipline);
+        caption.textContent = descriptions[discipline];
+        disciplines.forEach(function (item) {
+          item.setAttribute('aria-pressed', item === button ? 'true' : 'false');
+        });
+      });
+    });
+  }
+
   var form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', function (event) {
