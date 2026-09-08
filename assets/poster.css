@@ -462,4 +462,39 @@
 #poster.square .print-offers {
   top: 76.8%;
 }
-#poster.square .print-photos{height:28%}
+#poster.square .print-photos {
+  height: 28%;
+}
+
+/* Course content has equal visual weight across all three flagships. */
+#poster .print-paths {
+  left: 57%;
+  right: 5%;
+  top: 31%;
+}
+#poster .print-photos {
+  width: 49%;
+}
+#poster .print-paths > div {
+  padding: 1.25cqw 0;
+}
+#poster .print-paths h3 {
+  font-size: 1.6cqw;
+}
+#poster .print-paths h3 .copy-en {
+  font-size: 1.2cqw;
+}
+#poster .print-paths p {
+  font: 1.05cqw/1.6 system-ui;
+  margin: 0.7cqw 0 0;
+}
+#poster .print-paths p .copy-en {
+  font-size: 0.9cqw;
+  margin: 0.35cqw 0 0;
+}
+#poster.square .print-paths {
+  top: 28%;
+}
+#poster.portrait .print-paths {
+  top: 30%;
+}

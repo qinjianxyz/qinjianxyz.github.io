@@ -1559,3 +1559,75 @@ p .copy-en {
   display: inline-block;
   margin: 12px 18px 12px 0;
 }
+
+.flagship-selection {
+  padding-block: 48px 64px;
+}
+.flagship-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-block: 32px;
+}
+.flagship-grid article {
+  border-top: 2px solid #a55632;
+  padding-top: 22px;
+}
+.flagship-grid small {
+  letter-spacing: 0.12em;
+  color: #a55632;
+}
+.flagship-grid h3 {
+  font-size: 24px;
+}
+.flagship-grid p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.flagship-grid a {
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  .flagship-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.possibility-list {
+  padding-block: 40px;
+}
+.possibility-list article {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 36px;
+  padding: 36px 0;
+  border-top: 1px solid #cdd1c7;
+}
+.possibility-list article small {
+  color: #a55632;
+  letter-spacing: 0.1em;
+}
+.possibility-list h3 {
+  font-size: 28px;
+  margin-top: 0;
+}
+.possibility-list p {
+  max-width: 800px;
+  line-height: 1.9;
+}
+.possibility-list article p:last-child {
+  color: #687460;
+  font-size: 13px;
+}
+.next-editorial:has(> .next-invitation:only-child) {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 700px) {
+  .possibility-list article {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .possibility-list h3 {
+    font-size: 24px;
+  }
+}
