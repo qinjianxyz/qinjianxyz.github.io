@@ -1511,6 +1511,51 @@ p .copy-en {
 .guidance-workspace .button {
   margin: 8px 12px 8px 0;
 }
-.studio-directions{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:0 0 35px;margin:0 0 30px;border-bottom:1px solid var(--line)}
-.studio-directions a{display:block;padding-top:16px;border-top:1px solid var(--line)}.studio-directions strong{font-size:14px;font-weight:500}.studio-directions strong .copy-en{font:15px/1.5 Georgia,serif;color:var(--orange)}.studio-directions small{display:block;margin-top:10px;color:var(--muted);font-size:11px}.studio-directions small .copy-en{font-size:10px}
-@media(max-width:650px){.studio-directions{grid-template-columns:1fr;gap:14px}.studio-directions a{padding-top:12px}.studio-directions small{margin-top:5px}}
+.studio-directions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding: 0 0 35px;
+  margin: 0 0 30px;
+  border-bottom: 1px solid var(--line);
+}
+.studio-directions a {
+  display: block;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.studio-directions strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+.studio-directions strong .copy-en {
+  font:
+    15px/1.5 Georgia,
+    serif;
+  color: var(--orange);
+}
+.studio-directions small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.studio-directions small .copy-en {
+  font-size: 10px;
+}
+@media (max-width: 650px) {
+  .studio-directions {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .studio-directions a {
+    padding-top: 12px;
+  }
+  .studio-directions small {
+    margin-top: 5px;
+  }
+}
+#lesson-content > .lesson-intro > .quiet-link {
+  display: inline-block;
+  margin: 12px 18px 12px 0;
+}

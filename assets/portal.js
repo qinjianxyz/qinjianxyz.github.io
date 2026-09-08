@@ -379,6 +379,25 @@
     const pdf = e("a", tr("PDF workbook", "PDF 讲义"), "quiet-link");
     pdf.href = lessons.deck.replace(/pptx$/, "pdf");
     intro.append(pdf);
+    const classroom = e(
+      "a",
+      tr("Shared learner repository", "学员共享 GitHub 仓库"),
+      "quiet-link",
+    );
+    classroom.href = "https://github.com/qinjianxyz/ray-qin-studio-classroom";
+    classroom.target = "_blank";
+    classroom.rel = "noopener noreferrer";
+    intro.append(classroom);
+    intro.append(
+      e(
+        "p",
+        tr(
+          "Repository access is invited separately by Ray. Your downloaded materials remain yours to use after guidance ends.",
+          "仓库访问由 Ray 另行邀请。指导到期后，你仍可使用已下载的教材。",
+        ),
+        "fineprint",
+      ),
+    );
     const progress = e("div", "", "progress-bar"),
       meter = document.createElement("progress");
     meter.max = 6;
