@@ -7,6 +7,539 @@
     "email": "qinjianxyz@gmail.com",
     "chineseName": "秦剑"
   },
+  "pathways": [
+    {
+      "id": "software",
+      "title": {
+        "zh": "AI · 全栈软件",
+        "en": "AI · Full-stack software"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "title": {
+            "zh": "做出第一个应用",
+            "en": "Your first app"
+          },
+          "entry": {
+            "zh": "不要求编程基础；会使用电脑和文件夹即可。",
+            "en": "No coding experience required; comfortable using a computer and folders."
+          },
+          "outcome": {
+            "zh": "一个能添加、搜索和保存内容的小应用。",
+            "en": "A small app that adds, searches, and saves information."
+          },
+          "milestones": [
+            {
+              "zh": "选一个用途：社团活动、阅读清单或职位看板",
+              "en": "Choose a purpose: club events, reading lists, or a job board"
+            },
+            {
+              "zh": "借助 AI 做页面，理解输入与输出",
+              "en": "Use AI to build a page and trace inputs and outputs"
+            },
+            {
+              "zh": "把页面和服务连接起来",
+              "en": "Connect the page to a server"
+            },
+            {
+              "zh": "保存数据，检查刷新和重启",
+              "en": "Save data and check reloads and restarts"
+            },
+            {
+              "zh": "找到并修复一个错误",
+              "en": "Find and fix a bug"
+            },
+            {
+              "zh": "请别人试用，修改并演示",
+              "en": "Ask someone to try it, improve it, and demonstrate"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "刷新后数据仍在，搜索真的会筛选",
+              "en": "Data survives a reload and search actually filters"
+            },
+            {
+              "zh": "解释一次请求经过哪里，并独立修改一个功能",
+              "en": "Trace a request and independently change a feature"
+            }
+          ],
+          "extension": {
+            "zh": "在自己的兴趣题材上换内容、改规则。",
+            "en": "Change the content and rules to match your interests."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 2,
+          "title": {
+            "zh": "做一个别人能用的产品",
+            "en": "A product others can use"
+          },
+          "entry": {
+            "zh": "能运行和修改小应用，理解页面、服务和数据的关系。",
+            "en": "Can run and modify a small app and explain page, server, and data flow."
+          },
+          "outcome": {
+            "zh": "一个有账号、权限、完整操作流程和 AI 功能的网站。",
+            "en": "A website with accounts, permissions, a complete user workflow, and an AI feature."
+          },
+          "milestones": [
+            {
+              "zh": "画出两类用户和一次完整操作",
+              "en": "Define two user roles and a complete workflow"
+            },
+            {
+              "zh": "实现登录、数据结构和权限",
+              "en": "Implement sign-in, data structures, and permissions"
+            },
+            {
+              "zh": "完成发布与申请，或下单与处理",
+              "en": "Complete posting and applying, or ordering and fulfilment"
+            },
+            {
+              "zh": "接入 AI 摘要或分类，保留人工确认",
+              "en": "Add AI summaries or classification with human review"
+            },
+            {
+              "zh": "测试越权、重复提交和 AI 错误",
+              "en": "Test unauthorized actions, duplicate submissions, and AI mistakes"
+            },
+            {
+              "zh": "部署试用，记录反馈并修订",
+              "en": "Deploy for testing, collect feedback, and revise"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "另一个人独立完成一次业务流程",
+              "en": "Another person completes the workflow without help"
+            },
+            {
+              "zh": "用户不能改别人的数据；失败有提示且能恢复",
+              "en": "Users cannot alter others’ data; failures are visible and recoverable"
+            }
+          ],
+          "extension": {
+            "zh": "招聘网站、社团平台、小店接单或知识助手。",
+            "en": "Job boards, club platforms, shop orders, or knowledge assistants."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 3,
+          "title": {
+            "zh": "让 AI 完成一段工作",
+            "en": "An AI system that handles a workflow"
+          },
+          "entry": {
+            "zh": "能完成有账号和数据库的产品，并会调试 API。",
+            "en": "Can build an authenticated database-backed product and debug APIs."
+          },
+          "outcome": {
+            "zh": "一个会调用工具、处理文件、保留任务记录的 AI 工作助手。",
+            "en": "An AI work assistant that uses tools, handles files, and records its work."
+          },
+          "milestones": [
+            {
+              "zh": "选定工作流程，建立成功与失败样例",
+              "en": "Define the workflow and success and failure examples"
+            },
+            {
+              "zh": "设计可调用的工具和权限范围",
+              "en": "Define tools and their permission boundaries"
+            },
+            {
+              "zh": "管理文件、上下文和任务状态",
+              "en": "Manage files, context, and task state"
+            },
+            {
+              "zh": "加入确认、预算和取消机制",
+              "en": "Add approval, budget, and cancellation controls"
+            },
+            {
+              "zh": "测试错误输入、工具失败和恶意指令",
+              "en": "Test bad input, tool failures, and hostile instructions"
+            },
+            {
+              "zh": "比较版本表现，记录成本并交付",
+              "en": "Compare versions, record costs, and deliver"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "在未见过的任务上评估成功率和成本",
+              "en": "Evaluate success rate and cost on unseen tasks"
+            },
+            {
+              "zh": "未经确认不发送邮件或改重要文件；失败可追踪",
+              "en": "No email sends or important file changes without approval; failures are traceable"
+            }
+          ],
+          "extension": {
+            "zh": "邮件处理、资料整理、社团运营；AI Agent 是实现这些功能的工具。",
+            "en": "Inbox work, document organization, or club operations, using AI agents where useful."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        }
+      ]
+    },
+    {
+      "id": "robotics",
+      "title": {
+        "zh": "传感器 · 自动化 · 机器人",
+        "en": "Sensors · Automation · Robotics"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "title": {
+            "zh": "读懂环境，让灯响应",
+            "en": "Sense the room and control a light"
+          },
+          "entry": {
+            "zh": "不要求硬件经验；可以先在模拟环境开始。",
+            "en": "No hardware experience required; begin in simulation."
+          },
+          "outcome": {
+            "zh": "一个温湿度面板和按规则亮灭的指示灯。",
+            "en": "A temperature and humidity dashboard with a rule-controlled light."
+          },
+          "milestones": [
+            {
+              "zh": "认清传感器、控制板和输出设备",
+              "en": "Identify the sensor, controller, and output"
+            },
+            {
+              "zh": "读取并理解温湿度数值",
+              "en": "Read and interpret temperature and humidity"
+            },
+            {
+              "zh": "连接网页，记录带时间的读数",
+              "en": "Connect a dashboard and timestamp readings"
+            },
+            {
+              "zh": "实现阈值与停止命令",
+              "en": "Implement thresholds and a stop command"
+            },
+            {
+              "zh": "检查失效、断线和旧数据",
+              "en": "Check sensor failure, disconnection, and stale data"
+            },
+            {
+              "zh": "导出实验记录并解释结果",
+              "en": "Export experiment records and explain results"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "正常、停止、失效三种情况都有记录",
+              "en": "Record normal, stopped, and failed states"
+            },
+            {
+              "zh": "分清模拟读数与实物读数，解释两种阈值",
+              "en": "Distinguish simulated and physical readings and explain two thresholds"
+            }
+          ],
+          "extension": {
+            "zh": "桌面环境站、植物状态提醒、房间温度记录。",
+            "en": "Desk monitors, plant status reminders, or room temperature logs."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 2,
+          "title": {
+            "zh": "让装置按规则行动",
+            "en": "Build a responsive mechanism"
+          },
+          "entry": {
+            "zh": "能读取传感器、使用面板并处理停止与失效。",
+            "en": "Can read sensors, use a dashboard, and handle stop and failure states."
+          },
+          "outcome": {
+            "zh": "一个由传感器驱动、有限位与停止控制的舵机装置。",
+            "en": "A sensor-driven servo mechanism with motion limits and stop controls."
+          },
+          "milestones": [
+            {
+              "zh": "选定用途，画结构和接线",
+              "en": "Choose a use and draw the structure and wiring"
+            },
+            {
+              "zh": "确认供电、负载和动作范围",
+              "en": "Check power, load, and motion range"
+            },
+            {
+              "zh": "校准传感器与舵机位置",
+              "en": "Calibrate sensor readings and servo positions"
+            },
+            {
+              "zh": "加入手动与自动模式",
+              "en": "Add manual and automatic modes"
+            },
+            {
+              "zh": "测试断线、抖动与停止后的行为",
+              "en": "Test disconnects, jitter, and behavior after stopping"
+            },
+            {
+              "zh": "重复实验，比较稳定性",
+              "en": "Repeat experiments and compare reliability"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "动作不超过约定范围，模式切换可解释",
+              "en": "Motion stays within agreed limits and mode changes are explainable"
+            },
+            {
+              "zh": "在三种不同输入条件下重复成功",
+              "en": "Repeat successful behavior under three input conditions"
+            }
+          ],
+          "extension": {
+            "zh": "转向底座、互动装置、模型温室；先确认具体设备。",
+            "en": "A rotating platform, interactive mechanism, or model greenhouse; agree on hardware first."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 3,
+          "title": {
+            "zh": "做一台会调整动作的小机器人",
+            "en": "Build a robot that adjusts its actions"
+          },
+          "entry": {
+            "zh": "能独立完成传感器与执行器项目，具备基本调试经验。",
+            "en": "Can complete a sensor-actuator project and troubleshoot it."
+          },
+          "outcome": {
+            "zh": "一台能感知距离、调整路线并记录表现的小车。",
+            "en": "A rover that senses distance, adjusts its route, and records performance."
+          },
+          "milestones": [
+            {
+              "zh": "定义场地、任务和通过标准",
+              "en": "Define the course, task, and success criteria"
+            },
+            {
+              "zh": "组装底盘并测试电机与停止方式",
+              "en": "Assemble the chassis and test motors and stopping"
+            },
+            {
+              "zh": "测量距离，校准速度与转向",
+              "en": "Measure distance and calibrate speed and steering"
+            },
+            {
+              "zh": "实现感知与动作反馈",
+              "en": "Implement sensing and action feedback"
+            },
+            {
+              "zh": "比较不同路线和干扰条件",
+              "en": "Compare routes and disturbance conditions"
+            },
+            {
+              "zh": "用实验记录改进设计",
+              "en": "Improve the design using experiment records"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "多次完成约定路线，报告失败次数和原因",
+              "en": "Complete repeated runs and report failures and causes"
+            },
+            {
+              "zh": "能根据新障碍修改策略；明确感知与机械限制",
+              "en": "Adapt to a new obstacle and explain sensing and mechanical limits"
+            }
+          ],
+          "extension": {
+            "zh": "避障、循线或遥控协作；视觉识别作为后续扩展。",
+            "en": "Obstacle avoidance, line following, or remote cooperation; vision is a later extension."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        }
+      ]
+    },
+    {
+      "id": "web3",
+      "title": {
+        "zh": "区块链 · Web3",
+        "en": "Blockchain · Web3"
+      },
+      "levels": [
+        {
+          "level": 1,
+          "title": {
+            "zh": "看懂一笔链上交易",
+            "en": "Understand an onchain transaction"
+          },
+          "entry": {
+            "zh": "不要求投资或钱包经验；只使用练习网络。",
+            "en": "No investing or wallet experience required; use practice networks only."
+          },
+          "outcome": {
+            "zh": "一个能显示地址、余额、交易和确认状态的查询工具。",
+            "en": "A viewer for addresses, balances, transactions, and confirmation status."
+          },
+          "milestones": [
+            {
+              "zh": "区分钱包、账户、网络和资产",
+              "en": "Distinguish wallets, accounts, networks, and assets"
+            },
+            {
+              "zh": "使用练习账户发起一笔交易",
+              "en": "Send a transaction from a practice account"
+            },
+            {
+              "zh": "读取交易与确认状态",
+              "en": "Read transactions and confirmation status"
+            },
+            {
+              "zh": "用整数单位计算金额与费用",
+              "en": "Calculate amounts and fees in integer units"
+            },
+            {
+              "zh": "比较错误地址、失败与等待状态",
+              "en": "Compare wrong addresses, failures, and pending states"
+            },
+            {
+              "zh": "做成可查询的页面并解释证据",
+              "en": "Build a query page and explain the evidence"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "能解释网络、金额、手续费和确认的区别",
+              "en": "Explain network, amount, fee, and confirmation"
+            },
+            {
+              "zh": "不会把等待或失败的交易当作成功",
+              "en": "Do not treat pending or failed transactions as successful"
+            }
+          ],
+          "extension": {
+            "zh": "以太坊测试网查询；比特币输入、找零和手续费可单独深入。",
+            "en": "Ethereum testnet queries; Bitcoin inputs, change, and fees are an optional deeper route."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 2,
+          "title": {
+            "zh": "用 NFT 管理会员权限",
+            "en": "Build NFT membership access"
+          },
+          "entry": {
+            "zh": "能做基础网页，理解账户和交易；可先补软件基础。",
+            "en": "Can build a basic page and explain accounts and transactions; bridge software gaps first."
+          },
+          "outcome": {
+            "zh": "一个用钱包签名登录、按 NFT 持有情况开放内容的网站。",
+            "en": "A site with wallet sign-in and content access based on NFT ownership."
+          },
+          "milestones": [
+            {
+              "zh": "定义会员能访问什么",
+              "en": "Define what membership unlocks"
+            },
+            {
+              "zh": "部署练习 NFT 并发给测试账户",
+              "en": "Deploy a practice NFT and issue it to test accounts"
+            },
+            {
+              "zh": "用一次性消息验证钱包签名",
+              "en": "Verify wallet signatures with one-use messages"
+            },
+            {
+              "zh": "服务端读取持有情况并保护内容",
+              "en": "Check ownership server-side and protect content"
+            },
+            {
+              "zh": "测试转让、撤销、过期与重放",
+              "en": "Test transfer, revocation, expiry, and replay"
+            },
+            {
+              "zh": "解释链上与网站各自负责什么",
+              "en": "Explain the responsibilities of chain and website"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "仅改浏览器状态不能解锁内容",
+              "en": "Changing browser state cannot unlock content"
+            },
+            {
+              "zh": "转让或撤销后旧持有人失去下一次访问权限",
+              "en": "After transfer or revocation, the previous holder loses access on the next check"
+            }
+          ],
+          "extension": {
+            "zh": "社团会员、活动通行证或创作者内容；不涉及投资承诺。",
+            "en": "Club membership, event passes, or creator content, without investment promises."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        },
+        {
+          "level": 3,
+          "title": {
+            "zh": "设计完整的链上应用",
+            "en": "Design a complete onchain application"
+          },
+          "entry": {
+            "zh": "能完成签名登录和服务端授权，理解合约状态。",
+            "en": "Can implement signed sign-in and server authorization and explain contract state."
+          },
+          "outcome": {
+            "zh": "一个有完整状态流程、异常处理和审计记录的去中心化应用。",
+            "en": "A decentralized app with complete state transitions, failure handling, and an audit trail."
+          },
+          "milestones": [
+            {
+              "zh": "选定规则：会员治理、凭证或测试收款",
+              "en": "Choose rules for membership governance, credentials, or test payments"
+            },
+            {
+              "zh": "设计合约与链下数据的边界",
+              "en": "Design the boundary between contracts and offchain data"
+            },
+            {
+              "zh": "实现事件读取与状态同步",
+              "en": "Read events and synchronize state"
+            },
+            {
+              "zh": "处理重复、等待、撤销和服务中断",
+              "en": "Handle duplicates, pending states, revocation, and outages"
+            },
+            {
+              "zh": "测试权限攻击与故障恢复",
+              "en": "Test permission attacks and recovery"
+            },
+            {
+              "zh": "整理威胁模型、实验和使用说明",
+              "en": "Document the threat model, experiments, and operation"
+            }
+          ],
+          "assessment": [
+            {
+              "zh": "重启或重复事件不造成重复发放或重复记账",
+              "en": "Restarts and repeated events do not duplicate issuance or accounting"
+            },
+            {
+              "zh": "能说明中心化依赖、隐私取舍和未解决风险",
+              "en": "Explain centralized dependencies, privacy tradeoffs, and remaining risks"
+            }
+          ],
+          "extension": {
+            "zh": "测试网收款、可撤销凭证、会员投票；题目与范围单独确认。",
+            "en": "Testnet checkout, revocable credentials, or member voting; scope is agreed individually."
+          },
+          "deliveryStatus": "scope-confirmed-before-enrollment"
+        }
+      ]
+    }
+  ],
   "schedule": {
     "status": "proposed",
     "timezone": "America/Los_Angeles",
