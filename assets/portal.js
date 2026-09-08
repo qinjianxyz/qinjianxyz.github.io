@@ -154,6 +154,7 @@
       lessons = null;
       $("#lesson-content").replaceChildren();
       document.querySelector("#guidance-workspace")?.remove();
+      document.querySelector("#achievement-workspace")?.remove();
       $("#course-buttons").replaceChildren();
       $("#auth-panel").hidden = false;
       $("#dashboard").hidden = true;
@@ -319,6 +320,7 @@
       renderCourses();
       renderLessons();
       await renderGuidance();
+      await renderAchievements();
     } catch (err) {
       message(err.message, true);
     }
@@ -565,6 +567,7 @@
         try {
           await api("questions", Object.fromEntries(new FormData(form)));
           await renderGuidance();
+      await renderAchievements();
         } catch (err) {
           message(err.message, true);
         } finally {
@@ -603,6 +606,36 @@
       box.append(e("p", err.message));
     }
   }
+  async function renderAchievements() {
+    document.querySelector('#achievement-workspace')?.remove();
+    const box=e('section','', 'guidance-workspace');box.id='achievement-workspace';
+    box.append(e('h2',tr('Your project achievements','你的项目成果')));
+    $('#dashboard').append(box);
+    try {
+      const data=await api('achievements');
+      box.append(e('p',tr('Show what you built. Ray reviews the work before issuing a project achievement certificate.','把你做的作品交给我。评审通过后，会为你签发记录具体成果的项目证明。')));
+      if(me.guidance?.active){
+        const form=document.createElement('form');
+        const fields=[['learnerName','Learner’s name','学员姓名',100],['summary','What you built and tested','你做了什么，怎样验证',3000],['evidence','Repository, demo, or private review evidence','代码仓库、演示或私密评审资料',3000]];
+        fields.forEach(([name,en,zh,max])=>{const label=e('label',tr(en,zh));const input=document.createElement(name==='learnerName'?'input':'textarea');input.name=name;input.required=true;input.maxLength=max;label.append(input);form.append(label);});
+        form.append(e('p',tr('This submission uses your currently selected project. Do not include passwords, wallet keys, or other people’s private information.','按当前选择的项目提交。请不要附上密码、钱包密钥或他人的私人资料。')));
+        const button=e('button',tr('Submit for review','提交作品评审'),'button');button.type='submit';form.append(button);
+        form.onsubmit=event=>{event.preventDefault();busy(form,async()=>{const values=Object.fromEntries(new FormData(form));await api('submissions',{...values,path:currentPath});await renderAchievements();});};box.append(form);
+      }
+      for(const s of data.submissions){const item=e('details');item.append(e('summary',s.learner_name+' · '+s.path+' · '+s.status),e('p',s.summary));for(const r of s.reviews)item.append(e('p',r.feedback));box.append(item);}
+      for(const c of data.certificates){
+        const item=e('article');item.append(e('h3',c.snapshot.learnerName+' · '+c.snapshot.project.zh),e('p',c.status));
+        const doc=e('a',tr('Open certificate / Save as PDF','查看证明 · 可打印保存 PDF'));doc.href='/api/certificates/'+c.id+'/document';doc.target='_blank';doc.rel='noopener';item.append(doc);
+        if(c.status==='issued'){
+          if(c.share_token){const link=e('a',tr('View shared verification page','查看分享验证页'));link.href='/verify/'+c.share_token;item.append(link);}
+          const label=e('label');const check=document.createElement('input');check.type='checkbox';check.checked=Boolean(c.share_token);label.append(check,e('span',tr('Allow anyone with the link to see the learner name, project summary, and reviewed achievements. A guardian chooses for a child.','允许持有链接的人查看学员姓名、项目简介和评审成果。未成年学员由家长决定。')));item.append(label);
+          const save=e('button',tr('Save sharing choice','保存分享选择'),'button');save.onclick=()=>busy(item,async()=>{await api('certificates/'+c.id+'/sharing',{enabled:check.checked});await renderAchievements();});item.append(save);
+        }
+        box.append(item);
+      }
+    }catch(err){box.append(e('p',err.message));}
+  }
+
   async function refresh() {
     try {
       catalog = await api("catalog");

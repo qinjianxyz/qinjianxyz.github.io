@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "brand": {
+    "name": "Ray Qin",
+    "telegram": "https://t.me/rayq_ai",
+    "telegramLabel": "@rayq_ai",
+    "email": "qinjianxyz@gmail.com",
+    "chineseName": "秦剑"
+  },
+  "schedule": {
+    "status": "proposed",
+    "timezone": "America/Los_Angeles",
+    "days": [
+      "Tuesday",
+      "Thursday"
+    ],
+    "start": "18:00",
+    "end": "19:30",
+    "zh": "每周二、周四 · 18:00–19:30",
+    "en": "Tuesday & Thursday · 6–7:30 pm"
+  },
+  "pricing": {
+    "status": "under-review",
+    "public": false,
+    "currency": "USD"
+  },
+  "offers": [
+    {
+      "id": "ai-students",
+      "name": "Student Studio",
+      "zh": "青少年项目工作室",
+      "weeks": 8,
+      "ages": "13–17",
+      "kind": "project",
+      "guidanceDays": 56
+    },
+    {
+      "id": "ai-adults",
+      "name": "Adult Studio",
+      "zh": "成人项目工作室",
+      "weeks": 8,
+      "ages": "18+",
+      "kind": "project",
+      "guidanceDays": 56
+    },
+    {
+      "id": "studio-month",
+      "name": "Monthly guidance",
+      "zh": "共享指导续期",
+      "ages": "13+",
+      "kind": "renewal",
+      "guidanceMonths": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": "email",
+      "flagship": false,
+      "title": {
+        "zh": "做一个你愿意每天打开的邮件助手。",
+        "en": "Build an inbox assistant you’ll actually use."
+      },
+      "description": {
+        "zh": "把邮件整理成待办，找到需要回复的内容，生成由你确认的回复草稿。",
+        "en": "Turn messages into a useful task list, find what needs a reply, and prepare drafts for you to review."
+      },
+      "outcome": {
+        "zh": "一个可运行的助手、示例邮件、测试记录和自己的使用说明。",
+        "en": "A working assistant, sample messages, test notes, and a guide for your own workflow."
+      },
+      "milestones": [
+        {
+          "zh": "先选一个最烦的环节",
+          "en": "Choose the part you want to fix"
+        },
+        {
+          "zh": "做出收件箱与待办视图",
+          "en": "Build an inbox and a task view"
+        },
+        {
+          "zh": "加上 AI 分类和草稿",
+          "en": "Add AI sorting and drafts"
+        },
+        {
+          "zh": "用不那么整齐的邮件测试",
+          "en": "Try the awkward cases"
+        },
+        {
+          "zh": "接入自己的工作习惯",
+          "en": "Fit it into your routine"
+        },
+        {
+          "zh": "用一组邮件完整演示",
+          "en": "Walk through a complete batch"
+        }
+      ]
+    },
+    {
+      "id": "product",
+      "flagship": true,
+      "title": {
+        "zh": "把你想做的网站，做成能用的产品。",
+        "en": "Build a product people can try."
+      },
+      "description": {
+        "zh": "招聘平台、商家接单网站、社团平台。从一个真实用途开始，完成一条从头到尾的使用流程。",
+        "en": "A job board, a merchant ordering site, or a club platform. Start with one purpose and build a complete journey."
+      },
+      "outcome": {
+        "zh": "一个可访问的产品原型、源代码、演示和启动说明。",
+        "en": "A working product prototype, source code, a demo, and setup instructions."
+      },
+      "home": {
+        "title": {
+          "zh": "AI · 全栈软件",
+          "en": "AI · Full-stack software"
+        },
+        "outcome": {
+          "zh": "一个能发布、搜索和申请职位的网站。",
+          "en": "A website for posting, finding, and applying for opportunities."
+        },
+        "eyebrow": "01 / BUILD AN APP"
+      },
+      "milestones": [
+        {
+          "zh": "定下第一个版本",
+          "en": "Define the first version"
+        },
+        {
+          "zh": "让内容保存下来",
+          "en": "Save the important things"
+        },
+        {
+          "zh": "打通核心流程",
+          "en": "Connect the main journey"
+        },
+        {
+          "zh": "加一个有用的 AI 功能",
+          "en": "Add one useful AI feature"
+        },
+        {
+          "zh": "让别人来试",
+          "en": "Let someone else try it"
+        },
+        {
+          "zh": "交付你的作品",
+          "en": "Present your product"
+        }
+      ]
+    },
+    {
+      "id": "sensor",
+      "flagship": true,
+      "title": {
+        "zh": "做一个会感知、会提醒的小装置。",
+        "en": "Build a small device that senses and responds."
+      },
+      "description": {
+        "zh": "测量温度、湿度或土壤变化，在网页里看到读数，再让灯光或小舵机作出反应。",
+        "en": "Measure temperature, humidity, or soil changes, view the readings on a dashboard, and make an LED or small servo respond."
+      },
+      "outcome": {
+        "zh": "一个低压传感器装置、可视化面板、接线图、实验记录与代码。",
+        "en": "A low-voltage sensing device, dashboard, wiring diagram, experiment notes, and code."
+      },
+      "home": {
+        "title": {
+          "zh": "传感器 · 小型机器人",
+          "en": "Sensors · Small robotics"
+        },
+        "outcome": {
+          "zh": "从传感器到舵机、小车，做出会感知和行动的装置。",
+          "en": "Build from sensors to servos and small robots that sense and respond."
+        },
+        "eyebrow": "02 / MAKE IT RESPOND"
+      },
+      "milestones": [
+        {
+          "zh": "选择一个要测量的变化",
+          "en": "Choose something to measure"
+        },
+        {
+          "zh": "读到第一个数值",
+          "en": "Read the first value"
+        },
+        {
+          "zh": "让读数值得相信",
+          "en": "Check whether readings make sense"
+        },
+        {
+          "zh": "做一个能看懂的面板",
+          "en": "Build a useful dashboard"
+        },
+        {
+          "zh": "加一个小动作",
+          "en": "Add a small response"
+        },
+        {
+          "zh": "演示一次完整实验",
+          "en": "Demonstrate the experiment"
+        }
+      ]
+    },
+    {
+      "id": "bitcoin",
+      "flagship": false,
+      "title": {
+        "zh": "做一个比特币交易追踪器。",
+        "en": "Build a Bitcoin transaction tracker."
+      },
+      "description": {
+        "zh": "输入一笔交易，看到它用了哪些资金、发往哪里、付了多少手续费，以及是否被确认。",
+        "en": "Look up a transaction and see its inputs, outputs, fee, and confirmation status."
+      },
+      "outcome": {
+        "zh": "自己的交易追踪页面，一笔练习交易的分析，以及可重复的测试步骤。",
+        "en": "Your own tracker, an annotated practice transaction, and repeatable test steps."
+      },
+      "milestones": [
+        {
+          "zh": "准备自己的练习网络",
+          "en": "Set up a practice network"
+        },
+        {
+          "zh": "亲手发出一笔交易",
+          "en": "Make a transaction"
+        },
+        {
+          "zh": "读懂这笔交易",
+          "en": "Read the transaction"
+        },
+        {
+          "zh": "把数据做成页面",
+          "en": "Build the tracker view"
+        },
+        {
+          "zh": "处理等待和错误",
+          "en": "Handle waiting and errors"
+        },
+        {
+          "zh": "解释一笔完整交易",
+          "en": "Explain the whole transaction"
+        }
+      ]
+    },
+    {
+      "id": "stablecoin",
+      "flagship": false,
+      "title": {
+        "zh": "做一个稳定币收款台。",
+        "en": "Build a stablecoin checkout."
+      },
+      "description": {
+        "zh": "创建测试订单，连接练习钱包，核对收款，生成收据。把“支付成功”后面发生的事做清楚。",
+        "en": "Create a test order, connect a practice wallet, verify a payment, and issue a receipt."
+      },
+      "outcome": {
+        "zh": "一个测试收款应用、订单记录、可核对的收据及异常情况测试。",
+        "en": "A test checkout, order records, verifiable receipts, and failure-case tests."
+      },
+      "milestones": [
+        {
+          "zh": "创建一张测试订单",
+          "en": "Create a test order"
+        },
+        {
+          "zh": "准备付款页面",
+          "en": "Build the payment screen"
+        },
+        {
+          "zh": "发出练习付款",
+          "en": "Send a practice payment"
+        },
+        {
+          "zh": "核对链上记录",
+          "en": "Verify the on-chain record"
+        },
+        {
+          "zh": "处理少付、重复与失败",
+          "en": "Handle mismatches and retries"
+        },
+        {
+          "zh": "生成可核对的收据",
+          "en": "Produce a verifiable receipt"
+        }
+      ]
+    },
+    {
+      "id": "token",
+      "flagship": true,
+      "title": {
+        "zh": "做一个 NFT 会员系统。",
+        "en": "Build an NFT membership system."
+      },
+      "description": {
+        "zh": "用钱包证明身份，用链上的 NFT 决定访问权限。亲手做出会员页面，测试转让、到期和撤销后的变化。",
+        "en": "Use wallet signatures to prove account control and an onchain NFT to determine access. Build a members-only page and test transfers, expiry, and revocation."
+      },
+      "outcome": {
+        "zh": "一个会员验证应用、练习 Token、权限测试和明确的会员规则。",
+        "en": "A membership app, practice tokens, access tests, and explicit membership rules."
+      },
+      "home": {
+        "title": {
+          "zh": "区块链 · Web3",
+          "en": "Blockchain · Web3"
+        },
+        "outcome": {
+          "zh": "用 NFT 做会员通行证，让钱包成为访问凭证。",
+          "en": "Build NFT membership, with wallet-based access to a private space."
+        },
+        "eyebrow": "03 / BUILD ONCHAIN"
+      },
+      "milestones": [
+        {
+          "zh": "先写会员规则",
+          "en": "Define the membership rules"
+        },
+        {
+          "zh": "发行练习通行证",
+          "en": "Issue practice passes"
+        },
+        {
+          "zh": "证明账户由你控制",
+          "en": "Prove control of the account"
+        },
+        {
+          "zh": "接上会员页面",
+          "en": "Connect the members’ page"
+        },
+        {
+          "zh": "检查权益变化",
+          "en": "Test changes in access"
+        },
+        {
+          "zh": "解释你的会员系统",
+          "en": "Explain your membership system"
+        }
+      ]
+    }
+  ]
+}

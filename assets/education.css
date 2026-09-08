@@ -148,7 +148,7 @@ nav {
   gap: 30px;
   font-size: 13px;
 }
-nav a:not(.nav-portal) > span:last-child {
+nav a:not(.nav-portal) > span[aria-hidden="true"] {
   display: none;
 }
 nav a:hover {
