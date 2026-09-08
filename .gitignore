@@ -1,3 +1,14 @@
-
 .DS_Store
-.worktrees/
+node_modules/
+.env
+.env.*
+data/
+artifacts/
+public-dist/
+test-results/
+playwright-report/
+server/
+curriculum/
+docs/
+tests/
+scripts/

@@ -1,0 +1,19 @@
+# GitHub Pages uses Jekyll exclusions when served from this repository.
+exclude:
+  - server
+  - tests
+  - scripts
+  - docs
+  - data
+  - artifacts
+  - node_modules
+  - package.json
+  - package-lock.json
+  - README.md
+  - Dockerfile
+  - compose.yaml
+  - public-dist
+  - test-results
+  - playwright-report
+  - resume/content.json
+  - resume/generate.py
