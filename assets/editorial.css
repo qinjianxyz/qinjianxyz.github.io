@@ -1887,3 +1887,9 @@ h3 {
     font-size: 12px;
   }
 }
+
+/* Give the bilingual biography clear, compact chapters. */
+.about-chapter { padding: 24px 0; border-top: 1px solid var(--line); }
+.about-chapter h3 { font-size: 19px; line-height: 1.5; margin: 0 0 12px; }
+.about-chapter h3 .copy-en { font-size: 15px; color: var(--muted); }
+.about-chapter p { margin-bottom: 0; }
