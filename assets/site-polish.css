@@ -422,4 +422,42 @@ summary {
 }
 
 /* Keep small labels readable against the green project background. */
-.home-projects .home-section-head small { color: #925032; }
+.home-projects .home-section-head small {
+  color: #925032;
+}
+.idea-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.idea-label > span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.idea-label > span .copy-en {
+  display: inline;
+  margin-left: 6px;
+}
+.idea-grid article {
+  display: flex;
+  flex-direction: column;
+}
+.idea-grid article > a {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 22px;
+  font-size: 12px;
+  color: #925032;
+}
+.idea-grid article h3 {
+  font-weight: 500;
+}
+.idea-context {
+  margin: 20px 0;
+  max-width: 780px;
+}
+.field-ideas-link {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 12px;
+}
