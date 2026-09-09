@@ -553,8 +553,8 @@
     "en": "Tuesday & Thursday · 6–7:30 pm"
   },
   "pricing": {
-    "status": "under-review",
-    "public": false,
+    "status": "published",
+    "public": true,
     "currency": "USD"
   },
   "offers": [
@@ -565,7 +565,8 @@
       "weeks": 8,
       "ages": "13–17",
       "kind": "project",
-      "guidanceDays": 56
+      "guidanceDays": 56,
+      "price": 128000
     },
     {
       "id": "ai-adults",
@@ -574,7 +575,8 @@
       "weeks": 8,
       "ages": "18+",
       "kind": "project",
-      "guidanceDays": 56
+      "guidanceDays": 56,
+      "price": 128000
     },
     {
       "id": "studio-month",
@@ -582,7 +584,8 @@
       "zh": "共享指导续期",
       "ages": "13+",
       "kind": "renewal",
-      "guidanceMonths": 1
+      "guidanceMonths": 1,
+      "price": 48000
     }
   ],
   "courses": [

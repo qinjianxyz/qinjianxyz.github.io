@@ -461,3 +461,16 @@ summary {
   margin-top: 22px;
   font-size: 12px;
 }
+
+/* Published offers share the course page's quiet editorial rhythm. */
+.program-pricing { padding-block: clamp(36px, 6vw, 76px); border-top: 1px solid var(--line, #d0d3c8); }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 30px; }
+.pricing-grid article { border-top: 2px solid #a95632; padding-top: 22px; min-width: 0; }
+.pricing-grid h3 { margin: 0 0 22px; }
+.price-amount { display: block; font-size: clamp(32px, 3.4vw, 46px); line-height: 1.2; color: #283a30; }
+.price-unit { margin-block: 10px 22px; }
+.pricing-flex { background: #e8ece1; padding: clamp(20px, 3vw, 36px); margin-top: 32px; }
+.pricing-flex p { max-width: 850px; }
+.program-pricing > .fineprint { margin-top: 24px; }
+.home-price-row strong small { font-size: 14px; font-weight: 400; }
+@media (max-width: 850px) { .pricing-grid { grid-template-columns: 1fr; gap: 26px; } }
