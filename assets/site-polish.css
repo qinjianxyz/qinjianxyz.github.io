@@ -474,3 +474,17 @@ summary {
 .program-pricing > .fineprint { margin-top: 24px; }
 .home-price-row strong small { font-size: 14px; font-weight: 400; }
 @media (max-width: 850px) { .pricing-grid { grid-template-columns: 1fr; gap: 26px; } }
+
+/* About: keep the portrait alongside the introduction at tablet widths. */
+.bilingual .about-hero { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr); align-items:center; gap:clamp(24px,5vw,72px); padding-block:clamp(32px,5vw,64px); }
+.bilingual .about-hero > div { min-width:0; }
+.bilingual .about-hero h1 { margin-block:22px; letter-spacing:-.6px; }
+.bilingual .about-hero h1 .copy-zh { font-size:clamp(28px,3.2vw,42px); line-height:1.45; }
+.bilingual .about-hero h1 .copy-en { font-size:clamp(25px,2.7vw,35px); line-height:1.25; margin-top:10px; }
+.bilingual .about-hero p { max-width:620px; font-size:16px; line-height:1.8; }
+.bilingual .about-hero p .copy-en { font-size:14px; line-height:1.7; margin-top:14px; }
+.bilingual .about-hero img { width:100%; max-width:390px; height:auto; aspect-ratio:4/5; object-fit:cover; justify-self:center; transform:rotate(1.5deg); }
+@media(max-width:650px) {
+ .bilingual .about-hero { grid-template-columns:1fr; gap:28px; }
+ .bilingual .about-hero img { width:min(80%,300px); }
+}

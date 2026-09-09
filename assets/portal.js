@@ -293,8 +293,8 @@
             e(
               "p",
               tr(
-                "Proposed price. Enrollment opens after the offer and office hours are confirmed.",
-                "拟定价格。项目方案及答疑安排确认后开放付费。",
+                "Online checkout is not open yet. Contact Ray to arrange enrollment.",
+                "在线付款尚未开放，请联系秦剑安排报名。",
               ),
             ),
           );
