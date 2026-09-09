@@ -590,8 +590,8 @@
       "id": "email",
       "flagship": false,
       "title": {
-        "zh": "做一个你愿意每天打开的邮件助手。",
-        "en": "Build an inbox assistant you’ll actually use."
+        "zh": "AI 邮件与待办助手",
+        "en": "AI inbox & task assistant"
       },
       "description": {
         "zh": "把邮件整理成待办，找到需要回复的内容，生成由你确认的回复草稿。",
@@ -632,12 +632,12 @@
       "id": "product",
       "flagship": true,
       "title": {
-        "zh": "把你想做的网站，做成能用的产品。",
-        "en": "Build a product people can try."
+        "zh": "AI 招聘平台",
+        "en": "AI-powered recruiting platform"
       },
       "description": {
-        "zh": "招聘平台、商家接单网站、社团平台。从一个真实用途开始，完成一条从头到尾的使用流程。",
-        "en": "A job board, a merchant ordering site, or a club platform. Start with one purpose and build a complete journey."
+        "zh": "以招聘平台为起点，完成职位发布、搜索、申请和 AI 信息整理。也可以根据兴趣改成商家接单或社团平台。",
+        "en": "Develop a recruiting platform with job posting, search, applications, and AI-assisted summaries. Adapt the project into an ordering system or club platform if that fits your interests."
       },
       "outcome": {
         "zh": "一个可访问的产品原型、源代码、演示和启动说明。",
@@ -685,8 +685,8 @@
       "id": "sensor",
       "flagship": true,
       "title": {
-        "zh": "做一个会感知、会提醒的小装置。",
-        "en": "Build a small device that senses and responds."
+        "zh": "环境监测与自动控制",
+        "en": "Environmental monitoring & control"
       },
       "description": {
         "zh": "测量温度、湿度或土壤变化，在网页里看到读数，再让灯光或小舵机作出反应。",
@@ -738,8 +738,8 @@
       "id": "bitcoin",
       "flagship": false,
       "title": {
-        "zh": "做一个比特币交易追踪器。",
-        "en": "Build a Bitcoin transaction tracker."
+        "zh": "比特币交易追踪",
+        "en": "Bitcoin transaction tracking"
       },
       "description": {
         "zh": "输入一笔交易，看到它用了哪些资金、发往哪里、付了多少手续费，以及是否被确认。",
@@ -780,8 +780,8 @@
       "id": "stablecoin",
       "flagship": false,
       "title": {
-        "zh": "做一个稳定币收款台。",
-        "en": "Build a stablecoin checkout."
+        "zh": "稳定币测试网收款台",
+        "en": "Stablecoin testnet checkout"
       },
       "description": {
         "zh": "创建测试订单，连接练习钱包，核对收款，生成收据。把“支付成功”后面发生的事做清楚。",
@@ -822,8 +822,8 @@
       "id": "token",
       "flagship": true,
       "title": {
-        "zh": "做一个 NFT 会员系统。",
-        "en": "Build an NFT membership system."
+        "zh": "NFT 会员与访问授权",
+        "en": "NFT membership & access control"
       },
       "description": {
         "zh": "用钱包证明身份，用链上的 NFT 决定访问权限。亲手做出会员页面，测试转让、到期和撤销后的变化。",
