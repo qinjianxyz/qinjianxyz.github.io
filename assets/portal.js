@@ -310,6 +310,11 @@
         }
         container.append(card);
       });
+    if (me.products.length) {
+      const disclosure=e('details','', 'manage-enrollment');
+      disclosure.append(e('summary',tr('Enrollment & continuation','管理报名与续指导')),...Array.from(container.childNodes));
+      container.append(disclosure);
+    }
   }
   async function choose(id) {
     try {
@@ -368,6 +373,10 @@
     };
     pathLabel.append(pathSelect);
     intro.append(pathLabel);
+    if(lessons.resources?.length){const resources=e('div','','learning-resources');resources.append(e('h3',tr('Your project materials','项目教材')));for(const resource of lessons.resources){const link=e('a',tr(resource.en,resource.zh),'quiet-link');link.href=resource.url;resources.append(link);}intro.append(resources);}
+    const practice = e("a", tr("Try an interactive project challenge", "先试一个互动项目挑战"), "quiet-link");
+    practice.href = "/practice/";
+    intro.append(practice, e("p", tr("Free browser practice. Your real project and mentor review determine completion.", "这是免费的浏览器练习。正式项目是否完成，以实际作品和导师评审为准。"), "fineprint"));
     const deck = e(
       "a",
       tr(
@@ -614,15 +623,26 @@
     try {
       const data=await api('achievements');
       box.append(e('p',tr('Show what you built. Ray reviews the work before issuing a project achievement certificate.','把你做的作品交给我。评审通过后，会为你签发记录具体成果的项目证明。')));
-      if(me.guidance?.active){
-        const form=document.createElement('form');
+      function submissionForm(previous){
+        const form=document.createElement('form');form.className='project-submission';
+        if(previous)form.dataset.revises=previous.id;
         const fields=[['learnerName','Learner’s name','学员姓名',100],['summary','What you built and tested','你做了什么，怎样验证',3000],['evidence','Repository, demo, or private review evidence','代码仓库、演示或私密评审资料',3000]];
-        fields.forEach(([name,en,zh,max])=>{const label=e('label',tr(en,zh));const input=document.createElement(name==='learnerName'?'input':'textarea');input.name=name;input.required=true;input.maxLength=max;label.append(input);form.append(label);});
-        form.append(e('p',tr('This submission uses your currently selected project. Do not include passwords, wallet keys, or other people’s private information.','按当前选择的项目提交。请不要附上密码、钱包密钥或他人的私人资料。')));
-        const button=e('button',tr('Submit for review','提交作品评审'),'button');button.type='submit';form.append(button);
-        form.onsubmit=event=>{event.preventDefault();busy(form,async()=>{const values=Object.fromEntries(new FormData(form));await api('submissions',{...values,path:currentPath});await renderAchievements();});};box.append(form);
+        if(previous)fields.push(['changesSummary','What changed after the feedback','根据反馈，这次改了什么',2000]);
+        fields.forEach(([name,en,zh,max])=>{const label=e('label',tr(en,zh));const input=document.createElement(name==='learnerName'?'input':'textarea');input.name=name;input.required=true;input.maxLength=max;if(previous){input.value=name==='learnerName'?previous.learner_name:name==='changesSummary'?'':previous[name]||'';if(name==='learnerName')input.readOnly=true;}label.append(input);form.append(label);});
+        form.append(e('p',previous?tr('This creates a new version of the same project. Your previous work and feedback remain available.','这会为原项目提交一个新版本。上次作品和反馈都会保留。'):tr('This submission uses your currently selected project. Do not include passwords, wallet keys, or other people’s private information.','按当前选择的项目提交。请不要附上密码、钱包密钥或他人的私人资料。')));
+        const button=e('button',previous?tr('Submit revised work','提交修改后的作品'):tr('Submit for review','提交作品评审'),'button');button.type='submit';form.append(button);
+        form.onsubmit=event=>{event.preventDefault();busy(form,async()=>{const values=Object.fromEntries(new FormData(form));await api('submissions',{...values,path:previous?.path||currentPath,...(previous?{previousSubmissionId:previous.id}:{})});await renderAchievements();});};return form;
       }
-      for(const s of data.submissions){const item=e('details');item.append(e('summary',s.learner_name+' · '+s.path+' · '+s.status),e('p',s.summary));for(const r of s.reviews)item.append(e('p',r.feedback));box.append(item);}
+      if(me.guidance?.active)box.append(submissionForm());
+      const statusText={submitted:tr('Awaiting review','等待评审'),revision:tr('Changes requested','需要修改'),passed:tr('Review passed','评审通过')};
+      for(const s of data.submissions){const item=e('details');item.dataset.submission=s.id;item.append(e('summary',s.learner_name+' · '+s.path+' · '+tr('Version ','第 ')+s.revision_number+' · '+(statusText[s.status]||s.status)),e('p',s.summary));
+        if(s.changes_summary)item.append(e('h3',tr('What changed','这次的修改')),e('p',s.changes_summary));
+        for(const r of s.reviews){item.append(e('h3',tr('Ray’s feedback','导师反馈')),e('p',r.feedback));const list=e('ul');for(const c of r.checks)list.append(e('li',(c.passed?'✓ ': '○ ')+c.label+' — '+c.evidence));item.append(list);}
+        const next=data.submissions.find(n=>n.previous_id===s.id);
+        if(next)item.append(e('p',tr('A newer version has been submitted.','已提交新的版本。')));
+        else if(s.status==='revision'&&me.guidance?.active)item.append(submissionForm(s));
+        box.append(item);
+      }
       for(const c of data.certificates){
         const item=e('article');item.append(e('h3',c.snapshot.learnerName+' · '+c.snapshot.project.zh),e('p',c.status));
         const doc=e('a',tr('Open certificate / Save as PDF','查看证明 · 可打印保存 PDF'));doc.href='/api/certificates/'+c.id+'/document';doc.target='_blank';doc.rel='noopener';item.append(doc);
@@ -636,6 +656,26 @@
     }catch(err){box.append(e('p',err.message));}
   }
 
+  async function renderOrders() {
+    document.querySelector('#order-history')?.remove();
+    const section=e('section','', 'guidance-workspace');section.id='order-history';
+    section.append(e('h2',tr('Your orders','你的订单')));
+    $('#dashboard').append(section);
+    try {
+      const {orders}=await api('orders');
+      if(!orders.length) section.append(e('p',tr('Your orders will appear here after you start checkout. Activation codes are shown through your course access.','发起结账后，订单会显示在这里。使用激活码开通的课程显示在课程列表中。')));
+      const states={pending:tr('Awaiting payment confirmation','等待付款确认'),paid:tr('Paid','已付款'),expired:tr('Checkout expired','结账已过期'),failed:tr('Checkout failed','结账未完成'),revoked:tr('Access revoked / refund recorded','权限已撤销／退款已记录')};
+      for(const order of orders) {
+        const item=e('article','', 'order-item');
+        const product=catalog.products?.find(p=>p.id===order.product);
+        item.append(e('strong',product ? productName(product) : order.product),e('p',states[order.status] || order.status));
+        const money=n=>new Intl.NumberFormat('en-US',{style:'currency',currency:order.currency}).format(n/100);
+        if(order.paidAmount!==null) item.append(e('p',tr('Paid: '+money(order.paidAmount),'实付：'+money(order.paidAmount))));
+        else if(order.quotedAmount!==null) item.append(e('p',tr('Quoted: '+money(order.quotedAmount),'报价：'+money(order.quotedAmount))));
+        item.append(e('small',new Date(order.created).toLocaleDateString()+' · '+order.id));section.append(item);
+      }
+    } catch(err) { section.append(e('p',err.message)); }
+  }
   async function refresh() {
     try {
       catalog = await api("catalog");
@@ -645,6 +685,7 @@
       $("#welcome-name").textContent = me.user.name;
       renderCourses();
       renderOptions();
+      await renderOrders();
       if (me.products.length)
         await choose(me.products.includes(current) ? current : me.products[0]);
     } catch (err) {
