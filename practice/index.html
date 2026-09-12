@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>动手试一试 / Try a project challenge</title>
+    <meta
+      name="description"
+      content="Free bilingual learning previews for authorization, a greenhouse fan, and simulated NFT membership. Not certificates."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">跳到练习 / Skip to challenges</a>
+    <header class="site-header">
+      <p class="wordmark">Ray Qin Studio</p>
+      <nav aria-label="页面 / Page">
+        <a href="../program.html">课程 / Courses</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">免费学习预览 · Free learning preview</p>
+        <h1>动手试一试 / Try a project challenge</h1>
+        <p>
+          谁能看到一份申请？风扇什么时候该开？会员卡转让后，谁还能进入？选一个问题，改改规则，看看结果。
+          Who can read an application? When should a fan switch on? Who keeps access after a membership transfer? Pick a challenge, change the rules, and see what happens.
+        </p>
+        <p class="persist-note" id="persist-note">
+          无需注册 · 进度保存在当前浏览器 · 不连接真实硬件或钱包
+          No signup · Progress stays in this browser · Simulated hardware and wallets
+        </p>
+        <p id="storage-banner" class="banner" hidden></p>
+      </section>
+
+      <div class="tabs" role="tablist" aria-label="练习方向 / Challenge field">
+        <button type="button" role="tab" id="tab-recruiting-authz" aria-controls="panel-recruiting-authz" aria-selected="true">
+          全栈 · 招聘授权 / Full-stack auth
+        </button>
+        <button type="button" role="tab" id="tab-greenhouse-fan" aria-controls="panel-greenhouse-fan" aria-selected="false">
+          温室风扇 / Greenhouse fan
+        </button>
+        <button type="button" role="tab" id="tab-nft-membership" aria-controls="panel-nft-membership" aria-selected="false">
+          NFT 会员 / NFT membership
+        </button>
+      </div>
+
+      <p class="toolbar">
+        <button type="button" id="reset-activity">只重置当前练习 / Reset this activity only</button>
+      </p>
+
+      <div id="workspace">
+        <section
+          id="panel-recruiting-authz"
+          class="panel"
+          role="tabpanel"
+          aria-labelledby="tab-recruiting-authz"
+        >
+          <div class="workspace">
+            <article class="card">
+              <h2>任务 / Task</h2>
+              <p>
+                为招聘台写授权规则：谁可以看公开职位、谁可以看私有申请、谁可以改职位。隐藏用例会检查默认拒绝、本人与他人、以及私有数据。
+                Write authorization rules for a recruiting desk: who may read a public job, who may read a private application, and who may update the job. Hidden cases check deny-by-default, owner versus other, and private data.
+              </p>
+              <p class="caution">
+                这是浏览器演示。真实授权必须在服务器执行；藏按钮或藏页面不能保护数据。
+                Browser demonstration only. Real authorization must run on the server; hiding a button or a page does not protect data.
+              </p>
+              <p id="authz-status" class="status" aria-live="polite"></p>
+            </article>
+
+            <article class="card">
+              <h2>规则 / Policy</h2>
+              <fieldset>
+                <legend>允许的动作 / Allowed actions</legend>
+                <div id="authz-policy" class="checks"></div>
+              </fieldset>
+            </article>
+
+            <article class="card">
+              <h2>试一次 / Try</h2>
+              <div class="form-grid">
+                <label>
+                  请求者 / Requester
+                  <select id="authz-actor"></select>
+                </label>
+                <label>
+                  动作 / Action
+                  <select id="authz-action"></select>
+                </label>
+                <label id="authz-resource-wrap">
+                  对象 / Resource
+                  <select id="authz-resource"></select>
+                </label>
+              </div>
+              <fieldset class="inline">
+                <legend>你的预测 / Your prediction</legend>
+                <label><input type="radio" name="authz-predict" id="authz-predict-allow" value="allow" /> 允许 / Allow</label>
+                <label><input type="radio" name="authz-predict" id="authz-predict-deny" value="deny" checked /> 拒绝 / Deny</label>
+              </fieldset>
+              <div class="actions">
+                <button type="button" class="primary" id="authz-try">按规则判定 / Evaluate</button>
+                <button type="button" id="authz-checks">检查我的方案 / Check my solution</button>
+              </div>
+            </article>
+
+            <article class="card span-2">
+              <h2>即时结果 / Live result</h2>
+              <div id="authz-live" class="result" aria-live="polite"></div>
+            </article>
+
+            <article class="card span-2">
+              <h2>诊断 / Diagnostics</h2>
+              <div id="authz-diagnostics" class="diagnostics"></div>
+              <details class="test-details"><summary>查看测试结果 / Test results</summary><div id="authz-check-list"></div></details>
+            </article>
+
+            <article class="card span-2">
+              <h2>提示 / Hints</h2>
+              <details>
+                <summary>需要时再展开 / Open if stuck</summary>
+                <ol>
+                  <li>没有勾选的动作应失败。默认拒绝，而不是默认允许。 Unchecked actions should fail. Deny by default, do not allow by default.</li>
+                  <li>公开职位和申请材料不是同一类数据。 Public job listings are not the same as applications.</li>
+                  <li>雇主只能改自己的职位；其他雇主、候选人、访客都不行。 Only the owning employer updates that job.</li>
+                </ol>
+              </details>
+              <label class="block">
+                你发现了什么？（选填）/ What did you notice? (optional)
+                <textarea id="authz-reflection" rows="3" maxlength="2000" spellcheck="false"></textarea>
+              </label>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="panel-greenhouse-fan"
+          class="panel"
+          role="tabpanel"
+          aria-labelledby="tab-greenhouse-fan"
+          hidden
+        >
+          <div class="workspace">
+            <article class="card">
+              <h2>任务 / Task</h2>
+              <p>
+                给模型温室的低压风扇写控制：热了要开；用回差减少抖动；传感器过期、故障和急停在本演示中安全关断。
+                Control a low-voltage greenhouse fan: turn on when hot; use hysteresis to reduce chatter; stale readings, faults, and emergency stop fail safe to off in this demo.
+              </p>
+              <p class="caution">
+                没有连接真实硬件。这里的“故障则关”只是本练习的选择，不是通用工业安全设计。
+                No real hardware is connected. Safe-off on fault is a choice for this exercise, not a universal industrial safety design.
+              </p>
+              <p id="fan-status" class="status" aria-live="polite"></p>
+            </article>
+
+            <article class="card">
+              <h2>控制器 / Controller</h2>
+              <div class="form-grid">
+                <label>
+                  开启阈值 ℃ / On threshold °C
+                  <input id="fan-on" type="number" inputmode="decimal" step="0.5" min="-10" max="55" />
+                </label>
+                <label>
+                  关闭阈值 ℃ / Off threshold °C
+                  <input id="fan-off" type="number" inputmode="decimal" step="0.5" min="-10" max="55" />
+                </label>
+              </div>
+              <fieldset>
+                <legend>本演示的安全关断 / Demo fail-safe off</legend>
+                <label><input type="checkbox" id="fan-off-stale" /> 读数过期时关闭 / Off when the reading is stale</label>
+                <label><input type="checkbox" id="fan-off-fault" /> 传感器故障时关闭 / Off when the sensor faults</label>
+                <label><input type="checkbox" id="fan-stop-overrides" /> 急停优先于温度请求 / Stop overrides temperature</label>
+              </fieldset>
+            </article>
+
+            <article class="card">
+              <h2>输入序列 / Sequence</h2>
+              <label class="block">
+                温度 ℃，逗号分隔，最多 32 个 / Temperatures °C, commas, max 32
+                <textarea id="fan-sequence" rows="2" spellcheck="false"></textarea>
+              </label>
+              <div class="form-grid">
+                <label>
+                  过期序号（从 1 计）/ Stale indexes (from 1)
+                  <input id="fan-stale" type="text" inputmode="numeric" autocomplete="off" />
+                </label>
+                <label>
+                  故障序号 / Fault indexes
+                  <input id="fan-fault" type="text" inputmode="numeric" autocomplete="off" />
+                </label>
+                <label>
+                  急停序号 / Stop indexes
+                  <input id="fan-stop" type="text" inputmode="numeric" autocomplete="off" />
+                </label>
+              </div>
+              <fieldset class="inline">
+                <legend>预测最后状态 / Predict the last state</legend>
+                <label><input type="radio" name="fan-predict" id="fan-predict-on" value="on" /> 开 / On</label>
+                <label><input type="radio" name="fan-predict" id="fan-predict-off" value="off" checked /> 关 / Off</label>
+              </fieldset>
+              <div class="actions">
+                <button type="button" class="primary" id="fan-run">运行序列 / Run sequence</button>
+                <button type="button" id="fan-checks">检查我的方案 / Check my solution</button>
+              </div>
+            </article>
+
+            <article class="card span-2">
+              <h2>即时结果 / Live result</h2>
+              <div id="fan-live" class="result" aria-live="polite"></div>
+              <svg id="fan-chart" class="chart" viewBox="0 0 640 180" role="img" aria-labelledby="fan-chart-label"></svg>
+              <p id="fan-chart-label" class="visually-hidden">温度与风扇状态图 Temperature and fan chart</p>
+              <ol id="fan-trace" class="trace"></ol>
+            </article>
+
+            <article class="card span-2">
+              <h2>诊断 / Diagnostics</h2>
+              <div id="fan-diagnostics" class="diagnostics"></div>
+              <details class="test-details"><summary>查看测试结果 / Test results</summary><div id="fan-check-list"></div></details>
+            </article>
+
+            <article class="card span-2">
+              <h2>提示 / Hints</h2>
+              <details>
+                <summary>需要时再展开 / Open if stuck</summary>
+                <ol>
+                  <li>先让 32 ℃ 能开风扇，18 ℃ 能关掉。 Turn on at 32 °C and off at 18 °C first.</li>
+                  <li>27 ℃ 附近的小波动不是过热；开启值应更高，并留出回差。 Noise around 27 °C is not heat; leave a gap between on and off.</li>
+                  <li>过期、故障和急停不要当成普通温度。急停解除后从“关”重新判断。 Stale, fault, and stop are not ordinary temperatures. After stop, re-evaluate from off.</li>
+                </ol>
+              </details>
+              <label class="block">
+                你发现了什么？（选填）/ What did you notice? (optional)
+                <textarea id="fan-reflection" rows="3" maxlength="2000" spellcheck="false"></textarea>
+              </label>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="panel-nft-membership"
+          class="panel"
+          role="tabpanel"
+          aria-labelledby="tab-nft-membership"
+          hidden
+        >
+          <div class="workspace">
+            <article class="card">
+              <h2>任务 / Task</h2>
+              <p>
+                用模拟账本和模拟钱包练习会员授权：铸造通行证、转让、连接钱包、请求内容。请区分“钱包已连接”和“当前持有权益”。
+                Practice membership authorization with a simulated ledger and wallets: mint a pass, transfer it, connect a wallet, and request content. Distinguish wallet authentication from current entitlement.
+              </p>
+              <p class="caution">
+                没有真实链、真实签名或真实钱包。下面每一项都标明为模拟。生产环境不能把会员内容藏在前端 div 里当作所有权证明。
+                No real chain, signature, or wallet. Every piece below is labeled as a simulation. Production systems must not treat a hidden front-end div as proof of ownership.
+              </p>
+              <p id="nft-status" class="status" aria-live="polite"></p>
+            </article>
+
+            <article class="card">
+              <h2>模拟台 / Simulation desk</h2>
+              <p class="sim-label">模拟合约 / Simulated contract: sim-pass-contract</p>
+              <fieldset class="inline">
+                <legend>当前连接（模拟）/ Signed-in wallet (simulated)</legend>
+                <label><input type="radio" name="nft-session" value="" checked /> 未连接 / Disconnected</label>
+                <label><input type="radio" name="nft-session" value="sim-wallet-a" /> 钱包 A / Wallet A</label>
+                <label><input type="radio" name="nft-session" value="sim-wallet-b" /> 钱包 B / Wallet B</label>
+              </fieldset>
+              <div class="form-grid">
+                <label>
+                  铸造给 / Mint to
+                  <select id="nft-mint-to">
+                    <option value="sim-wallet-a">钱包 A / Wallet A</option>
+                    <option value="sim-wallet-b">钱包 B / Wallet B</option>
+                  </select>
+                </label>
+                <label>
+                  转让给 / Transfer to
+                  <select id="nft-transfer-to">
+                    <option value="sim-wallet-a">钱包 A / Wallet A</option>
+                    <option value="sim-wallet-b" selected>钱包 B / Wallet B</option>
+                  </select>
+                </label>
+              </div>
+              <label class="cache-toggle">
+                <input type="checkbox" id="nft-cache" />
+                使用缓存的持有人（转让后会过期）/ Use cached owner (goes stale after transfer)
+              </label>
+              <fieldset class="inline">
+                <legend>预测这次请求 / Predict this request</legend>
+                <label><input type="radio" name="nft-predict" id="nft-predict-allow" value="allow" /> 允许 / Allow</label>
+                <label><input type="radio" name="nft-predict" id="nft-predict-deny" value="deny" checked /> 拒绝 / Deny</label>
+              </fieldset>
+              <div class="actions">
+                <button type="button" id="nft-mint">铸造模拟通行证 / Mint simulated pass</button>
+                <button type="button" id="nft-transfer">转让 / Transfer</button>
+                <button type="button" class="primary" id="nft-request">请求受保护内容 / Request protected content</button>
+                <button type="button" id="nft-checks">检查我的方案 / Check my solution</button>
+              </div>
+            </article>
+
+            <article class="card span-2">
+              <h2>即时结果 / Live result</h2>
+              <div id="nft-live" class="result" aria-live="polite"></div>
+              <h3>模拟账本 / Simulated ledger</h3>
+              <div id="nft-ledger"></div>
+              <h3>服务器本应返回的内容 / What a server should return</h3>
+              <div id="nft-protected" class="protected"></div>
+            </article>
+
+            <article class="card span-2">
+              <h2>诊断 / Diagnostics</h2>
+              <div id="nft-diagnostics" class="diagnostics"></div>
+              <details class="test-details"><summary>查看测试结果 / Test results</summary><div id="nft-check-list"></div></details>
+            </article>
+
+            <article class="card span-2">
+              <h2>提示 / Hints</h2>
+              <details>
+                <summary>需要时再展开 / Open if stuck</summary>
+                <ol>
+                  <li>连上钱包只说明你能使用这个模拟地址，不说明你现在持有通行证。 Connecting a wallet is authentication, not entitlement.</li>
+                  <li>转让后要查当前账本。打开缓存开关，是为了复现旧持有人被误放行。 Recheck the ledger after transfer. The cache toggle exists to reproduce stale-owner access.</li>
+                  <li>未连接、没有 Token、旧持有人，应分别被拒绝。 Deny unconnected wallets, missing tokens, and former holders as different cases.</li>
+                </ol>
+              </details>
+              <label class="block">
+                你发现了什么？（选填）/ What did you notice? (optional)
+                <textarea id="nft-reflection" rows="3" maxlength="2000" spellcheck="false"></textarea>
+              </label>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <section class="card evidence" aria-labelledby="evidence-heading">
+        <h2 id="evidence-heading">自练记录 / Self-practice evidence</h2>
+        <p>
+          把你试过的方案和测试结果带来答疑，我们可以接着讨论。练习记录不作为课程结业证明。
+          Bring your setup and test results to office hours so we can discuss what you tried. Practice records are separate from course completion.
+        </p>
+        <details><summary>查看完整记录 / View full record</summary><pre id="evidence-out"></pre></details>
+        <div class="actions">
+          <button type="button" id="evidence-copy">复制 / Copy</button>
+          <button type="button" id="evidence-download">下载 / Download</button>
+        </div>
+        <p id="evidence-copy-status" class="status" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer>
+      <h2>想把它做成自己的项目？<br>Want to build your own version?</h2><p><a id="practice-course" href="../program.html?project=product">查看完整项目与指导 / Explore the project and mentoring ↗</a></p>
+      <p>进度仅本机 · Progress stays on this device. 不是证书 · Not a certificate.</p>
+    </footer>
+
+    <noscript>
+      <p>需要在浏览器中启用 JavaScript 才能运行这些练习。 JavaScript is required to run these challenges.</p>
+    </noscript>
+  </body>
+</html>
