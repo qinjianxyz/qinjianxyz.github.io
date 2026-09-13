@@ -473,7 +473,7 @@ summary {
 .pricing-flex p { max-width: 850px; }
 .program-pricing > .fineprint { margin-top: 24px; }
 .home-price-row strong small { font-size: 14px; font-weight: 400; }
-@media (max-width: 850px) { .pricing-grid { grid-template-columns: 1fr; gap: 26px; } }
+@media (max-width: 700px) { .pricing-grid { grid-template-columns: 1fr; gap: 26px; } }
 
 /* About: keep the portrait alongside the introduction at tablet widths. */
 .bilingual .about-hero { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,.8fr); align-items:center; gap:clamp(24px,5vw,72px); padding-block:clamp(32px,5vw,64px); }
@@ -488,3 +488,40 @@ summary {
  .bilingual .about-hero { grid-template-columns:1fr; gap:28px; }
  .bilingual .about-hero img { width:min(80%,300px); }
 }
+
+/* Biography: credentials are labels, their context belongs beside them. */
+.bilingual .about-text { max-width: 1120px; padding-block: 18px 44px; }
+.bilingual .about-text > h2 { margin: 0 0 28px; font-size: 27px; font-weight: 400; }
+.bilingual .about-text > h2 .copy-en { font: 23px/1.4 Georgia, serif; color: #65715e; }
+.about-chapter { display: grid; grid-template-columns: minmax(180px, .8fr) minmax(0, 1.6fr); gap: 36px; padding-block: 26px; }
+.about-chapter h3 { margin: 0; font-size: 19px; font-weight: 550; }
+.about-chapter h3 .copy-en { margin-top: 7px; font: 13px/1.6 system-ui, sans-serif; }
+.bilingual .about-chapter p { margin: 0; font-size: 15px; line-height: 1.8; }
+.bilingual .about-chapter p .copy-en { font-size: 14px; line-height: 1.75; margin-top: 10px; }
+.about-links { display: flex; gap: 24px; flex-wrap: wrap; padding-top: 16px; }
+.bilingual .about-text .about-cities { border-top: 1px solid var(--line); padding-top: 22px; margin-top: 30px; font-size: 12px; color: var(--muted); }
+.bilingual .about-text .about-cities .copy-en { font-size: 12px; margin-top: 6px; }
+.proof-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.proof-strip .proof-education strong small { display: block; margin: 5px 0 0; font-size: 11px; letter-spacing: 0; }
+.proof-strip > div { min-width: 0; }
+.proof-strip strong { font-size: 16px; }
+.proof-school > span:last-child .copy-en { margin-top: 3px; }
+.header nav a[aria-current="page"] { text-decoration: none; box-shadow: 0 2px #a55632; }
+@media (max-width: 650px) {
+ .about-chapter { grid-template-columns: 1fr; gap: 12px; padding-block: 22px; }
+ .bilingual .about-text > h2 { font-size: 24px; }
+ .bilingual .about-text > h2 .copy-en { font-size: 21px; }
+ .proof-strip { grid-template-columns: 1fr; gap: 14px; }
+ .proof-strip > div { padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+ .proof-strip > div:last-child { border-bottom: 0; padding-bottom: 0; }
+}
+
+.price-includes { padding: 0; list-style: none; margin: 0; }
+.price-includes li { border-top: 1px solid var(--line); padding-block: 12px; font-size: 14px; line-height: 1.75; }
+.price-includes .copy-en { font-size: 13px; }
+.pricing-terms { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px; }
+.pricing-terms p { font-size: 12px; line-height: 1.8; margin: 0; color: var(--muted); }
+.course-availability { padding-bottom: 24px; }
+.course-availability p { border-left: 2px solid #a55632; padding-left: 14px; margin: 0; font-size: 13px; line-height: 1.7; max-width: 820px; }
+.course-availability .copy-en { font-size: 12px; }
+@media(max-width:650px) { .pricing-terms { grid-template-columns: 1fr; gap: 14px; } }
