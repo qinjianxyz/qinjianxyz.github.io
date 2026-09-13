@@ -525,3 +525,12 @@ summary {
 .course-availability p { border-left: 2px solid #a55632; padding-left: 14px; margin: 0; font-size: 13px; line-height: 1.7; max-width: 820px; }
 .course-availability .copy-en { font-size: 12px; }
 @media(max-width:650px) { .pricing-terms { grid-template-columns: 1fr; gap: 14px; } }
+
+/* Explicit mobile reading order; removing a label must not move the biography. */
+@media (max-width: 760px) {
+ .bilingual .intro-copy h1 { grid-row: 1; }
+ .bilingual .memory-board { grid-row: 2; }
+ .bilingual .intro-copy .hero-bio { grid-row: 3; }
+ .bilingual .intro-copy .hero-work { grid-row: 4; }
+ .bilingual .intro-copy .intro-actions { grid-row: 5; }
+}
