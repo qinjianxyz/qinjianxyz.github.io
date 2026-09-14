@@ -572,3 +572,7 @@ summary {
 .studio-faq details[open]>summary::before{content:"−"}
 .studio-faq summary h3{margin:0}
 .studio-faq p{text-align:left}
+
+.home-price-row .scope-price{font-size:24px;line-height:1.4}
+.home-price-row .scope-price .copy-en{font-size:18px;margin-top:4px}
+.home-price-row>a>span:last-child{display:block;margin-top:12px;font-size:14px}
