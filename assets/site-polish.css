@@ -534,3 +534,23 @@ summary {
  .bilingual .intro-copy .hero-work { grid-row: 4; }
  .bilingual .intro-copy .intro-actions { grid-row: 5; }
 }
+
+/* A sample lesson uses the same editorial type and clear sequential steps. */
+.sample-actions { display:flex; flex-wrap:wrap; gap:20px; align-items:center; margin-block:24px; }
+.sample-entry { padding-bottom:26px; font-size:14px; }
+.sample-lesson { max-width:1000px; }
+.sample-step { display:grid; grid-template-columns:110px minmax(0,1fr); gap:30px; padding-block:30px; border-top:1px solid var(--line); }
+.sample-step > small { color:#985332; font-size:11px; letter-spacing:.1em; padding-top:8px; }
+.sample-step h2, .sample-next h2 { margin:0 0 18px; font-size:26px; font-weight:400; }
+.sample-step h2 .copy-en, .sample-next h2 .copy-en { font:22px/1.4 Georgia,serif; color:#65715e; }
+.sample-step p, .sample-checks, .sample-challenge p, .sample-next > p { font-size:15px; line-height:1.8; }
+.sample-step pre { padding:20px; background:#e7ece2; overflow:auto; font:13px/1.9 ui-monospace,monospace; }
+.sample-checks { padding-left:20px; }
+.sample-checks li { padding-bottom:14px; }
+.sample-challenge { border-block:1px solid var(--line); padding-block:24px; }
+.sample-challenge summary { cursor:pointer; font-size:16px; }
+.sample-next { max-width:1000px; padding-block:44px; }
+.sample-next .fineprint { font-size:12px; margin-top:24px; }
+@media(max-width:600px) { .sample-step { grid-template-columns:1fr; gap:12px; } .sample-step h2 { font-size:24px; } }
+.sample-step > div { min-width:0; }
+.sample-actions > a { max-width:100%; white-space:normal; }
