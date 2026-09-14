@@ -554,3 +554,13 @@ summary {
 @media(max-width:600px) { .sample-step { grid-template-columns:1fr; gap:12px; } .sample-step h2 { font-size:24px; } }
 .sample-step > div { min-width:0; }
 .sample-actions > a { max-width:100%; white-space:normal; }
+
+/* Actual course references appear inside the existing project disclosure. */
+.project-preview{margin:24px 0;padding:0;background:transparent}
+.project-preview>a{display:block;background:#e8e9e2;border:1px solid var(--line,#ccd3c4)}
+.project-preview img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+.project-preview figcaption{padding:14px 0}
+.project-preview figcaption strong{display:block;font-size:16px;line-height:1.5}
+.project-preview figcaption p{font-size:13px;line-height:1.65;margin:8px 0}
+.project-preview figcaption>a{font-size:13px}
+@media(max-width:600px){.project-preview img{max-height:300px}}
