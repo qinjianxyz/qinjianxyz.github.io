@@ -564,3 +564,11 @@ summary {
 .project-preview figcaption p{font-size:13px;line-height:1.65;margin:8px 0}
 .project-preview figcaption>a{font-size:13px}
 @media(max-width:600px){.project-preview img{max-height:300px}}
+
+/* Keep enrollment questions and their disclosure marker on one reading row. */
+.studio-faq summary{display:grid;grid-template-columns:16px minmax(0,1fr);gap:8px;list-style:none;align-items:start}
+.studio-faq summary::-webkit-details-marker{display:none}
+.studio-faq summary::before{content:"+";line-height:1.6}
+.studio-faq details[open]>summary::before{content:"−"}
+.studio-faq summary h3{margin:0}
+.studio-faq p{text-align:left}
