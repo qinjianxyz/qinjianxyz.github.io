@@ -576,3 +576,33 @@ summary {
 .home-price-row .scope-price{font-size:24px;line-height:1.4}
 .home-price-row .scope-price .copy-en{font-size:18px;margin-top:4px}
 .home-price-row>a>span:last-child{display:block;margin-top:12px;font-size:14px}
+
+/* Personal brand first: arrangements and fees open on request. */
+.home-price-row,.pricing-grid{align-items:start;gap:24px}
+.service-card{min-width:0;border:1px solid #c8cec1;border-radius:3px;background:#f7f5ef;overflow:hidden;padding:0!important}
+.service-card>summary{display:block;list-style:none;position:relative;padding:24px;cursor:pointer;min-height:180px}
+.service-card>summary::-webkit-details-marker{display:none}
+.service-card>summary::after{content:'+';position:absolute;right:18px;top:20px;font:24px/1 Georgia;color:#a95632}
+.service-card[open]>summary::after{content:'−'}
+.service-card>summary:hover{background:#edf0e7}
+.service-card>summary:focus-visible{outline:3px solid #a95632;outline-offset:-4px}
+.service-card>summary h3{margin:0 20px 16px 0;font-size:19px;line-height:1.4}
+.service-card>summary h3 .copy-en{font:18px/1.4 Georgia,serif;color:#67715e;margin-top:6px}
+.service-card>summary p{font-size:14px;line-height:1.65;margin:0 0 18px}
+.service-card .service-reveal{display:block;font-size:12px;color:#6c7468;margin-top:16px}
+.service-body{border-top:1px solid #c8cec1;padding:22px 24px 24px}
+.service-body>strong{display:block;font-size:30px;line-height:1.35}
+.service-body>strong small{font:12px/1.5 system-ui;color:#67715e}
+.service-body>a{display:inline-block;margin-top:14px;padding:10px 0;font-size:14px;text-decoration:underline;text-underline-offset:5px}
+.service-body p,.service-body li{font-size:14px;line-height:1.7}
+.service-body .copy-en{font-size:13px}
+@media(max-width:700px){.home-price-row,.pricing-grid{grid-template-columns:1fr;gap:12px}.service-card>summary{min-height:0;padding:20px}.service-body{padding:20px}.service-card>summary p{margin-bottom:12px}}
+
+.current-projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;padding:0;list-style:none;margin:24px 0}
+.current-projects li{padding:18px 0;border-top:1px solid #c8cec1;font-size:19px;line-height:1.45}
+.current-projects .copy-en{font-size:14px;color:#67715e;margin-top:5px}
+.home-interests>p{max-width:720px}
+@media(max-width:700px){.current-projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.current-projects li{font-size:17px}}
+@media(max-width:360px){.current-projects{grid-template-columns:1fr}}
+
+@media(min-width:701px) and (max-width:1000px){.home-price-row,.pricing-grid{grid-template-columns:1fr}.service-card>summary{min-height:0}.service-card>summary p{max-width:620px}}
