@@ -7,3 +7,9 @@ The maintained private platform and curriculum source lives in `qinjianxyz/ray-q
 The website is ready for visual review. Live portal hosting and payment enrollment are not configured. `assets/deployment.json` must only contain the confirmed public HTTPS portal URL, never credentials.
 
 The résumé remains at `/resume.html`, with its existing PDF and Word downloads.
+
+## Brand assets · 品牌素材
+
+[Browse the portfolio wordmarks](assets/brand/README.md): SkyBolt, Pulse, Windsor and private custom software. Includes high-resolution PNGs and editable HTML/CSS source.
+
+[![SkyBolt wordmark](assets/brand/skybolt-wordmark.png)](assets/brand/README.md)
