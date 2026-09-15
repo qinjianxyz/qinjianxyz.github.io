@@ -10,6 +10,6 @@ The résumé remains at `/resume.html`, with its existing PDF and Word downloads
 
 ## Brand assets · 品牌素材
 
-[Browse the portfolio wordmarks](assets/brand/README.md): SkyBolt, Pulse, Windsor and private custom software. Includes high-resolution PNGs and editable HTML/CSS source.
+[Browse the portfolio wordmarks](assets/brand/README.md): SkyBolt, Pulse, Windpost and private custom software. Includes high-resolution PNGs and editable HTML/CSS source.
 
 [![SkyBolt wordmark](assets/brand/skybolt-wordmark.png)](assets/brand/README.md)
