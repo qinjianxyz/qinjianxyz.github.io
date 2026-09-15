@@ -140,11 +140,11 @@
   position: absolute;
   border-radius: 50%;
 }
-.windsor-art {
+.windpost-art {
   background: #d4b3ab;
   color: #482c3d;
 }
-.windsor-art strong {
+.windpost-art strong {
   font: italic 170px/1 Georgia;
   letter-spacing: -15px;
   margin-top: -15px;
@@ -282,7 +282,7 @@
   .pulse-art strong {
     font-size: 63px;
   }
-  .windsor-art strong {
+  .windpost-art strong {
     font-size: 160px;
   }
   .custom-art strong {
@@ -344,7 +344,7 @@
   .pulse-art strong {
     font-size: 72px;
   }
-  .windsor-art strong {
+  .windpost-art strong {
     font-size: 165px;
   }
   .custom-art strong {
@@ -405,7 +405,7 @@
     font-size: 43px;
     letter-spacing: -2px;
   }
-  .windsor-art strong {
+  .windpost-art strong {
     font-size: 110px;
   }
   .custom-art strong {
@@ -471,7 +471,7 @@
 /* Small phones: keep display lettering and captions inside each art frame. */
 @media (max-width: 360px) {
   .pulse-art strong { font-size: 34px; }
-  .windsor-art strong { font-size: 90px; }
+  .windpost-art strong { font-size: 90px; }
   .custom-art strong { font-size: 25px; }
   .custom-art { padding-bottom: 24px; }
 }
