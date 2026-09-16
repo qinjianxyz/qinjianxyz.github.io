@@ -475,3 +475,14 @@
   .custom-art strong { font-size: 25px; }
   .custom-art { padding-bottom: 24px; }
 }
+
+/* Community is a distinct personal interest, not another software product. */
+.community-note { margin-top: 44px; padding: 32px 0; border-top: 1px solid #bcc4b0; border-bottom: 1px solid #bcc4b0; display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; }
+.community-note h2 { font: 38px/1.2 Georgia, serif; margin: 14px 0; }
+.community-note small { font-size: 10px; color: #68745f; letter-spacing: .5px; }
+.community-note p { font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
+.community-note p > span { display: block; }
+.community-note p > span[lang="en"] { font-size: 13px; color: #63705e; margin-top: 8px; }
+.community-note a { display: inline-block; font-size: 14px; padding: 8px 0; }
+.community-note .community-status { display: block; line-height: 1.7; margin-top: 10px; }
+@media (max-width: 600px) { .community-note { grid-template-columns: 1fr; gap: 16px; margin-top: 30px; padding: 24px 0; } .community-note h2 { font-size: 32px; } }
