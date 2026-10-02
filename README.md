@@ -1,15 +1,13 @@
 # Ray Qin — public website
 
-Public GitHub Pages output for Ray Qin’s personal site and project studio. Chinese and English appear together on every page.
+Bilingual personal website, published directly from the root of `main` by GitHub Pages.
 
-The maintained private platform and curriculum source lives in `qinjianxyz/ray-qin-studio`. Learner materials and starter projects live separately in `qinjianxyz/ray-qin-studio-classroom`. Only the allowlisted static export belongs in this public repository.
+## Current direction
 
-The website is ready for visual review. Live portal hosting and payment enrollment are not configured. `assets/deployment.json` must only contain the confirmed public HTTPS portal URL, never credentials.
+Pulse is the flagship: understand global trade and how objects are produced. Its advantage is selecting evidence that explains phenomena and designing useful visualizations, not collecting the most data. Describe development honestly; do not imply public App Store availability.
 
-The résumé remains at `/resume.html`, with its existing PDF and Word downloads.
+Keep Ray’s personal introduction, biography, photos, qualifications and résumé intact. Homepage and Work feature Pulse. Course, poster, sample and portal entry points are retired with a clear notice; their previous contents remain in Git history. Existing app privacy/support pages remain accessible.
 
-## Brand assets · 品牌素材
+`index.html` owns the personal homepage; `work.html` owns the Pulse presentation; `assets/pulse-feature.css` contains its responsive styles. Language aliases redirect to bilingual canonical pages. No package installation or build is required.
 
-[Browse the portfolio wordmarks](assets/brand/README.md): SkyBolt, Pulse, Windpost and private custom software. Includes high-resolution PNGs and editable HTML/CSS source.
-
-[![SkyBolt wordmark](assets/brand/skybolt-wordmark.png)](assets/brand/README.md)
+Preview with a temporary HTTP server; stop it and the test browser when verification ends. Check desktop and mobile, biography preservation, local links and retired course entry points before publishing.
