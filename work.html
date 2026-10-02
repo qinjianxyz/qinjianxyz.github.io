@@ -30,6 +30,7 @@
     
     
   <link rel="stylesheet" href="/assets/pulse-feature.css">
+<script src="/assets/pulse-showcase.js" defer></script>
 </head>
   <body class="bilingual">
     <a class="skip" href="#main">Skip to content</a>
@@ -37,7 +38,131 @@
       <a class="personal-mark" href="/"><span class="mark-monogram name-mark">秦剑</span><span>Ray Qin<small><span class="" data-en="Engineer · Educator · Farmer" data-zh="工程师 · 教育者 · 农民"><span class="copy-zh" lang="zh-CN">工程师 · 教育者 · 农民</span><span class="copy-en" lang="en">Engineer · Educator · Farmer</span></span></small></span></a>
       <nav aria-label="Main navigation"><a href="/work.html#pulse">Pulse</a><a href="/about.html"><span class="copy-zh" lang="zh-CN">关于秦剑</span><span class="copy-en" lang="en">About Ray</span></a><a href="https://t.me/rayq_ai" class="nav-portal"><span class="copy-zh" lang="zh-CN">联系秦剑</span><span class="copy-en" lang="en">Talk to Ray</span> ↗</a></nav>
     </header>
-    <main id="main"><section class="wrap pulse-feature" id="pulse"><p class="pulse-kicker">FLAGSHIP PROJECT / 旗舰项目 · iOS · 内部测试中 / Internal testing</p><h1>Pulse</h1><p class="pulse-tagline">Finger on the Pulse of the Global Economy</p><p class="pulse-lead"><span class="copy-zh" lang="zh-CN">把脉世界经济。看懂世界贸易格局，理解物品如何被生产。</span><span class="copy-en" lang="en">Understand global trade and how things are made.</span></p><p><span class="copy-zh" lang="zh-CN">从一个国家，到它交易的商品；从一件物品，到背后的材料、工序、设备、能源与劳动。Pulse 正在把这些关系连接成可探索的学习工具。</span><span class="copy-en" lang="en">From a country to the goods it trades. From an object to its materials, processes, equipment, energy, and labor. Pulse is being built to connect these relationships in an explorable learning tool.</span></p><div class="pulse-path" aria-label="Pulse exploration"><div><strong>01 / 世界 · World</strong><p><span class="copy-zh" lang="zh-CN">谁向谁买卖什么？规模与依赖怎样变化？</span><span class="copy-en" lang="en">Who trades what with whom? How do scale and dependence change?</span></p></div><div><strong>02 / 制造 · Making</strong><p><span class="copy-zh" lang="zh-CN">原材料怎样变成产品？哪些工序和能力不可或缺？</span><span class="copy-en" lang="en">How do raw materials become products? Which processes and capabilities matter?</span></p></div><div><strong>03 / 理解 · Understanding</strong><p><span class="copy-zh" lang="zh-CN">把贸易、生产与宏观变化联系起来，检查解释背后的证据。</span><span class="copy-en" lang="en">Connect trade, production, and economic change. Examine the evidence behind an explanation.</span></p></div></div><p class="pulse-principle"><span class="copy-zh" lang="zh-CN">我们的目标不是收集最多的数据，而是找到真正能说明现象的数据，用清晰的可视化帮助理解世界。</span><span class="copy-en" lang="en">The goal is not to collect the most data. It is to find evidence that explains what is happening—and make it understandable through visualization.</span></p><p class="fineprint"><span class="copy-zh" lang="zh-CN">正在迭代的产品，尚未公开上架。公开数据注明来源、时期与覆盖范围；缺失保持可见。</span><span class="copy-en" lang="en">An evolving product, not yet publicly released. Public data carries sources, periods, and coverage; gaps remain visible.</span></p><a class="editorial-button" href="https://t.me/rayq_ai">聊聊 Pulse / Talk about Pulse ↗</a><p><a href="/pulse/privacy.html">隐私 / Privacy</a> · <a href="/pulse/support.html">支持 / Support</a></p></section></main>
+    <main id="main">
+      <section class="pf-hero wrap" id="pulse">
+        <div class="pf-hero-copy">
+          <p class="pf-eyebrow"><span class="pf-dot" aria-hidden="true"></span> PULSE · iOS <span>内部测试 / Internal testing</span>
+          </p>
+          <h1>世界的流动，<br>物品的来路。<span lang="en">A world in motion.<br>Understand how it’s made.</span>
+          </h1>
+          <p class="pf-intro"><span lang="zh-CN">Pulse 把世界贸易与制造过程放在一起。看见国家之间的关系，再走进材料成为产品的过程。</span><span lang="en">Explore the relationships between countries, then follow the processes that turn materials into useful things.</span>
+          </p>
+          <div class="pf-actions">
+            <a class="pf-button" href="#explore">看一个例子 / Explore a case <span aria-hidden="true">↓</span></a>
+            <a class="pf-text-link" href="https://t.me/rayq_ai">与我交流 / Talk to Ray ↗</a>
+          </div>
+          <p class="pf-note">真实 iOS 界面 · 开发版本截图<br><span lang="en">Actual native screens from development builds. Not a browser demo.</span>
+          </p>
+        </div>
+        <figure class="pf-hero-figure">
+          <div class="pf-screen">
+            <img src="/media/pulse/world-iron-ore.png" width="750" height="1334" alt="Pulse iron ore trade map: Australia to China is the largest displayed relationship; source CEPII BACI, 2024." fetchpriority="high">
+          </div>
+          <figcaption><span>01 / WORLD</span> 铁矿石的贸易关系<br><span lang="en">Iron ore trade · CEPII BACI · 2024</span>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="pf-case" id="explore">
+        <div class="wrap">
+          <div class="pf-section-head">
+            <p class="pf-eyebrow">ONE QUESTION, TWO SCALES / 一个问题，两种尺度</p>
+            <h2><span lang="zh-CN">铁矿石离开港口之后呢？</span><span lang="en">What happens beyond the port?</span>
+            </h2>
+            <p><span lang="zh-CN">先看贸易，再理解炼钢。两种证据相连，但不能把贸易线当作某一座工厂的供应链。</span><span lang="en">Start with trade. Then understand steelmaking. These views connect ideas; they do not trace a shipment to a particular factory.</span>
+            </p>
+          </div>
+          <div class="pf-case-layout">
+            <div class="pf-case-reading">
+              <div class="pf-tabs" role="tablist" aria-label="View a Pulse screen">
+                <button id="tab-trade" role="tab" aria-controls="panel-trade" aria-selected="true" data-panel="trade"><span>01</span> 贸易 / Trade</button>
+                <button id="tab-routes" role="tab" aria-controls="panel-routes" aria-selected="false" tabindex="-1" data-panel="routes"><span>02</span> 工艺 / Process</button>
+                <button id="tab-mechanism" role="tab" aria-controls="panel-mechanism" aria-selected="false" tabindex="-1" data-panel="mechanism"><span>03</span> 原理 / Mechanism</button>
+              </div>
+              <article class="pf-explanation" data-copy="trade">
+                <p class="pf-eyebrow">COUNTRIES → GOODS → PARTNERS</p>
+                <h3><span lang="zh-CN">谁在向谁交易？</span><span lang="en">Who trades with whom?</span>
+                </h3>
+                <p><span lang="zh-CN">选择铁矿石，查看主要贸易关系、金额与来源。地图呈现的是年度贸易额，不是航线或实时货运。</span><span lang="en">Select iron ore to inspect leading relationships, values and their source. The map shows annual trade value, not shipping routes or live cargo.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">读图提示：截图仅画出 1,075 对关系中的前 15 对。未显示不等于没有贸易。</span><span lang="en">Reading the screen: 15 of 1,075 relationships are drawn. An omitted line does not mean no trade.</span>
+                </div>
+              </article>
+              <article class="pf-explanation" data-copy="routes" hidden>
+                <p class="pf-eyebrow">MATERIAL → PROCESS → PRODUCT</p>
+                <h3><span lang="zh-CN">矿石与废钢，为什么走不同的路？</span><span lang="en">Why do ore and scrap take different paths?</span>
+                </h3>
+                <p><span lang="zh-CN">矿石需要去除氧；废钢已经是金属，需要重新熔化。比较两条路线，再进入各自的工序。</span><span lang="en">Ore needs oxygen removed; scrap is already metal and is remelted. Compare the two routes, then explore their steps.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">工艺参考：DOE 2015。一般生产示例，不代表地图上某一笔贸易的实际去向。</span><span lang="en">Process reference: DOE 2015. General production examples, not the destination of a mapped shipment.</span>
+                </div>
+              </article>
+              <article class="pf-explanation" data-copy="mechanism" hidden>
+                <p class="pf-eyebrow">A DIAGRAM YOU CAN QUESTION</p>
+                <h3><span lang="zh-CN">不只记住名称，更要看懂变化。</span><span lang="en">Understand the change, not just its name.</span>
+                </h3>
+                <p><span lang="zh-CN">用示意图理解材料如何变化，再查看解释和来源。图形帮助理解机制，不把简化画面当成设备图纸。</span><span lang="en">Use a schematic to understand a material change, then examine the explanation and source. A learning diagram explains a mechanism; it is not an equipment blueprint.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">此网页切换真实截图；交互式学习发生在 iOS 应用中。</span><span lang="en">This page switches between actual screenshots. Interactive lessons run in the iOS app.</span>
+                </div>
+              </article>
+            </div>
+            <div class="pf-gallery">
+              <figure id="panel-trade" role="tabpanel" aria-labelledby="tab-trade" tabindex="0" >
+                <a href="/media/pulse/world-iron-ore.png" target="_blank" rel="noopener" aria-label="Open full-size Annual iron ore trade map, CEPII BACI 2024">
+                <img src="/media/pulse/world-iron-ore.png" width="750" height="1334" alt="Annual iron ore trade map, CEPII BACI 2024" loading="lazy"></a>
+                <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/world-iron-ore.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
+                </figcaption>
+              </figure>
+              <figure id="panel-routes" role="tabpanel" aria-labelledby="tab-routes" tabindex="0" hidden>
+                <a href="/media/pulse/steel-routes.png" target="_blank" rel="noopener" aria-label="Open full-size Two steelmaking routes: ore reduction and scrap remelting">
+                <img src="/media/pulse/steel-routes.png" width="750" height="1334" alt="Two steelmaking routes: ore reduction and scrap remelting" loading="lazy"></a>
+                <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/steel-routes.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
+                </figcaption>
+              </figure>
+              <figure id="panel-mechanism" role="tabpanel" aria-labelledby="tab-mechanism" tabindex="0" hidden>
+                <a href="/media/pulse/steel-mechanism.png" target="_blank" rel="noopener" aria-label="Open full-size Pulse steelmaking mechanism learning screen">
+                <img src="/media/pulse/steel-mechanism.png" width="750" height="1334" alt="Pulse steelmaking mechanism learning screen" loading="lazy"></a>
+                <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/steel-mechanism.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap pf-evidence">
+        <div>
+          <p class="pf-eyebrow">THE DESIGN PRINCIPLE / 设计原则</p>
+          <h2><span lang="zh-CN">让证据帮助理解。</span><span lang="en">Evidence that helps you understand.</span>
+          </h2>
+        </div>
+        <div class="pf-evidence-list">
+          <article>
+            <h3>来源与时间 / Source & time</h3>
+            <p><span lang="zh-CN">贸易额、产量和工艺参考属于不同的证据。来源、年份与单位必须跟着结论。</span><span lang="en">Trade values, production quantities and process references are different kinds of evidence. Sources, dates and units belong with the interpretation.</span>
+            </p>
+          </article>
+          <article>
+            <h3>看得见的边界 / Visible limits</h3>
+            <p><span lang="zh-CN">没有数据，就保留空缺。伙伴份额不直接等于依赖程度，示例工艺也不是供应链追踪。</span><span lang="en">Keep missing data visible. A partner share alone does not establish dependence; a process example is not supply-chain traceability.</span>
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="pf-contact">
+        <div class="wrap">
+          <p class="pf-eyebrow">BUILT BY RAY QIN / 秦剑开发</p>
+          <h2><span lang="zh-CN">你想更理解哪一部分世界？</span><span lang="en">What would you like to understand better?</span>
+          </h2>
+          <p><span lang="zh-CN">Pulse 正在内部测试，尚未公开上架。欢迎带着一个具体问题，与我讨论。</span><span lang="en">Pulse is in internal testing and is not publicly released. Bring a concrete question; I’d like to hear it.</span>
+          </p>
+          <a class="pf-button" href="https://t.me/rayq_ai">聊聊 Pulse / Talk about Pulse ↗</a>
+          <div class="pf-legal">
+            <a href="/pulse/privacy.html">隐私 / Privacy</a>
+            <a href="/pulse/support.html">支持 / Support</a>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="editorial-footer"><div class="footer-top"><a class="personal-mark" href="/">Ray Qin.</a><a href="mailto:qinjianxyz@gmail.com">qinjianxyz@gmail.com</a></div><div class="footer-bottom"><span>© 2026 · 秦剑 Ray Qin</span><a href="/resume.html">简历 / Résumé</a><a href="/pulse/privacy.html">Pulse Privacy</a></div></footer>
   </body>
 </html>
