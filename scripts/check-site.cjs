@@ -12,9 +12,27 @@ const types = {
   '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml',
 };
 const server = http.createServer((req, res) => {
-  const pathname = decodeURIComponent(req.url.split('?')[0]);
-  const file = path.join(root, pathname === '/' ? 'index.html' : pathname);
+  let pathname;
   try {
+    pathname = decodeURIComponent(req.url.split('?')[0]);
+  } catch {
+    res.statusCode = 400;
+    res.end('Malformed URL');
+    return;
+  }
+  const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
+  if (file !== root && !file.startsWith(root + path.sep)) {
+    res.statusCode = 403;
+    res.end('Outside site root');
+    return;
+  }
+  try {
+    const actual = fs.realpathSync(file);
+    if (actual !== root && !actual.startsWith(root + path.sep)) {
+      res.statusCode = 403;
+      res.end('Outside site root');
+      return;
+    }
     res.setHeader('Content-Type', types[path.extname(file)] || 'text/html');
     res.end(fs.readFileSync(file));
   } catch {
@@ -65,6 +83,16 @@ async function verifyPage(page, route, width) {
   });
   let browser;
   try {
+    // Send raw paths so a client URL parser cannot normalize traversal away.
+    for (const [requestPath, expected] of [['/%ZZ', 400], ['/../README.md', 403], ['/%2e%2e/README.md', 403]]) {
+      const status = await new Promise((resolve, reject) => {
+        http.get({ hostname: '127.0.0.1', port: 8127, path: requestPath }, response => { response.resume(); resolve(response.statusCode); })
+          .on('error', reject);
+      });
+      if (status !== expected) {
+        throw Error(`Path guard ${requestPath}: ${status} != ${expected}`);
+      }
+    }
     browser = await chromium.launch({
       headless: true,
       executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
