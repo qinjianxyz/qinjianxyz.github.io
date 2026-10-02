@@ -37,6 +37,9 @@ async function verifyPage(page, route, width) {
   }
   const label = route === '/' ? 'home' : 'work';
   await page.screenshot({ path: `${output}/${width}-${label}.png`, fullPage: true });
+  if (route === '/work.html' && width === 1440) {
+    await page.screenshot({ path: `${output}/1440-work-hero.png` });
+  }
   if (route === '/work.html') {
     await page.locator('#tab-trade').focus();
     await page.keyboard.press('ArrowRight');
