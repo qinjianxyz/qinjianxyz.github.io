@@ -72,60 +72,70 @@
             </p>
           </div>
           <div class="pf-case-layout">
-            <div class="pf-case-reading">
-              <div class="pf-tabs" role="tablist" aria-label="View a Pulse screen">
-                <button id="tab-trade" role="tab" aria-controls="panel-trade" aria-selected="true" data-panel="trade"><span>01</span> 贸易 / Trade</button>
-                <button id="tab-routes" role="tab" aria-controls="panel-routes" aria-selected="false" tabindex="-1" data-panel="routes"><span>02</span> 工艺 / Process</button>
-                <button id="tab-mechanism" role="tab" aria-controls="panel-mechanism" aria-selected="false" tabindex="-1" data-panel="mechanism"><span>03</span> 原理 / Mechanism</button>
-              </div>
-              <article class="pf-explanation" data-copy="trade">
+            <div class="pf-tabs" role="tablist" aria-label="View a Pulse screen">
+              <button id="tab-trade" role="tab" aria-controls="panel-trade" aria-selected="true" data-panel="trade"><span>01</span> 贸易 / Trade</button>
+              <button id="tab-routes" role="tab" aria-controls="panel-routes" aria-selected="false" tabindex="-1" data-panel="routes"><span>02</span> 工艺 / Process</button>
+              <button id="tab-mechanism" role="tab" aria-controls="panel-mechanism" aria-selected="false" tabindex="-1" data-panel="mechanism"><span>03</span> 原理 / Mechanism</button>
+            </div>
+            <article class="pf-case-panel" id="panel-trade" role="tabpanel" aria-labelledby="tab-trade" tabindex="0">
+              <header class="pf-explanation pf-case-question">
                 <p class="pf-eyebrow">COUNTRIES → GOODS → PARTNERS</p>
                 <h3><span lang="zh-CN">谁在向谁交易？</span><span lang="en">Who trades with whom?</span>
                 </h3>
-                <p><span lang="zh-CN">选择铁矿石，查看主要贸易关系、金额与来源。地图呈现的是年度贸易额，不是航线或实时货运。</span><span lang="en">Select iron ore to inspect leading relationships, values and their source. The map shows annual trade value, not shipping routes or live cargo.</span>
-                </p>
-                <div class="pf-reading-note"><span lang="zh-CN">读图提示：截图仅画出 1,075 对关系中的前 15 对。未显示不等于没有贸易。</span><span lang="en">Reading the screen: 15 of 1,075 relationships are drawn. An omitted line does not mean no trade.</span>
-                </div>
-              </article>
-              <article class="pf-explanation" data-copy="routes" hidden>
-                <p class="pf-eyebrow">MATERIAL → PROCESS → PRODUCT</p>
-                <h3><span lang="zh-CN">矿石与废钢，为什么走不同的路？</span><span lang="en">Why do ore and scrap take different paths?</span>
-                </h3>
-                <p><span lang="zh-CN">矿石需要去除氧；废钢已经是金属，需要重新熔化。比较两条路线，再进入各自的工序。</span><span lang="en">Ore needs oxygen removed; scrap is already metal and is remelted. Compare the two routes, then explore their steps.</span>
-                </p>
-                <div class="pf-reading-note"><span lang="zh-CN">工艺参考：DOE 2015。一般生产示例，不代表地图上某一笔贸易的实际去向。</span><span lang="en">Process reference: DOE 2015. General production examples, not the destination of a mapped shipment.</span>
-                </div>
-              </article>
-              <article class="pf-explanation" data-copy="mechanism" hidden>
-                <p class="pf-eyebrow">A DIAGRAM YOU CAN QUESTION</p>
-                <h3><span lang="zh-CN">不只记住名称，更要看懂变化。</span><span lang="en">Understand the change, not just its name.</span>
-                </h3>
-                <p><span lang="zh-CN">用示意图理解材料如何变化，再查看解释和来源。图形帮助理解机制，不把简化画面当成设备图纸。</span><span lang="en">Use a schematic to understand a material change, then examine the explanation and source. A learning diagram explains a mechanism; it is not an equipment blueprint.</span>
-                </p>
-                <div class="pf-reading-note"><span lang="zh-CN">此网页切换真实截图；交互式学习发生在 iOS 应用中。</span><span lang="en">This page switches between actual screenshots. Interactive lessons run in the iOS app.</span>
-                </div>
-              </article>
-            </div>
-            <div class="pf-gallery">
-              <figure id="panel-trade" role="tabpanel" aria-labelledby="tab-trade" tabindex="0" >
+              </header>
+              <figure class="pf-gallery">
                 <a href="/media/pulse/world-iron-ore.png" target="_blank" rel="noopener" aria-label="Open full-size Annual iron ore trade map, CEPII BACI 2024">
                 <img src="/media/pulse/world-iron-ore.png" width="750" height="1334" alt="Annual iron ore trade map, CEPII BACI 2024" loading="lazy"></a>
                 <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/world-iron-ore.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
                 </figcaption>
               </figure>
-              <figure id="panel-routes" role="tabpanel" aria-labelledby="tab-routes" tabindex="0" hidden>
+              <div class="pf-explanation pf-case-answer">
+                <p><span lang="zh-CN">选择铁矿石，查看主要贸易关系、金额与来源。地图呈现的是年度贸易额，不是航线或实时货运。</span><span lang="en">Select iron ore to inspect leading relationships, values and their source. The map shows annual trade value, not shipping routes or live cargo.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">读图提示：截图仅画出 1,075 对关系中的前 15 对。未显示不等于没有贸易。</span><span lang="en">Reading the screen: 15 of 1,075 relationships are drawn. An omitted line does not mean no trade.</span>
+                </div>
+              </div>
+            </article>
+            <article class="pf-case-panel" id="panel-routes" role="tabpanel" aria-labelledby="tab-routes" tabindex="0" hidden>
+              <header class="pf-explanation pf-case-question">
+                <p class="pf-eyebrow">MATERIAL → PROCESS → PRODUCT</p>
+                <h3><span lang="zh-CN">矿石与废钢，为什么走不同的路？</span><span lang="en">Why do ore and scrap take different paths?</span>
+                </h3>
+              </header>
+              <figure class="pf-gallery">
                 <a href="/media/pulse/steel-routes.png" target="_blank" rel="noopener" aria-label="Open full-size Two steelmaking routes: ore reduction and scrap remelting">
                 <img src="/media/pulse/steel-routes.png" width="750" height="1334" alt="Two steelmaking routes: ore reduction and scrap remelting" loading="lazy"></a>
                 <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/steel-routes.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
                 </figcaption>
               </figure>
-              <figure id="panel-mechanism" role="tabpanel" aria-labelledby="tab-mechanism" tabindex="0" hidden>
-                <a href="/media/pulse/steel-mechanism.png" target="_blank" rel="noopener" aria-label="Open full-size Pulse steelmaking mechanism learning screen">
-                <img src="/media/pulse/steel-mechanism.png" width="750" height="1334" alt="Pulse steelmaking mechanism learning screen" loading="lazy"></a>
+              <div class="pf-explanation pf-case-answer">
+                <p><span lang="zh-CN">矿石需要去除氧；废钢已经是金属，需要重新熔化。比较两条路线，再进入各自的工序。</span><span lang="en">Ore needs oxygen removed; scrap is already metal and is remelted. Compare the two routes, then explore their steps.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">工艺参考：DOE 2015。一般生产示例，不代表地图上某一笔贸易的实际去向。</span><span lang="en">Process reference: DOE 2015. General production examples, not the destination of a mapped shipment.</span>
+                </div>
+              </div>
+            </article>
+            <article class="pf-case-panel" id="panel-mechanism" role="tabpanel" aria-labelledby="tab-mechanism" tabindex="0" hidden>
+              <header class="pf-explanation pf-case-question">
+                <p class="pf-eyebrow">ORE → IRON / 矿石 → 铁</p>
+                <h3><span lang="zh-CN">炼铁，不只是熔化。</span><span lang="en">More than melting.</span>
+                </h3>
+              </header>
+              <figure class="pf-gallery">
+                <a href="/media/pulse/steel-mechanism.png" target="_blank" rel="noopener" aria-label="Open full-size Pulse blast-furnace screen, with Remove oxygen selected">
+                <img src="/media/pulse/steel-mechanism.png" width="750" height="1334" alt="Pulse Remove oxygen view: orange arrows show hot air entering and gas rising; pig iron and slag leave through separate outlets." loading="lazy"></a>
                 <figcaption>实际应用截图 / Actual app screen · <a href="/media/pulse/steel-mechanism.png" target="_blank" rel="noopener">查看原图 / Full size ↗</a>
+                  <br><span lang="zh-CN">高炉工艺示例，不追踪某笔货物的去向。</span><br><span lang="en">A blast-furnace example, not a shipment trace.</span>
+                  <br><a href="https://www.energy.gov/sites/prod/files/2015/08/f26/iron_and_steel_bandwidth_report_0.pdf#page=26" target="_blank" rel="noopener">DOE 2015</a> · <a href="https://www.epa.gov/sites/default/files/2020-11/documents/c12s05.pdf" target="_blank" rel="noopener">EPA 1986 / 1995</a>
                 </figcaption>
               </figure>
-            </div>
+              <div class="pf-explanation pf-case-answer">
+                <p><span lang="zh-CN">氧化铁矿石中的铁与氧结合。焦炭和热风提供热量与还原条件，把氧去除。炉底得到的是含碳生铁；炼钢是下一步。</span><span lang="en">Iron in iron-oxide ore is bound to oxygen. Coke and hot air provide heat and reducing conditions that remove it. The output is carbon-rich pig iron; making steel comes later.</span>
+                </p>
+                <div class="pf-reading-note"><span lang="zh-CN">看橙色箭头：热风入炉，气体上升并排出。</span><span lang="en">Follow the orange arrows: hot air enters; gas rises and exits.</span>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>

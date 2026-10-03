@@ -124,12 +124,26 @@
 .pf-case .pf-section-head p [lang=en],.pf-case .pf-explanation p [lang=en] {
   color:#becfca}
 .pf-case-layout {
+  display:block}
+.pf-case-panel {
   display:grid;
   grid-template-columns:1.15fr .85fr;
-  gap:80px;
+  grid-template-rows:auto 1fr;
+  grid-template-areas:"question screenshot" "answer screenshot";
+  column-gap:80px;
   align-items:start}
+.pf-case-question {
+  grid-area:question}
+.pf-case-answer {
+  grid-area:answer;
+  padding-top:16px}
+.pf-case-panel .pf-case-question h3 {
+  margin-bottom:0}
+.pf-case-answer>p:first-child {
+  margin-top:0}
 .pf-tabs {
   display:flex;
+  width:calc(57.5% - 46px);
   border-bottom:1px solid #56716d;
   gap:4px;
   margin-bottom:40px}
@@ -178,7 +192,8 @@
 .pf-reading-note [lang=en] {
   display:block;
   margin-top:8px}
-.pf-gallery figure {
+.pf-gallery {
+  grid-area:screenshot;
   margin:0}
 .pf-gallery img {
   display:block;
@@ -283,8 +298,10 @@
 @media(max-width:900px) {
   .pf-hero,.pf-home {
   gap:32px}
-.pf-case-layout {
-  gap:40px}
+.pf-case-panel {
+  column-gap:40px}
+.pf-tabs {
+  width:calc(57.5% - 23px)}
 .pf-tabs button {
   padding-inline:8px;
   font-size:12px}
@@ -322,10 +339,14 @@
   font-size:29px}
 .pf-section-head h2 [lang=en],.pf-evidence h2 [lang=en],.pf-contact h2 [lang=en] {
   font-size:25px}
-.pf-case-layout {
-  grid-template-columns:1fr;
-  gap:30px}
+.pf-case-panel {
+  display:flex;
+  flex-direction:column;
+  gap:24px}
+.pf-case-answer {
+  padding-top:0}
 .pf-tabs {
+  width:100%;
   margin-bottom:26px;
   gap:0}
 .pf-tabs button {
@@ -337,6 +358,9 @@
   font-size:23px}
 .pf-gallery img {
   max-width:290px}
+.pf-gallery {
+  align-self:center;
+  width:100%}
 .pf-section-head {
   margin-bottom:26px}
 .pf-home h2 {

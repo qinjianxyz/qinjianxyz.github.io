@@ -66,7 +66,31 @@ async function verifyPage(page, route, width) {
     await page.locator('.pf-case-layout').screenshot({ path: `${output}/${width}-routes.png` });
     await page.keyboard.press('End');
     if (!await page.locator('#panel-mechanism').isVisible()) throw Error('End-key selection failed');
+    const mechanism = page.locator('#panel-mechanism');
+    if (await page.locator('.pf-case-panel:visible').count() !== 1) throw Error('More than one active case panel');
+    const naturalOrder = await mechanism.evaluate(panel => {
+      const question = panel.querySelector('.pf-case-question');
+      const image = panel.querySelector('.pf-gallery');
+      const answer = panel.querySelector('.pf-case-answer');
+      return Boolean(question.compareDocumentPosition(image) & Node.DOCUMENT_POSITION_FOLLOWING) &&
+        Boolean(image.compareDocumentPosition(answer) & Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    if (!naturalOrder) throw Error('Case reading order must be question, image, explanation');
+    if (width <= 650) {
+      const question = await mechanism.locator('.pf-case-question').boundingBox();
+      const image = await mechanism.locator('img').boundingBox();
+      const answer = await mechanism.locator('.pf-case-answer').boundingBox();
+      if (question.y + question.height > image.y || image.y + image.height > answer.y) {
+        throw Error('Mobile must show the native image before the long explanation');
+      }
+    }
     await page.locator('.pf-case-layout').screenshot({ path: `${output}/${width}-mechanism.png` });
+    await page.keyboard.press('Tab');
+    if (!await mechanism.evaluate(panel => panel === document.activeElement)) throw Error('Active panel missing from keyboard order');
+    await page.keyboard.press('Tab');
+    if (!await mechanism.locator('.pf-gallery > a').evaluate(link => link === document.activeElement)) {
+      throw Error('Native image link must follow the selected panel in keyboard order');
+    }
     await page.locator('#tab-trade').click();
     if (!await page.locator('#panel-trade').isVisible()) throw Error('Pointer selection failed');
   }
