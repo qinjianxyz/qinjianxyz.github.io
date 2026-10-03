@@ -7,7 +7,6 @@
       item.setAttribute('aria-selected', String(active));
       item.tabIndex = active ? 0 : -1;
       document.getElementById(item.getAttribute('aria-controls')).hidden = !active;
-      document.querySelector(`[data-copy="${item.dataset.panel}"]`).hidden = !active;
     });
     if (focus) tab.focus();
   }
