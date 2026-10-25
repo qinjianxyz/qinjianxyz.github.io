@@ -12,3 +12,8 @@ curriculum/
 docs/
 tests/
 scripts/
+
+# Local review evidence; generated HTML and public content are tracked.
+/design-qa.md
+__pycache__/
+*.pyc
