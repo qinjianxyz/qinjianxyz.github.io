@@ -1,0 +1,459 @@
+[
+  {
+    "slug": "snow-upon-the-bow-and-blade",
+    "title": {
+      "zh": "雪满弓刀",
+      "en": "Snow Upon the Bow and Blade"
+    },
+    "originalWork": false,
+    "author": {
+      "zh": "卢纶 · 唐",
+      "en": "Lu Lun · Tang dynasty"
+    },
+    "sourceTitle": {
+      "zh": "和张仆射塞下曲六首·其三",
+      "en": "Frontier Songs, no. 3"
+    },
+    "theme": {
+      "zh": "行动之前",
+      "en": "Before the pursuit"
+    },
+    "summary": {
+      "zh": "月黑，雁高。雪落在弓刀上，追击还没有开始。",
+      "en": "A moonless night. Geese overhead. Snow gathers on bows and blades before the pursuit begins."
+    },
+    "alt": {
+      "zh": "黑白风雪中，一名持弓骑兵在近处驻马，其他骑兵向山间延伸，飞鸟掠过夜空。",
+      "en": "A mounted archer in a monochrome snowstorm, with other riders receding into the mountains and birds crossing the dark sky."
+    },
+    "poemLines": [
+      "月黑雁飞高，",
+      "单于夜遁逃。",
+      "欲将轻骑逐，",
+      "大雪满弓刀。"
+    ],
+    "translationLines": [
+      "Moonless night; geese fly high.",
+      "The enemy commander slips away in darkness.",
+      "Light cavalry are about to give pursuit—",
+      "heavy snow covers their bows and blades."
+    ],
+    "background": {
+      "zh": "这首边塞诗把紧张的一刻留在出发之前：敌军主帅趁夜逃走，轻骑正准备追赶。末句没有写交锋，而让雪落满弓刀。寒冷、等待与将要发生的行动，都凝在这幅静景里。",
+      "en": "The third of Lu Lun’s six frontier songs stops at a moment of suspense. An opposing commander retreats at night; light cavalry prepare to follow. Instead of a clash, the poem ends with snow settling on weapons. Cold, waiting, and the prospect of action become tangible in a single still image."
+    },
+    "interpretation": {
+      "zh": "画面选择了行动前的停顿。近处骑兵、远处队列与高空飞鸟，被风雪连接起来。黑暗显出人的渺小，积雪中的姿态则留下克制与决心。",
+      "en": "The image stays with that pause. A rider in the foreground, the distant column, and birds overhead are joined by falling snow. The darkness makes the figures vulnerable; their composure gives the scene its resolve."
+    },
+    "image": {
+      "src": "/media/art/snow-upon-the-bow-and-blade.png",
+      "thumb": "/media/art/snow-upon-the-bow-and-blade-640.jpg",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "30fe9f2bb7655aad41d07cf01962be462a1d61ce12e21f4fbfd4a807aefea1bf"
+    },
+    "sourceLinks": [
+      {
+        "label": "《全唐诗》卷278 / Collected Tang Poems, vol. 278",
+        "url": "https://zh.wikisource.org/wiki/和張僕射塞下曲_(月黑鴈飛高)"
+      },
+      {
+        "label": "山东教育出版社·原诗 / Shandong Education Press · poem text",
+        "url": "https://www.sjs.com.cn/Images/attached/file/20140603/20140603151242_2776.pdf#page=22"
+      }
+    ],
+    "visualAuthor": {
+      "zh": "秦剑 / Jian Qin",
+      "en": "Jian Qin (秦剑)"
+    },
+    "approval": {
+      "scope": "website_integration_preview",
+      "basis": "author_supplied_artwork_and_literary_content"
+    },
+    "translationNote": {
+      "zh": "英文为本站新译，供阅读；中文原诗按作者选用文本保留。",
+      "en": "A new reading translation prepared for this site. The Chinese poem retains the text selected by the artist."
+    },
+    "seriesContext": {
+      "zh": "以中国诗词为起点，结合文学与历史研究、视觉诠释和 AI 辅助创作。先看见文学，再遇见画面。",
+      "en": "An exploration of Chinese poetry through literary and historical research, visual interpretation, and AI-assisted creation. Literature comes first; the image opens another way in."
+    },
+    "attribution": {
+      "zh": "视觉诠释 — 秦剑 / Jian Qin",
+      "en": "Visual interpretation — Jian Qin (秦剑)"
+    },
+    "sourceNote": {
+      "zh": "原典转录作“鴈”，此处采用常见字形“雁”。诗中没有交代具体战役或追逐结果。",
+      "en": "The source transcription writes 鴈; this version uses the common form 雁. The poem names no specific battle and gives no outcome for the pursuit."
+    }
+  },
+  {
+    "slug": "a-star-within-the-sleeve",
+    "title": {
+      "zh": "袖中星",
+      "en": "A Star Within the Sleeve"
+    },
+    "originalWork": true,
+    "author": {
+      "zh": "秦剑 · 现代",
+      "en": "Jian Qin · Contemporary"
+    },
+    "sourceTitle": {
+      "zh": "袖中星",
+      "en": "A Star Within the Sleeve"
+    },
+    "theme": {
+      "zh": "每个人的微光",
+      "en": "A light of one’s own"
+    },
+    "summary": {
+      "zh": "护住袖中微光，穿过风雪。山的另一边，万家各有灯火。",
+      "en": "A traveler guards a small light through the snow. Beyond the mountains, countless homes hold lights of their own."
+    },
+    "alt": {
+      "zh": "一位行者站在雪山上，把暖光护在胸前，手边悬着罗盘；上方是银河，远处山谷有万家灯火。",
+      "en": "A traveler on a snowy ridge holds a warm light close, with a compass by his hand. The Milky Way stretches above distant valleys filled with lights."
+    },
+    "poemLines": [
+      "万壑沉沉夜未央，",
+      "行人袖里护微芒。",
+      "星列长空如刻尺，",
+      "手中罗盘辨八荒。",
+      "风雪弥天犹可度，",
+      "人持寸火越寒冈。",
+      "千峰万户灯如豆，",
+      "忽见人间万点光。"
+    ],
+    "translationLines": [
+      "Ten thousand valleys lie in darkness; night is not yet over.",
+      "A traveler shelters a faint light within his sleeve.",
+      "Stars line the vast sky like markings on a ruler;",
+      "a compass in his hand finds bearings in the boundless world.",
+      "Though wind and snow fill the heavens, the way can still be crossed.",
+      "With a tiny flame, he crosses the frozen ridges.",
+      "Across a thousand peaks, the lamps of countless homes are small as beans—",
+      "and suddenly he sees a world of lights."
+    ],
+    "background": {
+      "zh": "这是秦剑的原创诗与油画。诗从一个人护住微光写起：借星辰与罗盘辨认方向，持寸火穿过寒冈，最后看见千峰之间的万家灯火。由独行走向相遇，是这首诗的路径。",
+      "en": "An original poem and oil painting by Jian Qin. A traveler begins by protecting one small light, finds direction through stars and a compass, and crosses the frozen mountains. The journey moves from solitude toward the discovery of countless illuminated homes."
+    },
+    "interpretation": {
+      "zh": "微光可以是知识、信念、尊严、爱，也可以是一个人不愿交出的自由。行者没有替所有人点灯；他发现，别人本来就拥有自己的光。独立与联结，在这里可以同时存在。",
+      "en": "The light may be knowledge, conviction, dignity, love, or a freedom someone refuses to surrender. The traveler does not arrive as a savior bringing light to everyone else. He discovers that others already have their own. Independence and human connection can belong in the same landscape."
+    },
+    "attribution": {
+      "zh": "原创诗词与油画 — 秦剑 / Jian Qin",
+      "en": "Original Poetry & Oil Painting — Jian Qin (秦剑)"
+    },
+    "copyright": "© Jian Qin / 秦剑. All rights reserved.",
+    "image": {
+      "src": "/media/art/a-star-within-the-sleeve.png",
+      "thumb": "/media/art/a-star-within-the-sleeve-640.jpg",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "648e4a5352955fea33ea2cf28910597d7491c8119788056fd57c04a37cbcbfd7"
+    },
+    "sourceLinks": [],
+    "visualAuthor": {
+      "zh": "秦剑 / Jian Qin",
+      "en": "Jian Qin (秦剑)"
+    },
+    "approval": {
+      "scope": "website_integration_preview",
+      "basis": "author_supplied_artwork_and_literary_content"
+    },
+    "translationNote": {
+      "zh": "英文为本站新译，供阅读；中文原诗按作者选用文本保留。",
+      "en": "A new reading translation prepared for this site. The Chinese poem retains the text selected by the artist."
+    },
+    "seriesContext": {
+      "zh": "以中国诗词为起点，结合文学与历史研究、视觉诠释和 AI 辅助创作。先看见文学，再遇见画面。",
+      "en": "An exploration of Chinese poetry through literary and historical research, visual interpretation, and AI-assisted creation. Literature comes first; the image opens another way in."
+    },
+    "sourceNote": {
+      "zh": "当代原创，不归于古人。完整中文诗与“原创诗词与油画”署名均由秦剑本人提供；未添加具体工具、实物材质或制作流程。",
+      "en": "A contemporary original, not a historical poem. Jian Qin supplied the complete Chinese text and the attribution “Original Poetry & Oil Painting.” No particular tools, physical materials, or production process are asserted here."
+    }
+  },
+  {
+    "slug": "when-the-world-turns-white",
+    "title": {
+      "zh": "一声天下白",
+      "en": "When the World Turns White"
+    },
+    "originalWork": false,
+    "author": {
+      "zh": "李贺 · 唐",
+      "en": "Li He · Tang dynasty"
+    },
+    "sourceTitle": {
+      "zh": "致酒行（节选）",
+      "en": "An Invitation to Wine · excerpt"
+    },
+    "theme": {
+      "zh": "勇气重新回来",
+      "en": "When courage returns"
+    },
+    "summary": {
+      "zh": "“少年心事当拏云。”长夜尽处，仍有重新出发的可能。",
+      "en": "“A young heart’s ambitions should reach the clouds.” At the end of a difficult night, the possibility of beginning again."
+    },
+    "alt": {
+      "zh": "橙红色天空铺展在深蓝海面上，旭日在地平线上升起，金色光带照亮海浪。",
+      "en": "An orange-red sky above a deep blue ocean, with the rising sun casting a golden path across the waves."
+    },
+    "poemLines": [
+      "我有迷魂招不得，",
+      "雄鸡一声天下白。",
+      "少年心事当拏云，",
+      "谁念幽寒坐呜呃。"
+    ],
+    "translationLines": [
+      "I cannot call my bewildered spirit back.",
+      "One crow of the rooster, and the world is light.",
+      "A young heart’s ambitions should reach the clouds—",
+      "who will heed one sitting in cold obscurity, sighing?"
+    ],
+    "background": {
+      "zh": "《致酒行》写饮酒与劝慰，也写才志未酬的困顿。诗中借主父偃、马周的际遇，转向重新振作的可能。“雄鸡一声天下白”使情绪骤然明亮，接着便是“少年心事当拏云”。它没有许诺成功，却把勇气重新交还给身处低谷的人。",
+      "en": "Li He’s poem brings drinking and consolation together with frustrated ambition. References to Zhufu Yan and Ma Zhou, figures whose talents were not immediately recognized, open the possibility of a different future. A rooster’s cry turns the scene toward daylight, followed by the call to reach for the clouds. The poem restores courage without promising success."
+    },
+    "interpretation": {
+      "zh": "画面把清晨放大成一场颜色的相遇：炽热天空与深蓝海水，在地平线上汇合。没有人物承担英雄的位置；光本身，就是从迷惘走向可能的转折。",
+      "en": "The image makes dawn a meeting of colors: a blazing sky and deep blue water converge at the horizon. No human figure carries the role of hero. Light itself becomes the turn from bewilderment toward possibility."
+    },
+    "image": {
+      "src": "/media/art/when-the-world-turns-white.png",
+      "thumb": "/media/art/when-the-world-turns-white-640.jpg",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "2f253aeaae9f021dda0e05cd2744fb7e5be23c6d268ff29162621676a87ba75e"
+    },
+    "sourceLinks": [
+      {
+        "label": "《全唐诗》卷391·全文 / Collected Tang Poems, vol. 391 · full poem",
+        "url": "https://zh.wikisource.org/wiki/致酒行"
+      }
+    ],
+    "visualAuthor": {
+      "zh": "秦剑 / Jian Qin",
+      "en": "Jian Qin (秦剑)"
+    },
+    "approval": {
+      "scope": "website_integration_preview",
+      "basis": "author_supplied_artwork_and_literary_content"
+    },
+    "translationNote": {
+      "zh": "英文为本站新译，供阅读；中文原诗按作者选用文本保留。",
+      "en": "A new reading translation prepared for this site. The Chinese poem retains the text selected by the artist."
+    },
+    "seriesContext": {
+      "zh": "以中国诗词为起点，结合文学与历史研究、视觉诠释和 AI 辅助创作。先看见文学，再遇见画面。",
+      "en": "An exploration of Chinese poetry through literary and historical research, visual interpretation, and AI-assisted creation. Literature comes first; the image opens another way in."
+    },
+    "attribution": {
+      "zh": "视觉诠释 — 秦剑 / Jian Qin",
+      "en": "Visual interpretation — Jian Qin (秦剑)"
+    },
+    "sourceNote": {
+      "zh": "这里展示《致酒行》结尾四句，并保留“拏云”的字形。海上日出是当代视觉诠释，原诗写的是雄鸡报晓。",
+      "en": "These are the closing four lines of Zhi Jiu Xing, retaining the character 拏. The sunrise over the sea is a contemporary visual interpretation; the poem itself turns on a rooster’s dawn call."
+    }
+  },
+  {
+    "slug": "ninety-thousand-li",
+    "title": {
+      "zh": "扶摇九万里",
+      "en": "Ninety Thousand Li Into the Sky"
+    },
+    "originalWork": false,
+    "author": {
+      "zh": "李白 · 唐",
+      "en": "Li Bai · Tang dynasty"
+    },
+    "sourceTitle": {
+      "zh": "上李邕",
+      "en": "To Li Yong"
+    },
+    "theme": {
+      "zh": "未被看见的志向",
+      "en": "Ambition before recognition"
+    },
+    "summary": {
+      "zh": "大鹏乘风而起。即使风停，仍能激荡沧海。",
+      "en": "The great Peng rises with the wind. Even when the wind falls, it can still stir the sea."
+    },
+    "alt": {
+      "zh": "巨大的鹏鸟展开深色羽翼，从翻涌的海浪与浪花间向上飞起。",
+      "en": "A colossal Peng bird spreads dark wings and rises above a turbulent ocean amid breaking waves and spray."
+    },
+    "poemLines": [
+      "大鹏一日同风起，",
+      "扶摇直上九万里。",
+      "假令风歇时下来，",
+      "犹能簸却沧溟水。",
+      "世人见我恒殊调，",
+      "闻余大言皆冷笑。",
+      "宣父犹能畏后生，",
+      "丈夫未可轻年少。"
+    ],
+    "translationLines": [
+      "One day the great Peng rises with the wind,",
+      "spiraling straight up, ninety thousand li.",
+      "Even if the wind should cease and it descend,",
+      "it could still shake the waters of the vast sea.",
+      "People find my voice forever out of step;",
+      "they hear my bold words and answer with cold laughter.",
+      "Even Confucius held the young in awe—",
+      "one should never look lightly on youth."
+    ],
+    "background": {
+      "zh": "《上李邕》借《庄子·逍遥游》中的大鹏写志向，把古老的想象化为年轻人的自信。面对“大言”招来的冷笑，结尾以孔子“后生可畏”的意思回应：不要轻视尚未被认可的人。此诗传统归于李白，常与他的早年经历相联系；具体写作时间与情境不在此断定。",
+      "en": "Traditionally attributed to Li Bai, To Li Yong draws on the enormous Peng bird in the Zhuangzi’s “Free and Easy Wandering,” turning an ancient image into youthful confidence. Its closing lines recall Confucius’s regard for younger generations: those not yet recognized should not be dismissed. The poem is often linked to Li Bai’s youth, but its precise occasion is not established here. A li is a traditional unit of distance; ninety thousand evokes a mythic scale."
+    },
+    "interpretation": {
+      "zh": "羽翼、风与沧海，把志向变成可以感受到的力量。鸟的升腾牵动整个海面，画面留下的是尚未获认可时，依然敢于想象的尺度。",
+      "en": "Wings, wind, and sea give ambition a physical presence. The bird’s ascent seems to move an entire ocean. The scale belongs to what a person can imagine before the world has recognized their ability."
+    },
+    "image": {
+      "src": "/media/art/ninety-thousand-li.png",
+      "thumb": "/media/art/ninety-thousand-li-640.jpg",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "06e847f8fb75414a61be0329d9c89eb933feb497a66541ae531f4c31b54da570"
+    },
+    "sourceLinks": [
+      {
+        "label": "《全唐诗》卷168·原文与旧注 / Collected Tang Poems, vol. 168 · text and note",
+        "url": "https://zh.wikisource.org/wiki/上李邕"
+      },
+      {
+        "label": "《庄子·逍遥游》/ Zhuangzi · Free and Easy Wandering",
+        "url": "https://zh.wikisource.org/wiki/莊子/逍遙遊"
+      },
+      {
+        "label": "教育部辞典·后生可畏 / Ministry of Education · the younger generation",
+        "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=-467&la=0&webMd=2"
+      }
+    ],
+    "visualAuthor": {
+      "zh": "秦剑 / Jian Qin",
+      "en": "Jian Qin (秦剑)"
+    },
+    "approval": {
+      "scope": "website_integration_preview",
+      "basis": "author_supplied_artwork_and_literary_content"
+    },
+    "translationNote": {
+      "zh": "英文为本站新译，供阅读；中文原诗按作者选用文本保留。",
+      "en": "A new reading translation prepared for this site. The Chinese poem retains the text selected by the artist."
+    },
+    "seriesContext": {
+      "zh": "以中国诗词为起点，结合文学与历史研究、视觉诠释和 AI 辅助创作。先看见文学，再遇见画面。",
+      "en": "An exploration of Chinese poetry through literary and historical research, visual interpretation, and AI-assisted creation. Literature comes first; the image opens another way in."
+    },
+    "attribution": {
+      "zh": "视觉诠释 — 秦剑 / Jian Qin",
+      "en": "Visual interpretation — Jian Qin (秦剑)"
+    },
+    "sourceNote": {
+      "zh": "此处保留作者选用的“扶摇”“世人”“恒”。所链《全唐诗》转录有“摶摇”等异文，并保留一则古代注家的归属疑说；这不等于已判定为伪作。",
+      "en": "This text retains the artist’s selected readings 扶摇, 世人, and 恒. The linked transcription has variants, including 摶搖, and preserves an older commentator’s doubt about attribution—not an established verdict that the poem is spurious."
+    }
+  },
+  {
+    "slug": "three-blessings-one-peach-tree",
+    "title": {
+      "zh": "桃夭",
+      "en": "Three Blessings, One Peach Tree"
+    },
+    "originalWork": false,
+    "author": {
+      "zh": "佚名 · 先秦",
+      "en": "Anonymous · Pre-Qin tradition"
+    },
+    "sourceTitle": {
+      "zh": "诗经·国风·周南·桃夭",
+      "en": "The Book of Songs · Zhou Nan · Tao Yao"
+    },
+    "theme": {
+      "zh": "一个家的生长",
+      "en": "A home in bloom"
+    },
+    "summary": {
+      "zh": "花、果、叶，三章祝愿。一扇门通向共同生活。",
+      "en": "Blossoms, fruit, and leaves: three stanzas of blessing, and a doorway into a shared life."
+    },
+    "alt": {
+      "zh": "两棵交织的桃树同时开花、结果、长满绿叶，枝干围出一道通向庭院的红色门扉。",
+      "en": "Two intertwined peach trees bearing pink blossoms, ripe fruit, and green leaves frame an open red doorway into a courtyard."
+    },
+    "poemLines": [
+      "桃之夭夭，灼灼其华。",
+      "之子于归，宜其室家。",
+      "桃之夭夭，有蕡其实。",
+      "之子于归，宜其家室。",
+      "桃之夭夭，其叶蓁蓁。",
+      "之子于归，宜其家人。"
+    ],
+    "translationLines": [
+      "The peach tree flourishes, its blossoms radiant.",
+      "This young woman goes to be married; may she bring harmony to her home.",
+      "The peach tree flourishes, its fruit abundant.",
+      "This young woman goes to be married; may she bring harmony to her household.",
+      "The peach tree flourishes, its leaves thick and green.",
+      "This young woman goes to be married; may she live in harmony with her family."
+    ],
+    "background": {
+      "zh": "《桃夭》是《诗经》中的婚嫁祝辞。“之子于归”写女子出嫁，三章依次以桃花、桃实、桃叶寄托祝愿，并反复落在家人的和睦上。作者与确切创作年代已不可考。",
+      "en": "A wedding blessing preserved in the Book of Songs, Tao Yao follows a young woman into married life. Its three stanzas turn from peach blossoms to fruit and abundant leaves, each returning to harmony within the household. Its author and precise date are unknown."
+    },
+    "interpretation": {
+      "zh": "花、果与叶在画中同时出现，把不同生长阶段与三章祝福放进同一幅景象。交织的树干与敞开的门，留下相伴和成家的意味。这是今天对诗的视觉解读，不是古代婚俗的复原。",
+      "en": "Blossoms, fruit, and leaves appear together, bringing different stages of growth and three stanzas of blessing into one scene. Intertwined trunks and an open doorway suggest companionship and a home taking shape. This is a contemporary reading of the poem, rather than a reconstruction of ancient wedding customs."
+    },
+    "image": {
+      "src": "/media/art/three-blessings-one-peach-tree.png",
+      "thumb": "/media/art/three-blessings-one-peach-tree-640.jpg",
+      "width": 1122,
+      "height": 1402,
+      "sha256": "3c501e1e18a50939bc3ff3c3b70b247cce122a11cada92b8a1566f8578463773"
+    },
+    "sourceLinks": [
+      {
+        "label": "香港教育局·桃夭原文 / Hong Kong Education Bureau · Tao Yao",
+        "url": "https://cd.edb.gov.hk/chi/resource/ncs/download/js_list/JS_taoyao.pdf"
+      },
+      {
+        "label": "教育部辞典·婚嫁用语 / Ministry of Education · wedding usage",
+        "url": "https://dict.idioms.moe.edu.tw/idiomView.jsp?ID=27352&la=0&webMd=1"
+      }
+    ],
+    "visualAuthor": {
+      "zh": "秦剑 / Jian Qin",
+      "en": "Jian Qin (秦剑)"
+    },
+    "approval": {
+      "scope": "website_integration_preview",
+      "basis": "author_supplied_artwork_and_literary_content"
+    },
+    "translationNote": {
+      "zh": "英文为本站新译，供阅读；中文原诗按作者选用文本保留。",
+      "en": "A new reading translation prepared for this site. The Chinese poem retains the text selected by the artist."
+    },
+    "seriesContext": {
+      "zh": "以中国诗词为起点，结合文学与历史研究、视觉诠释和 AI 辅助创作。先看见文学，再遇见画面。",
+      "en": "An exploration of Chinese poetry through literary and historical research, visual interpretation, and AI-assisted creation. Literature comes first; the image opens another way in."
+    },
+    "attribution": {
+      "zh": "视觉诠释 — 秦剑 / Jian Qin",
+      "en": "Visual interpretation — Jian Qin (秦剑)"
+    },
+    "sourceNote": {
+      "zh": "原诗文字与香港教育局参考文本相合，采用简体及现代标点；保留三章中“室家”“家室”“家人”的区别。确切作者与创作年份未知。",
+      "en": "The Chinese wording follows the Hong Kong Education Bureau’s reference text, using simplified characters and modern punctuation. The three stanzas retain their different words for home, household, and family. The author and exact date are unknown."
+    }
+  }
+]

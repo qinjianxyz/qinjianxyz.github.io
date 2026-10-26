@@ -1,4 +1,18 @@
 /* Ray Qin — shared portfolio system. Original photography, quiet editorial hierarchy. */
+.dialog-navigation[hidden] {display:none}
+.gaming-section {display:grid;grid-template-columns:1fr 1.35fr;gap:90px;padding-block:70px 85px;border-top:1px solid var(--line)}
+.gaming-section h2 {margin-top:20px}
+.gaming-copy p {margin-bottom:20px;line-height:1.9;color:var(--muted)}
+.gaming-copy p:last-child {margin-bottom:0}
+@media(max-width:800px){.gaming-section {gap:40px}}
+@media(max-width:600px){.gaming-section {grid-template-columns:1fr;gap:30px;padding-block:45px}.gaming-section h2 {font-size:35px}.gaming-copy p {font-size:15px}}
+.article-original-title {font-size:14px!important;color:var(--muted);margin:9px 0 14px!important}
+.essay-original-title {font:22px/1.5 var(--serif);color:var(--muted);margin-top:18px}
+.essay-body .translation-label {font:12px/1.8 var(--sans);color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:30px}
+.essay-source-disclosure {border-top:1px solid var(--line);margin-top:42px;padding-top:22px}
+.essay-source-disclosure summary {cursor:pointer;font:14px/1.7 var(--sans);color:var(--green);list-style-position:inside}
+.essay-source-disclosure .essay-original {margin-top:28px}
+.essay-body .essay-section-title {font:500 30px/1.4 var(--serif);margin-top:46px;margin-bottom:24px}
 :root {
   --paper: #f7f5ef;
   --surface: #eeede5;
