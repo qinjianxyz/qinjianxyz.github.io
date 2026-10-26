@@ -189,7 +189,7 @@ for (const work of artworks) {
 }
 const basePages = ['index.html', 'work.html', 'writing.html', 'about.html', 'art.html',
   ...articles.map(a => `writing/${a.slug}.html`), ...artworks.map(a => `art/${a.slug}.html`)];
-const pages = basePages.flatMap(file => [file, `en/${file}`]);
+const pages = basePages.flatMap(file => [file, `zh/${file}`]);
 
 for (const file of pages) {
   let doc;
@@ -203,7 +203,7 @@ for (const file of pages) {
   if (doc.ids.some(id => !id)) fail(file, 'empty id');
   for (const id of doc.idSet) if (doc.ids.filter(x => x === id).length > 1) fail(file, `duplicate id: ${id}`);
   const htmlTag = requireOne(file, doc.tags.filter(t => t.name === 'html'), 'html element');
-  const expectedLanguage = file.startsWith('en/') ? 'en' : 'zh-CN';
+  const expectedLanguage = file.startsWith('zh/') ? 'zh-CN' : 'en';
   if (htmlTag?.attrs.get('lang') !== expectedLanguage) fail(file, `html lang should be ${expectedLanguage}`);
   const head = doc.html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/i)?.[1];
   if (!head) { fail(file, 'missing head'); continue; }
@@ -224,8 +224,8 @@ for (const file of pages) {
   if (canonical?.attrs.get('href') !== origin + route(file)) fail(file, 'canonical URL does not identify this page');
   for (const language of ['zh-CN', 'en', 'x-default']) {
     const link = requireOne(file, headTags.filter(t => t.name === 'link' && t.attrs.get('rel') === 'alternate' && t.attrs.get('hreflang') === language), `hreflang ${language}`);
-    const bare = file.replace(/^en\//, '');
-    const expected = origin + route((language === 'en' ? 'en/' : '') + bare);
+    const bare = file.replace(/^zh\//, '');
+    const expected = origin + route((language === 'zh-CN' ? 'zh/' : '') + bare);
     if (link?.attrs.get('href') !== expected) fail(file, `incorrect hreflang ${language} target`);
   }
   const linkedData = [...head.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -241,7 +241,7 @@ for (const file of pages) {
   }
   const languageLink = requireOne(file, doc.tags.filter(t => t.name === 'a' && (t.attrs.get('class') ?? '').split(/\s+/).includes('language-link')), 'visible language switch');
   if (languageLink) {
-    const expectedFile = file.startsWith('en/') ? file.slice(3) : `en/${file}`;
+    const expectedFile = file.startsWith('zh/') ? file.slice(3) : `zh/${file}`;
     const target = localURL(languageLink.attrs.get('href') ?? '', file);
     if (target?.file !== expectedFile) fail(file, 'language switch does not lead to the counterpart page');
     else try {
@@ -250,15 +250,30 @@ for (const file of pages) {
       if (!back || localURL(back.attrs.get('href') ?? '', expectedFile)?.file !== file) fail(file, 'language switch is not reciprocal');
     } catch { fail(file, 'language counterpart is missing'); }
   }
-  const artIndex = `${file.startsWith('en/') ? '/en/' : '/'}art.html`;
+  for (const menu of classContents(doc.html, 'mobile-menu')) {
+    if (parse(menu.inner).tags.some(t => (t.attrs.get('class') ?? '').split(/\s+/).includes('language-link'))) fail(file, 'language switch must stay outside the collapsed mobile menu');
+  }
+  const artIndex = `${file.startsWith('zh/') ? '/zh/' : '/'}art.html`;
   if (!doc.tags.some(t => t.name === 'a' && t.attrs.get('href') === artIndex)) fail(file, 'missing art-overview entrance in this interface language');
   const htmlBudget = /(?:^|\/)writing\/[^/]+\.html$/.test(file) ? 192 * 1024 : 96 * 1024;
   if (Buffer.byteLength(doc.html) > htmlBudget) fail(file, `HTML exceeds ${htmlBudget / 1024} KiB page budget`);
 }
 
+for (const file of basePages) {
+  const alias = `en/${file}`;
+  try {
+    const doc = await document(alias);
+    const canonical = doc.tags.find(t => t.name === 'link' && t.attrs.get('rel') === 'canonical');
+    if (canonical?.attrs.get('href') !== origin + route(file)) fail(alias, 'legacy English URL must point to its new canonical page');
+    if (!doc.tags.some(t => t.name === 'a' && t.attrs.get('href') === route(file))) fail(alias, 'legacy URL needs a working fallback link');
+    if (!doc.tags.some(t => t.name === 'meta' && t.attrs.get('name') === 'robots' && t.attrs.get('content') === 'noindex')) fail(alias, 'legacy redirect must not duplicate the canonical search entry');
+    if (!doc.html.includes('location.search + location.hash')) fail(alias, 'legacy redirect must retain query and reading position');
+  } catch { fail(alias, 'missing legacy English redirect'); }
+}
+
 for (const article of articles) {
   if (!Array.isArray(article.paragraphs)) continue;
-  for (const prefix of ['', 'en/']) {
+  for (const prefix of ['', 'zh/']) {
     const file = `${prefix}writing/${article.slug}.html`;
     let doc;
     try { doc = await document(file); } catch { continue; }
@@ -272,7 +287,7 @@ for (const article of articles) {
     if (anchored.length !== article.paragraphs.length) fail(file, 'original paragraph count differs from reviewed JSON');
     if (!doc.tags.some(t => t.name === 'a' && t.attrs.get('href') === article.sourceUrl)) fail(file, 'missing original X source link');
     if (!doc.tags.some(t => t.name === 'time' && t.attrs.get('datetime') === article.publishedAt)) fail(file, 'publication time differs from reviewed JSON');
-    if (!prefix) {
+    if (prefix === 'zh/') {
       const translation = classContents(doc.html, 'essay-translation');
       if (translation.length !== 1) fail(file, 'expected one Chinese essay-translation region');
       const original = classContents(doc.html, 'essay-original');
@@ -295,7 +310,7 @@ for (const article of articles) {
   }
 }
 
-for (const prefix of ['', 'en/']) {
+for (const prefix of ['', 'zh/']) {
   const overview = `${prefix}art.html`;
   let index;
   try { index = await document(overview); } catch { continue; }
@@ -306,7 +321,7 @@ for (const prefix of ['', 'en/']) {
     const file = `${prefix}art/${work.slug}.html`;
     let doc;
     try { doc = await document(file); } catch { continue; }
-    const language = prefix ? 'en' : 'zh';
+    const language = prefix ? 'zh' : 'en';
     const originals = classContents(doc.html, 'poem-original');
     if (originals.length !== 1) fail(file, 'expected one separately identified Chinese poem-original');
     else if (Array.isArray(work.poemLines)) {
@@ -329,7 +344,8 @@ for (const prefix of ['', 'en/']) {
       }
       if (translations[0].attrs.get('lang') !== 'en' && !/\blang=["']en["']/.test(translations[0].inner)) fail(file, 'English reading translation needs a language marker');
     }
-    if (!/(?:Reading translation|阅读译文)/i.test(normalizedText(doc.html))) fail(file, 'missing explicit reading-translation label');
+    const translationLabel = normalizedText(doc.html);
+    if (!/(?:English translation|英文译文)/i.test(translationLabel) || !/(?:AI assistance|AI\s*辅助)/i.test(translationLabel)) fail(file, 'missing explicit AI-assisted English translation label');
     const full = classContents(doc.html, 'artwork-full');
     if (full.length !== 1) fail(file, 'expected one artwork-full region');
     else {
