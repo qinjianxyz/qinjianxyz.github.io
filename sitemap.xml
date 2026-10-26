@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://qinjianxyz.github.io/</loc></url>
-  <url><loc>https://qinjianxyz.github.io/program.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/work.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/writing.html</loc></url>
   <url><loc>https://qinjianxyz.github.io/about.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/writing/ai-bitcoin-and-the-right-to-choose.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/writing/rules-without-rulers.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/work.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/writing.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/about.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/writing/ai-bitcoin-and-the-right-to-choose.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/en/writing/rules-without-rulers.html</loc></url>
   <url><loc>https://qinjianxyz.github.io/resume.html</loc></url>
-  <url><loc>https://qinjianxyz.github.io/participation.html</loc></url>
-  <url><loc>https://qinjianxyz.github.io/poster.html</loc></url>
-<url><loc>https://qinjianxyz.github.io/ideas.html</loc></url>
-<url><loc>https://qinjianxyz.github.io/sample.html</loc></url>
-<url><loc>https://qinjianxyz.github.io/work.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/pulse/privacy.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/pulse/support.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/life-garden/privacy.html</loc></url>
+  <url><loc>https://qinjianxyz.github.io/life-garden/support.html</loc></url>
 </urlset>

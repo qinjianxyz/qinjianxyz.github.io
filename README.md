@@ -1,49 +1,89 @@
-# Ray Qin — public website
+# Ray Qin — work, writing, and a life beyond the screen
 
-Bilingual personal website, published directly from the root of `main` by GitHub Pages.
+A bilingual personal website for Ray Qin: engineering practice, original essays, and the interests behind the work. The homepage keeps the real photographs of speaking, building a small autonomous vehicle, trail running, travel, and strength training. Projects support the personal story; no single app defines the site.
 
-## Current direction
+The website is static. Its small generator and checks use Node.js standard-library modules; the local preview uses Python 3. No npm installation, framework, API, database, analytics service, or recurring job is required.
 
-Pulse is the flagship: understand global trade and how objects are produced. Its advantage is selecting evidence that explains phenomena and designing useful visualizations, not collecting the most data. Describe development honestly; do not imply public App Store availability.
+## Source and generated files
 
-Keep Ray’s personal introduction, biography, photos, qualifications and résumé intact. Homepage and Work feature Pulse. Course, poster, sample and portal entry points are retired with a clear notice; their previous contents remain in Git history. Existing app privacy/support pages remain accessible.
-
-`index.html` owns the personal homepage; `work.html` owns the Pulse presentation; `assets/pulse-feature.css` contains its responsive styles. Language aliases redirect to bilingual canonical pages. No package installation or build is required.
-
-Preview with a temporary HTTP server; stop it and the test browser when verification ends. Check desktop and mobile, biography preservation, local links and retired course entry points before publishing.
-
-## Pulse visual case study (2026-10-01)
-
-Home preserves the personal introduction and photographs, then presents Pulse through two native screens. Work is a screenshot walkthrough: annual iron-ore trade → two steelmaking routes → a mechanism. The controls switch screenshots and explanations; they do not run the app or fetch trade data. Root `/en/` and `/zh/` aliases still redirect to the same bilingual pages.
-
-Screenshot provenance (unmodified PNGs, copied from the Pulse repository's retained native QA evidence):
-
-| Website asset | Pulse evidence path under `docs/qa/screenshots/` |
+| Edit here | Responsibility |
 | --- | --- |
-| `media/pulse/world-iron-ore.png` | `native-world-reset/selected-goods-2601-normal.png` |
-| `media/pulse/steel-routes.png` | `making-understanding/steel-comparison-entry-normal.png` |
-| `media/pulse/steel-mechanism.png` | `trade-to-iron-2026-10-02/global-ore-direct-entry-normal.png` (updated 2 October) |
+| `tools/build.mjs` | Page templates, shared navigation/footer, bilingual interface copy, metadata, routes, and sitemap |
+| `_portfolio/articles.json` | Reviewed original article paragraphs, publication timestamps, source links, and separately written bilingual summaries |
+| `_portfolio/projects.json` | Project descriptions, contributions, status, limits, and image captions |
+| `assets/ray.css` | Shared typography, layout, responsive styles, and reduced-motion behavior |
+| `assets/ray.js` | Photo viewer, copy-link action, and reading progress |
+| `media/` | Reviewed public photographs, development previews, résumé downloads, and existing assets |
 
-These are development-build examples, not a claim about a publicly downloadable version. The map identifies CEPII BACI 2024 and retained coverage; the process comparison identifies DOE 2015. A trade relationship does not establish a shipment's factory or subsequent use. Do not replace these with synthetic app imagery or remove the scope captions.
+Edit the source and regenerate; do not maintain separate hand-edited versions of the generated pages. Commit the generated HTML alongside its source because GitHub Pages serves the checked-in files. The generator also updates four Chinese route aliases and `sitemap.xml`.
 
-### Design verification
+The 12 generated pages are six pages in each interface language:
 
-`node scripts/check-site.cjs` uses an available Playwright installation and Google Chrome on macOS. It starts one temporary server on localhost:8127, captures home/Work at 320, 390 and 1440 pixels, checks image loading and horizontal overflow, exercises screenshot tabs by keyboard and pointer, tests language redirects, and closes browser/server in `finally`. Set `NODE_PATH` to the installed Playwright module directory if needed. `SITE_CHECK_OUTPUT` overrides the default `/tmp/pulse-site-design-check` output. No dependencies are installed by the check.
+| Page | Chinese interface | English interface |
+| --- | --- | --- |
+| Home | `/` | `/en/` |
+| Work and capabilities | `/work.html` | `/en/work.html` |
+| Writing index | `/writing.html` | `/en/writing.html` |
+| About | `/about.html` | `/en/about.html` |
+| AI, Bitcoin, and the Right to Choose | `/writing/ai-bitcoin-and-the-right-to-choose.html` | `/en/writing/ai-bitcoin-and-the-right-to-choose.html` |
+| Rules Without Rulers | `/writing/rules-without-rulers.html` | `/en/writing/rules-without-rulers.html` |
 
-Inspect the actual captures, including below-fold content and both additional screenshots. The run emulates reduced motion; the new walkthrough itself has no animation. Screenshots are links to full-size originals because small preview text is not a substitute for reading the native screen. Also verify local links and preserve the personal introduction/proof-strip HTML and About/résumé bytes against the accepted baseline before merge.
+Language switches preserve the page. Both article views retain the original English paragraphs; translated navigation and summaries do not turn those essays into translated originals. Every essay links to the original X post and records its publication timestamp. The `/zh/` aliases for home, work, writing, and about redirect to the corresponding root pages.
 
-This revision was checked against the actual deployed site and local baseline, then checked at all three widths with no horizontal overflow, missing referenced images or browser errors. Keyboard tab selection and reduced-motion presentation passed. Personal intro/proof-strip HTML and About/résumé/language aliases matched baseline bytes. The first automated image check incorrectly counted the existing empty photo-dialog image as a failed asset; corrected to check images with `src`. Independent source/capture review and actual-browser desktop/mobile operation were approved, including keyboard tab switching. Long bilingual page length remains a design tradeoff. No deployment is included; publishing is a separate parent-owned step.
+## Build, check, and preview
 
-## Mechanism explanation follow-up (2 October 2026)
+Run from the repository root:
 
-Continuity: PR63 merged as `e1fd0a5`; its retained delivery receipt records successful Pages run `36961200624` and live homepage/Work/CSS/JavaScript byte matching. A read-only remote check on 2 October confirmed `main` still at `e1fd0a5`, matching this worktree's starting point; there was no open PR for this branch. The preceding “No deployment is included” statement describes the earlier implementation handoff, not today's deployment state.
+```bash
+node tools/build.mjs
+node tools/check.mjs
+node tools/review.mjs
+python3 tools/preview.py --port 8769
+```
 
-The existing Mechanism tab now answers one concrete question: why melting iron-oxide ore is insufficient. Its unmodified, accepted native **Remove oxygen** screenshot replaces the older **Charge** capture; the explanation connects bound oxygen, coke/hot air, reducing conditions and carbon-rich pig iron to the visible arrows/output. DOE 2015 and EPA (1986, reformatted 1995) remain process references, not measured shipment, plant, quantity or operating-time evidence. The controls still switch static screenshots; they do not simulate the furnace. The same three tabs remain. Biography, homepage, credentials, résumé, trade values and App Store availability claims do not change.
+Open `http://127.0.0.1:8769/artifacts/portfolio-review/` for the interactive desktop/phone review, or `/` and `/en/` for standalone pages. The review generator creates the frame viewer; its six screenshot links require separately captured browser PNGs in that ignored review directory. The preview binds to loopback. Press Ctrl-C when finished; no preview service should remain running as a background maintenance task.
 
-Candidate asset SHA-256: `91412f65ff8e82c05a68526f9b2185fa85d939716552cc262b7ef14b482da851`. The old screenshot remains in Git history and in Pulse's `making-understanding/steel-comparison-ore-mechanism-normal.png`. Static checks pass for local links, unique IDs, the existing three-tab relationships, exact native asset bytes/dimensions and JavaScript syntax. Homepage, About, résumé and language aliases match baseline bytes.
+`tools/check.mjs` is a read-only static gate. It checks the 12 pages for local links and anchors, duplicate IDs, a single H1, head metadata, reciprocal language links, exact original paragraphs, source links, and obvious private-path, credential, or unfinished-copy patterns. It also checks JavaScript syntax, CSS/JS size budgets, and the protected baseline files listed below. Errors return a nonzero exit code.
 
-The first browser check passed homepage/Work at 320, 390 and 1440 pixels, image loading, horizontal overflow, language aliases, keyboard/pointer tab switching and reduced-motion emulation. Original captures: `/tmp/pulse-site-mechanism-20261002/`; log: `/tmp/pulse-site-mechanism-check.log`. Actual `320-mechanism.png`, `390-mechanism.png` and `1440-mechanism.png` showed the selected oxygen-removal state and orange-arrow cue agreeing, with separate pig-iron/slag outlets. **Parent review rejected the mobile hierarchy despite those passing checks:** about 640/750px of bilingual copy preceded the image at 390/320px. That failed visual candidate remains preserved. Its temporary server/browser closed in `finally`, with no port8127 listener or owned Playwright Chrome process remaining.
+These checks do not prove browser rendering, keyboard interactions, accessibility, external-link availability, or editorial quality. Inspect complete desktop and phone previews, including small-screen overflow, navigation, photo dialogs, article reading, focus behavior, and reduced motion. Keep the actual QA results and review screenshots outside the published content; this README does not claim those checks have passed or that this revision has been deployed.
 
-The repair puts each panel's question, native image/caption and explanation in that DOM order. Mobile follows the natural reading/focus sequence; desktop places the image beside the question and explanation with scoped CSS Grid. The tab controller now hides one complete panel rather than separate copy and image elements. The existing browser check additionally verifies DOM/visual reading order and keyboard focus from the selected tab to its panel and image link.
+## Content and image boundaries
 
-The repaired check passed all three widths, with original captures in `/tmp/pulse-site-mechanism-order-20261002/` and log `/tmp/pulse-site-mechanism-order-check.log`. Actual `320-mechanism.png`, `390-mechanism.png`, `1440-mechanism.png` and `390-routes.png` were inspected: the mobile screenshot now follows the short question before the explanatory paragraphs, and desktop remains side by side. In the Mechanism component capture, the image starts about 270px/250px below the tabs at 320/390px, versus the rejected roughly 750px/640px. This is the case-study section, not a claim that the page's earlier hero/intro disappeared. Final server/browser termination was verified again; there are no additional background services. Parent reviewed the final 390px capture, and independent source/visual review approved all three widths. Merge and deployment remain pending. Small native screenshot labels still need the full-size link, the full bilingual page remains long, and spoken VoiceOver, phone-app acceptance and human comprehension are unverified.
+The work page distinguishes past engineering experience, internal tools, research prototypes, development prototypes, and internal testing. Preserve these boundaries when editing:
+
+- Anvil Sim is a research prototype. Its retained image is a development preview, not proof of engineering certification or a customer deployment.
+- The autonomous vehicle is a past small-scale engineering project. The real hardware photograph does not establish public-road autonomy.
+- Life Garden is a development prototype. Its retained screen contains fictional sample records and does not establish a public release.
+- Enterprise OS is an internal engineering tool.
+- Pulse is in iOS internal testing. Its retained native screenshots do not establish App Store availability.
+
+Selected retained assets:
+
+| Public asset | Provenance and interpretation |
+| --- | --- |
+| `media/education/{ray-speaking,autonomous-car,trail-running,ray-outdoors,strength}.jpg` | Original personal/project photographs from the deployed baseline; the collage uses separate `-640.jpg` derivatives |
+| `media/projects/anvil.jpg` | Retained Anvil development preview |
+| `media/work/life-garden.png` | Retained Life Garden development screen with fictional records |
+| `media/pulse/world-iron-ore.png` | Native Pulse QA capture: `native-world-reset/selected-goods-2601-normal.png` |
+| `media/pulse/steel-routes.png` | Native Pulse QA capture: `making-understanding/steel-comparison-entry-normal.png` |
+| `media/pulse/steel-mechanism.png` | Native Pulse QA capture: `trade-to-iron-2026-10-02/global-ore-direct-entry-normal.png` |
+
+The latter two Pulse images remain available even when not featured in the new work page. A map of trade relationships does not identify a shipment’s factory or later use. Keep source and scope captions with the image when reusing it.
+
+Everything committed to this public repository is public, including generator inputs. GitHub Pages exclusions for `tools`, `_portfolio`, and review artifacts control site serving; they are not access controls for GitHub. Do not commit personal archives, private recordings, unpublished notes, credentials, internal reports, or local machine paths.
+
+## Publication and rollback
+
+GitHub Pages publishes the repository root of `main`. Generation is local; Pages does not run `tools/build.mjs`. Do not import or run the retired private Studio export over this repository.
+
+The redesign starts from deployed commit `101471de6c7355a376334e61f578c31a627193f9`. Before implementation, the live homepage, Work, About, and Pulse stylesheet were byte-checked against that commit. The complete earlier landing remains recoverable in Git; no duplicate repository, backup ZIP, or extra worktree is required.
+
+Keep these baseline files unchanged during this revision:
+
+- The five original personal/project photographs listed above.
+- `resume.html`, `media/Ray_Qin_Resume.pdf`, `media/Ray_Qin_Resume.docx`, and `media/Ray_Resume.pdf`.
+- `pulse/privacy.html`, `pulse/support.html`, `life-garden/privacy.html`, and `life-garden/support.html`.
+
+Develop on the review branch, regenerate, run the static gate, and inspect the desktop and phone previews. Ray reviews the actual result before merging to `main`; merging publishes the change. Recheck remote `main` before release, preserve intervening work, and verify the resulting live site after deployment. Record release and QA evidence separately.
+
+If a released revision needs rollback, revert its change commits through normal Git history and let Pages rebuild. Do not force-reset the remote or overwrite another workspace’s uncommitted work. Git already preserves the previous site.

@@ -17,3 +17,6 @@ exclude:
   - playwright-report
   - resume/content.json
   - resume/generate.py
+  - tools
+  - _portfolio
+  - design-qa.md
