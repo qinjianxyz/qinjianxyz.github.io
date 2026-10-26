@@ -1,5 +1,15 @@
 /* Progressive enhancement only: all content and navigation work without JS. */
 (() => {
+  // Old root-language links may carry a Chinese translation anchor. The
+  // English default keeps that paragraph reachable at its original-text ID.
+  if (document.documentElement.lang === 'en' && /^#t\d+$/.test(location.hash)) {
+    const id = location.hash.slice(1).replace(/^t/, 'p');
+    const paragraph = document.getElementById(id);
+    if (paragraph) {
+      history.replaceState(null, '', location.pathname + location.search + '#' + id);
+      paragraph.scrollIntoView();
+    }
+  }
   // Keep the reading position when changing language; paragraph IDs distinguish
   // original English (p) from the Chinese reading translation (t).
   const languageLink = document.querySelector('.language-link');

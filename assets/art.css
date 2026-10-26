@@ -17,7 +17,7 @@
 .art-secondary-title {font:14px/1.55 var(--serif);color:var(--muted);margin-top:8px}
 .art-card-summary {font-size:14px;line-height:1.8;margin-top:17px;color:var(--muted)}
 .art-home-grid .art-card h3 {font-size:23px}
-.art-home-grid .art-card-summary {display:none}
+.art-home-grid .art-card-summary {font-size:13px;line-height:1.7;margin-top:14px}
 html[lang=en] .art-home-grid .art-card h3 {font-size:20px}
 .art-intro {padding-block:82px 70px;display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:end}
 .art-intro h1 {font-size:clamp(56px,6vw,86px);line-height:1.18;margin-top:22px;letter-spacing:-.035em}

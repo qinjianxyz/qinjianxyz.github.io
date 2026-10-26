@@ -2,30 +2,33 @@
   {
     "id": "anvil-sim",
     "name": "Anvil Sim",
-    "status": { "zh": "研发原型", "en": "Research prototype" },
+    "status": {
+      "zh": "研发原型",
+      "en": "Research prototype"
+    },
     "eyebrow": {
       "zh": "机械工程 × 软件",
       "en": "Mechanical engineering × software"
     },
     "title": {
-      "zh": "让一次模拟，留下可复查的依据。",
-      "en": "A simulation should leave a trail you can inspect."
+      "zh": "用于早期设计筛选的模拟工作台。",
+      "en": "A simulation workbench for early design decisions."
     },
     "summary": {
-      "zh": "面向早期设计筛选的 Mac 工作台，把几何、假设、求解结果和审阅材料放进同一个项目。",
-      "en": "A Mac workbench for early design screening, bringing geometry, assumptions, simulation results, and review material into one project."
+      "zh": "在 Mac 上集中管理几何模型、计算假设、模拟结果和审阅材料，帮助比较早期设计方案。",
+      "en": "A Mac app that brings geometry, assumptions, simulation results, and review materials together to help compare early design options."
     },
     "contribution": {
-      "zh": "我发起这个项目，把机械工程问题与原生软件开发连接起来。工作覆盖 Swift 与 Metal 界面、Rust 求解流程，以及输入和结果的追溯。",
-      "en": "I founded Anvil to connect mechanical engineering with native software. The work spans Swift and Metal interfaces, Rust simulation workflows, and traceable inputs and results."
+      "zh": "我想把机械工程中遇到的问题做成原生软件工具。目前的工作包括 Swift 与 Metal 界面、Rust 求解流程，以及输入和结果的追溯。",
+      "en": "I started Anvil to build native software for mechanical engineering problems. My work includes Swift and Metal interfaces, Rust simulation workflows, and tracing results back to their inputs."
     },
     "decision": {
-      "zh": "让设置、结果和限制一起被看见。AI 可以协助准备和审阅，工程判断仍需要人来作出。",
-      "en": "Keep the setup, results, and limitations visible together. AI can assist preparation and review; an engineer still makes the decision."
+      "zh": "把计算设置和适用限制与结果放在一起，方便审阅。AI 可以协助准备与检查，工程判断仍由人作出。",
+      "en": "Show the setup and limitations alongside the results so they can be reviewed together. AI can help with preparation and review; engineering judgment remains with the person using it."
     },
     "boundary": {
-      "zh": "部分路径有限定范围的数值验证，部分仍是回放或探索。尚无物理实验关联或工程认证。",
-      "en": "Some paths have numerical checks within a defined scope; others remain replay or exploratory workflows. Physical validation and engineering certification are not established."
+      "zh": "部分模拟流程已在限定范围内进行数值检查，其他流程仍用于回放或探索。尚未与物理实验对照验证，也未获得工程认证。",
+      "en": "Some simulation workflows have numerical checks within a limited scope; others are still exploratory or replay-based. They have not been validated against physical experiments or certified for engineering use."
     },
     "image": {
       "src": "/media/projects/anvil.jpg",
@@ -38,7 +41,12 @@
         "en": "Development preview · early design screening workflows"
       }
     },
-    "skills": ["Swift", "Metal", "Rust", "Simulation workflows"],
+    "skills": [
+      "Swift",
+      "Metal",
+      "Rust",
+      "Simulation workflows"
+    ],
     "sourceNote": {
       "zh": "依据项目说明、验证范围文档与保留的开发预览。这里不把演示等同于客户交付。",
       "en": "Based on project documentation, stated verification scope, and the retained development preview. A demonstration does not establish customer delivery."
@@ -47,26 +55,29 @@
   {
     "id": "autonomous-vehicle",
     "name": "Autonomous Vehicle",
-    "status": { "zh": "过往工程项目", "en": "Past engineering project" },
+    "status": {
+      "zh": "过往工程项目",
+      "en": "Past engineering project"
+    },
     "eyebrow": {
       "zh": "感知 × 控制 × 硬件",
       "en": "Perception × control × hardware"
     },
     "title": {
-      "zh": "从摄像头里的世界，到车轮的动作。",
-      "en": "From a camera frame to a moving wheel."
+      "zh": "在小车上连接视觉与控制。",
+      "en": "Connecting computer vision to vehicle control."
     },
     "summary": {
-      "zh": "在小型自动驾驶车上连接视觉感知、嵌入式计算、车道跟随与转向控制。",
-      "en": "Connecting visual perception, embedded computing, lane following, and steering on a small autonomous vehicle."
+      "zh": "一个小型自动驾驶车项目，结合视觉感知、嵌入式计算、车道跟随与转向控制。",
+      "en": "A small autonomous-vehicle project combining visual perception, embedded computing, lane following, and steering control."
     },
     "contribution": {
-      "zh": "我的工作包括在 Jetson Nano 上运行车道跟随，以及用 ROS2、YOLOv5 和 OpenCV 构建物体检测流程，把视觉结果接到真实硬件。",
-      "en": "My work included lane following on a Jetson Nano and an object-detection pipeline with ROS2, YOLOv5, and OpenCV, connecting vision to real hardware."
+      "zh": "我在 Jetson Nano 上运行车道跟随程序，并用 ROS2、YOLOv5 和 OpenCV 构建物体检测流程，将视觉处理与车辆硬件连接起来。",
+      "en": "I worked on lane-following software running on a Jetson Nano and an object-detection pipeline using ROS2, YOLOv5, and OpenCV, integrating computer vision with the vehicle’s hardware."
     },
     "decision": {
-      "zh": "把感知和控制放在同一台车上，面对摄像头、计算与执行之间的实际约束。",
-      "en": "Bring perception and control onto the same vehicle, where the camera, computation, and actuators must work together."
+      "zh": "在同一台车上调试感知与控制，处理摄像头、计算程序和执行机构之间的配合问题。",
+      "en": "Develop perception and control on the same vehicle, where the camera, software, and actuators have to work together."
     },
     "boundary": {
       "zh": "这是小型实验车辆项目，不代表公共道路自动驾驶能力。",
@@ -75,7 +86,7 @@
     "image": {
       "src": "/media/education/autonomous-car.jpg",
       "alt": {
-        "zh": "真实项目小车，车架上装有摄像头、计算板、连线和控制硬件",
+        "zh": "项目小车，车架上装有摄像头、计算板、连线和控制硬件",
         "en": "The project vehicle with a camera, compute board, wiring, and control hardware mounted on its chassis"
       },
       "caption": {
@@ -83,7 +94,12 @@
         "en": "Project hardware · sensing, computation, and control"
       }
     },
-    "skills": ["ROS2", "Jetson Nano", "YOLOv5", "OpenCV"],
+    "skills": [
+      "ROS2",
+      "Jetson Nano",
+      "YOLOv5",
+      "OpenCV"
+    ],
     "sourceNote": {
       "zh": "依据本人先前公开的项目描述与实物照片；未保留足够测试依据的准确率数字不在此引用。",
       "en": "Based on my earlier public project account and hardware photograph. Accuracy figures without sufficient retained test evidence are omitted."
@@ -92,43 +108,50 @@
   {
     "id": "life-garden",
     "name": "Life Garden",
-    "status": { "zh": "开发原型", "en": "Development prototype" },
+    "status": {
+      "zh": "开发原型",
+      "en": "Development prototype"
+    },
     "eyebrow": {
       "zh": "生活记录 × 产品设计",
-      "en": "Life records × product design"
+      "en": "Journaling × product design"
     },
     "title": {
-      "zh": "把值得记住的日子，慢慢种成一座花园。",
-      "en": "Let the days worth remembering grow into a garden."
+      "zh": "用一座花园，记录日常的积累。",
+      "en": "A growing garden for your everyday life."
     },
     "summary": {
-      "zh": "一个 iPhone 产品实验：把日记、习惯、日历和专注记录，连到一座逐渐成长的花园。",
-      "en": "An iPhone product experiment connecting a journal, habits, calendar, and focus sessions to a garden that grows over time."
+      "zh": "一个实验性的 iPhone 应用，把日记、习惯、日历和专注记录与花园的生长联系起来。",
+      "en": "An experimental iPhone app that connects journaling, habits, a calendar, and focus sessions to a garden that grows over time."
     },
     "contribution": {
-      "zh": "我在探索生活记录的另一种界面：既能回看具体日子，也能感受长期积累。",
-      "en": "I’m exploring a different interface for keeping a life record: one that lets you revisit a particular day and see what accumulates over time."
+      "zh": "我想尝试另一种记录生活的方式：既能翻看某一天的细节，也能看见日积月累的变化。",
+      "en": "I’m exploring a way to record everyday life that lets you revisit individual days and see a longer record take shape."
     },
     "decision": {
-      "zh": "让时间线保留细节，让花园呈现积累，把记录变成愿意回来看的东西。",
-      "en": "Use the timeline for detail and the garden for accumulation, making a record you want to return to."
+      "zh": "时间线保留每天的细节，花园呈现长期的积累，让记录值得经常回看。",
+      "en": "Keep the daily details in a timeline and reflect their accumulation in the garden, giving people a reason to return to their records."
     },
     "boundary": {
-      "zh": "仍是开发原型。展示使用虚构记录，不代表已经公开发布的产品。",
-      "en": "Still a development prototype. The preview uses fictional records and does not represent a public release."
+      "zh": "仍处于原型开发阶段，尚未公开发布。预览中的记录为虚构示例。",
+      "en": "A prototype in development, not yet publicly released. The preview uses fictional sample entries."
     },
     "image": {
       "src": "/media/work/life-garden.png",
       "alt": {
         "zh": "Life Garden 开发界面，包含日记记录、专注时间和一座小花园，使用虚构演示数据",
-        "en": "Life Garden development screen with memories, focus time, and a small garden, using fictional demonstration data"
+        "en": "Life Garden prototype showing journal entries, focus time, and a small garden with fictional sample data"
       },
       "caption": {
         "zh": "开发版界面 · 虚构示例记录",
         "en": "Development screen · fictional sample records"
       }
     },
-    "skills": ["iPhone product design", "Journaling", "Interaction design"],
+    "skills": [
+      "iPhone product design",
+      "Journaling",
+      "Interaction design"
+    ],
     "sourceNote": {
       "zh": "依据保留的开发截图与项目介绍；截图中的记录均为示例。",
       "en": "Based on the retained development screen and project description. All records shown are examples."
@@ -137,30 +160,33 @@
   {
     "id": "enterprise-os",
     "name": "Enterprise OS",
-    "status": { "zh": "内部工程工具", "en": "Internal engineering tool" },
+    "status": {
+      "zh": "内部工程工具",
+      "en": "Internal engineering tool"
+    },
     "eyebrow": {
       "zh": "AI 开发 × 工作连续性",
-      "en": "AI development × continuity"
+      "en": "AI development × project continuity"
     },
     "title": {
-      "zh": "让下一次开发，接得上这一次。",
-      "en": "Make the next work session build on this one."
+      "zh": "让 AI 协作接得上前一次的工作。",
+      "en": "Picking up where an AI work session left off."
     },
     "summary": {
-      "zh": "围绕项目状态、Git 工作保护和验证交付的一层轻量支持，让 AI 辅助开发更容易继续、检查和回退。",
-      "en": "A lightweight support layer around project state, Git protections, and verified delivery, making AI-assisted work easier to continue, inspect, and roll back."
+      "zh": "一个轻量工作工具，用于记录项目进度、通过 Git 保护改动并保存验证结果，方便继续开发、检查和回退。",
+      "en": "A lightweight tool for recording project state, preserving changes with Git, and keeping verification results, so AI-assisted work is easier to resume, review, and roll back."
     },
     "contribution": {
-      "zh": "我用它探索长期 AI 协作：把任务留下的状态、实际代码和验证结果连接起来。",
-      "en": "I use it to explore sustained work with AI, connecting the state a task leaves behind with its code and verification results."
+      "zh": "我用它探索怎样与 AI 持续协作，让项目进度、代码改动和验证结果能够互相对应。",
+      "en": "I use it to explore longer-running work with AI, keeping project state connected to the corresponding code changes and verification results."
     },
     "decision": {
-      "zh": "将更重的编排缩减为项目真正需要的连续性、工作保护和相关测试。",
-      "en": "Reduce heavier orchestration to the continuity, work protection, and relevant checks a project actually needs."
+      "zh": "简化任务编排，保留恢复项目进度、保护改动和执行必要检查的功能。",
+      "en": "Simplify task orchestration around three needs: resuming work, preserving changes, and running the relevant checks."
     },
     "boundary": {
-      "zh": "这是内部工作工具；尚未证明它能提高模型准确率，或适用于所有团队。",
-      "en": "This is an internal tool. Improved model accuracy or suitability for every team has not been established."
+      "zh": "目前仅作为内部工具使用，尚未证明能提高模型准确率，或普遍适用于不同团队。",
+      "en": "An internal tool. It has not been shown to improve model accuracy or to suit a wide range of teams."
     },
     "image": null,
     "skills": [
@@ -177,30 +203,33 @@
   {
     "id": "pulse",
     "name": "Pulse",
-    "status": { "zh": "iOS 内部测试", "en": "iOS internal testing" },
+    "status": {
+      "zh": "iOS 内部测试",
+      "en": "iOS internal testing"
+    },
     "eyebrow": {
       "zh": "世界贸易 × 物品制造",
       "en": "Global trade × how things are made"
     },
     "title": {
-      "zh": "一张贸易地图后面，是怎样的物质世界？",
-      "en": "What is the material world behind a trade map?"
+      "zh": "从贸易地图，看材料与制造。",
+      "en": "Exploring materials and manufacturing through trade."
     },
     "summary": {
-      "zh": "从国家间的贸易关系，走进矿物、材料、工艺和设备，理解一件物品如何来到我们面前。",
-      "en": "Follow trade relationships into minerals, materials, processes, and equipment to understand how things reach us."
+      "zh": "从国家间的贸易关系出发，了解矿物、材料、工艺和设备，追溯日常物品的来源与生产过程。",
+      "en": "Explore trade between countries, then look at the minerals, materials, processes, and equipment behind everyday goods."
     },
     "contribution": {
-      "zh": "我把公开数据与制造知识组织成原生 iOS 探索体验，让地图、具体商品和生产过程彼此连通。",
-      "en": "I’m bringing public data and manufacturing knowledge into a native iOS experience, connecting maps, specific goods, and production processes."
+      "zh": "我把公开数据与制造知识整理进原生 iOS 应用，让用户可以从地图上的贸易关系继续查看具体商品与生产过程。",
+      "en": "I’m building a native iOS app that brings together public data and manufacturing knowledge, linking trade maps to individual goods and how they are made."
     },
     "decision": {
-      "zh": "每个观察保留来源和时间；地图上的关系可以继续追到材料与工艺。",
-      "en": "Keep each observation’s source and date visible, and let a relationship on the map lead into materials and processes."
+      "zh": "保留数据的来源与时间，并让地图上的贸易关系连接到相关材料与工艺。",
+      "en": "Show the source and date of the data, and connect trade relationships on the map to the relevant materials and processes."
     },
     "boundary": {
-      "zh": "覆盖范围仍有限；贸易关系不是实际航运路线，也不代表实时数据。",
-      "en": "Coverage remains partial. Trade relationships are not physical shipping routes and do not imply live data."
+      "zh": "覆盖范围仍有限。地图展示贸易关系，并非实际航运路线；数据也不是实时更新。",
+      "en": "Coverage is still limited. The map shows trade relationships, not shipping routes, and the data is not real-time."
     },
     "image": {
       "src": "/media/pulse/world-iron-ore.png",
@@ -209,8 +238,8 @@
         "en": "Pulse iron-ore trade map showing relationships among countries including Australia, Brazil, and China, using CEPII BACI 2024 data"
       },
       "caption": {
-        "zh": "实际应用截图 · CEPII BACI，2024 年",
-        "en": "Actual app screen · CEPII BACI, 2024"
+        "zh": "应用截图 · CEPII BACI，2024 年",
+        "en": "App screenshot · CEPII BACI, 2024"
       }
     },
     "skills": [
