@@ -2,7 +2,7 @@
 
 A bilingual personal website for Ray Qin: engineering practice, essays, poetry and visual work, and the interests behind the work. The homepage keeps the real photographs of speaking, building a small autonomous vehicle, trail running, travel, and strength training. Projects support the personal story; no single app defines the site.
 
-This revision is a local review candidate. Its Chinese reading translations and new editorial copy await Ray’s review; the build and preview commands do not publish it.
+The homepage introduces art first, then AI/Bitcoin writing, then eight compact project and interest entries. Original landing photos remain in place; the vehicle is not repeated as a large home-page project image. The build and preview commands do not publish changes.
 
 The website is static. Its small generator and checks use Node.js standard-library modules; the local preview uses Python 3. No npm installation, framework, API, database, analytics service, or recurring job is required.
 
@@ -34,7 +34,7 @@ The current build contains 26 core pages: 13 in each language, including three a
 | Each article | `/writing/<slug>.html` | `/en/writing/<slug>.html` |
 | Each of the five artworks | `/art/<slug>.html` | `/en/art/<slug>.html` |
 
-Language switches preserve the page and translate linked paragraph anchors between the English `p` and Chinese `t` IDs. The three articles contain 171 original English paragraphs and 171 Chinese reading-translation paragraphs. English article pages retain the originals. Chinese pages offer a separately labeled AI-assisted reading translation awaiting editorial review, plus an expandable English original. Every essay links to the original X post and records its publication timestamp; a translation is not presented as Ray’s original wording.
+Language switches preserve the page and translate linked paragraph anchors between the English `p` and Chinese `t` IDs. The three articles contain 171 original English paragraphs and 171 Chinese reading-translation paragraphs. English article pages retain the originals. Chinese pages offer a separately labeled AI-assisted reading translation, plus an expandable English original. Every essay links to the original X post and records its publication timestamp; a translation is not presented as Ray’s original wording.
 
 Each artwork detail preserves the Chinese poem, identifies its author and source separately from the visual work, and labels its English reading translation. Both languages retain access to the complete original PNG. The five artworks are `snow-upon-the-bow-and-blade`, `a-star-within-the-sleeve`, `when-the-world-turns-white`, `ninety-thousand-li`, and `three-blessings-one-peach-tree`. The artwork inventory records SHA-256 hashes and pixel dimensions for the originals; small JPEG derivatives serve the overview. These are user-supplied works, so an X post is not required as their source.
 

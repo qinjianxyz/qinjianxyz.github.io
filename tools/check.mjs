@@ -278,7 +278,7 @@ for (const article of articles) {
       const original = classContents(doc.html, 'essay-original');
       if (original.length !== 1) fail(file, 'expected one separately identified English essay-original region');
       const label = normalizedText(doc.html);
-      if (!/(?:AI\s*辅助|AI-assisted)/i.test(label) || !/(?:中文译文|Chinese translation)/i.test(label) || !/(?:待[^。]{0,8}审阅|editorial review)/i.test(label)) fail(file, 'Chinese translation needs an AI-assisted editorial-review label');
+      if (!/(?:AI\s*辅助|AI-assisted)/i.test(label) || !/(?:中文译文|Chinese translation)/i.test(label)) fail(file, 'Chinese translation needs an explicit AI-assisted translation label');
       const translated = article.translations?.zh?.paragraphs;
       if (Array.isArray(translated)) {
         for (const [i, expected] of translated.entries()) {

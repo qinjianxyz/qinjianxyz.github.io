@@ -11,7 +11,7 @@ export function artCard(l, a, i) {
 }
 
 export function artHome(l, artworks) {
-  return `<section class="art-home wrap" id="art"><div class="section-heading"><div><p class="eyebrow">03 / ${t(l,'诗与画','Poetry & art')}</p><h2>${t(l,'读到的诗，<br>想看见的世界。','Poems I return to.<br>Worlds I want to see.')}</h2></div><div class="art-home-intro"><p>${t(l,'四首古诗，一首自己的诗。<br>把文字留在心里的画面，慢慢做出来。','Four classical poems, and one of my own.<br>Making visible what the words leave behind.')}</p><a class="text-link" href="${local(l,'art.html')}">${t(l,'走进作品','Explore the collection')} ${arrow}</a></div></div><div class="art-grid art-home-grid">${artworks.map((a,i)=>artCard(l,a,i)).join('')}</div></section>`;
+  return `<section class="art-home wrap" id="art"><div class="section-heading"><div><p class="eyebrow">01 / ${t(l,'诗与画','Poetry & art')}</p><h2>${t(l,'读到的诗，<br>想看见的世界。','Poems I return to.<br>Worlds I want to see.')}</h2></div><div class="art-home-intro"><p>${t(l,'四首古诗，一首自己的诗。<br>把文字留在心里的画面，慢慢做出来。','Four classical poems, and one of my own.<br>Making visible what the words leave behind.')}</p><a class="text-link" href="${local(l,'art.html')}">${t(l,'走进作品','Explore the collection')} ${arrow}</a></div></div><div class="art-grid art-home-grid">${artworks.map((a,i)=>artCard(l,a,i)).join('')}</div></section>`;
 }
 
 export function artIndex(l, artworks) {

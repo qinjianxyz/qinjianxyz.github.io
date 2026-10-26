@@ -1,5 +1,19 @@
 /* Ray Qin — shared portfolio system. Original photography, quiet editorial hierarchy. */
 .dialog-navigation[hidden] {display:none}
+.interests-section {padding-block:90px 85px}
+.interest-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 35px}
+.interest-item {padding:24px 0 28px;border-top:1px solid var(--line);min-width:0;display:block}
+.interest-meta {display:flex;justify-content:space-between;gap:14px;color:var(--muted);font-size:10px;line-height:1.5;letter-spacing:.035em}
+.interest-meta span:last-child {text-align:right;white-space:nowrap}
+.interest-item h3 {font:500 25px/1.35 var(--serif);letter-spacing:0;margin:17px 0 12px}
+.interest-item h3>span {font:16px var(--sans);color:var(--muted);display:inline-block;transition:transform .2s}
+.interest-item:hover h3 {color:var(--green)}
+.interest-item:hover h3>span {transform:translate(2px,-2px)}
+.interest-item p {font-size:14px;line-height:1.8;color:var(--muted);max-width:360px}
+.interests-more {display:inline-block;margin-top:12px}
+@media(max-width:1000px){.interest-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}}
+@media(max-width:600px){.interests-section {padding-block:52px}.interest-grid {grid-template-columns:1fr;gap:0}.interest-item {padding:22px 0}.interest-item h3 {font-size:25px;margin-top:13px;margin-bottom:9px}.interest-item p {max-width:none}.interest-meta {font-size:10px}}
+@media(prefers-reduced-motion:reduce){.interest-item h3>span {transition:none}}
 .gaming-section {display:grid;grid-template-columns:1fr 1.35fr;gap:90px;padding-block:70px 85px;border-top:1px solid var(--line)}
 .gaming-section h2 {margin-top:20px}
 .gaming-copy p {margin-bottom:20px;line-height:1.9;color:var(--muted)}
