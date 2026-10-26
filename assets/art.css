@@ -1,0 +1,73 @@
+/* Poetry and art share the portfolio's paper, type and quiet navigation. */
+.art-home {padding-block:110px 105px;border-bottom:1px solid var(--line)}
+.art-home-intro {max-width:350px}
+.art-home-intro .text-link {display:inline-block;margin-top:18px}
+.art-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:60px 30px}
+.art-home-grid {grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}
+.art-card {min-width:0}
+.art-card-image {position:relative;display:block;overflow:hidden;background:#e8e5db}
+.art-card-image img {width:100%;height:auto;aspect-ratio:1122/1402;object-fit:contain;transition:transform .4s ease}
+.art-card-image:hover img {transform:scale(1.015)}
+.art-image-link {position:absolute;bottom:13px;right:13px;font-size:11px;padding:6px 10px;color:var(--white);background:#17241ce6;opacity:0;transition:opacity .2s}
+.art-card-image:hover .art-image-link,.art-card-image:focus-visible .art-image-link {opacity:1}
+.art-card-meta {display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:10px;letter-spacing:.06em;color:var(--muted);margin:20px 0 12px}
+.art-card-meta span:last-child {text-align:right}
+.art-card h3 {font:500 28px/1.35 var(--serif);letter-spacing:0}
+.art-card h3 a:hover {text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px}
+.art-secondary-title {font:14px/1.55 var(--serif);color:var(--muted);margin-top:8px}
+.art-card-summary {font-size:14px;line-height:1.8;margin-top:17px;color:var(--muted)}
+.art-home-grid .art-card h3 {font-size:23px}
+.art-home-grid .art-card-summary {display:none}
+html[lang=en] .art-home-grid .art-card h3 {font-size:20px}
+.art-intro {padding-block:82px 70px;display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:end}
+.art-intro h1 {font-size:clamp(56px,6vw,86px);line-height:1.18;margin-top:22px;letter-spacing:-.035em}
+.art-intro-copy {max-width:480px;padding-bottom:8px}
+.art-intro-copy .lede {font:25px/1.7 var(--serif);margin-bottom:20px}
+.art-intro-copy>p:not(.lede) {font-size:14px;color:var(--muted);line-height:1.9}
+.art-principle {display:block;margin-top:25px;font-size:11px;letter-spacing:.035em;color:var(--accent)}
+.art-collection {padding-bottom:70px}
+.art-collection-label {display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:18px 0 26px;font-size:10px;letter-spacing:.13em;color:var(--muted)}
+.art-colophon {padding-block:32px 80px;border-top:1px solid var(--line);display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:start}
+.art-colophon>p {font-size:12px;color:var(--muted);line-height:1.9;max-width:680px}
+.art-colophon>a {justify-self:end;font-size:13px}
+.art-detail-header {padding-block:38px 46px}
+.art-title-line {margin-top:36px;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:end}
+.art-title-line h1 {font-size:clamp(42px,4.5vw,66px);letter-spacing:-.035em;margin:14px 0 12px}
+.art-title-other {font:21px/1.5 var(--serif);color:var(--muted)}
+.art-detail-deck {font-size:16px;line-height:1.9;max-width:380px;justify-self:end;padding-bottom:5px}
+.art-reading {display:grid;grid-template-columns:1.08fr 1fr;gap:90px;padding-bottom:70px;align-items:start}
+.artwork-full {min-width:0;position:sticky;top:108px}
+.artwork-full .image-button {display:block;width:100%;padding:0;border:0;background:transparent;position:relative}
+.artwork-full img {width:100%;height:auto;object-fit:contain}
+.artwork-full figcaption {font-size:11px;color:var(--muted);padding-top:14px;line-height:1.7}
+.art-copyright {display:block;font-size:10px;margin-top:3px}
+.art-poem {padding-top:9px}
+.art-poem h2 {font:500 22px/1.5 var(--serif);letter-spacing:0;margin-top:13px}
+.poem-author {font-size:12px;color:var(--muted);margin-top:8px}
+.poem-original {font:24px/1.95 var(--serif);letter-spacing:.045em;margin:30px 0 32px;color:#25332a}
+.poem-original p:nth-child(2n) {margin-bottom:10px}
+.poem-original p:last-child {margin-bottom:0}
+.poem-translation-disclosure {border-top:1px solid var(--line);padding-top:18px}
+.poem-translation-disclosure summary {font-size:12px;color:var(--green);cursor:pointer;list-style-position:inside}
+.translation-note {font:11px/1.7 var(--sans);color:var(--muted);margin:15px 0}
+.poem-translation {font:18px/1.75 var(--serif)}
+.poem-translation p {margin-top:6px}
+.poem-translation p:nth-child(2n) {margin-bottom:13px}
+.art-context {display:grid;grid-template-columns:1fr 1fr;gap:90px;border-top:1px solid var(--line);padding-block:45px 48px}
+.art-context h2 {font-size:28px;margin:17px 0 20px;letter-spacing:0}
+.art-context section>p:last-child {font-size:15px;line-height:1.95;color:var(--muted)}
+.art-sources {padding-bottom:45px;font-size:11px;color:var(--muted)}
+.art-sources>div {display:flex;flex-wrap:wrap;gap:10px 24px;margin-top:12px}
+.art-sources a {text-decoration:underline;text-underline-offset:3px}
+.art-sources>p:last-child:not(:first-child) {max-width:800px;margin-top:14px;line-height:1.8}
+.art-pagination {display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-block:30px 70px;border-top:1px solid var(--line)}
+.art-pagination a:last-child {text-align:right}
+.art-pagination span {display:block;font-size:11px;color:var(--muted);margin-bottom:10px}
+.art-pagination strong {font:500 24px/1.4 var(--serif)}
+@media(min-width:1100px){.art-grid:not(.art-home-grid) .art-card:nth-child(2) {padding-top:52px}.art-grid:not(.art-home-grid) .art-card:nth-child(5) {padding-top:42px}}
+@media(max-width:1100px){.art-home-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 22px}.art-reading,.art-context {gap:45px}.art-intro {gap:40px}.artwork-full {position:static}.art-home-grid .art-card h3 {font-size:25px}}
+@media(max-width:800px){.art-intro {padding-top:52px;grid-template-columns:1fr;gap:32px}.art-intro-copy {max-width:560px}.art-intro h1 br {display:none}.art-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:38px 20px}.art-reading {gap:32px}.poem-original {font-size:20px;letter-spacing:0}.art-title-line {gap:30px}.art-detail-deck {font-size:14px}.art-colophon {gap:30px}.art-home {padding-block:70px}.art-card h3 {font-size:25px}.art-home-grid .art-card:last-child {grid-column:auto}}
+@media(max-width:600px){.art-intro {padding-block:36px 35px;gap:27px}.art-intro h1 {font-size:49px;margin-top:16px}.art-intro-copy .lede {font-size:21px}.art-intro-copy .lede br {display:none}.art-principle {margin-top:19px}.art-collection-label {padding-block:16px 22px}.art-grid {gap:30px 16px}.art-card-meta {font-size:9px;margin:13px 0 9px;gap:4px;flex-wrap:wrap;justify-content:flex-start}.art-card-meta span:first-child {display:none}.art-card h3,.art-home-grid .art-card h3 {font-size:23px}.art-card-summary {font-size:12px;margin-top:12px}.art-secondary-title {font-size:12px;margin-top:6px}.art-home-grid .art-card h3:lang(en),html[lang=en] .art-home-grid .art-card h3 {font-size:19px}.art-home .section-heading {gap:24px}.art-home-intro .text-link {margin-top:12px}.art-home {padding-block:56px}.art-home-grid {grid-template-columns:repeat(2,minmax(0,1fr))}.art-colophon {display:block;padding-block:24px 44px}.art-colophon>a {display:inline-block;margin-top:20px}.art-detail-header {padding-block:25px 28px}.art-title-line {display:block;margin-top:27px}.art-title-line h1 {font-size:42px;margin-top:12px}.art-title-other {font-size:19px}.art-detail-deck {margin-top:20px;max-width:none}.art-reading {grid-template-columns:1fr;gap:35px;padding-bottom:38px}.artwork-full figcaption {font-size:10px}.art-poem {padding-top:0}.art-poem h2 {font-size:22px}.poem-original {font-size:24px;line-height:1.9;margin-top:24px}.poem-translation {font-size:18px}.art-context {grid-template-columns:1fr;gap:32px;padding-block:32px}.art-context h2 {font-size:26px;margin-block:13px 16px}.art-context section>p:last-child {font-size:14px}.art-pagination {padding-block:25px 45px;gap:20px}.art-pagination strong {font-size:21px}.art-sources {padding-bottom:30px}}
+@media(max-width:360px){.art-card h3,.art-home-grid .art-card h3 {font-size:21px}.poem-original {font-size:21px}.art-title-line h1 {font-size:36px}}
+@media(prefers-reduced-motion:reduce){.art-card-image img,.art-image-link {transition:none}.art-card-image:hover img {transform:none}}
+@media print{.artwork-full {position:static}.art-reading {display:block}.artwork-full {max-width:360px;break-inside:avoid;margin-bottom:30px}.art-context {gap:35px}.art-pagination,.enlarge-label {display:none}}

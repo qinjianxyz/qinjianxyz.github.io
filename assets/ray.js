@@ -1,11 +1,37 @@
 /* Progressive enhancement only: all content and navigation work without JS. */
 (() => {
+  // Keep the reading position when changing language; paragraph IDs distinguish
+  // original English (p) from the Chinese reading translation (t).
+  const languageLink = document.querySelector('.language-link');
+  const updateLanguageLink = () => {
+    if (!languageLink) return;
+    const target = new URL(languageLink.href);
+    const hash = location.hash;
+    target.hash = /^#[pt]\d+$/.test(hash) && location.pathname.includes('/writing/')
+      ? hash.replace(/^#[pt]/, document.documentElement.lang === 'zh-CN' ? '#p' : '#t')
+      : hash;
+    languageLink.href = target.href;
+  };
+  updateLanguageLink();
+  window.addEventListener('hashchange', updateLanguageLink);
+  const revealLinkedOriginal = () => {
+    if (!/^#p\d+$/.test(location.hash)) return;
+    const target = document.getElementById(location.hash.slice(1));
+    const disclosure = target?.closest('details');
+    if (disclosure && !disclosure.open) {
+      disclosure.open = true;
+      target.scrollIntoView();
+    }
+  };
+  revealLinkedOriginal();
+  window.addEventListener('hashchange', revealLinkedOriginal);
   const dialog = document.querySelector(".image-dialog");
   let trigger;
   if (dialog && typeof dialog.showModal === "function") {
     const image = dialog.querySelector("img");
     const caption = dialog.querySelector("p");
     const gallery = [...document.querySelectorAll("[data-image]")];
+    if (gallery.length < 2) dialog.querySelector('.dialog-navigation').hidden = true;
     let position = 0;
     const count = dialog.querySelector(".image-count");
     const show = index => {
@@ -89,7 +115,9 @@
       const distance = Math.max(1, rect.height - window.innerHeight * 0.5);
       const value = Math.min(100, Math.max(0, (-rect.top / distance) * 100));
       progress.style.setProperty("--progress", `${value}%`);
-      const paragraphs = [...body.querySelectorAll("p[id]")];
+      const paragraphs = [...document.querySelectorAll('.essay-aside a[href^="#"]')]
+        .map(a => document.getElementById(a.hash.slice(1)))
+        .filter(p => p && p.getClientRects().length);
       let current = paragraphs[0]?.id;
       paragraphs.forEach((p) => {
         if (p.getBoundingClientRect().top < window.innerHeight * 0.35)
